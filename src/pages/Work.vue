@@ -45,11 +45,10 @@ export default {
     return {
       works: workList,
       categories: [
-        'Front-end Development',
+        'Development',
         'Advertising',
         'Marketing',
-        'Craft',
-        'Media Production'
+        'Craft'
       ]
     };
   },

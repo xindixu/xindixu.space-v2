@@ -2,7 +2,7 @@
   {
     "title":"Nokia Demo Center",
     "id": "nokia-demo-center",
-    "category": "Front-end Development",
+    "category": "Development",
     "tags":[
       "UX/UI Design",
       "Content Management System",
@@ -33,7 +33,7 @@
   {
     "title":"Shih's Lab Website",
     "id": "shihs-lab",
-    "category": "Front-end Development",
+    "category": "Development",
     "tags":[
       "UX/UI Design",
       "Structure",
@@ -129,7 +129,7 @@
   {
     "title":"Look For UT",
     "id": "look-for-ut",
-    "category": "Front-end Development",
+    "category": "Development",
     "tags":[
       "iOS Development",
       "UX/UI Design",
@@ -169,7 +169,7 @@
   {
     "title":"Catformer",
     "id": "catformer",
-    "category": "Front-end Development",
+    "category": "Development",
     "tags":[
       "Computer Graphics",
       "Game Development",
@@ -185,7 +185,7 @@
   {
     "title":"UT Tower",
     "id": "ut-tower",
-    "category": "Front-end Development",
+    "category": "Development",
     "tags":[
       "Computer Graphics",
       "UX/UI Design"

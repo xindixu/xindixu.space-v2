@@ -59,7 +59,6 @@
     </div>
 </template>
 <script>
-
 import { Parallax } from '@/components';
 import BasicElements from './components/BasicElementsSection';
 import Navigation from './components/Navigation';

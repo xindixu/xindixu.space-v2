@@ -113,33 +113,20 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="">
 .swiper-container {
     height: 100vh;
     width: 100vw;
-}
-.swiper-slide {
-    background-position: center center;
-    background-size: cover;
-    padding: 70px 1%;
-}
-.swiper-pagination {
-    index: 10;
-}
-.swiper-pagination-v .swiper-pagination-bullet-active {
-    -webkit-transform: translateX(-25%);
-    -ms-transform: translateX(-25%);
-    transform: translateX(-25%);
-}
-.swiper-pagination-h .swiper-pagination-bullet-active {
-    -webkit-transform: translateY(25%);
-    -ms-transform: translateY(25%);
-    transform: translateY(25%);
-}
 
-.self {
-    width: 300px;
-    height: 300px;
+    .swiper-slide {
+        background-position: center center;
+        background-size: cover;
+        padding: 70px 5%;
+    }
+
+    .swiper-pagination {
+        z-index: 10;
+    }
 }
 
 #header {

@@ -216,6 +216,7 @@ animation: bounce 1s linear 1s; */
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
       transition: all 1s ease;
+			cursor: pointer;
       .bar {
         -webkit-transition: all 1s ease;
         -moz-transition: all 1s ease;

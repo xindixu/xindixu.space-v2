@@ -6,7 +6,7 @@
       <swiper-slide id="slide-1" style="background-image: url('img/bg/bg14.jpg');">
         <b-row class="mb-5">
           <b-col>
-            <h1 class="display-3 my-auto">Nice to meet you!</h1>
+            <h1 class="display-3 my-auto">So happy to see you here!</h1>
           </b-col>
           <b-col>
             <div class="float-md-right">
@@ -212,6 +212,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .swiper-container {
     height: 100vh;
     width: 100vw;
@@ -223,19 +224,7 @@ export default {
     }
 
     .swiper-pagination {
-        index: 10;
-
-        .swiper-pagination-v .swiper-pagination-bullet-active {
-            -webkit-transform: translateX(-25%);
-            -ms-transform: translateX(-25%);
-            transform: translateX(-25%);
-        }
-
-        .swiper-pagination-h .swiper-pagination-bullet-active {
-            -webkit-transform: translateY(25%);
-            -ms-transform: translateY(25%);
-            transform: translateY(25%);
-        }
+        z-index: 10;
     }
 }
 
