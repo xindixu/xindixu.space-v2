@@ -1,22 +1,20 @@
 <template>
-  <v-app light>
-    <v-container>
-      <v-layout row wrap align-center>
-        <header>
-          {{#if readingTime}}
-            Reading time {{ readingTime }} min |
-          {{/if}}
-
-          published on the {{ data postDate }}
-
-          {{#if lastUpdated}}
-            and last updated on {{ date lastUpdated }}
-          {{/if}}
-        </header>
-        <article>
-          <Content :custome="false" />
-        </article>
-      </v-layout>
-    </v-container>
-  </v-app>
+  <div class="">
+    <app-navbar></app-navbar>
+    <Content />
+    <app-footer></app-footer>
+  </div>
 </template>
+
+<script>
+import AppNavbar from '../../components/AppFooter.vue';
+import AppFooter from '../../components/AppFooter.vue';
+export default {
+  components: {
+    AppFooter
+  }
+}
+</script>
+
+<style lang="scss">
+</style>

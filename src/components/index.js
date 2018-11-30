@@ -22,10 +22,10 @@ import Pagination from './Pagination.vue';
 import quickMenu from './quickMenu.vue';
 import sliderComponent from './Slider/slider.vue';
 import sliderItemComponent from './Slider/slider_item.vue';
-const slider = sliderComponent
-const slideritem = sliderItemComponent
-export default slider
-export { slider, slideritem }
+const slider = sliderComponent;
+const slideritem = sliderItemComponent;
+export default slider;
+export { slider, slideritem };
 
 export {
   Alert,

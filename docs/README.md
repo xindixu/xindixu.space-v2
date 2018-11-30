@@ -3,8 +3,6 @@ layout: Home
 ---
 # Blog Documentation
 
-
-
 ## Links paragraph
 [Home](/)
 

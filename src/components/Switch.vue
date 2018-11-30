@@ -1,16 +1,15 @@
 <template>
-  <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate" :class="switchClass">
-    <div class="bootstrap-switch-container" @click="triggerToggle()">
+  <div
+    class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate"
+    :class="switchClass"
+  >
+    <div class="bootstrap-switch-container" @click="triggerToggle();">
       <span class="bootstrap-switch-handle-on ">
-        <slot name="on">
-            {{onText}}
-        </slot>
+        <slot name="on"> {{ onText }} </slot>
       </span>
       <span class="bootstrap-switch-label"></span>
       <span class="bootstrap-switch-handle-off bootstrap-switch-default">
-        <slot name="off">
-            {{offText}}
-        </slot>
+        <slot name="off"> {{ offText }} </slot>
       </span>
     </div>
   </div>

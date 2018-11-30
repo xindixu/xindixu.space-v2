@@ -1,41 +1,46 @@
 <template>
-<div>
-  <div class="swiper-container">
-    <swiper id="v" :options="swiperOptionV">
-      <swiper-slide>
-        <div id="header">
-          <h1 class="display-3">{{ greeting }}</h1>
-          <h1 class="display-3">
-            I'm Xindi,
-            <vue-typer :text="role" :repeat="Infinity" :shuffle="false" initial-action="typing" :pre-type-delay="100" :type-delay="100" :pre-erase-delay="6000" :erase-delay="250" erase-style="clear" :erase-on-complete="false" caret-animation="blink"
-              class="display-3"></vue-typer>
-          </h1>
-          <p class="display-4" id="header4">{{ headline }}</p>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <p>Vertical Slide 2</p>
-      </swiper-slide>
-      <swiper-slide>
-        <p>Vertical Slide 3</p>
-      </swiper-slide>
-      <swiper-slide>
-        <p>Vertical Slide 4</p>
-      </swiper-slide>
-      <swiper-slide>
-        <p>Vertical Slide 5</p>
-      </swiper-slide>
-      <div class="swiper-pagination swiper-pagination-v" slot="pagination"></div>
-    </swiper>
-    <!-- update https://jsfiddle.net/awolf2904/m9hxfmcz/ -->
+  <div>
+    <div class="swiper-container">
+      <swiper id="v" :options="swiperOptionV">
+        <swiper-slide>
+          <div id="header">
+            <h1 class="display-3">{{ greeting }}</h1>
+            <h1 class="display-3">
+              I'm Xindi,
+              <vue-typer
+                :text="role"
+                :repeat="Infinity"
+                :shuffle="false"
+                initial-action="typing"
+                :pre-type-delay="100"
+                :type-delay="100"
+                :pre-erase-delay="6000"
+                :erase-delay="250"
+                erase-style="clear"
+                :erase-on-complete="false"
+                caret-animation="blink"
+                class="display-3"
+              ></vue-typer>
+            </h1>
+            <p class="display-4" id="header4">{{ headline }}</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide> <p>Vertical Slide 2</p> </swiper-slide>
+        <swiper-slide> <p>Vertical Slide 3</p> </swiper-slide>
+        <swiper-slide> <p>Vertical Slide 4</p> </swiper-slide>
+        <swiper-slide> <p>Vertical Slide 5</p> </swiper-slide>
+        <div
+          class="swiper-pagination swiper-pagination-v"
+          slot="pagination"
+        ></div>
+      </swiper>
+      <!-- update https://jsfiddle.net/awolf2904/m9hxfmcz/ -->
+    </div>
   </div>
-</div>
 </template>
 
 <script>
-import {
-  VueTyper
-} from 'vue-typer';
+import { VueTyper } from 'vue-typer';
 export default {
   data() {
     return {
@@ -113,25 +118,25 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped="">
+<style lang="scss">
 .swiper-container {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 
-    .swiper-slide {
-        background-position: center center;
-        background-size: cover;
-        padding: 70px 5%;
-    }
+  .swiper-slide {
+    background-position: center center;
+    background-size: cover;
+    padding: 70px 5%;
+  }
 
-    .swiper-pagination {
-        z-index: 10;
-    }
+  .swiper-pagination {
+    z-index: 10;
+  }
 }
 
 #header {
-    position: absolute;
-    top: 15%;
-    left: 20%;
+  position: absolute;
+  top: 15%;
+  left: 20%;
 }
 </style>

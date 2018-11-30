@@ -1,29 +1,29 @@
 <template>
   <div class="card card-plain">
     <div role="tab" id="headingOne" class="card-header">
-      <a data-toggle="collapse"
-         data-parent="#accordion"
-         :href="`#${itemId}`"
-         @click.prevent="activate"
-         :aria-expanded="active"
-         :aria-controls="`content-${itemId}`">
-        <slot name="title">
-          {{title}}
-        </slot>
+      <a
+        data-toggle="collapse"
+        data-parent="#accordion"
+        :href="`#${itemId}`"
+        @click.prevent="activate"
+        :aria-expanded="active"
+        :aria-controls="`content-${itemId}`"
+      >
+        <slot name="title"> {{ title }} </slot>
         <slot name="icon">
           <i v-if="!noIcon" class="now-ui-icons arrows-1_minimal-down"></i>
         </slot>
       </a>
     </div>
     <collapse-transition :duration="animationDuration">
-      <div v-show="active"
-           :id="`content-${itemId}`"
-           role="tabpanel"
-           :aria-labelledby="title"
-           class="collapsed">
-        <div class="card-body">
-          <slot></slot>
-        </div>
+      <div
+        v-show="active"
+        :id="`content-${itemId}`"
+        role="tabpanel"
+        :aria-labelledby="title"
+        class="collapsed"
+      >
+        <div class="card-body"><slot></slot></div>
       </div>
     </collapse-transition>
   </div>
@@ -90,5 +90,4 @@ export default {
   }
 };
 </script>
-<style>
-</style>
+<style></style>

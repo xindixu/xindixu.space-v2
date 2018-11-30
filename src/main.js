@@ -13,8 +13,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import './assets/css/fullpage.css';
 import 'swiper/dist/css/swiper.css';
 
-
-
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
@@ -22,7 +20,6 @@ Vue.use(NowUiKit);
 Vue.use(VueFullPage);
 Vue.use(VueAwesomeSwiper);
 Vue.use(VueP5);
-
 
 new Vue({
   router,

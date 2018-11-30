@@ -2,6 +2,7 @@
 layout: Post
 title: Basic Javascript
 lang: en-US
+postDate: "Sept. 20, 2018"
 ---
 # Basic Javascript
 ### Array

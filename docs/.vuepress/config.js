@@ -1,5 +1,10 @@
 module.exports = {
   base: '/blog/',
+  head: [
+    ['link', { rel:'stylesheet', href: `https://fonts.googleapis.com/css?family=Cormorant+Upright|Dancing+Script` }],
+    ['link', { rel:'stylesheet', href: `https://use.fontawesome.com/releases/v5.0.6/css/all.css` }],
+    ['link', { rel:'stylesheet', href: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css` }]
+  ],
   locales: {
     '/': {
       lang: 'en-US',
@@ -12,6 +17,7 @@ module.exports = {
       description: '咩'
     }
   },
+  port:3000,
   themeConfig: {
     locales: {
       '/': {

@@ -1,16 +1,15 @@
 <template>
-  <div class="form-check"
-       :class="[{disabled: disabled}, inlineClass]">
+  <div class="form-check" :class="[{ disabled: disabled }, inlineClass]">
     <label :for="cbId" class="form-check-label">
-      <input :id="cbId"
-             class="form-check-input"
-             type="checkbox"
-             :disabled="disabled"
-             v-model="model"/>
+      <input
+        :id="cbId"
+        class="form-check-input"
+        type="checkbox"
+        :disabled="disabled"
+        v-model="model"
+      />
       <span class="form-check-sign"></span>
-      <slot>
-        <span v-if="inline">&nbsp;</span>
-      </slot>
+      <slot> <span v-if="inline">&nbsp;</span> </slot>
     </label>
   </div>
 </template>
@@ -55,5 +54,5 @@ export default {
       .toString(16)
       .slice(2);
   }
-};
-</script>>
+};</script
+>>
