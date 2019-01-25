@@ -8,7 +8,9 @@
     >
       <el-menu-item index="1">Home</el-menu-item>
       <el-submenu index="2">
-        <template slot="title">Highlighted</template>
+        <template slot="title"
+          >Highlighted</template
+        >
         <el-menu-item index="2-1">Coding Crush</el-menu-item>
         <el-menu-item index="2-2">Media Mind</el-menu-item>
       </el-submenu>
@@ -20,6 +22,7 @@
 
 <script>
 export default {
+  name: 'app-navbar',
   data() {
     return {
       activeIndex: '1'

@@ -1,6 +1,7 @@
 //test
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
+
 /* Element Chalk Variables */
 
 /* Transition
@@ -650,4 +651,5 @@ $--footer-padding: 0 20px !default;
 --------------------------*/
 $--main-padding: 20px !default;
 
+@import '~element-ui/lib/theme-chalk/display.css';
 @import "~element-ui/packages/theme-chalk/src/index";

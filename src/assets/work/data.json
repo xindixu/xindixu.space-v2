@@ -1,6 +1,22 @@
 [
   {
-    "title":"Nokia Demo Center",
+    "title":"Nokia Demo System",
+    "id": "nokia-demo-system",
+    "category": "Development",
+    "tags":[
+      "UX/UI Design",
+      "Developement",
+      "Single Page Application"
+    ],
+    "tools":[
+      "Python Django",
+      "React"
+    ],
+    "start":"12/2018",
+    "end": "now"
+  },
+  {
+    "title":"Nokia Demo Center Website",
     "id": "nokia-demo-center",
     "category": "Development",
     "tags":[
@@ -9,10 +25,58 @@
       "Developement"
     ],
     "tools":[
-      "Wordpress"
+      "Wordpress",
+      "Sketch"
     ],
     "start":"09/2018",
-    "end": "now"
+    "end": "12/2018"
+  },
+  {
+    "title": "Clif Bar",
+    "id": "clif-bar",
+    "category": "Advertising",
+    "tags":[
+      "Research",
+      "Strategy",
+      "Media"
+    ],
+    "tools":[
+      "ESRI",
+      "SQAD"
+    ],
+    "start":"11/2018",
+    "end":"12/2018"
+  },
+  {
+    "title":"Leweno Freelancer Website",
+    "id": "leweno-freelancer-website",
+    "category": "Design",
+    "tags":[
+      "UX/UI Design"
+    ],
+    "tools":[
+      "Sketch"
+    ],
+    "start":"11/2018",
+    "end": "11/2018"
+  },
+  {
+    "title":"Stay At Home & Let's Cook",
+    "id": "stay-at-home",
+    "category": "Development",
+    "tags":[
+      "UX/UI Design",
+      "Full-stack Developement",
+      "External API"
+    ],
+    "tools":[
+      "Angular",
+      "Node.js",
+      "MangoDB",
+      "Express.js"
+    ],
+    "start":"11/2018",
+    "end": "12/2018"
   },
   {
     "title":"Texas Central Star",
@@ -198,7 +262,7 @@
     "end":"02/2017"
   },
   {
-    "title":"Teo Gelato Branding",
+    "title":"Tèo Gelato Branding",
     "id": "teo-gelato",
     "category": "Advertising",
     "tags":[

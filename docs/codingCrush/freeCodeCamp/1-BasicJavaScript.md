@@ -1,15 +1,18 @@
 ---
-layout: Post
 title: Basic Javascript
 lang: en-US
 postDate: "Sept. 20, 2018"
+sidebar: auto
+prev: false
+next: ./2-ES6
 ---
 # Basic Javascript
-### Array
+
+## Array
 .pop() .push()
 .shift() .unshift()
 
-### Scope
+## Scope
 ``` javascript
 var a;          //global
 function foo(){
@@ -21,10 +24,10 @@ function foo(){
 - Strict mode
 'use strict';
 
-### Comparison
+## Comparison
 ``` javascript
 1 == "1" //true => equality
-1 === "1" //false => strick equality
+1 === "1" //false => strict equality
 
 1 !== 1 //false
 1 !== "1" //true
@@ -33,7 +36,7 @@ typeof 3 // returns "number"
 typeof "3" // returns "string"
 ```
 
-### Objects
+## Objects
 ``` javascript
 var anotherObject = {
   make: "Ford", // 'make'
@@ -53,13 +56,12 @@ var anotherObject = {
     - string (only alphabets / _ / $)
     - can't start with number
     - can't take in variable
-    -
+
   - bracket notation
     `obj["my name"]`
     inside bracket:
     - string
     - space
-    -
     - a variable that resolves to a string
     i.e function parameters
 
@@ -74,14 +76,14 @@ var anotherObject = {
   `.hasOwnProperty(propname)`
   return `true` or `false`
 
-### Loop
+## Loop
 - for()
 - while()
   - don't execute if condition is not met
 - do{...}while(...)
   - execute at least once
 
-### Random
+## Random
 Math.random();
 //return 0 <= x < 1
 
@@ -91,7 +93,7 @@ Math.floor(Math.random() * (a+1))
 Math.floor(Math.random() * (max - min + 1)) + min;
 // return
 
-### Parse String to ...
+## Parse String to ...
 parseInt(str); //takes in a str and return a int
 parseInt(str, radix); //radix = 2, 8, 10, 16
 
@@ -105,7 +107,7 @@ Note:
 - Leading and trailing spaces are allowed.
 - If the first character cannot be converted to a number, parseInt() returns NaN.
 
-### Ternary Operator
+## Ternary Operator
 condition ? statement 1 : statement2
 
 condition1 ? statement 1 : condition2 ? statement2 : statement 3

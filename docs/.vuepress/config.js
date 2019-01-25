@@ -37,7 +37,18 @@ module.exports = {
           { text: 'CodingCrush', link: '/codingCrush/' },
         ],
         sidebar: {
-          '/': [/* ... */]
+          sidebarDepth:2,
+          activeHeaderLinks: false,
+          '/codingCrush/':[
+            '',
+            '/codingCrush/freeCodeCamp/'
+          ],
+          '/codingCrush/freeCodeCamp/': [
+            '',
+            '1-BasicJavaScript',
+            '2-ES6',
+            '3-RegularExpression'
+          ]
         }
       },
       '/zh/': {

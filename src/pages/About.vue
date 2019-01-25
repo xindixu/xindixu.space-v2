@@ -153,10 +153,13 @@
               </div>
               <h2>Learning</h2>
               <p>
-                I am a junior student at the University of Texas at Austin,
-                major in Advertising and Japanese, minor in Business and
-                History, with a certificate in Computer Science. I am also
-                applying for Texas Media now.
+                I am a junior student at the University of Texas at Austin major
+                in Advertising and Japanese. I am part of TexasMedia, the
+                program of the kind in the US. I just finished my certificate
+                for Computer Science and I will keep exploring more. Ever since
+                I started programming in high school, I'd never stopped taking
+                Computer Science classes even though I changed my major three
+                times.
               </p>
             </b-col>
             <b-col>
@@ -186,11 +189,11 @@
               </div>
               <h2>Working</h2>
               <p>
-                I am particularly interested in media because media could be the
-                first step toward leveraging a consumer-centric ad campaign.
-                Some areas I want to explore include programmatic ad buying, web
-                design, anything about digital, people, technology, experience,
-                anything creative and fun!
+                At the beginning of my junior year, I finally made my decision
+                to work in the web/software development field. I am currently
+                interning at Nokia as a front-end web developer. My area of
+                experitise includes Web Developement, Media Planning, Web
+                Design, Computer Aided Graphic Design.
               </p>
             </b-col>
             <b-col>
@@ -204,17 +207,20 @@
                   />
                 </svg>
               </div>
-              <h2>Living</h2>
+              <h2>Enjoying</h2>
               <p>
-                I love my needy cat, Casper. I love editing, producing videos. I
-                love playing sports: Tae Kwon Do, swimming, weight training,
-                anything without "balls". I love music and I am learning guitar
-                by myself now, although I sing off-key.
+                My kitty Dr. Casper Meowspy is a super needy dog-like cat. I'm
+                always energetic. My boyfriend has to "walk" me a lot and
+                sometimes we bring his cat, Arby, as well. Tae Kwon Do,
+                swimming, weight training... I like them all. I like music and I
+                am learning guitar by myself now, although I sing off-key all
+                the time.
               </p>
             </b-col>
           </b-row>
         </swiper-slide>
-        <swiper-slide
+<!--  动态绑定src路径  https://blog.csdn.net/nalaluky/article/details/82965079-->       
+          <swiper-slide
           id="slide-4"
           style="background-image: url('img/bg/bg14.jpg');"
         >

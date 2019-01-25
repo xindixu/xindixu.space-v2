@@ -1,5 +1,5 @@
 ---
-layout: Home
+home: true
 ---
 # Blog Documentation
 
@@ -10,4 +10,4 @@ layout: Home
 
 [Coding Crush](/codingCrush/)
 
-[Basic JavaScript](/codingCrush/basicJavaScript.md)
+[Basic JavaScript](/codingCrush/1-BasicJavaScript.md)
