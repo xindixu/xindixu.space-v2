@@ -5,6 +5,7 @@ import router from './router';
 import BootstrapVue from 'bootstrap-vue';
 import NowUiKit from './plugins/now-ui-kit';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
+import VueScrollReveal from 'vue-scroll-reveal';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -15,6 +16,8 @@ Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.use(NowUiKit);
 Vue.use(VueAwesomeSwiper);
+Vue.use(VueScrollReveal);
+
 
 new Vue({
   router,

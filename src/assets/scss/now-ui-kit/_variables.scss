@@ -1,14 +1,15 @@
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Upright');
+
 @font-face {
-    font-family: 'Chelsea';
-    src: url('/assets/fonts/Chelsea/Chelsea') format('ttf');
+    font-family: 'ChristmasLigtness';
+    src: url('/fonts/ChristmasLigtness.ttf') format('ttf');
 }
 
 $primary-text:          'Cormorant Upright', serif !default;
-$display-text:          'Dancing Script', cursive !default;
+$title-text:            'Dancing Script', cursive !default;
+$display-text:          'ChristmasLigtness', cursive !default;
 
 $none:                       0   !default;
 $border-thin:                1px !default;
