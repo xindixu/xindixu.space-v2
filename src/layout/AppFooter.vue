@@ -1,16 +1,16 @@
 <template>
   <footer class="footer">
-    <quick-menu
+    <QuickMenu
       :menu-count="count"
       :icon-class="icons"
       :menu-url-list="list"
       :position="position"
       :backgroundColor="backgroundColor"
-    ></quick-menu>
+    ></QuickMenu>
   </footer>
 </template>
 <script>
-import { quickMenu } from '@/components';
+import { QuickMenu } from '@/components';
 export default {
   props: {
     type: String
@@ -48,7 +48,7 @@ export default {
     };
   },
   components: {
-    quickMenu
+    QuickMenu
   }
 };
 </script>

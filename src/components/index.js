@@ -19,12 +19,12 @@ import Modal from './Modal.vue';
 import Parallax from './Parallax.vue';
 import Slider from './Slider.vue';
 import Pagination from './Pagination.vue';
-import quickMenu from './quickMenu.vue';
-import sliderComponent from './Slider/slider.vue';
-import sliderItemComponent from './Slider/slider_item.vue';
-const slider = sliderComponent;
-const slideritem = sliderItemComponent;
-export default slider;
+import QuickMenu from './QuickMenu.vue';
+import slider from './Slider/slider.vue';
+import slideritem from './Slider/slider_item.vue';
+import SquareLink from './SquareLink.vue';
+import SquareTexts from './SquareTexts.vue';
+
 export { slider, slideritem };
 
 export {
@@ -49,5 +49,7 @@ export {
   Parallax,
   Slider,
   Button,
-  quickMenu
+  QuickMenu,
+  SquareLink,
+  SquareTexts
 };
