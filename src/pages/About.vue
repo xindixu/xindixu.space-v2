@@ -73,15 +73,56 @@
 
         <swiper-slide style="background-image: url('img/bg/bg31.jpg');">
           <b-row>
-            <b-col class="half"></b-col>
-            <b-col class="half tint"></b-col>
+            <b-col class="half">
+              <div class="white left top">
+                <h1>Learning...</h1>
+                <p>
+                  I major in advertising and I am part of TexasMedia. I just
+                  finished my certificate for Computer Science and I will keep
+                  explore more.
+                </p>
+                <p>
+                  I want to be a web developer after graduation so I am
+                  dedicated to learn lots of modern web technologies online.
+                </p>
+              </div>
+            </b-col>
+            <b-col class="half chinese">
+              <div class="white right bottom">
+                <h1 class="chineseTitle">学习中...</h1>
+                <p>
+                  我主修广告，是TexasMedia的一员。我刚刚拿到了我的计算机科学的证书，我也会继续深入学习。
+                </p>
+                <p>
+                  我毕业后想做个网页开发工程师，所以全身心地学习各种现代网页开发技术。
+                </p>
+              </div>
+            </b-col>
           </b-row>
         </swiper-slide>
 
         <swiper-slide style="background-image: url('img/bg/bg33.jpg');">
           <b-row>
-            <b-col class="half tint"></b-col>
-            <b-col class="half"></b-col>
+            <b-col class="half">
+              <div class="white left bottom">
+                <h1>Working...</h1>
+                <p>
+                  I am currently interning at Nokia as a front-end web
+                  developer. My work includes designing, implementing, and
+                  maintaining websites with Sketch, WordPress, and Python
+                  Django.
+                </p>
+              </div>
+            </b-col>
+            <b-col class="half chinese">
+              <div class="white right top">
+                <h1 class="chineseTitle">工作中...</h1>
+                <p>
+                  我现在在Nokia实习，做前端开发。我的工作包括设计，开发，和维护网站，主要用Sketch，WordPress，和Python
+                  Django.
+                </p>
+              </div>
+            </b-col>
           </b-row>
         </swiper-slide>
         <div
@@ -237,6 +278,21 @@ svg {
 
 .half {
   height: 90vh;
+  .white {
+    color: white;
+  }
+}
+.left {
+  text-align: right;
+}
+.top {
+  margin-top: 30vh;
+}
+.bottom {
+  margin-top: 60vh;
+}
+.right {
+  text-align: left;
 }
 
 .tint {

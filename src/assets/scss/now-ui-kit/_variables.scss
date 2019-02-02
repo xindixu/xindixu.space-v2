@@ -6,11 +6,16 @@
     font-family: 'ChristmasLigtness';
     src: url('/fonts/ChristmasLigtness.ttf') format('ttf');
 }
+@font-face {
+    font-family: 'SentyTEA';
+    src: url('/fonts/SentyTEA.ttf') format('ttf');
+}
 
 $primary-text:          'Cormorant Upright', serif !default;
 $title-text:            'Dancing Script', cursive !default;
 $display-text:          'ChristmasLigtness', cursive !default;
 $chinese-text:          'ZCOOL XiaoWei', serif !default;
+$chinese-title:         'SentyTEA', serif !default;
 
 $none:                       0   !default;
 $border-thin:                1px !default;
