@@ -63,7 +63,7 @@ export default new Router({
       name: 'home',
       components: { default: Home, header: AppNavbar, footer: AppFooter },
       props: {
-        header: { colorOnScroll: 0 }
+        header: { colorOnScroll: 4000 }
       }
     },
     {

@@ -24,6 +24,7 @@ import slider from './Slider/slider.vue';
 import slideritem from './Slider/slider_item.vue';
 import SquareLink from './SquareLink.vue';
 import SquareTexts from './SquareTexts.vue';
+import IncreaseNum from './IncreaseNum.vue';
 
 export { slider, slideritem };
 
@@ -51,5 +52,6 @@ export {
   Button,
   QuickMenu,
   SquareLink,
-  SquareTexts
+  SquareTexts,
+  IncreaseNum
 };

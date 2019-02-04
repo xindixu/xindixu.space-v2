@@ -2,136 +2,101 @@
   <div>
     <div class="swiper-container">
       <swiper id="v" :options="swiperOptionV">
+        <swiper-slide id="slide1">
+          <div
+            id="photo"
+            style="background-image: url('img/home/photo.jpg');"
+          ></div>
+
+          <b-col md="5" offset-md="7">
+            <div class="zhIntro vertical">
+              <h1 class="chineseTitle">徐欣笛</h1>
+              <div class="chinese indentV">
+                <h4>网页开发工程师</h4>
+                <h4>疯狂广告人</h4>
+                <h4>终身学习家</h4>
+              </div>
+            </div>
+
+            <div class="enIntro">
+              <h1>Xindi Xu</h1>
+              <div class="english indentH">
+                <h4>Dedicated Web Developer</h4>
+                <h4>Passionate Advertiser</h4>
+                <h4>Lifelong Learner</h4>
+              </div>
+            </div>
+          </b-col>
+        </swiper-slide>
         <swiper-slide
-          id="slide1"
-          style="background-image: url('img/bg/bg18.jpg');"
+          id="slide2"
+          class="slideHelp"
+          style="background-image: url('img/bg/bg12.jpg');"
         >
-          <div id="header">
-            <SpreadText :text="greeting"></SpreadText>
-            <!-- <h1 class="display display-3">{{ greeting }}</h1> -->
-
-            <h1 class="display-3">
-              I'm Xindi,
-              <vue-typer
-                :text="role"
-                :repeat="Infinity"
-                :shuffle="false"
-                initial-action="typing"
-                :pre-type-delay="100"
-                :type-delay="100"
-                :pre-erase-delay="6000"
-                :erase-delay="250"
-                erase-style="clear"
-                :erase-on-complete="false"
-                caret-animation="blink"
-                class="display-3"
-              ></vue-typer>
-            </h1>
-
-            <transition appear name="fade" mode="out-in">
-              <h2 :key="headline">{{ headline }}</h2>
-            </transition>
-          </div>
-        </swiper-slide>
-        <swiper-slide style="background-image: url('img/bg/bg12.jpg');">
-          <h2 class="mt-5">I can help you with...</h2>
-
-          <div class="row mt-5" id="help">
-            <div class="col-md">
-              <div class="text-center"><img src="img/home/web.svg" /></div>
-              <h3>Web Development</h3>
-              <p>
+          <b-row>
+            <b-col lg="6" md="8">
+              <h1>Web Development</h1>
+              <div><img class="introPic" src="img/home/web.svg" alt="" /></div>
+              <h4 class="english">
                 Establishing web presence contributes a lot to the success of
-                your business. Let's build a <b>stunning website together</b>!
-                Whether you want to use <b>CMS</b>, or<b>HTML, CSS, and JS</b>,
-                or <b>JS frameworks</b> such as Vue.js and Angular, I am here to
-                help!
-              </p>
-            </div>
-            <div class="col-md">
-              <div class="text-center"><img src="img/home/analysis.svg" /></div>
-              <h3>Research &amp; Planning</h3>
-              <p>
-                <b>Research</b> is the cornerstone of any effective marketing
-                strategy. However, data gathered from research are just raw
-                facts without further meaning. Let me help you translate them
-                into insights that <b>drive better decisions</b>.
-              </p>
-            </div>
-            <div class="col-md">
-              <div class="text-center"><img src="img/home/visual.svg" /></div>
-              <h3>Visual Design</h3>
-              <p>
-                Got an amazing idea, but don't know how to execute it? No
-                worries! From <b>graphic designs</b> to <b>video production</b>,
-                from <b>computer graphics</b> to <b>online web games</b>, I will
-                help you <b>get your idea across</b> with compelling contents.
-              </p>
-            </div>
-          </div>
-          <div class="row mt-5" id="stats">
-            <div class="col-md">
-              <div class="text-center"><img src="img/home/code.svg" /></div>
+                your business.
+              </h4>
+              <h4 class="english">
+                Why not build a stunning website together?
+              </h4>
+            </b-col>
 
-              <p>Numbers of programming projects done:</p>
+            <b-col offset-lg="4" offset-md="2" lg="2" md="2">
+              <div class="zhIntro vertical">
+                <h1 class="chineseTitle">网页开发</h1>
+                <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
+                <h4 class="chinese indentV">不如让我来帮你？</h4>
+              </div>
+            </b-col>
+          </b-row>
 
-              <div class="text-center navi cl-effect-1">
-                <a href="computer-science.html">take a look</a>
+          <b-row>
+            <b-col class="project" offset-lg="6" offset-md="2" lg="4" md="6">
+              <div>
+                <img class="projectPic" src="img/home/code.svg" alt="" />
               </div>
-            </div>
-            <div class="col-md">
-              <div class="text-center"><img src="img/home/project.svg" /></div>
-              <p>
-                Numbers of ad projects done: <span class="h3" id="ad"></span>
-              </p>
-              <div class="text-center navi cl-effect-1">
-                <a href="advertising.html">take a look</a>
-              </div>
-            </div>
-            <div class="col-md">
-              <div class="text-center"><img src="img/home/graphic.svg" /></div>
-              <p>
-                Numbers of visuals created: <span class="h3" id="visual"></span>
-              </p>
-              <div class="text-center navi cl-effect-1">
-                <a href="digital-media-production.html">take a look</a>
-              </div>
-            </div>
-          </div>
+              <b-row class="substitle">
+                <b-col cols="1">
+                  <h4>These</h4>
+                  <h4 class="chinese">这</h4>
+                </b-col>
+                <b-col cols="2"
+                  ><IncreaseNum start="0" end="10"></IncreaseNum
+                ></b-col>
+                <b-col cols="9">
+                  <h4>projects can prove my ability</h4>
+                  <h4 class="chinese">个项目可以证明我</h4>
+                </b-col>
+                <div class="link">
+                  <SquareLink text="take a look" link="/work"></SquareLink>
+                </div>
+              </b-row>
+            </b-col>
+          </b-row>
         </swiper-slide>
+        <swiper-slide style="background-image: url(img/bg/bg3.jpg)"></swiper-slide>
         <div
           class="swiper-pagination swiper-pagination-v"
           slot="pagination"
         ></div>
       </swiper>
-      <!-- update https://jsfiddle.net/awolf2904/m9hxfmcz/ -->
     </div>
   </div>
 </template>
-
 <script>
-import { VueTyper } from 'vue-typer';
-import { TimelineLite } from 'gsap';
-import SpreadText from '../components/SpreadText.vue';
+import { SquareLink, IncreaseNum } from '../components';
 
 export default {
+  name: '',
   data() {
     return {
-      // for setInterval & clearInterval
-      running: String,
-      index: 0,
-      role: ['a Devsigner,', 'a Learner,', 'a Cat Mom,'],
-      detail: [
-        'designing the user experience of websites & apps.',
-        'building web apps with latest technologies.',
-        'studying Advertising & Computer Science at UT Austin.',
-        'learning web development online.',
-        'having fun with my kitty, Dr. Casper Meowspy.',
-        'being frustrated because he is getting fat.'
-      ],
       swiperOptionV: {
         direction: 'vertical',
-        effect: 'fade',
         speed: 500,
         pagination: {
           el: '.swiper-pagination-v',
@@ -146,76 +111,15 @@ export default {
           enabled: true,
           onlyInViewport: false
         }
-      },
-      cs: 0
+      }
     };
   },
-  methods: {
-    // visibilityChanged() {
-    //   console.log("change")
-    //   TweenLite.to(this.cs, 0.5, { tweenedNumber: this.number });
-    // },
-    // NOTE: come back later
-    numberIncrease(el, done) {
-      TweenLite.to({ d: 0 }, 5, {
-        d: 9000,
-        roundProps: 'd',
-        ease: Linear.easeNone,
-        onUpdate() {
-          this.cs = this.target.d;
-        }
-      });
-      done();
-    }
-  },
-  computed: {
-    greeting() {
-      let time = new Date().getHours();
-      let greeting = 'Hey There!';
-      switch (true) {
-        case time < 5:
-          greeting = 'Good Night ~';
-          break;
-        case time < 12:
-          greeting = 'Good Morning ~';
-          break;
-        case time < 17:
-          greeting = 'Good Afternoon ~';
-          break;
-        case time < 20:
-          greeting = 'Good Evening ~';
-          break;
-        case time < 24:
-          greeting = 'Good Night ~';
-          break;
-      }
-      return greeting;
-    },
-    headline() {
-      return this.detail[this.index];
-    },
-    animatedNumber: function() {
-      return this.tweenedNumber.toFixed(0);
-    }
-  },
-  created() {
-    this.running = setInterval(() => {
-      this.index < this.detail.length - 1 ? this.index++ : (this.index = 0);
-    }, 3500);
-  },
-  beforeRouteLeave(to, from, next) {
-    this.index = 0;
-    clearInterval(this.running);
-    next();
-  },
   components: {
-    VueTyper,
-    TimelineLite,
-    SpreadText
+    SquareLink,
+    IncreaseNum
   }
 };
 </script>
-
 <style lang="scss">
 @import '../assets/scss/now-ui-kit/variables.scss';
 
@@ -226,6 +130,7 @@ export default {
   .swiper-slide {
     background-position: center center;
     background-size: cover;
+    background-color: white;
     padding: 70px 5%;
   }
 
@@ -237,25 +142,82 @@ export default {
     background: $primary-color;
   }
 }
-#header {
-  position: absolute;
-  top: 15%;
-  left: 10%;
-}
-#help img {
-  margin-bottom: 50px;
-  width: 80%;
-}
-#stats img {
-  width: 50px;
+
+#slide1 {
+  #photo {
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100vh;
+  }
+
+  .zhIntro {
+    height: 500px;
+    position: absolute;
+    top: auto;
+    right: auto;
+
+    .chineseTitle {
+      letter-spacing: 15px;
+    }
+
+    .chinese {
+      letter-spacing: 15px;
+    }
+  }
+
+  .enIntro {
+    position: absolute;
+    left: 10px;
+    top: 60vh;
+    letter-spacing: 1px;
+  }
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+.slideHelp {
+  .introPic {
+    width: 500px;
+  }
+
+  .zhIntro {
+    height: 580px;
+    position: absolute;
+    top: auto;
+    right: auto;
+
+    .chineseTitle {
+      letter-spacing: 15px;
+    }
+
+    .chinese {
+      letter-spacing: 15px;
+    }
+  }
+  .placeholder {
+    height: 200px;
+  }
+
+  .project {
+    margin-top: 10vh;
+    .projectPic {
+      width: 80px;
+      opacity: 0.5;
+      margin-left: -50px;
+    }
+
+    .substitle {
+      margin-top: -50px;
+      h4 {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .link {
+    margin-left: 280px;
+  }
 }
 </style>

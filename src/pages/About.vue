@@ -118,7 +118,7 @@
               <div class="white right top">
                 <h1 class="chineseTitle">工作中...</h1>
                 <p>
-                  我现在在Nokia实习，做前端开发。我的工作包括设计，开发，和维护网站，主要用Sketch，WordPress，和Python
+                  我现在在Nokia实习，做前端开发。我的工作包括设计，开发，维护网站，主要用Sketch，WordPress，和Python
                   Django.
                 </p>
               </div>
@@ -196,20 +196,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.swiper-container {
-  height: 100vh;
-  width: 100vw;
-
-  .swiper-slide {
-    background-position: center center;
-    background-size: cover;
-    padding: 70px 5%;
-  }
-
-  .swiper-pagination {
-    z-index: 10;
-  }
-}
 
 svg {
   width: 100%;

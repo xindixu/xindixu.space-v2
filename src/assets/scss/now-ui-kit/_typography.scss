@@ -172,11 +172,25 @@ p {
   }
 }
 
-.chinese {
+.chinese,
+.chinese h1,
+.chinese h2,
+.chinese h3,
+.chinese h4,
+.chinese h5,
+.chinese h6,
+.chinese p {
   font-family: $chinese-text;
 }
 
-.chineseTitle {
+.chineseTitle,
+.chineseTitle h1,
+.chineseTitle h2,
+.chineseTitle h3,
+.chineseTitle h4,
+.chineseTitle h5,
+.chineseTitle h6,
+.chineseTitle p {
   font-family: $chinese-title;
 }
 
@@ -185,4 +199,34 @@ p {
   text-orientation: upright;
   position: absolute;
   height: 100%;
+
+}
+
+.indentV {
+  margin-top: $margin-base-vertical * 8;
+}
+.indentH {
+  margin-left: $margin-base-vertical * 4;
+}
+
+.english,
+.english h1,
+.english h2,
+.english h3,
+.english h4,
+.english h5,
+.english h6,
+.english p {
+  font-family: $primary-text;
+}
+
+.englishTitle,
+.englishTitle h1,
+.englishTitle h2,
+.englishTitle h3,
+.englishTitle h4,
+.englishTitle h5,
+.englishTitle h6,
+.englishTitle p {
+  font-family: $title-text;
 }

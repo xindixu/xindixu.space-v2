@@ -6,7 +6,16 @@
 <script>
 export default {
   name: 'SquareLink',
-  props: ['text'],
+  props: {
+    text: {
+      type: String,
+      required: true
+    },
+    link: {
+      type: String,
+      required: false
+    }
+  },
   data: () => ({})
 };
 </script>

@@ -707,6 +707,11 @@
     "@shellscape/koa-send" "^4.1.0"
     debug "^2.6.8"
 
+"@tweenjs/tween.js@^17.3.0":
+  version "17.3.0"
+  resolved "https://registry.yarnpkg.com/@tweenjs/tween.js/-/tween.js-17.3.0.tgz#1cbea14b4b5baa292274c96766fd1b2a56b7ca9f"
+  integrity sha512-SPkhNj9/wGfbdX2C3B3KhttLQ4iesd+Ny8Dv1RnqF1MFUIqsZz/OJVLzJEHSEl7zheNx70dvqrwfbCFDQ0sWBw==
+
 "@vue/babel-preset-app@^3.1.1", "@vue/babel-preset-app@^3.2.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.2.0.tgz#a443acdbd34f66d7645db271d9ac58fbe4fe870d"
@@ -11867,6 +11872,11 @@ vue-loader@^15.2.4, vue-loader@^15.4.2:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-observe-visibility@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/vue-observe-visibility/-/vue-observe-visibility-0.4.3.tgz#b2694a83c94b274f566e03a497df51540e2daedc"
+  integrity sha512-YyyO3a5OUkgpmC0NEf+xWJR0jVdFWzVbKRDzUumOVMhfr3+jxXEycYNHCM3rEO5lcj3ZNJpDomZEYEx0Wqqh9A==
 
 vue-router@^3.0.1:
   version "3.0.2"
