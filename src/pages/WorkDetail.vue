@@ -8,11 +8,11 @@
 <template>
   <div>
     <div class="page-header page-header-small">
-      <parallax
+      <Parallax
         class="page-header-image"
         style="background-image: url('img/bg/bg15.jpg')"
       >
-      </parallax>
+      </Parallax>
       <div class="content-center">
         <div class="container">
           <h1 class="title">{{ title }}</h1>
@@ -24,7 +24,7 @@
   </div>
 </template>
 <script>
-import { Parallax, Card } from '@/components';
+import { Parallax } from '@/components';
 import workList from '../assets/work/data.json';
 import showdown from 'showdown';
 import { nokiaDemoCenter, stayAtHome } from '../assets/markdown';
@@ -39,7 +39,7 @@ export default {
   }),
   props: ['id'],
   watch: {
-    $route(to, from) {
+    $route(to) {
       this.id = to.params.id;
     }
   },
@@ -59,9 +59,7 @@ export default {
     }
   },
   components: {
-    Parallax,
-    Card,
-    showdown
+    Parallax
   },
   mounted() {
     this.getWorkObj();

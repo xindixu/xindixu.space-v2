@@ -35,7 +35,7 @@
 </template>
 <script>
 export default {
-  name: 'quick-menu',
+  name: 'QuickMenu',
   props: {
     menuCount: {
       type: Number,
@@ -150,17 +150,17 @@ export default {
         left: menuPosition[n][1] + 'px'
       };
     },
-    toggleMenu(e) {
+    toggleMenu() {
       let menuEl = this.$refs.quickMenu;
       let menuIconEl = this.$refs.icon;
       if (!~menuEl.className.indexOf(' active')) {
         menuEl.className += ' active';
-        menuIconEl.forEach(function(element, index) {
+        menuIconEl.forEach(function(element) {
           element.className += ' menu-animate';
         });
       } else {
         menuEl.className = menuEl.className.replace(' active', '');
-        menuIconEl.forEach(function(element, index) {
+        menuIconEl.forEach(function(element) {
           element.className = element.className.replace(' menu-animate', '');
         });
       }

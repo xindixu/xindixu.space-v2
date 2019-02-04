@@ -16,14 +16,13 @@
         type="primary"
         square
         centered
-        tabContentClasses="tab-subcategories text-center"
+        tab-content-classes="tab-subcategories text-center"
       >
         <tab-pane v-for="category in categories">
           <template slot="label">
             {{ category }}
           </template>
           <b-row>
-
             <div v-for="(data, key) in works">
               <b-card-group v-if="category === data.category" deck class="md">
                 <router-link :to="'/work/' + data.id">

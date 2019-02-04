@@ -8,9 +8,9 @@
             <div class="svg-wrapper"><Xin></Xin><Xin0></Xin0></div>
             <div class="svg-wrapper"><Di></Di><Di0></Di0></div>
             <div style="margin-top:130px">
-              <span @click="pronounce"
-                ><SquareLink text="pronounce"></SquareLink
-              ></span>
+              <span @click="pronounce">
+                <SquareLink text="pronounce"></SquareLink>
+              </span>
             </div>
             <audio src="audio/name.mp3" id="audio"></audio>
           </b-row>
@@ -109,8 +109,8 @@
                 <p>
                   I am currently interning at Nokia as a front-end web
                   developer. My work includes designing, implementing, and
-                  maintaining websites with Sketch, WordPress, and Python
-                  Django.
+                  maintaining websites with Sketch, WordPress, HTML, JS, and
+                  Python Django.
                 </p>
               </div>
             </b-col>
@@ -118,7 +118,7 @@
               <div class="white right top">
                 <h1 class="chineseTitle">工作中...</h1>
                 <p>
-                  我现在在Nokia实习，做前端开发。我的工作包括设计，开发，维护网站，主要用Sketch，WordPress，和Python
+                  我现在在Nokia实习，做前端开发。我的工作包括设计，开发，维护网站，主要用Sketch，WordPress，HTML，JS，和Python
                   Django.
                 </p>
               </div>
@@ -196,7 +196,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 svg {
   width: 100%;
   height: 100%;

@@ -5,11 +5,7 @@ module.exports = {
     node: true
   },
 
-  extends: [
-    'plugin:vue/essential',
-    'plugin:prettier/recommended',
-    'eslint:recommended'
-  ],
+  extends: ['plugin:vue/essential', 'plugin:prettier/recommended'],
 
   rules: {
     indent: 0,
@@ -19,8 +15,12 @@ module.exports = {
     'no-console': 'off',
     'no-debugger': 'off',
     'vue/attribute-hyphenation': 'error',
-    'vue/component-name-in-template-casing': 'error',
-    'vue/html-closing-bracket-newline': 'error',
+    'vue/component-name-in-template-casing': [
+      'PascalCase',
+      {
+        ignores: ['/^b-/','swiper-slide']
+      }
+    ],
     'vue/html-end-tags': 'error'
   },
 
@@ -31,14 +31,12 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     'plugin:prettier/recommended',
-    'eslint:recommended',
     '@vue/prettier'
   ],
 
-  'extends': [
+  extends: [
     'plugin:vue/essential',
     'plugin:prettier/recommended',
-    'eslint:recommended',
     '@vue/prettier'
   ]
 };

@@ -8,13 +8,11 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import VueScrollReveal from 'vue-scroll-reveal';
 
 import TWEEN from '@tweenjs/tween.js';
-import { ObserveVisibility } from 'vue-observe-visibility'
+import { ObserveVisibility } from 'vue-observe-visibility';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'swiper/dist/css/swiper.css';
-
-
 
 Vue.config.productionTip = false;
 
@@ -24,7 +22,7 @@ Vue.use(VueAwesomeSwiper);
 Vue.use(VueScrollReveal);
 Vue.use(TWEEN);
 
-Vue.directive('observe-visibility', ObserveVisibility)
+Vue.directive('observe-visibility', ObserveVisibility);
 
 new Vue({
   router,
