@@ -31,8 +31,7 @@
         <swiper-slide
           id="slide2"
           class="slideHelp"
-          style="background-image: url('img/bg/bg12.jpg');"
-        >
+          style="background-image: url('img/bg/bg12.jpg');">
           <b-row>
             <b-col lg="6" md="8">
               <h1>Web Development</h1>
@@ -73,13 +72,112 @@
                   <h4 class="chinese">个项目可以证明我</h4>
                 </b-col>
                 <div class="link">
-                  <SquareLink text="take a look" link="/work"></SquareLink>
+                  <SquareLink text="take a look" link="work"></SquareLink>
                 </div>
               </b-row>
             </b-col>
           </b-row>
         </swiper-slide>
-        <swiper-slide style="background-image: url(img/bg/bg3.jpg)"></swiper-slide>
+        <swiper-slide
+          id="slide2"
+          class="slideHelp"
+          style="background-image: url('img/bg/bg12.jpg');">
+          <b-row>
+            <b-col lg="6" md="8">
+              <h1>Web Development</h1>
+              <div><img class="introPic" src="img/home/web.svg" alt="" /></div>
+              <h4 class="english">
+                Establishing web presence contributes a lot to the success of
+                your business.
+              </h4>
+              <h4 class="english">
+                Why not build a stunning website together?
+              </h4>
+            </b-col>
+
+            <b-col offset-lg="4" offset-md="2" lg="2" md="2">
+              <div class="zhIntro vertical">
+                <h1 class="chineseTitle">网页开发</h1>
+                <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
+                <h4 class="chinese indentV">不如让我来帮你？</h4>
+              </div>
+            </b-col>
+          </b-row>
+
+          <b-row>
+            <b-col class="project" offset-lg="6" offset-md="2" lg="4" md="6">
+              <div>
+                <img class="projectPic" src="img/home/code.svg" alt="" />
+              </div>
+              <b-row class="substitle">
+                <b-col cols="1">
+                  <h4>These</h4>
+                  <h4 class="chinese">这</h4>
+                </b-col>
+                <b-col cols="2"
+                  ><IncreaseNum start="0" end="10"></IncreaseNum
+                ></b-col>
+                <b-col cols="9">
+                  <h4>projects can prove my ability</h4>
+                  <h4 class="chinese">个项目可以证明我</h4>
+                </b-col>
+                <div class="link">
+                  <SquareLink text="take a look" link="work"></SquareLink>
+                </div>
+              </b-row>
+            </b-col>
+          </b-row>
+        </swiper-slide>
+        <swiper-slide
+          id="slide2"
+          class="slideHelp"
+          style="background-image: url('img/bg/bg12.jpg');">
+          <b-row>
+            <b-col lg="6" md="8">
+              <h1>Web Development</h1>
+              <div><img class="introPic" src="img/home/web.svg" alt="" /></div>
+              <h4 class="english">
+                Establishing web presence contributes a lot to the success of
+                your business.
+              </h4>
+              <h4 class="english">
+                Why not build a stunning website together?
+              </h4>
+            </b-col>
+
+            <b-col offset-lg="4" offset-md="2" lg="2" md="2">
+              <div class="zhIntro vertical">
+                <h1 class="chineseTitle">网页开发</h1>
+                <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
+                <h4 class="chinese indentV">不如让我来帮你？</h4>
+              </div>
+            </b-col>
+          </b-row>
+
+          <b-row>
+            <b-col class="project" offset-lg="6" offset-md="2" lg="4" md="6">
+              <div>
+                <img class="projectPic" src="img/home/code.svg" alt="" />
+              </div>
+              <b-row class="substitle">
+                <b-col cols="1">
+                  <h4>These</h4>
+                  <h4 class="chinese">这</h4>
+                </b-col>
+                <b-col cols="2"
+                  ><IncreaseNum start="0" end="10"></IncreaseNum
+                ></b-col>
+                <b-col cols="9">
+                  <h4>projects can prove my ability</h4>
+                  <h4 class="chinese">个项目可以证明我</h4>
+                </b-col>
+                <div class="link">
+                  <SquareLink text="take a look" link="work"></SquareLink>
+                </div>
+              </b-row>
+            </b-col>
+          </b-row>
+        </swiper-slide>
         <div
           class="swiper-pagination swiper-pagination-v"
           slot="pagination"

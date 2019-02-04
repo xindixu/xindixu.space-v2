@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a>{{ text }}</a>
+    <router-link :to="link" tag="a">{{ text }}</router-link>
   </div>
 </template>
 <script>
@@ -26,11 +26,14 @@ a {
   outline: none;
   text-decoration: none;
   display: inline-block;
+  color: black;
   cursor: pointer;
 
   &:hover,
   &:focus {
     outline: none;
+    text-decoration: none;
+    color: black;
   }
 
   &::before,
