@@ -8,8 +8,6 @@
 
 ### Third Party Plugins
 - Now UI Kit
-- vue-fullpage.js
-
 
 ### File Structure
 
