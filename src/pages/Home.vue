@@ -3,10 +3,9 @@
     <div class="swiper-container">
       <swiper id="v" :options="swiperOptionV">
         <swiper-slide id="slide1">
-          <div
-            id="photo"
-            style="background-image: url('img/home/photo.jpg');"
-          ></div>
+          <div id="photo" style="background-image: url('img/home/photo.jpg');">
+            <CurveText id="greeting">Good morning</CurveText>
+          </div>
 
           <b-col md="5" offset-md="7">
             <div class="zhIntro vertical">
@@ -73,7 +72,7 @@
                   <h4 class="chinese">个项目可以证明我</h4>
                 </b-col>
                 <div class="link">
-                  <SquareLink text="take a look" link="work"></SquareLink>
+                  <SquareLink link="work">take a look</SquareLink>
                 </div>
               </b-row>
             </b-col>
@@ -126,7 +125,7 @@
                   <h4 class="chinese">个项目可以证明我</h4>
                 </b-col>
                 <div class="link">
-                  <SquareLink text="take a look" link="work"></SquareLink>
+                  <SquareLink link="work">take a look</SquareLink>
                 </div>
               </b-row>
             </b-col>
@@ -178,7 +177,7 @@
                   <h4 class="chinese">个项目可以证明我</h4>
                 </b-col>
                 <div class="link">
-                  <SquareLink text="take a look" link="work"></SquareLink>
+                  <SquareLink link="work">take a look</SquareLink>
                 </div>
               </b-row>
             </b-col>
@@ -193,7 +192,7 @@
   </div>
 </template>
 <script>
-import { SquareLink, IncreaseNum } from '../components';
+import { SquareLink, IncreaseNum, CurveText } from '../components';
 
 export default {
   name: '',
@@ -220,7 +219,8 @@ export default {
   },
   components: {
     SquareLink,
-    IncreaseNum
+    IncreaseNum,
+    CurveText
   }
 };
 </script>
@@ -256,6 +256,12 @@ export default {
     left: 0%;
     height: 100vh;
     width: 100vh;
+
+    #greeting {
+      position: absolute;
+      top: 0px;
+      left: 30%;
+    }
   }
 
   .zhIntro {

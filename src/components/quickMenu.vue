@@ -2,6 +2,7 @@
   <div class="quick-menu" ref="quickMenu" :style="quickMenuStyle">
     <div
       v-for="(n, key) in menuCount"
+      :key="key"
       class="sub-menu"
       :style="getSubMenu(n - 1)"
     >

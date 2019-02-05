@@ -19,14 +19,13 @@ import Modal from './Modal.vue';
 import Parallax from './Parallax.vue';
 import Slider from './Slider.vue';
 import Pagination from './Pagination.vue';
+
+// own components
 import QuickMenu from './QuickMenu.vue';
-import slider from './Slider/slider.vue';
-import slideritem from './Slider/slider_item.vue';
 import SquareLink from './SquareLink.vue';
 import SquareTexts from './SquareTexts.vue';
 import IncreaseNum from './IncreaseNum.vue';
-
-export { slider, slideritem };
+import CurveText from './CurveText.vue';
 
 export {
   Alert,
@@ -53,5 +52,6 @@ export {
   QuickMenu,
   SquareLink,
   SquareTexts,
-  IncreaseNum
+  IncreaseNum,
+  CurveText
 };

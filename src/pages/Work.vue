@@ -18,12 +18,12 @@
         centered
         tab-content-classes="tab-subcategories text-center"
       >
-        <tab-pane v-for="category in categories">
+        <tab-pane v-for="category in categories" :key="category.index">
           <template slot="label">
             {{ category }}
           </template>
           <b-row>
-            <div v-for="(data, key) in works">
+            <div v-for="data in works" :key="data.index">
               <b-card-group v-if="category === data.category" deck class="md">
                 <router-link :to="'/work/' + data.id">
                   <b-card

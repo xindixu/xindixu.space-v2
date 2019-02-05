@@ -9,7 +9,7 @@
             <div class="svg-wrapper"><Di></Di><Di0></Di0></div>
             <div style="margin-top:130px">
               <span @click="pronounce">
-                <SquareLink text="pronounce"></SquareLink>
+                <SquareLink>pronounce</SquareLink>
               </span>
             </div>
             <audio src="audio/name.mp3" id="audio"></audio>
@@ -136,7 +136,7 @@
 
 <script>
 import { SquareLink, SquareTexts } from '../components';
-import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin, Route } from '../assets/svg';
+import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 
 export default {
   data() {
@@ -167,17 +167,8 @@ export default {
       let playPromise = audio.play();
 
       if (playPromise !== undefined) {
-        playPromise
-          .then(_ => {
-            // Automatic playback started!
-            // Show playing UI.
-          })
-          .catch(error => {
-            // Auto-play was prevented
-            // Show paused UI.
-          });
+        playPromise;
       }
-      console.log('play');
     }
   },
   components: {
@@ -188,7 +179,6 @@ export default {
     Di0,
     Di,
     Pin,
-    Route,
     SquareLink,
     SquareTexts
   }

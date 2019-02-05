@@ -1,19 +1,15 @@
 <template>
   <div>
-    <router-link :to="link" tag="a">{{ text }}</router-link>
+    <router-link :to="link" tag="a"><slot /></router-link>
   </div>
 </template>
 <script>
 export default {
   name: 'SquareLink',
   props: {
-    text: {
-      type: String,
-      required: true
-    },
     link: {
       type: String,
-      required: false
+      default: ''
     }
   },
   data: () => ({})
