@@ -24,11 +24,11 @@ export default {
   props: {
     width: {
       type: Number,
-      default: 400
+      default: 500
     },
     height: {
       type: Number,
-      default: 200
+      default: 250
     },
     r: {
       type: Number,

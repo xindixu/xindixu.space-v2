@@ -4,7 +4,7 @@
       <swiper id="v" :options="swiperOptionV">
         <swiper-slide id="slide1">
           <div id="photo" style="background-image: url('img/home/photo.jpg');">
-            <CurveText id="greeting">Good morning</CurveText>
+            <CurveText id="greeting">{{ greeting }}</CurveText>
           </div>
 
           <b-col md="5" offset-md="7">
@@ -217,6 +217,30 @@ export default {
       }
     };
   },
+  computed: {
+    greeting() {
+      let time = new Date().getHours();
+      let greeting = 'Hey There!';
+      switch (true) {
+        case time < 5:
+          greeting = 'Good Night';
+          break;
+        case time < 12:
+          greeting = 'Good Morning';
+          break;
+        case time < 17:
+          greeting = 'Good Afternoon';
+          break;
+        case time < 20:
+          greeting = 'Good Evening';
+          break;
+        case time < 24:
+          greeting = 'Good Night';
+          break;
+      }
+      return greeting;
+    }
+  },
   components: {
     SquareLink,
     IncreaseNum,
@@ -259,8 +283,9 @@ export default {
 
     #greeting {
       position: absolute;
-      top: 0px;
-      left: 30%;
+      top: -25px;
+      left: 25%;
+      letter-spacing: 4px;
     }
   }
 
