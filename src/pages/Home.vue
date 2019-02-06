@@ -4,6 +4,21 @@
       <swiper id="v" :options="swiperOptionV">
         <swiper-slide id="slide1">
           <div id="photo" style="background-image: url('img/home/photo.jpg');">
+            <svg id="mask" width="150" viewbox="0 0 100 100">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop
+                    offset="0%"
+                    style="stop-color:rgb(255,255,255);stop-opacity:0"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color:rgb(255,255,255);stop-opacity:1"
+                  />
+                </linearGradient>
+              </defs>
+              <rect width="150" height="1000" style="fill:url(#grad1)"></rect>
+            </svg>
             <CurveText id="greeting">{{ greeting }}</CurveText>
           </div>
 
@@ -281,11 +296,23 @@ export default {
     height: 100vh;
     width: 100vh;
 
+    #mask {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+    }
+
     #greeting {
       position: absolute;
-      top: -25px;
+      top: -40px;
       left: 25%;
       letter-spacing: 4px;
+    }
+
+    #headline {
+      background-position: center center;
+      background-size: cover;
     }
   }
 
