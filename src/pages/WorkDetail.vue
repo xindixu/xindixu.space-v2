@@ -19,15 +19,28 @@
         </div>
       </div>
     </div>
-    <div class="container"><VueShowdown :markdown="md"></VueShowdown></div>
+    <div class="container">
+      <VueShowdown
+        id="scrollspy-nested"
+        :markdown="md"
+        flavor="github"
+        :options="showdownOptions"
+      ></VueShowdown>
+
+      <div class="scrollspy">
+        <b-navbar v-b-scrollspy:scrollspy-nested class="flex-column">
+          <b-nav v-for="header in headers" :key="header.id">
+            <b-nav-item :href="header.id">{{ header.innerHTML }}</b-nav-item>
+          </b-nav>
+        </b-navbar>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import { Parallax } from '@/components';
 import { VueShowdown } from 'vue-showdown';
-
 import workList from '../assets/work/data.json';
-import { nokiaDemoCenter, stayAtHome } from '../assets/markdown';
 
 export default {
   name: 'workDetail',
@@ -36,7 +49,12 @@ export default {
     html: '',
     work: '',
     title: '',
-    md: ''
+    md: '',
+    headers: [],
+    showdownOptions: {
+      headerLevelStart: 3,
+      openLinksInNewWindow: true
+    }
   }),
   props: ['id'],
   watch: {
@@ -52,6 +70,9 @@ export default {
     },
     getMd() {
       this.md = require(`../assets/markdown/${this.work[0].id}.md`);
+    },
+    getHeaders() {
+      this.headers = document.getElementsByTagName('h2');
     }
   },
   components: {
@@ -59,9 +80,23 @@ export default {
     VueShowdown
   },
   mounted() {
+    //do something after mounting vue instance
     this.getWorkObj();
     this.getMd();
+  },
+  updated() {
+    //do something after updating vue instance
+    this.getHeaders();
   }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.scrollspy {
+  .nav-item li {
+    color: black;
+  }
+  .navbar a:not(.btn):not(.dropdown-item) {
+    color: black;
+  }
+}
+</style>

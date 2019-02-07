@@ -14,7 +14,7 @@ module.exports = {
     'generator-star-spacing': 0,
     'no-console': 'off',
     'no-debugger': 'off',
-    'vue/attribute-hyphenation': 'error',
+    'vue/attribute-hyphenation': 'ignore',
     'vue/component-name-in-template-casing': [
       'PascalCase',
       {
