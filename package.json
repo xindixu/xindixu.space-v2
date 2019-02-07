@@ -31,6 +31,7 @@
     "vue-lazyload": "^1.2.6",
     "vue-router": "^3.0.1",
     "vue-scroll-reveal": "^1.0.11",
+    "vue-showdown": "^2.3.0",
     "vue-typer": "^1.2.0",
     "vue2-animate": "^2.1.0",
     "vue2-transitions": "^0.2.3",

@@ -19,14 +19,14 @@
         </div>
       </div>
     </div>
-
-    <div v-html="html" class="container"></div>
+    <div class="container"><VueShowdown :markdown="md"></VueShowdown></div>
   </div>
 </template>
 <script>
 import { Parallax } from '@/components';
+import { VueShowdown } from 'vue-showdown';
+
 import workList from '../assets/work/data.json';
-import showdown from 'showdown';
 import { nokiaDemoCenter, stayAtHome } from '../assets/markdown';
 
 export default {
@@ -35,7 +35,8 @@ export default {
     works: workList,
     html: '',
     work: '',
-    title: ''
+    title: '',
+    md: ''
   }),
   props: ['id'],
   watch: {
@@ -51,20 +52,15 @@ export default {
     },
     getMd() {
       this.md = require(`../assets/markdown/${this.work[0].id}.md`);
-    },
-    getHTML() {
-      let converter = new showdown.Converter();
-      let text = this.md.toString();
-      this.html = converter.makeHtml(text);
     }
   },
   components: {
-    Parallax
+    Parallax,
+    VueShowdown
   },
   mounted() {
     this.getWorkObj();
     this.getMd();
-    this.getHTML();
   }
 };
 </script>

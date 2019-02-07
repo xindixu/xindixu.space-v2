@@ -11904,6 +11904,13 @@ vue-server-renderer@^2.5.16:
     serialize-javascript "^1.3.0"
     source-map "0.5.6"
 
+vue-showdown@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vue-showdown/-/vue-showdown-2.3.0.tgz#bd830d7bf941cd28058ded7adc38a873c061516b"
+  integrity sha512-v2f2y1NxekXqiJ/55T5ltVyWK8XnVPZiJQvETHRcz66omgRyJDiTCNASAIrw3vFEEFcElfqL1fCg45UWDknP4g==
+  dependencies:
+    showdown "^1.9.0"
+
 vue-style-loader@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"
