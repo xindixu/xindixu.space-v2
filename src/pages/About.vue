@@ -125,6 +125,30 @@
             </b-col>
           </b-row>
         </swiper-slide>
+        <swiper-slide style="background-image: url('img/bg/bg19.jpg');">
+          <b-row>
+            <b-col class="half">
+              <div class="white left top">
+                <h1>Enjoying...</h1>
+                <p>
+                  I love my super needy kitty, Dr. Casper Meowspy. I love to
+                  exercise, weight trainning, Tae Kwon Do, swimming, anything
+                  without "balls". During my vocations, I love to travel around
+                  and explore new places.
+                </p>
+              </div>
+            </b-col>
+            <b-col class="half chinese">
+              <div class="white right bottom">
+                <h1 class="chineseTitle">玩耍中...</h1>
+                <p>
+                  我爱我的猫猫，Dr. Casper Meowspy。
+                  我乐于锻炼身体，健身房，跆拳道，游泳，任何和“球”无关的运动。在放假时，我喜欢出游，探索各种地方。
+                </p>
+              </div>
+            </b-col>
+          </b-row>
+        </swiper-slide>
         <div
           class="swiper-pagination swiper-pagination-v"
           slot="pagination"
