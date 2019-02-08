@@ -8,7 +8,6 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import VueScrollReveal from 'vue-scroll-reveal';
 import Scrollactive from 'vue-scrollactive';
 
-import TWEEN from '@tweenjs/tween.js';
 import { ObserveVisibility } from 'vue-observe-visibility';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -21,7 +20,6 @@ Vue.use(BootstrapVue);
 Vue.use(NowUiKit);
 Vue.use(VueAwesomeSwiper);
 Vue.use(VueScrollReveal);
-Vue.use(TWEEN);
 Vue.use(Scrollactive);
 
 Vue.directive('observe-visibility', ObserveVisibility);
