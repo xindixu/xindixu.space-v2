@@ -6,7 +6,6 @@
         :offset="50"
         :duration="800"
         :modifyUrl="false"
-        :highlightFirstItem="true"
         bezierEasingValue=".5,0,.35,1"
       >
         <div class="item" v-for="header in headers" :key="header.id">
@@ -26,7 +25,7 @@ export default {
   }),
   mounted() {
     this.headers = document.getElementsByTagName('h2');
-    console.log(this.headers);
+    // console.log(this.headers);
   }
 };
 </script>

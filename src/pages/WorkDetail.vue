@@ -28,20 +28,6 @@
       ></VueShowdown>
     </div>
     <TableOfContent></TableOfContent>
-    <!--
-      <div class="scrollspy">
-        <b-navbar>
-          <b-nav v-b-scrollspy:scrollspy-nested class="flex-column">
-            <b-nav-item
-              v-for="header in headers"
-              :key="header.id"
-              :href="header.id"
-              >{{ header.innerHTML }}</b-nav-item
-            >
-          </b-nav>
-        </b-navbar>
-      </div>
-    -->
   </div>
 </template>
 <script>
@@ -98,10 +84,4 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-#scrollspy-nested {
-  position: relative;
-  overflow-y: auto;
-  height: 100%;
-}
-</style>
+<style lang="scss" scoped></style>
