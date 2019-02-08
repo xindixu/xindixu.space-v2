@@ -18,6 +18,13 @@
           </a>
         </div>
       </scrollactive>
+      <button
+        id="closeBtn"
+        type="button"
+        class="btn btn-icon btn-round btn-primary"
+      >
+        <i class="now-ui-icons arrows-1_minimal-left"></i>
+      </button>
     </b-card>
   </div>
 </template>
@@ -49,6 +56,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '../assets/scss/now-ui-kit/variables.scss';
+
 #tableOfContent {
   position: sticky;
   width: 200px;
@@ -60,6 +69,7 @@ export default {
   a:hover,
   a:focus {
     text-decoration: none;
+    color: $brand-warning;
   }
 
   .item {
@@ -70,8 +80,16 @@ export default {
       margin-left: 20px;
     }
     .is-active {
-      color: red;
+      color: $brand-success;
     }
+  }
+
+  #closeBtn {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    transform: translate(0%, -50%);
   }
 }
 </style>
