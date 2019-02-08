@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <b-container>
+    <b-container class="mt-5">
       <VueShowdown id="mdContent" :markdown="md"></VueShowdown>
     </b-container>
     <TableOfContent></TableOfContent>
@@ -67,7 +67,7 @@ export default {
       this.md = require(`../assets/markdown/${this.work[0].id}.md`);
     },
     getFilter() {
-      let arr = ['pink', 'orange', 'purple', 'blue', 'yellow', 'green'];
+      let arr = ['pink', 'red', 'purple', 'blue'];
       let i = Math.floor(Math.random() * arr.length);
       this.filter = arr[i];
     }
