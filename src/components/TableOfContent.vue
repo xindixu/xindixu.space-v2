@@ -9,7 +9,11 @@
         bezierEasingValue=".5,0,.35,1"
       >
         <div class="item" v-for="header in headers" :key="header.id">
-          <a :href="'#' + header.id" class="scrollactive-item">
+          <a
+            :href="'#' + header.id"
+            class="scrollactive-item"
+            :class="header.tagName == 'H3' ? 'sub' : ''"
+          >
             {{ header.innerHTML }}
           </a>
         </div>
@@ -21,18 +25,36 @@
 export default {
   name: 'TableOfContent',
   data: () => ({
-    headers: []
+    headers2: [],
+    headers: [],
+    allHeaders: []
   }),
   mounted() {
-    this.headers = document.getElementsByTagName('h2');
-    // console.log(this.headers);
+    this.headers2 = document.getElementsByTagName('h2');
+
+    let content = document.getElementById('scrollspy-nested');
+    this.allHeaders = content.childNodes;
+    console.log(this.allHeaders);
+  },
+  watch: {
+    allHeaders() {
+      for (let el of this.allHeaders) {
+        if (el.tagName == 'H2' || el.tagName == 'H3') {
+          this.headers.push(el);
+        }
+      }
+      console.log(this.headers);
+    }
+  },
+  updated() {
+    //do something after updating vue instance
   }
 };
 </script>
 <style lang="scss" scoped>
 #tableOfContent {
   position: sticky;
-  width: 150px;
+  width: 200px;
   right: 10px;
   bottom: 100px;
   display: flex;
@@ -44,12 +66,15 @@ export default {
   }
 
   .item {
-    width: 150px;
+    width: 200px;
     height: 35px;
-  }
 
-  .is-active {
-    color: red;
+    .sub {
+      margin-left: 20px;
+    }
+    .is-active {
+      color: red;
+    }
   }
 }
 </style>

@@ -23,8 +23,7 @@
       <VueShowdown
         id="scrollspy-nested"
         :markdown="md"
-        flavor="github"
-        :options="showdownOptions"
+        :options="options"
       ></VueShowdown>
     </div>
     <TableOfContent></TableOfContent>
@@ -44,9 +43,8 @@ export default {
     title: '',
     md: '',
     headers: [],
-    showdownOptions: {
-      headerLevelStart: 3,
-      openLinksInNewWindow: true
+    options: {
+      prefixHeaderId: 'xindi'
     }
   }),
   props: ['id'],
