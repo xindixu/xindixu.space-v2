@@ -9,6 +9,11 @@
         <div class="container">
           <h1 class="title">{{ title }}</h1>
           <div class="text-center">
+            <badge v-for="tag in tags" :key="tag" type="success">
+              {{ tag }}
+            </badge>
+          </div>
+          <div class="text-center">
             <a href="#pablo" class="btn btn-primary btn-icon btn-round">
               <i class="fab fa-facebook-square"></i>
             </a>
@@ -30,7 +35,7 @@
   </div>
 </template>
 <script>
-import { TableOfContent } from '@/components';
+import { TableOfContent, Badge } from '@/components';
 import { VueShowdown } from 'vue-showdown';
 import workList from '../assets/work/data.json';
 
@@ -41,6 +46,7 @@ export default {
     work: '',
     html: '',
     title: '',
+    tags: [],
     md: '',
     filter: ''
   }),
@@ -55,6 +61,7 @@ export default {
     getWorkObj() {
       this.work = workList.filter(work => work.id === this.id);
       this.title = this.work[0].title;
+      this.tags = this.work[0].tags;
     },
     getMd() {
       this.md = require(`../assets/markdown/${this.work[0].id}.md`);
@@ -67,7 +74,8 @@ export default {
   },
   components: {
     TableOfContent,
-    VueShowdown
+    VueShowdown,
+    Badge
   },
   mounted() {
     //do something after mounting vue instance
@@ -83,5 +91,10 @@ export default {
   position: fixed;
   top: 60px;
   left: 10px;
+}
+
+.badge {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 </style>
