@@ -9,14 +9,11 @@
         :highlightFirstItem="true"
         bezierEasingValue=".5,0,.35,1"
       >
-        <a
-          v-for="header in headers"
-          :key="header.id"
-          :href="'#' + header.id"
-          class="scrollactive-item"
-        >
-          {{ header.innerHTML }}
-        </a>
+        <div class="item" v-for="header in headers" :key="header.id">
+          <a :href="'#' + header.id" class="scrollactive-item">
+            {{ header.innerHTML }}
+          </a>
+        </div>
       </scrollactive>
     </b-card>
   </div>
@@ -36,14 +33,20 @@ export default {
 <style lang="scss" scoped>
 #tableOfContent {
   position: sticky;
-  width: 200px;
+  width: 150px;
   right: 10px;
-  bottom: 10px;
+  bottom: 100px;
   display: flex;
   flex-direction: column;
 
-  .scrollactive-item {
-    width: 200px;
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+
+  .item {
+    width: 150px;
+    height: 35px;
   }
 
   .is-active {
