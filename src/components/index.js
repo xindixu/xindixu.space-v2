@@ -26,6 +26,7 @@ import SquareLink from './SquareLink.vue';
 import SquareTexts from './SquareTexts.vue';
 import IncreaseNum from './IncreaseNum.vue';
 import CurveText from './CurveText.vue';
+import TableOfContent from './TableOfContent.vue';
 
 export {
   Alert,
@@ -53,5 +54,6 @@ export {
   SquareLink,
   SquareTexts,
   IncreaseNum,
-  CurveText
+  CurveText,
+  TableOfContent
 };

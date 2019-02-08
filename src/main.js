@@ -3,6 +3,7 @@ import App from './App.vue';
 // You can change this import to `import router from './starterRouter'` to quickly start development from a blank layout.
 import router from './router';
 import BootstrapVue from 'bootstrap-vue';
+import { Scrollspy } from 'bootstrap-vue/es/directives';
 import NowUiKit from './plugins/now-ui-kit';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import VueScrollReveal from 'vue-scroll-reveal';
@@ -17,6 +18,7 @@ import 'swiper/dist/css/swiper.css';
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
+Vue.use(Scrollspy);
 Vue.use(NowUiKit);
 Vue.use(VueAwesomeSwiper);
 Vue.use(VueScrollReveal);

@@ -26,19 +26,26 @@
         flavor="github"
         :options="showdownOptions"
       ></VueShowdown>
-
+    </div>
+    <TableOfContent></TableOfContent>
+    <!--
       <div class="scrollspy">
-        <b-navbar v-b-scrollspy:scrollspy-nested class="flex-column">
-          <b-nav v-for="header in headers" :key="header.id">
-            <b-nav-item :href="header.id">{{ header.innerHTML }}</b-nav-item>
+        <b-navbar>
+          <b-nav v-b-scrollspy:scrollspy-nested class="flex-column">
+            <b-nav-item
+              v-for="header in headers"
+              :key="header.id"
+              :href="header.id"
+              >{{ header.innerHTML }}</b-nav-item
+            >
           </b-nav>
         </b-navbar>
       </div>
-    </div>
+    -->
   </div>
 </template>
 <script>
-import { Parallax } from '@/components';
+import { Parallax, TableOfContent } from '@/components';
 import { VueShowdown } from 'vue-showdown';
 import workList from '../assets/work/data.json';
 
@@ -77,6 +84,7 @@ export default {
   },
   components: {
     Parallax,
+    TableOfContent,
     VueShowdown
   },
   mounted() {
@@ -91,12 +99,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.scrollspy {
-  .nav-item li {
-    color: black;
-  }
-  .navbar a:not(.btn):not(.dropdown-item) {
-    color: black;
-  }
+#scrollspy-nested {
+  position: relative;
+  overflow-y: auto;
+  height: auto;
 }
 </style>
