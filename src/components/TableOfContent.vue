@@ -4,7 +4,10 @@
       :class="isShow ? 'btn-shown' : 'btn-hidden'"
       type="button"
       class="btn btn-icon btn-round btn-primary"
-      @click="isShow = !isShow;"
+      @click="
+        isShow = !isShow;
+        userToggleClose = !userToggleClose;
+      "
     >
       <i
         class="now-ui-icons"
@@ -15,8 +18,9 @@
       enter-active-class="animated slideInDown"
       leave-active-class="animated bounceOutUp"
     >
-      <b-card id="card" v-if="isShow">
+      <b-card id="card" v-show="isShow">
         <scrollactive
+          v-on:itemchanged="onItemChanged"
           ref="scrollactive"
           :offset="50"
           :duration="800"
@@ -43,12 +47,13 @@ export default {
   data: () => ({
     headers: [],
     allHeaders: [],
-    isShow: true
+    isShow: false,
+    userToggleClose: false
   }),
   mounted() {
     let content = document.getElementById('mdContent');
     this.allHeaders = content.childNodes;
-    console.log(this.allHeaders);
+    //  console.log(this.allHeaders);
   },
   watch: {
     allHeaders() {
@@ -57,11 +62,18 @@ export default {
           this.headers.push(el);
         }
       }
-      console.log(this.headers);
+      //  console.log(this.headers);
     }
   },
-  updated() {
-    //do something after updating vue instance
+  methods: {
+    onItemChanged(event, currentItem, lastActiveItem) {
+      console.log(currentItem);
+      if (typeof currentItem == 'undefined' || this.userToggleClose) {
+        this.isShow = false;
+      } else {
+        this.isShow = true;
+      }
+    }
   }
 };
 </script>

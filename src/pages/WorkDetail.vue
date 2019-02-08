@@ -62,7 +62,6 @@ export default {
     getFilter() {
       let arr = ['pink', 'orange', 'purple', 'blue', 'yellow', 'green'];
       let i = Math.floor(Math.random() * arr.length);
-      console.log(i);
       this.filter = arr[i];
     }
   },
