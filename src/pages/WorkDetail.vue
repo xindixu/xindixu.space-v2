@@ -79,4 +79,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#tableOfContent {
+  position: fixed;
+  top: 60px;
+  left: 10px;
+}
+</style>

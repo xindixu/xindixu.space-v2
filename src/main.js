@@ -7,7 +7,7 @@ import NowUiKit from './plugins/now-ui-kit';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import VueScrollReveal from 'vue-scroll-reveal';
 import Scrollactive from 'vue-scrollactive';
-
+import Animated from 'animate.css';
 import { ObserveVisibility } from 'vue-observe-visibility';
 
 import 'bootstrap/dist/css/bootstrap.css';
@@ -21,6 +21,7 @@ Vue.use(NowUiKit);
 Vue.use(VueAwesomeSwiper);
 Vue.use(VueScrollReveal);
 Vue.use(Scrollactive);
+Vue.use(Animated);
 
 Vue.directive('observe-visibility', ObserveVisibility);
 

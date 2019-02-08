@@ -1,31 +1,40 @@
 <template>
   <div id="tableOfContent">
-    <b-card>
-      <scrollactive
-        ref="scrollactive"
-        :offset="50"
-        :duration="800"
-        :modifyUrl="false"
-        bezierEasingValue=".5,0,.35,1"
-      >
-        <div class="item" v-for="header in headers" :key="header.id">
-          <a
-            :href="'#' + header.id"
-            class="scrollactive-item"
-            :class="header.tagName === 'H3' ? 'sub' : ''"
-          >
-            {{ header.innerHTML }}
-          </a>
-        </div>
-      </scrollactive>
-      <button
-        id="closeBtn"
-        type="button"
-        class="btn btn-icon btn-round btn-primary"
-      >
-        <i class="now-ui-icons arrows-1_minimal-left"></i>
-      </button>
-    </b-card>
+    <button
+      :class="isShow ? 'btn-shown' : 'btn-hidden'"
+      type="button"
+      class="btn btn-icon btn-round btn-primary"
+      @click="isShow = !isShow;"
+    >
+      <i
+        class="now-ui-icons"
+        :class="isShow ? 'arrows-1_minimal-up' : 'arrows-1_minimal-down'"
+      ></i>
+    </button>
+    <transition
+      enter-active-class="animated slideInDown"
+      leave-active-class="animated bounceOutUp"
+    >
+      <b-card id="card" v-if="isShow">
+        <scrollactive
+          ref="scrollactive"
+          :offset="50"
+          :duration="800"
+          :modifyUrl="false"
+          bezierEasingValue=".5,0,.35,1"
+        >
+          <div class="item" v-for="header in headers" :key="header.id">
+            <a
+              :href="'#' + header.id"
+              class="scrollactive-item"
+              :class="header.tagName === 'H3' ? 'sub' : ''"
+            >
+              {{ header.innerHTML }}
+            </a>
+          </div>
+        </scrollactive>
+      </b-card>
+    </transition>
   </div>
 </template>
 <script>
@@ -33,7 +42,8 @@ export default {
   name: 'TableOfContent',
   data: () => ({
     headers: [],
-    allHeaders: []
+    allHeaders: [],
+    isShow: true
   }),
   mounted() {
     let content = document.getElementById('mdContent');
@@ -59,23 +69,23 @@ export default {
 @import '../assets/scss/now-ui-kit/variables.scss';
 
 #tableOfContent {
-  position: sticky;
+  z-index: 50;
   width: 200px;
-  right: 10px;
-  bottom: 100px;
   display: flex;
   flex-direction: column;
 
-  a:hover,
-  a:focus {
-    text-decoration: none;
-    color: $brand-warning;
-  }
-
   .item {
     width: 200px;
-    height: 35px;
 
+    a {
+      line-height: 35px;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $brand-warning;
+      }
+    }
     .sub {
       margin-left: 20px;
     }
@@ -84,12 +94,49 @@ export default {
     }
   }
 
-  #closeBtn {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    right: -10%;
-    transform: translate(0%, -50%);
+  .btn {
+    z-index: 100;
+    &-shown {
+      /*       margin-top: -50px;
+     */
+    }
+  }
+
+  #placeholder {
+    height: 100px;
   }
 }
+/*
+.slide-enter,
+.slide-leave-to {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.slide-enter-active {
+  animation: slide-down 1s ease;
+  transition: opacity 0.5s;
+}
+
+.slide-leave-active {
+  animation: slide-up 1s ease;
+  transition: opacity 0.5s;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(100px);
+  }
+} */
 </style>
