@@ -12,7 +12,7 @@
           <a
             :href="'#' + header.id"
             class="scrollactive-item"
-            :class="header.tagName == 'H3' ? 'sub' : ''"
+            :class="header.tagName === 'H3' ? 'sub' : ''"
           >
             {{ header.innerHTML }}
           </a>
@@ -25,14 +25,11 @@
 export default {
   name: 'TableOfContent',
   data: () => ({
-    headers2: [],
     headers: [],
     allHeaders: []
   }),
   mounted() {
-    this.headers2 = document.getElementsByTagName('h2');
-
-    let content = document.getElementById('scrollspy-nested');
+    let content = document.getElementById('mdContent');
     this.allHeaders = content.childNodes;
     console.log(this.allHeaders);
   },

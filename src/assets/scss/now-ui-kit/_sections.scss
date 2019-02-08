@@ -109,8 +109,27 @@
     }
 
     &[filter-color="orange"]{
-        @include linear-gradient(rgba($black-color,.20), rgba(224, 23, 3, 0.6));
+      @include linear-gradient(rgba($black-color,.20), rgba(224, 23, 3, 0.6));
     }
+    &[filter-color="pink"]{
+      @include linear-gradient(rgba($black-color,.20), rgba(224, 2, 187, 0.6));
+    }
+
+    &[filter-color="purple"]{
+      @include linear-gradient(rgba($black-color,.20), rgba(68, 1, 224, 0.6));
+    }
+
+    &[filter-color="blue"]{
+      @include linear-gradient(rgba($black-color,.20), rgba(0, 119, 224, 0.6));
+    }
+    &[filter-color="yellow"]{
+      @include linear-gradient(rgba($black-color,.20), rgba(249, 232, 39, 0.6));
+    }
+
+    &[filter-color="green"]{
+      @include linear-gradient(rgba($black-color,.20), rgba(0, 224, 67, 0.6));
+    }
+
 }
 
 .section-story-overview{

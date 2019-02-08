@@ -1,51 +1,48 @@
-<!--
-  add readme https://www.jianshu.com/p/c324711f12b5
-  github style css https://www.npmjs.com/package/github-markdown-css
--->
-<!--
-  dynamic components https://blog.csdn.net/qq20004604/article/details/52479435?locationNum=2&fps=1
--->
 <template>
   <div>
-    <div class="page-header page-header-small">
-      <Parallax
+    <div class="page-header clear-filter" :filter-color="filter">
+      <div
         class="page-header-image"
-        style="background-image: url('img/bg/bg15.jpg')"
-      >
-      </Parallax>
+        style="background-image: url('img/bg/bg23.jpg')"
+      ></div>
       <div class="content-center">
         <div class="container">
           <h1 class="title">{{ title }}</h1>
+          <div class="text-center">
+            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
+              <i class="fab fa-google-plus"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <VueShowdown
-        id="scrollspy-nested"
-        :markdown="md"
-        :options="options"
-      ></VueShowdown>
-    </div>
+
+    <b-container>
+      <VueShowdown id="mdContent" :markdown="md"></VueShowdown>
+    </b-container>
     <TableOfContent></TableOfContent>
   </div>
 </template>
 <script>
-import { Parallax, TableOfContent } from '@/components';
+import { TableOfContent } from '@/components';
 import { VueShowdown } from 'vue-showdown';
 import workList from '../assets/work/data.json';
 
 export default {
-  name: 'workDetail',
+  name: 'WorkDetail',
   data: () => ({
     works: workList,
-    html: '',
     work: '',
+    html: '',
     title: '',
     md: '',
-    headers: [],
-    options: {
-      prefixHeaderId: 'xindi'
-    }
+    filter: ''
   }),
   props: ['id'],
   watch: {
@@ -62,12 +59,14 @@ export default {
     getMd() {
       this.md = require(`../assets/markdown/${this.work[0].id}.md`);
     },
-    getHeaders() {
-      this.headers = document.getElementsByTagName('h2');
+    getFilter() {
+      let arr = ['pink', 'orange', 'purple', 'blue', 'yellow', 'green'];
+      let i = Math.floor(Math.random() * arr.length);
+      console.log(i);
+      this.filter = arr[i];
     }
   },
   components: {
-    Parallax,
     TableOfContent,
     VueShowdown
   },
@@ -75,11 +74,9 @@ export default {
     //do something after mounting vue instance
     this.getWorkObj();
     this.getMd();
-  },
-  updated() {
-    //do something after updating vue instance
-    this.getHeaders();
+    this.getFilter();
   }
 };
 </script>
+
 <style lang="scss" scoped></style>

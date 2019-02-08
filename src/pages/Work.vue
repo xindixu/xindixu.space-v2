@@ -7,7 +7,7 @@
       >
       </parallax>
       <div class="content-center">
-        <div class="container"><h1 class="title display-3">Work</h1></div>
+        <div class="container"><h1 class="title">Work</h1></div>
       </div>
     </div>
     <card>
