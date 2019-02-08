@@ -1,16 +1,24 @@
 <template>
-  <div id="scrollspy">
-    <b-navbar>
-      <b-nav v-b-scrollspy:scrollspy-nested="80" class="flex-column">
-        <b-nav-item
+  <div id="tableOfContent">
+    <b-card>
+      <scrollactive
+        ref="scrollactive"
+        :offset="50"
+        :duration="800"
+        :modifyUrl="false"
+        :highlightFirstItem="true"
+        bezierEasingValue=".5,0,.35,1"
+      >
+        <a
           v-for="header in headers"
           :key="header.id"
           :href="'#' + header.id"
+          class="scrollactive-item"
         >
           {{ header.innerHTML }}
-        </b-nav-item>
-      </b-nav>
-    </b-navbar>
+        </a>
+      </scrollactive>
+    </b-card>
   </div>
 </template>
 <script>
@@ -26,25 +34,20 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#scrollspy {
+#tableOfContent {
   position: sticky;
   width: 200px;
   right: 10px;
   bottom: 10px;
+  display: flex;
+  flex-direction: column;
 
-  .navbar {
+  .scrollactive-item {
     width: 200px;
-    .nav-item {
-      text-align: left;
-      a:not(.btn):not(.dropdown-item) {
-        color: black;
-      }
-    }
-    .active {
-      a:not(.btn):not(.dropdown-item) {
-        color: red;
-      }
-    }
+  }
+
+  .is-active {
+    color: red;
   }
 }
 </style>

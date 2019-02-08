@@ -102,6 +102,6 @@ export default {
 #scrollspy-nested {
   position: relative;
   overflow-y: auto;
-  height: auto;
+  height: 100%;
 }
 </style>
