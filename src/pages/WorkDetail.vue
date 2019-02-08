@@ -13,17 +13,6 @@
               {{ tag }}
             </badge>
           </div>
-          <div class="text-center">
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#pablo" class="btn btn-primary btn-icon btn-round">
-              <i class="fab fa-google-plus"></i>
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -31,11 +20,11 @@
     <b-container class="mt-5">
       <VueShowdown id="mdContent" :markdown="md"></VueShowdown>
     </b-container>
-    <TableOfContent></TableOfContent>
+    <TableOfContent></TableOfContent> <SocialSideBar></SocialSideBar>
   </div>
 </template>
 <script>
-import { TableOfContent, Badge } from '@/components';
+import { Badge, TableOfContent, SocialSideBar } from '@/components';
 import { VueShowdown } from 'vue-showdown';
 import workList from '../assets/work/data.json';
 
@@ -72,11 +61,7 @@ export default {
       this.filter = arr[i];
     }
   },
-  components: {
-    TableOfContent,
-    VueShowdown,
-    Badge
-  },
+  components: { Badge, TableOfContent, SocialSideBar, VueShowdown },
   mounted() {
     //do something after mounting vue instance
     this.getWorkObj();
@@ -90,11 +75,17 @@ export default {
 #tableOfContent {
   position: fixed;
   top: 60px;
-  left: 10px;
+  right: 10px;
 }
 
 .badge {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+#socialSideBar {
+  position: fixed;
+  top: 20vh;
+  left: 10vw;
 }
 </style>

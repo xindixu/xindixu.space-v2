@@ -25,6 +25,8 @@ Vue.use(Animated);
 
 Vue.directive('observe-visibility', ObserveVisibility);
 
+Vue.prototype.$eventBus = new Vue();
+
 new Vue({
   router,
   render: h => h(App)

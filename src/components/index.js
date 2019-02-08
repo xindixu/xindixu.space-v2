@@ -27,6 +27,7 @@ import SquareTexts from './SquareTexts.vue';
 import IncreaseNum from './IncreaseNum.vue';
 import CurveText from './CurveText.vue';
 import TableOfContent from './TableOfContent.vue';
+import SocialSideBar from './SocialSideBar.vue';
 
 export {
   Alert,
@@ -55,5 +56,6 @@ export {
   SquareTexts,
   IncreaseNum,
   CurveText,
-  TableOfContent
+  TableOfContent,
+  SocialSideBar
 };

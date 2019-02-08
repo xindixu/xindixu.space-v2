@@ -1,24 +1,27 @@
 <template>
   <div id="tableOfContent">
-    <button
-      :class="isShow ? 'btn-shown' : 'btn-hidden'"
-      type="button"
-      class="btn btn-icon btn-round btn-primary"
-      @click="
-        isShow = !isShow;
-        userToggleClose = !userToggleClose;
-      "
+    <transition
+      enter-active-class="animated zoomIn"
+      leave-active-class="animated zoomOut"
     >
-      <i
-        class="now-ui-icons"
-        :class="isShow ? 'arrows-1_minimal-up' : 'arrows-1_minimal-down'"
-      ></i>
-    </button>
+      <button
+        v-if="isContentShown"
+        :class="isTOCShown ? 'btn-shown' : 'btn-hidden'"
+        type="button"
+        class="btn btn-icon btn-round btn-info"
+        @click="userToggleClose = !userToggleClose;"
+      >
+        <i
+          class="now-ui-icons"
+          :class="isTOCShown ? 'arrows-1_minimal-up' : 'arrows-1_minimal-down'"
+        ></i>
+      </button>
+    </transition>
     <transition
       enter-active-class="animated slideInDown"
       leave-active-class="animated bounceOutUp"
     >
-      <b-card id="card" v-show="isShow">
+      <b-card id="card" v-show="isTOCShown">
         <scrollactive
           v-on:itemchanged="onItemChanged"
           ref="scrollactive"
@@ -47,13 +50,12 @@ export default {
   data: () => ({
     headers: [],
     allHeaders: [],
-    isShow: false,
+    isContentShown: false,
     userToggleClose: false
   }),
   mounted() {
     let content = document.getElementById('mdContent');
     this.allHeaders = content.childNodes;
-    //  console.log(this.allHeaders);
   },
   watch: {
     allHeaders() {
@@ -62,17 +64,27 @@ export default {
           this.headers.push(el);
         }
       }
-      //  console.log(this.headers);
+    },
+    isContentShown() {
+      this.sendData();
+    }
+  },
+  computed: {
+    isTOCShown() {
+      return this.isContentShown && !this.userToggleClose ? true : false;
     }
   },
   methods: {
     onItemChanged(event, currentItem, lastActiveItem) {
-      console.log(currentItem);
-      if (typeof currentItem == 'undefined' || this.userToggleClose) {
-        this.isShow = false;
+      //console.log(currentItem);
+      if (typeof currentItem == 'undefined') {
+        this.isContentShown = false;
       } else {
-        this.isShow = true;
+        this.isContentShown = true;
       }
+    },
+    sendData() {
+      this.$eventBus.$emit('workContentVisible', this.isContentShown);
     }
   }
 };
@@ -91,11 +103,12 @@ export default {
 
     a {
       line-height: 35px;
+      color: $brand-info;
 
       &:hover,
       &:focus {
         text-decoration: none;
-        color: $brand-warning;
+        color: $brand-success;
       }
     }
     .sub {
@@ -108,47 +121,12 @@ export default {
 
   .btn {
     z-index: 100;
-    &-shown {
-      /*       margin-top: -50px;
-     */
-    }
+    margin-left: 160px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   }
 
   #placeholder {
     height: 100px;
   }
 }
-/*
-.slide-enter,
-.slide-leave-to {
-  transform: translateY(-100px);
-  opacity: 0;
-}
-.slide-enter-active {
-  animation: slide-down 1s ease;
-  transition: opacity 0.5s;
-}
-
-.slide-leave-active {
-  animation: slide-up 1s ease;
-  transition: opacity 0.5s;
-}
-
-@keyframes slide-up {
-  from {
-    transform: translateY(-1000px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes slide-down {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(100px);
-  }
-} */
 </style>
