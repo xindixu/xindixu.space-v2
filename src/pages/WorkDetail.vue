@@ -72,6 +72,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+img {
+  width: 100%;
+}
 #tableOfContent {
   position: fixed;
   top: 60px;
@@ -87,5 +90,20 @@ export default {
   position: fixed;
   top: 20vh;
   left: 10vw;
+}
+
+/* iframes & issuu embed */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>

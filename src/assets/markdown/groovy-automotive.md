@@ -8,7 +8,9 @@ This is a hypothetical media planning project for Austin local brand, Groovy Aut
 ![Business objectives for Groovy Automotive](/img/work/groovy-automotive/groovy01.png)
 
 ## Research and Insights
-
+<div id="#issuu-embed-container-groovy" style="position: relative;padding-bottom: 56.25%;max-width: 100%;margin: 12px 0px;">
+<iframe class="issuuembed" style="position: absolute;top: 0;left: 0;border:none;width:100%;height:100%;" src="https://e.issuu.com/embed.html#29585443/61044981" allowfullscreen></iframe>
+</div>
 
 Just as other professional media agencies, we, Agency6, started with conducting a significant amount of primary and secondary research. This benefits us a lot in terms of understanding our brand, its competitors, as well as local market and potential trade area.
 
@@ -41,6 +43,10 @@ With Google Adwords, I worked with Regina, first coming up with ideas on various
 On Blue Line Media website, Alejandro and I searched for various OOH media placements, collecting data their potential showings and costs.
 
 ## Recommendations
+<div id="#issuu-embed-container-groovy" style="position: relative;padding-bottom: 56.25%;max-width: 100%;margin: 12px 0px;">
+<iframe class="issuuembed" style="position: absolute;top: 0;left: 0;border:none;width:100%;height:100%;" src="https://e.issuu.com/embed.html#29585443/61044890" allowfullscreen></iframe>
+</div>
+
 ### Communication Platform
 ![Communication platform for Groovy Automotive](/img/work/groovy-automotive/groovy06.png)
 
