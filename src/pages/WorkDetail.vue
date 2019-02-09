@@ -29,7 +29,8 @@
       <div id="htmlContent" v-html="html"></div>
     </b-container>
 
-    <TableOfContent></TableOfContent> <SocialSideBar></SocialSideBar>
+    <TableOfContent></TableOfContent>
+    <SocialSideBar :path="id"></SocialSideBar>
   </div>
 </template>
 <script>
@@ -46,6 +47,7 @@ export default {
     tags: [],
     md: '',
     filter: '',
+    path: '',
     options: {
       omitExtraWLInCodeBlocks: false,
       noHeaderId: false,

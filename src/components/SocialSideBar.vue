@@ -31,6 +31,7 @@
           v-for="(so, index) in socialIcons"
           :key="index"
           :href="so.link"
+          target="_blank"
           class="btn btn-success btn-icon btn-round socialLinks"
         >
           <i class="fab" :class="so.name"></i>
@@ -71,6 +72,7 @@ export default {
     isShow: false,
     modalOn: false
   }),
+  props: ['path'],
   methods: {
     process(index) {
       switch (index) {
@@ -87,6 +89,14 @@ export default {
     },
     generateLink() {
       // http://www.sharelinkgenerator.com/
+      const fullPath = `http://xindixu.space/work/${this.path}`;
+      const facebookPath = `https://www.facebook.com/sharer/sharer.php?u=${fullPath}`;
+      const twitterPath = `https://twitter.com/home?status=Just%20saw%20a%20cool%20project%20created%20by%20Xindi!%0A${fullPath}`;
+      const linkedinPath = `https://www.linkedin.com/shareArticle?mini=true&url=${fullPath}&title=Here%20is%20a%20cool%20project%20created%20by%20Xindi&summary=&source=`;
+
+      this.socialIcons[0].link = facebookPath;
+      this.socialIcons[1].link = linkedinPath;
+      this.socialIcons[2].link = twitterPath;
     }
   },
   created() {
@@ -94,6 +104,10 @@ export default {
     this.$eventBus.$on('workContentVisible', isVisible => {
       this.isShow = isVisible;
     });
+  },
+  mounted() {
+    //do something after mounting vue instance
+    this.generateLink();
   },
   components: {
     Modal,
