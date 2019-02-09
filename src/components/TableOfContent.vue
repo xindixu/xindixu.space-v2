@@ -56,14 +56,14 @@ export default {
   mounted() {
     let content = document.getElementById('htmlContent');
     this.allHeaders = content.childNodes;
-    console.log(this.allHeaders);
+    //  console.log(this.allHeaders);
   },
   watch: {
     allHeaders() {
       for (let el of this.allHeaders) {
         if (el.tagName == 'H2' || el.tagName == 'H3') {
           el.id = el.innerHTML;
-          console.log(el);
+          //  console.log(el);
           this.headers.push(el);
         }
       }
