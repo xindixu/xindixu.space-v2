@@ -4,21 +4,14 @@ module.exports = {
       rules: [
         {
           test: /\.md$/,
-          use: [
-            { loader: 'html-loader' },
-            { loader: 'markdown-loader', options: {} }
-          ]
+          use: 'raw-loader'
         }
       ]
     }
   },
-  chainWebpack: (config) => {
+  chainWebpack: config => {
     const svgRule = config.module.rule('svg');
-
     svgRule.uses.clear();
-
-    svgRule
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader');
+    svgRule.use('vue-svg-loader').loader('vue-svg-loader');
   }
 };

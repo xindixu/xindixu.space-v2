@@ -18,14 +18,18 @@
     </div>
 
     <b-container class="mt-5">
-      <VueShowdown id="mdContent" :markdown="md"></VueShowdown>
+      <vue-showdown
+        id="mdContent"
+        :markdown="md"
+        :options="options"
+      ></vue-showdown>
     </b-container>
+
     <TableOfContent></TableOfContent> <SocialSideBar></SocialSideBar>
   </div>
 </template>
 <script>
 import { Badge, TableOfContent, SocialSideBar } from '@/components';
-import { VueShowdown } from 'vue-showdown';
 import workList from '../assets/work/data.json';
 
 export default {
@@ -37,7 +41,41 @@ export default {
     title: '',
     tags: [],
     md: '',
-    filter: ''
+    filter: '',
+    options: {
+      omitExtraWLInCodeBlocks: false,
+      noHeaderId: false,
+      prefixHeaderId: false,
+      rawPrefixHeaderId: false,
+      ghCompatibleHeaderId: false,
+      rawHeaderId: false,
+      headerLevelStart: false,
+      parseImgDimensions: true,
+      simplifiedAutoLink: true,
+      excludeTrailingPunctuationFromURLs: false,
+      literalMidWordUnderscores: false,
+      literalMidWordAsterisks: false,
+      strikethrough: false,
+      tables: false,
+      tablesHeaderId: false,
+      ghCodeBlocks: true,
+      tasklists: true,
+      smoothLivePreview: false,
+      smartIndentationFix: false,
+      disableForced4SpacesIndentedSublists: false,
+      simpleLineBreaks: false,
+      requireSpaceBeforeHeadingText: false,
+      ghMentions: true,
+      ghMentionsLink: 'https://github.com/{u}',
+      encodeEmails: true,
+      openLinksInNewWindow: false,
+      backslashEscapesHTMLTags: false,
+      emoji: true,
+      underline: false,
+      completeHTMLDocument: false,
+      metadata: false,
+      splitAdjacentBlockquotes: false
+    }
   }),
   props: ['id'],
   watch: {
@@ -61,7 +99,11 @@ export default {
       this.filter = arr[i];
     }
   },
-  components: { Badge, TableOfContent, SocialSideBar, VueShowdown },
+  components: {
+    Badge,
+    TableOfContent,
+    SocialSideBar
+  },
   mounted() {
     //do something after mounting vue instance
     this.getWorkObj();
