@@ -5,13 +5,23 @@ module.exports = {
         {
           test: /\.md$/,
           use: 'raw-loader'
+        },
+        {
+          test: /\.html$/,
+          use: [
+            {
+              loader: 'html-loader',
+              options: {
+                minimize: true
+              }
+            }
+          ]
+        },
+        {
+          test: /\.svg$/,
+          use: 'vue-svg-loader'
         }
       ]
     }
-  },
-  chainWebpack: config => {
-    const svgRule = config.module.rule('svg');
-    svgRule.uses.clear();
-    svgRule.use('vue-svg-loader').loader('vue-svg-loader');
   }
 };

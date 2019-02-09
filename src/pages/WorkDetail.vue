@@ -18,11 +18,14 @@
     </div>
 
     <b-container class="mt-5">
-      <vue-showdown
-        id="mdContent"
-        :markdown="md"
-        :options="options"
-      ></vue-showdown>
+      <!--
+        <vue-showdown
+          id="mdContent"
+          :markdown="md"
+          :options="options"
+        ></vue-showdown>
+      -->
+      <div id="htmlContent" v-html="html"></div>
     </b-container>
 
     <TableOfContent></TableOfContent> <SocialSideBar></SocialSideBar>
@@ -41,41 +44,7 @@ export default {
     title: '',
     tags: [],
     md: '',
-    filter: '',
-    options: {
-      omitExtraWLInCodeBlocks: false,
-      noHeaderId: false,
-      prefixHeaderId: false,
-      rawPrefixHeaderId: false,
-      ghCompatibleHeaderId: false,
-      rawHeaderId: false,
-      headerLevelStart: false,
-      parseImgDimensions: true,
-      simplifiedAutoLink: true,
-      excludeTrailingPunctuationFromURLs: false,
-      literalMidWordUnderscores: false,
-      literalMidWordAsterisks: false,
-      strikethrough: false,
-      tables: false,
-      tablesHeaderId: false,
-      ghCodeBlocks: true,
-      tasklists: true,
-      smoothLivePreview: false,
-      smartIndentationFix: false,
-      disableForced4SpacesIndentedSublists: false,
-      simpleLineBreaks: false,
-      requireSpaceBeforeHeadingText: false,
-      ghMentions: true,
-      ghMentionsLink: 'https://github.com/{u}',
-      encodeEmails: true,
-      openLinksInNewWindow: false,
-      backslashEscapesHTMLTags: false,
-      emoji: true,
-      underline: false,
-      completeHTMLDocument: false,
-      metadata: false,
-      splitAdjacentBlockquotes: false
-    }
+    filter: ''
   }),
   props: ['id'],
   watch: {
@@ -97,6 +66,9 @@ export default {
       let arr = ['pink', 'red', 'purple', 'blue'];
       let i = Math.floor(Math.random() * arr.length);
       this.filter = arr[i];
+    },
+    getHtml() {
+      this.html = require(`../assets/html/${this.work[0].id}.html`);
     }
   },
   components: {
@@ -107,16 +79,14 @@ export default {
   mounted() {
     //do something after mounting vue instance
     this.getWorkObj();
-    this.getMd();
+    //this.getMd();
+    this.getHtml();
     this.getFilter();
   }
 };
 </script>
 
 <style lang="scss" scoped>
-img {
-  width: 100%;
-}
 #tableOfContent {
   position: fixed;
   top: 60px;
