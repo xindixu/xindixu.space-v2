@@ -8,7 +8,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 import VueScrollReveal from 'vue-scroll-reveal';
 import Scrollactive from 'vue-scrollactive';
 import Animated from 'animate.css';
-import VueShowdown, { showdown } from 'vue-showdown';
+import VueShowdown from 'vue-showdown';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
 
@@ -24,14 +24,6 @@ Vue.use(VueAwesomeSwiper);
 Vue.use(VueScrollReveal);
 Vue.use(Scrollactive);
 Vue.use(Animated);
-
-showdown.extension('replaceMarkdownByShowdown', () => [
-  {
-    type: 'lang',
-    regex: /markdown/g,
-    replace: 'showdown'
-  }
-]);
 
 Vue.use(VueShowdown);
 

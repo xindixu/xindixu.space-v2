@@ -28,6 +28,7 @@ import IncreaseNum from './IncreaseNum.vue';
 import CurveText from './CurveText.vue';
 import TableOfContent from './TableOfContent.vue';
 import SocialSideBar from './SocialSideBar.vue';
+import CommentSection from './CommentSection.vue';
 
 export {
   Alert,
@@ -57,5 +58,6 @@ export {
   IncreaseNum,
   CurveText,
   TableOfContent,
-  SocialSideBar
+  SocialSideBar,
+  CommentSection
 };

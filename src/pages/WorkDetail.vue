@@ -27,6 +27,12 @@
 
       <!-- real content -->
       <div id="htmlContent" v-html="html"></div>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <CommentSection></CommentSection>
     </b-container>
 
     <TableOfContent></TableOfContent>
@@ -34,7 +40,12 @@
   </div>
 </template>
 <script>
-import { Badge, TableOfContent, SocialSideBar } from '@/components';
+import {
+  Badge,
+  TableOfContent,
+  SocialSideBar,
+  CommentSection
+} from '@/components';
 import workList from '../assets/work/data.json';
 
 export default {
@@ -111,7 +122,8 @@ export default {
   components: {
     Badge,
     TableOfContent,
-    SocialSideBar
+    SocialSideBar,
+    CommentSection
   },
   mounted() {
     //do something after mounting vue instance
