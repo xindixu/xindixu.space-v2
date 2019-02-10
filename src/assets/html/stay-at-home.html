@@ -1,0 +1,111 @@
+<h2 id="result">Result</h2>
+<a href="https://stay-at-home-and-lets-cook.herokuapp.com/#/home" target="_blank">Click to Launch</a>
+<h2 id="description">Description</h2>
+<p>
+  Empty stomach, don't want to get out, only some random stuffs left in your
+  fridge… No worries, just get on this website and search for simple recipes
+  based on the ingredients you've got.
+</p>
+<p>
+  My boyfriend and I created this website for our Web Development class at UT.
+  This website uses the MEAN stack: MongoDB for database, Express.js as backend
+  framework, Angular as frontend framework, and Node.js for backend. The website
+  also connects to a 3rd-party API for recipe search.
+</p>
+<h2 id="functionalities">Functionalities</h2>
+<ol>
+  <li>Search for recipes based on ingredients on hand</li>
+  <li>Ask nutrition-related questions and get instant response</li>
+  <li>Search for food videos</li>
+  <li>Register/Login to personalize</li>
+</ol>
+<h2 id="challenges">Challenges</h2>
+<ol>
+  <li>Lack of knowledge on MEAN stack</li>
+  <li>Limited experience working with APIs</li>
+  <li>Not familiar with Google Material Design principles</li>
+</ol>
+<h2 id="implementations">Implementations</h2>
+<h3 id="somedecisionstomake">Some decisions to make</h3>
+<p>
+  The first thing we agreed on our project is that we need to have a
+  <strong>well-maintained API</strong> to provide high quality content. We found
+  this Nutrition API, which grants us access to recipe informations and function
+  calls.
+</p>
+<p>
+  Since we have to work with <strong>API</strong> and
+  <strong>user authentication</strong>, we have to build a backend and database
+  for our website. We choose Express.js and Node.js for back-end because they
+  are <strong>written in JS</strong> and MongoDB because it is a
+  <strong>non-relational database</strong>.
+</p>
+<p>
+  For frontend, we favors Angular because: 1) it has a well-organized and
+  easy-to-understand documentation, 2) it use <strong>TypeScript</strong>, 3) it
+  has a great <strong>CLI</strong> to help speed up the process. Although it is
+  harder to learn than Vue.js and React, we still decided to use it.
+</p>
+<h3 id="getstarted">Get started</h3>
+<p>
+  I first started working on setting up both frontend and backend. It was quite
+  challenging. Starting with backend, I set up <strong>Jwt-passport</strong> for
+  user authentication, <strong>routes</strong> for functions related to users
+  logins and API calls. Then, I did some configuration for database and
+  passport.
+</p>
+<p>
+  Then, I started with the frontend. With the help of Angular-CLI, it was quite
+  easy. I set up the routes and a few pages for basic structure of the web app.
+  I also referred to Google Material Design to style the theme and components
+  for the app.
+</p>
+<h3 id="highlights">Highlights</h3>
+<p>
+  There are several highlights during the implementation process. Some are quite
+  challenging for me to figure out; some deepened my understanding a lot on the
+  technologies I used.
+</p>
+<h4 id="1usermodelandauthentication">1. User model and authentication</h4>
+<h5 id="backend">Backend</h5>
+<p>
+  In the backend, I created a file <code>user.js</code> under
+  <code>model</code> folder. Here, I connected to Mongoose, the database,
+  constructed <code>UserSchema</code>, and exports as model for database. I
+  wrote some functions such as <code>getUserById()</code> and
+  <code>getUserByUsername()</code> with Mongoose built-in functions
+  <code>findById()</code> and <code>findOne()</code>. Then, I implemented
+  functions to hash and compare passwords with <strong>bcrypt.js</strong>. I
+  used <code>hash()</code> function came with bcrypt to to encrypt password when
+  adding users. For comparing passwords, I used <code>compare()</code> came with
+  bcrypt.
+</p>
+<p>
+  Then, in the <code>routes</code> folder, I started another
+  <code>user.js</code> file to call the functions I created in
+  <code>model/user.js</code> file and create routes for frontend use. All the
+  method used by router here is <code>post</code>. <code>Register</code> part is
+  fairly easy: basically create user model with the data from the
+  <code>request body</code> and add user to the database. For
+  <code>authenticate</code>, it is a little bit more complicated. First, we call
+  function <code>getUserByUsername()</code> and check if there is a particular
+  user. Then, we call function <code>comparePassword()</code> and set token
+  expire time span. If success, it will response with a user object, token and
+  login status.
+</p>
+<h5 id="frontend">Frontend</h5>
+<p>
+  First, I created a <code>authService.ts</code> service to hold all
+  login/register related functions. Most of the communication made from frontend
+  to backend is using headers.
+</p>
+<p>
+  Inside the register and login pages I created, I imported the
+  <code>authService</code>, and used appropriate functions. Also, I want to hide
+  certain pages such as <code>profile</code> from unlogged in users. To do that,
+  I created a <code>authGuard</code> that detect logged in status from
+  <code>authService</code> component. Also, I removed the link for that page
+  from the navigation bar for better user experience.
+</p>
+<h4 id="2consumeapi">2. Consume API</h4>
+<h4 id="3passdatatootherpages">3. Pass data to other pages</h4>

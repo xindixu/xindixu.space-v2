@@ -172,6 +172,9 @@ div[id^='issuu-embed-container-'] {
   max-width: 100%;
   margin: 12px 0px;
 }
+#issuu-embed-container-texas-central,
+#issuu-embed-container-clif,
+#issuu-embed-container-brand-safty,
 #issuu-embed-container-triobike,
 #issuu-embed-container-tesla {
   padding-bottom: 77.27%;

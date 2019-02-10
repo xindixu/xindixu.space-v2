@@ -1,5 +1,5 @@
 ## Result
-<https://stay-at-home-and-lets-cook.herokuapp.com/#/home>
+https://stay-at-home-and-lets-cook.herokuapp.com/#/home
 
 ## Description
 Empty stomach, don't want to get out, only some random stuffs left in your fridge... No worries, just get on this website and search for simple recipes based on the ingredients you've got.
