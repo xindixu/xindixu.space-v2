@@ -167,20 +167,18 @@ export default {
   width: 100%;
   height: 100%;
 }
-#issuu-embed-container-tesla {
+div[id^='issuu-embed-container-'] {
   position: relative;
-  padding-bottom: 77.27%;
   max-width: 100%;
   margin: 12px 0px;
 }
+#issuu-embed-container-triobike,
+#issuu-embed-container-tesla {
+  padding-bottom: 77.27%;
+}
 #issuu-embed-container-groovy,
 #issuu-embed-container-groovy2 {
-  position: relative;
   padding-bottom: 56.25%; /* set the aspect ratio here as (height / width) * 100% */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  margin: 12px 0px;
 }
 .issuuembed {
   position: absolute;
