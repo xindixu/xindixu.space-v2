@@ -13,6 +13,7 @@ import Work from './pages/Work.vue';
 import Blog from './pages/Blog.vue';
 import Casper from './pages/Casper.vue';
 import WorkDetail from './pages/WorkDetail.vue';
+import WorkDetail0 from './pages/WorkDetail0.vue';
 
 import Backup from './pages/Backup.vue';
 
@@ -85,6 +86,15 @@ export default new Router({
     {
       path: '/work/:id',
       name: 'workDetail',
+      components: { default: WorkDetail, header: AppNavbar, footer: AppFooter },
+      props: {
+        default: true,
+        header: { colorOnScroll: 400 }
+      }
+    },
+    {
+      path: '/work0/:id',
+      name: 'workDetail0',
       components: { default: WorkDetail, header: AppNavbar, footer: AppFooter },
       props: {
         default: true,
