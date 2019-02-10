@@ -79,6 +79,7 @@ export default {
         case 0:
           break;
         case 1:
+          this.addToFavorate(this.fullPath, 'xindixu.space');
           break;
         case 2:
           this.modalOn = true;
@@ -89,14 +90,59 @@ export default {
     },
     generateLink() {
       // http://www.sharelinkgenerator.com/
-      const fullPath = `http://xindixu.space/work/${this.path}`;
-      const facebookPath = `https://www.facebook.com/sharer/sharer.php?u=${fullPath}`;
-      const twitterPath = `https://twitter.com/home?status=Just%20saw%20a%20cool%20project%20created%20by%20Xindi!%0A${fullPath}`;
-      const linkedinPath = `https://www.linkedin.com/shareArticle?mini=true&url=${fullPath}&title=Here%20is%20a%20cool%20project%20created%20by%20Xindi&summary=&source=`;
+      this.fullPath = `http://xindixu.space/work/${this.path}`;
+      const facebookPath = `https://www.facebook.com/sharer/sharer.php?u=${
+        this.fullPath
+      }`;
+      const twitterPath = `https://twitter.com/home?status=Just%20saw%20a%20cool%20project%20created%20by%20Xindi!%0A${
+        this.fullPath
+      }`;
+      const linkedinPath = `https://www.linkedin.com/shareArticle?mini=true&url=${
+        this.fullPath
+      }&title=Here%20is%20a%20cool%20project%20created%20by%20Xindi&summary=&source=`;
 
       this.socialIcons[0].link = facebookPath;
       this.socialIcons[1].link = linkedinPath;
       this.socialIcons[2].link = twitterPath;
+    },
+    addToFavorate(url, title) {
+      if (!url) {
+        url = window.location;
+      }
+      if (!title) {
+        title = document.title;
+      }
+      let browser = navigator.userAgent.toLowerCase();
+      if (window.sidebar) {
+        // Mozilla, Firefox, Netscape
+        window.sidebar.addPanel(title, url, '');
+      } else if (window.external) {
+        // IE or chrome
+        if (browser.indexOf('chrome') == -1) {
+          // ie
+          window.external.AddFavorite(url, title);
+        } else {
+          // chrome
+          alert(
+            'Please use CTRL+D (or Command+D for Macs) to bookmark this page'
+          );
+        }
+      } else if (window.opera && window.print) {
+        // Opera - automatically adds to sidebar if rel=sidebar in the tag
+        return true;
+      } else if (browser.indexOf('konqueror') != -1) {
+        // Konqueror
+        alert('Please press CTRL+B to bookmark this page.');
+      } else if (browser.indexOf('webkit') != -1) {
+        // safari
+        alert(
+          'Please press CTRL+B (or Command+D for macs) to bookmark this page.'
+        );
+      } else {
+        alert(
+          'Your browser cannot add bookmarks using this link. Please add this link manually.'
+        );
+      }
     }
   },
   created() {
