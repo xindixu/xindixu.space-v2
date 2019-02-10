@@ -48,6 +48,23 @@
     "end":"12/2018"
   },
   {
+    "title": "Triobike",
+    "id": "triobike",
+    "category": "Advertising",
+    "tags":[
+      "Research",
+      "Strategy",
+      "Creative",
+      "Media"
+    ],
+    "tools":[
+      "ESRI",
+      "SQAD"
+    ],
+    "start":"11/2018",
+    "end":"12/2018"
+  },
+  {
     "title":"Leweno Freelancer Website",
     "id": "leweno-freelancer-website",
     "category": "Advertising",
