@@ -135,7 +135,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .badge {
   margin-left: 5px;
   margin-right: 5px;
@@ -152,4 +152,43 @@ export default {
   top: 20vh;
   left: 10vw;
 }
+
+/* iframe*/
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#issuu-embed-container-tesla {
+  position: relative;
+  padding-bottom: 77.27%;
+  max-width: 100%;
+  margin: 12px 0px;
+}
+#issuu-embed-container-groovy,
+#issuu-embed-container-groovy2 {
+  position: relative;
+  padding-bottom: 56.25%; /* set the aspect ratio here as (height / width) * 100% */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 12px 0px;
+}
+.issuuembed {
+  position: absolute;
+  border: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*end of iframe*/
 </style>
