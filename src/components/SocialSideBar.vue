@@ -85,6 +85,9 @@ export default {
           this.modalOn = true;
           break;
         case 3:
+          document.querySelector('#commentSection').scrollIntoView({
+            behavior: 'smooth'
+          });
           break;
       }
     },
@@ -162,6 +165,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+html {
+  scroll-behavior: smooth;
+}
 #socialSideBar {
   z-index: 50;
 
