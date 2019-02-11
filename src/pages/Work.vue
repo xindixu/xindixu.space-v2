@@ -49,7 +49,8 @@ export default {
   data: function() {
     return {
       works: workList,
-      categories: ['Development', 'Advertising', 'Marketing', 'Craft']
+      categories: ['Development', 'Advertising', 'Marketing', 'Craft'],
+      tags: []
     };
   },
   components: {

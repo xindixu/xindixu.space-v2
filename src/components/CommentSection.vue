@@ -56,14 +56,15 @@ export default {
     email: null,
     md: `# Yay! You've found this great way of sharing thoughts! :tada:
 
-I really like your website! :smile::cat::email:
+I really like your website! :smile::cat::heart_eyes:
 
-here is my website: https://xindixu.space
-
-THINK
-- [] Is it true?
-- [] Is it
-- [] Is it insightful
+<hr/>
+THINK ... before you submit
+- [x] Is it true?
+- [x] Is it helpful?
+- [x] Is it insightful?
+- [x] Is is nice?
+- [x] Is is kind?
 `,
     options: {
       omitExtraWLInCodeBlocks: false,

@@ -5,7 +5,7 @@
     "category": "Development",
     "tags":[
       "UX/UI Design",
-      "Developement",
+      "Full-Stack Development",
       "Single Page Application"
     ],
     "tools":[
@@ -22,7 +22,7 @@
     "tags":[
       "UX/UI Design",
       "Content Management System",
-      "Developement"
+      "Front-End Development"
     ],
     "tools":[
       "Wordpress",
@@ -208,17 +208,50 @@
     "end":"05/2018"
   },
   {
+    "title":"Chemistry Monopoly",
+    "id": "chemistry-monopoly",
+    "category": "Development",
+    "tags":[
+      "Original Idea",
+      "Game Development",
+      "UX/UI Design",
+      "Object Oriented Programming"
+    ],
+    "tools":[
+      "JavaScript",
+      "Phaser"
+    ],
+    "start":"10/2017",
+    "end":"12/2017"
+  },
+  {
     "title":"Look For UT",
     "id": "look-for-ut",
     "category": "Development",
     "tags":[
       "iOS Development",
       "UX/UI Design",
-      "API Integration"
+      "Realtime Database"
     ],
     "tools":[
       "Swift",
       "Google Firebase"
+    ],
+    "start":"10/2017",
+    "end":"12/2017"
+  },
+  {
+    "title":"Defend The Throne",
+    "id": "defend-the-throne",
+    "category": "Development",
+    "tags":[
+      "Game Development",
+      "UX/UI Design",
+      "Object Oriented Programming"
+    ],
+    "tools":[
+      "JavaScript",
+      "Phaser"
     ],
     "start":"10/2017",
     "end":"12/2017"
