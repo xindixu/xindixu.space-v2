@@ -151,6 +151,25 @@
         </swiper-slide>
         <swiper-slide style="background-image: url('img/bg/bg1.jpg');">
           <h2>Capabilities</h2>
+          <button type="button" name="button" @click="animateCloud();">
+            clikc
+          </button>
+
+          <vue-word-cloud
+            ref="cloud"
+            :words="words"
+            :color="
+              ([, weight]) =>
+                weight > 35 ? '#9B6A6C' : weight > 25 ? '#E2B4BD' : '#7B6077'
+            "
+            font-family="Fredericka the Great"
+            enter-animation="animated bounceIn"
+            leave-animation="animated hinge"
+            :class="{ 'animated zoomIn': cloudAnimated }"
+            :font-size-ratio="5"
+            :animation-overlap="0.4"
+            :animation-duration="2000"
+          />
           <!--
             <div
               style="width: 800px; height: 800px;"
@@ -171,6 +190,7 @@
 <script>
 import { SquareLink, SquareTexts } from '../components';
 import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
+import VueWordCloud from 'vuewordcloud';
 
 export default {
   data() {
@@ -192,7 +212,40 @@ export default {
           enabled: true,
           onlyInViewport: false
         }
-      }
+      },
+      words: [
+        ['Angular', 40],
+        ['Vue.js', 40],
+        ['JavaScript', 30],
+        ['TypeScript', 30],
+        ['Express.js', 20],
+        ['Firebase', 20],
+        ['Node.js', 20],
+        ['Python3', 20],
+        ['Django', 20],
+        ['Processing', 20],
+        ['Swift', 20],
+        ['MongoDB', 15],
+        ['Phaser', 15],
+        ['Xcode', 15],
+        ['Bootstrap', 15],
+        ['Material', 15],
+        ['ElementUI', 15],
+        ['Java', 10],
+        ['Illustrator', 10],
+        ['Photoshop', 10],
+        ['Premiere', 10],
+        ['Sketch', 10],
+        ['AfterEffects', 10],
+        ['Maya', 10],
+        ['CMS', 10],
+        ['PowerPoint', 5],
+        ['Analytics', 5],
+        ['Tableau', 5],
+        ['Adwords', 5],
+        ['Excel', 5]
+      ],
+      cloudAnimated: true
     };
   },
   methods: {
@@ -203,6 +256,13 @@ export default {
       if (playPromise !== undefined) {
         playPromise;
       }
+    },
+    animateCloud() {
+      var self = this;
+      self.cloudAnimated = true;
+      setTimeout(function() {
+        self.cloudAnimated = false;
+      }, 1000);
     }
   },
   components: {
@@ -214,7 +274,8 @@ export default {
     Di,
     Pin,
     SquareLink,
-    SquareTexts
+    SquareTexts,
+    VueWordCloud
   },
   mounted() {
     //do something after mounting vue instance

@@ -12272,6 +12272,13 @@ vuepress@^1.0.0-alpha.25:
     "@vuepress/core" "^1.0.0-alpha.25"
     "@vuepress/theme-default" "^1.0.0-alpha.25"
 
+vuewordcloud@^18.7.11:
+  version "18.7.11"
+  resolved "https://registry.yarnpkg.com/vuewordcloud/-/vuewordcloud-18.7.11.tgz#285ae2b6d93ac6f1da6e60141227f68a64b30f24"
+  integrity sha1-KFrittk6xvHabmAUEif2imSzDyQ=
+  dependencies:
+    vue "^2.5.16"
+
 vuex@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
