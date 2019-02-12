@@ -149,6 +149,16 @@
             </b-col>
           </b-row>
         </swiper-slide>
+        <swiper-slide style="background-image: url('img/bg/bg1.jpg');">
+          <h2>Capabilities</h2>
+          <!--
+            <div
+              style="width: 800px; height: 800px;"
+              data-wordart-src="https://cdn.wordart.com/json/64h7bd4bk0re"
+              data-wordart-show-attribution
+            ></div>
+          -->
+        </swiper-slide>
         <div
           class="swiper-pagination swiper-pagination-v"
           slot="pagination"
@@ -205,6 +215,12 @@ export default {
     Pin,
     SquareLink,
     SquareTexts
+  },
+  mounted() {
+    //do something after mounting vue instance
+    let scriptTag = document.createElement('script');
+    scriptTag.src = 'https://cdn.wordart.com/wordart.min.js';
+    document.getElementsByTagName('head')[0].appendChild(scriptTag);
   }
 };
 </script>
