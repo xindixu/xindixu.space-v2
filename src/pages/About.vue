@@ -149,7 +149,7 @@
             </b-col>
           </b-row>
         </swiper-slide>
-        <swiper-slide style="background-image: url('img/bg/bg1.jpg');">
+        <swiper-slide style="background-color:white">
           <h2>Capabilities</h2>
           <button type="button" name="button" @click="animateCloud();">
             clikc
@@ -157,6 +157,7 @@
 
           <vue-word-cloud
             ref="cloud"
+            v-if="show"
             :words="words"
             :color="
               ([, weight]) =>
@@ -239,12 +240,11 @@ export default {
         ['AfterEffects', 10],
         ['Maya', 10],
         ['CMS', 10],
-        ['PowerPoint', 5],
         ['Analytics', 5],
         ['Tableau', 5],
-        ['Adwords', 5],
-        ['Excel', 5]
+        ['Adwords', 5]
       ],
+      show: false,
       cloudAnimated: true
     };
   },
@@ -258,11 +258,13 @@ export default {
       }
     },
     animateCloud() {
-      var self = this;
-      self.cloudAnimated = true;
-      setTimeout(function() {
-        self.cloudAnimated = false;
-      }, 1000);
+      // var self = this;
+      // self.cloudAnimated = true;
+      // setTimeout(function() {
+      //   self.cloudAnimated = false;
+      // }, 1000);
+      this.show = !this.show;
+      console.log(this.$refs.cloud);
     }
   },
   components: {
@@ -278,10 +280,10 @@ export default {
     VueWordCloud
   },
   mounted() {
-    //do something after mounting vue instance
-    let scriptTag = document.createElement('script');
-    scriptTag.src = 'https://cdn.wordart.com/wordart.min.js';
-    document.getElementsByTagName('head')[0].appendChild(scriptTag);
+    // //do something after mounting vue instance
+    // let scriptTag = document.createElement('script');
+    // scriptTag.src = 'https://cdn.wordart.com/wordart.min.js';
+    // document.getElementsByTagName('head')[0].appendChild(scriptTag);
   }
 };
 </script>
