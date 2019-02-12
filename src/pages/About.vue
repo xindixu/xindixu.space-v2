@@ -150,14 +150,9 @@
           </b-row>
         </swiper-slide>
         <swiper-slide style="background-color:white">
-          <h2>Capabilities</h2>
-          <button type="button" name="button" @click="animateCloud();">
-            clikc
-          </button>
-
+          <h2 v-observe-visibility="visibilityChanged">Capabilities</h2>
           <vue-word-cloud
-            ref="cloud"
-            v-if="show"
+            v-if="cloudShow"
             :words="words"
             :color="
               ([, weight]) =>
@@ -168,7 +163,7 @@
             leave-animation="animated hinge"
             :class="{ 'animated zoomIn': cloudAnimated }"
             :font-size-ratio="5"
-            :animation-overlap="0.4"
+            :animation-overlap="0.2"
             :animation-duration="2000"
           />
           <!--
@@ -198,7 +193,7 @@ export default {
     return {
       swiperOptionV: {
         direction: 'vertical',
-        effect: 'fade',
+        // effect: 'fade',
         speed: 500,
         pagination: {
           el: '.swiper-pagination-v',
@@ -218,7 +213,7 @@ export default {
         ['Angular', 40],
         ['Vue.js', 40],
         ['JavaScript', 30],
-        ['TypeScript', 30],
+        ['TypeScript', 20],
         ['Express.js', 20],
         ['Firebase', 20],
         ['Node.js', 20],
@@ -228,10 +223,9 @@ export default {
         ['Swift', 20],
         ['MongoDB', 15],
         ['Phaser', 15],
-        ['Xcode', 15],
-        ['Bootstrap', 15],
-        ['Material', 15],
-        ['ElementUI', 15],
+        ['Bootstrap', 10],
+        ['Material', 10],
+        ['ElementUI', 10],
         ['Java', 10],
         ['Illustrator', 10],
         ['Photoshop', 10],
@@ -240,12 +234,11 @@ export default {
         ['AfterEffects', 10],
         ['Maya', 10],
         ['CMS', 10],
-        ['Analytics', 5],
-        ['Tableau', 5],
-        ['Adwords', 5]
+        ['Analytics', 8],
+        ['Tableau', 8],
+        ['Adwords', 8]
       ],
-      show: false,
-      cloudAnimated: true
+      cloudShow: false
     };
   },
   methods: {
@@ -257,14 +250,9 @@ export default {
         playPromise;
       }
     },
-    animateCloud() {
-      // var self = this;
-      // self.cloudAnimated = true;
-      // setTimeout(function() {
-      //   self.cloudAnimated = false;
-      // }, 1000);
-      this.show = !this.show;
-      console.log(this.$refs.cloud);
+    visibilityChanged(isVisible) {
+      this.cloudShow = isVisible;
+      console.log(isVisible);
     }
   },
   components: {
