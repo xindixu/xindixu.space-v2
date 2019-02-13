@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="swiper-container">
-      <swiper id="v" :options="swiperOptionV">
+      <swiper ref="swiper" :options="swiperOptionV">
         <swiper-slide style="background-image: url('img/bg/bg29.jpg');">
           <b-row>
             <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
@@ -150,22 +150,33 @@
           </b-row>
         </swiper-slide>
         <swiper-slide style="background-color:white">
-          <h2 v-observe-visibility="visibilityChanged">Capabilities</h2>
-          <vue-word-cloud
-            v-if="cloudShow"
-            :words="words"
-            :color="
-              ([, weight]) =>
-                weight > 35 ? '#9B6A6C' : weight > 25 ? '#E2B4BD' : '#7B6077'
-            "
-            font-family="Fredericka the Great"
-            enter-animation="animated bounceIn"
-            leave-animation="animated hinge"
-            :class="{ 'animated zoomIn': cloudAnimated }"
-            :font-size-ratio="5"
-            :animation-overlap="0.2"
-            :animation-duration="2000"
-          />
+          <transition
+            enter-active-class="animated bounceIn"
+            leave-active-class="animated fadeOut"
+            mode="out-in"
+          >
+            <div class="full-screen" v-if="wordShow">
+              <h2 class="screen-center">I'm skilled at ...</h2>
+            </div>
+
+            <vue-word-cloud
+              v-else
+              :words="words"
+              :color="
+                ([, weight]) =>
+                  weight > 35 ? '#9B6A6C' : weight > 25 ? '#E2B4BD' : '#7B6077'
+              "
+              font-family="Fredericka the Great"
+              enter-animation="animated bounceIn"
+              leave-animation="animated hinge"
+              :font-size-ratio="5"
+              :animation-overlap="0.2"
+              :animation-duration="2000"
+            />
+          </transition>
+
+          <div v-observe-visibility="visibilityChanged"></div>
+
           <!--
             <div
               style="width: 800px; height: 800px;"
@@ -193,7 +204,7 @@ export default {
     return {
       swiperOptionV: {
         direction: 'vertical',
-        // effect: 'fade',
+        effect: 'slide',
         speed: 500,
         pagination: {
           el: '.swiper-pagination-v',
@@ -222,6 +233,7 @@ export default {
         ['Processing', 20],
         ['Swift', 20],
         ['MongoDB', 15],
+        ['SQL', 15],
         ['Phaser', 15],
         ['Bootstrap', 10],
         ['Material', 10],
@@ -234,10 +246,11 @@ export default {
         ['AfterEffects', 10],
         ['Maya', 10],
         ['CMS', 10],
-        ['Analytics', 8],
+        ['Analytics', 5],
         ['Tableau', 8],
-        ['Adwords', 8]
+        ['Adwords', 5]
       ],
+      wordShow: false,
       cloudShow: false
     };
   },
@@ -251,8 +264,13 @@ export default {
       }
     },
     visibilityChanged(isVisible) {
-      this.cloudShow = isVisible;
-      console.log(isVisible);
+      this.wordShow = false;
+      this.wordShow = isVisible;
+      let v = this;
+      let timer = setTimeout(() => {
+        v.wordShow = !isVisible;
+        v.cloudShow = isVisible;
+      }, 2000);
     }
   },
   components: {
@@ -364,5 +382,23 @@ svg {
 .tint {
   background-color: white;
   opacity: 0.8;
+}
+
+.full-screen {
+  z-index: 10;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.screen-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
