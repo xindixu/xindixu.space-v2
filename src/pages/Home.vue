@@ -2,27 +2,31 @@
   <div>
     <div class="swiper-container">
       <swiper id="v" :options="swiperOptionV">
-        <swiper-slide id="slide1">
-          <div id="photo" style="background-image: url('img/home/photo.jpg');">
-            <svg id="mask" width="150" viewbox="0 0 100 100">
-              <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop
-                    offset="0%"
-                    style="stop-color:rgb(255,255,255);stop-opacity:0"
-                  />
-                  <stop
-                    offset="100%"
-                    style="stop-color:rgb(255,255,255);stop-opacity:1"
-                  />
-                </linearGradient>
-              </defs>
-              <rect width="150" height="1000" style="fill:url(#grad1)"></rect>
-            </svg>
-            <CurveText id="greeting">{{ greeting }}</CurveText>
-          </div>
-
-          <b-col md="5" offset-md="7">
+        <swiper-slide
+          id="slide1"
+          style="background-image:url('img/home/2.jpg')"
+        >
+          <!--
+            <div id="photo" style="background-image: url('img/home/photo.jpg');">
+              <svg id="mask" width="150" viewbox="0 0 100 100">
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop
+                      offset="0%"
+                      style="stop-color:rgb(255,255,255);stop-opacity:0"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color:rgb(255,255,255);stop-opacity:1"
+                    />
+                  </linearGradient>
+                </defs>
+                <rect width="150" height="1000" style="fill:url(#grad1)"></rect>
+              </svg>
+              <CurveText id="greeting">{{ greeting }}</CurveText>
+            </div>
+          -->
+          <b-col lg="5" offset-lg="7" md="6" offset-md="6">
             <div class="zhIntro vertical">
               <h1 class="chineseTitle">徐欣笛</h1>
               <div class="chinese indentV">
@@ -287,6 +291,8 @@ export default {
 }
 
 #slide1 {
+  color: white;
+
   #photo {
     background-position: center center;
     background-size: cover;

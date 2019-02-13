@@ -15,8 +15,6 @@ import Casper from './pages/Casper.vue';
 import WorkDetail from './pages/WorkDetail.vue';
 import WorkDetail0 from './pages/WorkDetail0.vue';
 
-import Backup from './pages/Backup.vue';
-
 import AppNavbar from './layout/AppNavbar.vue';
 import AppFooter from './layout/AppFooter.vue';
 
@@ -25,7 +23,7 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/original',
       name: 'index',
       components: { default: Index, header: AppNavbar, footer: AppFooter },
       props: {
@@ -60,7 +58,7 @@ export default new Router({
       }
     },
     {
-      path: '/home',
+      path: '/',
       name: 'home',
       components: { default: Home, header: AppNavbar, footer: AppFooter },
       props: {
@@ -113,14 +111,6 @@ export default new Router({
       path: '/casper',
       name: 'casper',
       components: { default: Casper, header: AppNavbar, footer: AppFooter },
-      props: {
-        header: { colorOnScroll: 400 }
-      }
-    },
-    {
-      path: '/backup',
-      name: 'backup',
-      components: { default: Backup, header: AppNavbar, footer: AppFooter },
       props: {
         header: { colorOnScroll: 400 }
       }

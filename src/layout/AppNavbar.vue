@@ -20,7 +20,7 @@
             class="nav-link"
             active-class="active"
             exact
-            to="/home"
+            to="/"
           >
             <i class="now-ui-icons objects_globe"></i>
             <p>Home</p>
