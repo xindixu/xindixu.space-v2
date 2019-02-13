@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from './pages/Index.vue';
-import Landing from './pages/Landing.vue';
-import Login from './pages/Login.vue';
-import Profile from './pages/Profile.vue';
+
+import Index from './backup/Index.vue';
+import Landing from './backup/Landing.vue';
+import Login from './backup/Login.vue';
+import Profile from './backup/Profile.vue';
 import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
 

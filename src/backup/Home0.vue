@@ -249,5 +249,4 @@ export default {
 #stats img {
   width: 50px;
 }
-
 </style>

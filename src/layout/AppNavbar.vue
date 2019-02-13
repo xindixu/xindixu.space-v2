@@ -93,8 +93,7 @@
 </template>
 
 <script>
-import { DropDown, NavbarToggleButton, Navbar, NavLink } from '@/components';
-import { Popover } from 'element-ui';
+import { NavbarToggleButton, Navbar, NavLink } from '@/components';
 
 export default {
   name: 'app-navbar',
@@ -104,11 +103,9 @@ export default {
     toggled: Boolean
   },
   components: {
-    DropDown,
     Navbar,
     NavbarToggleButton,
-    NavLink,
-    [Popover.name]: Popover
+    NavLink
   }
 };
 </script>

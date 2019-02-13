@@ -20,7 +20,7 @@
 #### Components
 - [x]Footer
 - [x]Navigation bar
-  - [ ]Color & transparency 
+  - [ ]Color & transparency
 
 ## Development  
 #### Libraries
@@ -28,3 +28,15 @@
 
 ## Random Ideas
 ## Reference
+
+## Before 2/14 release:
+- [ ] Work page: img, card layout => center
+- [ ] Highlight: change color
+- [ ] All: check img resolution
+- [ ] Remove unused pictures, components, pages, etc
+- [ ] Contact me page
+- [ ] Original HTML pages migration
+- [ ] Work in progress component
+- [ ] My life story integration
+- [ ] Build vuepress, relink
+- [ ] THAT'S IT

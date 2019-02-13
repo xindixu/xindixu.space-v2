@@ -264,7 +264,7 @@ export default {
       }
     },
     visibilityChanged(isVisible) {
-      this.wordShow = false;
+      this.cloudShow = false;
       this.wordShow = isVisible;
       let v = this;
       let timer = setTimeout(() => {

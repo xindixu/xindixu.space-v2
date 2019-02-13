@@ -8,4 +8,4 @@ sidebar: auto
 # FreeCodeCamp
 This series contains my notes taken when I am learning Front-end technologies on FreeCodeCamp
 
-[link](1-BasicJavaScript.md)
+[link](/1-BasicJavaScript.md)
