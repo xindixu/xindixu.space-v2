@@ -39,4 +39,5 @@
 - [ ] Work in progress component
 - [ ] My life story integration
 - [ ] Build vuepress, relink
+- [ ] Treeshaking :https://medium.com/@joanxie/utilize-webpacks-tree-shaking-in-your-vue-application-a0dc63c0dfac
 - [ ] THAT'S IT
