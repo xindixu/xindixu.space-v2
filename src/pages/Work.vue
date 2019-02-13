@@ -24,7 +24,11 @@
           </template>
           <b-row>
             <div v-for="data in works" :key="data.index">
-              <b-card-group v-if="category === data.category" deck class="md">
+              <b-card-group
+                v-if="category === data.category"
+                deck
+                class="md text-center"
+              >
                 <router-link :to="'/work/' + data.id">
                   <b-card
                     :title="data.title"
@@ -62,6 +66,10 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+/* div {
+  border: 1px solid #000;
+} */
+
 img {
   width: 100%;
   height: auto;
@@ -72,6 +80,9 @@ img {
 
   .row {
     margin: 1%;
+    padding: 0.7%;
+    display: flex;
+    justify-content: center;
   }
 
   .work-card {
