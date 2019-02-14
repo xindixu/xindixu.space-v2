@@ -58,41 +58,7 @@ export default {
     tags: [],
     md: '',
     filter: '',
-    path: '',
-    options: {
-      omitExtraWLInCodeBlocks: false,
-      noHeaderId: false,
-      prefixHeaderId: false,
-      rawPrefixHeaderId: false,
-      ghCompatibleHeaderId: false,
-      rawHeaderId: false,
-      headerLevelStart: false,
-      parseImgDimensions: false,
-      simplifiedAutoLink: false,
-      excludeTrailingPunctuationFromURLs: false,
-      literalMidWordUnderscores: false,
-      literalMidWordAsterisks: false,
-      strikethrough: false,
-      tables: false,
-      tablesHeaderId: false,
-      ghCodeBlocks: true,
-      tasklists: false,
-      smoothLivePreview: false,
-      smartIndentationFix: false,
-      disableForced4SpacesIndentedSublists: false,
-      simpleLineBreaks: false,
-      requireSpaceBeforeHeadingText: false,
-      ghMentions: false,
-      ghMentionsLink: 'https://github.com/{u}',
-      encodeEmails: true,
-      openLinksInNewWindow: false,
-      backslashEscapesHTMLTags: false,
-      emoji: false,
-      underline: false,
-      completeHTMLDocument: false,
-      metadata: false,
-      splitAdjacentBlockquotes: false
-    }
+    path: ''
   }),
   props: ['id'],
   watch: {
@@ -166,6 +132,21 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
+}
+.gameWrapper {
+  position: relative;
+  padding-bottom: 70.31%; /* 1024:720 */
+  padding-top: 25px;
+  height: 0;
+}
+.gameWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 div[id^='issuu-embed-container-'] {
   position: relative;

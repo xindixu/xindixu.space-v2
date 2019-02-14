@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .ac-wrapper {
+        width: 100%;
+        position: relative;
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        perspective: 1000px;
+        -webkit-perspective-origin: 50% 25%;
+        -moz-perspective-origin: 50% 25%;
+        perspective-origin: 50% 25%;
+      }
+
+      .ac-device {
+        width: 320px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background: url(..//img/work/look-for-ut/iPhone.png) no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        position: relative;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+
+      .ac-device a {
+        width: 275px;
+        height: 539px;
+        margin: 80px 0 0 22px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ac-device a img {
+        display: block;
+        position: absolute;
+        height: auto;
+        width: 100%;
+        margin: 0;
+      }
+
+      .ac-device h3 {
+        position: relative;
+        margin: 0;
+        left: auto;
+        top: auto;
+        width: 100%;
+        padding-top: 50px;
+        display: block;
+        text-align: center;
+      }
+
+      .ac-device nav {
+        position: absolute;
+        bottom: 1em;
+        left: 100%;
+        margin-left: 2em;
+        width: 100%;
+      }
+
+      .ac-device nav span {
+        display: block;
+        font-size: 36px;
+        cursor: pointer;
+        color: #585858;
+        margin-right: 10px;
+        float: left;
+        text-align: center;
+      }
+
+      .ac-grid {
+        width: 90%;
+        left: 5%;
+        background-color: rgba(196, 196, 196, 0.43);
+        position: absolute;
+        z-index: 1000;
+        top: 10px;
+        opacity: 0;
+        text-align: center;
+        pointer-events: none;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -webkit-transform: translateZ(-350px);
+        -moz-transform: translateZ(-350px);
+        transform: translateZ(-350px);
+      }
+      .ac-grid a {
+        width: 120px;
+        display: inline-block;
+        position: relative;
+        margin: 10px 5px;
+        cursor: pointer;
+      }
+
+      .ac-grid a img {
+        display: block;
+        width: 100%;
+      }
+
+      .ac-grid a span {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 3em 1em 0;
+        z-index: 100;
+        color: #ddd;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        transform: translateY(-5px);
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+
+      .ac-grid a:hover span {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+      .ac-wrapper.ac-gridview .ac-device {
+        -webkit-transform: translateZ(-350px);
+        -moz-transform: translateZ(-350px);
+        transform: translateZ(-350px);
+        opacity: 0.6;
+      }
+
+      .ac-wrapper.ac-gridview .ac-grid {
+        -webkit-transform: translateZ(0px);
+        -moz-transform: translateZ(0px);
+        transform: translateZ(0px);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @media (max-width: 599px) {
+        .ac-grid a {
+          width: 100px;
+        }
+
+        .ac-device nav {
+          position: absolute;
+          left: 0%;
+          top: 100%;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        .ac-grid a {
+          width: 150px;
+        }
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        .ac-grid a {
+          width: 150px;
+        }
+      }
+    </style>
+
+  </head>
+
+
+  <body>
+    <h2>Project Description</h2>
+
+    <h2>Final App</h2>
+    <div id="ac-wrapper" class="ac-wrapper">
+      <div class="ac-device">
+        <a href="#"><img src="/img/work/look-for-ut/lookForUT1.png"/></a>
+        <h3 class="ac-title">Scavenger hunt at UT</h3>
+        <nav>
+          <span><i class="fa fa-chevron-left"></i></span>
+          <span><i class="fa fa-chevron-right"></i></span>
+        </nav>
+      </div>
+      <div class="ac-grid">
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT1.png" /><span
+            >Login or register</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT2.png" /><span
+            >Home</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT3.png" /><span
+            >Choose to join a team or create a team</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT4.png" /><span
+            >Create a team and ask teammates to enter the code to join</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT5.png" /><span
+            >Enter a code to join a team</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT6.png" /><span
+            >Wait until all team members arrive at the Little Fountain</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT7.png" /><span
+            >Game will not start until all members arrive</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT8.png" /><span
+            >Solve the puzzle and go to the corresponding location</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT9.png" /><span
+            >Try again if not corrrect</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT10.png" /><span
+            >Yay, a coupon for nearby restuarants will be the reward</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT11.png" /><span
+            >Account settings</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT12.png" /><span
+            >About us</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT13.png" /><span
+            >Tutorial</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT14.png" /><span
+            >Tutorial</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT15.png" /><span
+            >Check avialable coupons and enjoy it with teammates!</span
+          ></a
+        >
+        <a href="#"
+          ><img src="/img/work/look-for-ut/lookForUT16.png" /><span
+            >Delete account</span
+          ></a
+        >
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      var AppShowcase = (function() {
+        var $el = $('#ac-wrapper'),
+          // device element
+          $device = $el.find('.ac-device'),
+          // the device image wrapper
+          $trigger = $device.children('a:first'),
+          // the screens
+          $screens = $el.find('.ac-grid a'),
+          // the device screen image
+          $screenImg = $device.find('img').css('transition', 'all 0.5s ease'),
+          // the device screen title
+          $screenTitle = $device.find('.ac-title'),
+          // navigation arrows
+          $nav = $device.find('nav'),
+          $navPrev = $nav.children('span:first'),
+          $navNext = $nav.children('span:last'),
+          // current screen´s element index
+          current = 0,
+          // if navigating is in process
+          animating = false,
+          // total number of screens
+          screensCount = $screens.length,
+          // csstransitions support
+          support = Modernizr.csstransitions,
+          // transition end event name
+          transEndEventNames = {
+            WebkitTransition: 'webkitTransitionEnd',
+            MozTransition: 'transitionend',
+            OTransition: 'oTransitionEnd',
+            msTransition: 'MSTransitionEnd',
+            transition: 'transitionend'
+          },
+          transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+          // HTML Body element
+          $body = $('body');
+
+        function init() {
+          // show grid
+          $trigger.on('click', showGrid);
+          // when a grid´s screen is clicked, show the respective image on the device
+          $screens.on('click', function() {
+            showScreen($(this));
+            return false;
+          });
+          // navigate
+          $navPrev.on('click', function() {
+            navigate('prev');
+            return false;
+          });
+          $navNext.on('click', function() {
+            navigate('next');
+            return false;
+          });
+        }
+
+        function showGrid() {
+          $el.addClass('ac-gridview');
+          // clicking somewhere else on the page closes the grid view
+          $body.off('click').on('click', function() {
+            showScreen();
+          });
+          return false;
+        }
+
+        function showScreen($screen) {
+          $el.removeClass('ac-gridview');
+          if ($screen) {
+            // update current
+            current = $screen.index();
+            // update image and title on the device
+            $screenImg.attr('src', $screen.find('img').attr('src'));
+            $screenTitle.text($screen.find('span').text());
+          }
+        }
+
+        function navigate(direction) {
+          if (animating) {
+            return false;
+          }
+
+          animating = true;
+
+          if (direction === 'next') {
+            current = current < screensCount - 1 ? ++current : 0;
+          } else if (direction === 'prev') {
+            current = current > 0 ? --current : screensCount - 1;
+          }
+
+          // next screen to show
+          var $nextScreen = $screens.eq(current);
+
+          if (support) {
+            // append new image to the device
+            var $nextScreenImg = $(
+              '<img src="' + $nextScreen.find('img').attr('src') + '"></img>'
+            )
+              .css({
+                transition: 'all 0.5s ease',
+                opacity: 0,
+                transform: direction === 'next' ? 'scale(0.9)' : 'translateY(100px)'
+              })
+              .insertBefore($screenImg);
+
+            // update title
+            $screenTitle.text($nextScreen.find('span').text());
+
+            setTimeout(function() {
+              // current image fades out / new image fades in
+              $screenImg
+                .css({
+                  opacity: 0,
+                  transform:
+                    direction === 'next' ? 'translateY(100px)' : 'scale(0.9)'
+                })
+                .on(transEndEventName, function() {
+                  $(this).remove();
+                });
+
+              $nextScreenImg
+                .css({
+                  opacity: 1,
+                  transform: direction === 'next' ? 'scale(1)' : 'translateY(0px)'
+                })
+                .on(transEndEventName, function() {
+                  $screenImg = $(this).off(transEndEventName);
+                  animating = false;
+                });
+            }, 25);
+          } else {
+            // update image and title on the device
+            $screenImg.attr('src', $nextScreen.find('img').attr('src'));
+            $screenTitle.text($nextScreen.find('span').text());
+            animating = false;
+          }
+        }
+
+        return { init: init };
+      })();
+    </script>
+    <script>
+      $(function() {
+        AppShowcase.init();
+      });
+    </script>
+
+  </body>
+</html>
