@@ -148,6 +148,7 @@
               </div>
             </b-col>
           </b-row>
+          <div v-observe-visibility="visibilityChangedS3"></div>
         </swiper-slide>
         <swiper-slide style="background-color:white">
           <transition
@@ -160,7 +161,7 @@
             </div>
 
             <vue-word-cloud
-              v-else
+              v-else-if="cloudShow"
               :words="words"
               :color="
                 ([, weight]) =>
@@ -174,15 +175,17 @@
               :animation-duration="2000"
             />
           </transition>
-
-          <div v-observe-visibility="visibilityChanged"></div>
-
+          <div v-observe-visibility="visibilityChangedS4"></div>
           <!--
-            <div
-              style="width: 800px; height: 800px;"
-              data-wordart-src="https://cdn.wordart.com/json/64h7bd4bk0re"
-              data-wordart-show-attribution
-            ></div>
+            <transition
+              enter-active-class="animated bounceIn"
+              leave-active-class="animated fadeOut"
+              :duration="{ enter: 16000, leave: 800 }"
+            >
+              <div class="right-corner" v-if="!wordShow">
+                <h4>and more... because I am always learning...</h4>
+              </div>
+            </transition>
           -->
         </swiper-slide>
         <div
@@ -263,14 +266,16 @@ export default {
         playPromise;
       }
     },
-    visibilityChanged(isVisible) {
-      this.cloudShow = false;
+    visibilityChangedS4(isVisible) {
       this.wordShow = isVisible;
       let v = this;
       let timer = setTimeout(() => {
         v.wordShow = !isVisible;
         v.cloudShow = isVisible;
       }, 2000);
+    },
+    visibilityChangedS3(isVisible) {
+      this.cloudShow = false;
     }
   },
   components: {
@@ -400,5 +405,10 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.right-corner {
+  position: absolute;
+  right: 8%;
+  bottom: 5%;
 }
 </style>
