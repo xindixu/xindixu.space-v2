@@ -2,27 +2,9 @@
   <div>
     <div class="swiper-container">
       <swiper id="v" :options="swiperOptionV">
-        <swiper-slide
-          id="slide1"
-          style="background-image:url('img/home/2.jpg')"
-        >
-          <!--
-            <div id="photo" style="background-image: url('img/home/photo.jpg');">
-              <svg id="mask" width="150" viewbox="0 0 100 100">
-                <defs>
-                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop
-                      offset="0%"
-                      style="stop-color:rgb(255,255,255);stop-opacity:0"
-                    />
-                    <stop
-                      offset="100%"
-                      style="stop-color:rgb(255,255,255);stop-opacity:1"
-                    />
-                  </linearGradient>
-                </defs>
-                <rect width="150" height="1000" style="fill:url(#grad1)"></rect>
-              </svg>
+        <swiper-slide id="slide1" style="background-image:url('img/home/2.jpg')"
+          ><!--
+            <div id="photo">
               <CurveText id="greeting">{{ greeting }}</CurveText>
             </div>
           -->
@@ -312,8 +294,15 @@ export default {
     #greeting {
       position: absolute;
       top: -40px;
-      left: 25%;
+      /*   left: 15%; */
       letter-spacing: 4px;
+
+      @media screen and (max-width: 768px) {
+        left: 10%;
+      }
+      @media screen and (min-width: 769px) {
+        left: 20%;
+      }
     }
 
     #headline {
@@ -387,58 +376,5 @@ export default {
   .link {
     margin-left: 280px;
   }
-}
-
-/*
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
-*/
-
-@media (min-width: 1281px) {
-  //CSS
-}
-
-/*
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  //CSS
-}
-
-/*
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  //CSS
-}
-
-/*
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  //CSS
-}
-
-/*
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-}
-
-/*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
-
-@media (min-width: 320px) and (max-width: 480px) {
-  //CSS
 }
 </style>

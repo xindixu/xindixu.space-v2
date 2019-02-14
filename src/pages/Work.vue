@@ -82,11 +82,13 @@ img {
     margin: 1%;
     padding: 0.7%;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    /* justify-content: center; */
   }
 
   .work-card {
     width: 300px;
+    flex: 1 0 500px;
   }
 }
 a:hover,
