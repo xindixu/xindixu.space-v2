@@ -199,7 +199,7 @@
             <div class="screen-center text-center">
               <h2>My Life So Far...</h2>
               <n-button
-                onclick="location.href='html/life-story.html'"
+                onclick="window.open('html/life-story.html','_blank');"
                 type="warning"
                 round
                 >Click to Launch</n-button

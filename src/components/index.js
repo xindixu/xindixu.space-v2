@@ -29,6 +29,7 @@ import CurveText from './CurveText.vue';
 import TableOfContent from './TableOfContent.vue';
 import SocialSideBar from './SocialSideBar.vue';
 import CommentSection from './CommentSection.vue';
+import WorkInProgress from './WorkInProgress.vue';
 
 export {
   Alert,
@@ -59,5 +60,6 @@ export {
   CurveText,
   TableOfContent,
   SocialSideBar,
-  CommentSection
+  CommentSection,
+  WorkInProgress
 };

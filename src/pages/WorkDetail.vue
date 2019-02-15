@@ -26,9 +26,9 @@
           :options="options"
         ></vue-showdown>
       -->
-
       <!-- real content -->
       <div id="htmlContent" v-html="html"></div>
+      <WorkInProgress v-if="!html"></WorkInProgress>
 
       <CommentSection></CommentSection>
     </b-container>
@@ -42,7 +42,8 @@ import {
   Badge,
   TableOfContent,
   SocialSideBar,
-  CommentSection
+  CommentSection,
+  WorkInProgress
 } from '@/components';
 import workList from '../assets/work/data.json';
 
@@ -87,7 +88,8 @@ export default {
     Badge,
     TableOfContent,
     SocialSideBar,
-    CommentSection
+    CommentSection,
+    WorkInProgress
   },
   mounted() {
     //do something after mounting vue instance
