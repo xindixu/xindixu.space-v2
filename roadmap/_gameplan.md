@@ -30,14 +30,14 @@
 ## Reference
 
 ## Before 2/14 release:
-- [ ] Work page: img, card layout => center
+- [X] Work page: img, card layout => center
 - [ ] Highlight: change color
 - [ ] All: check img resolution
 - [ ] Remove unused pictures, components, pages, etc
 - [ ] Contact me page
 - [ ] Original HTML pages migration
 - [ ] Work in progress component
-- [ ] My life story integration
+- [X] My life story integration
 - [ ] Build vuepress, relink
 - [ ] Treeshaking :https://medium.com/@joanxie/utilize-webpacks-tree-shaking-in-your-vue-application-a0dc63c0dfac
 - [ ] THAT'S IT

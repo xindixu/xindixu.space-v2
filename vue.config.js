@@ -12,7 +12,9 @@ module.exports = {
             {
               loader: 'html-loader',
               options: {
-                minimize: true
+                minimize: true,
+                removeComments: false,
+                collapseWhitespace: false
               }
             }
           ]

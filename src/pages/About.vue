@@ -27,7 +27,7 @@
             </b-col>
           </b-row>
 
-          <b-row class="mt-5">
+          <b-row style="margin-top:15vh">
             <b-col lg="6" offset-lg="5" md="10">
               <div id="map-container" class="mx-4">
                 <img id="map" src="img/about/map.png" />
@@ -156,11 +156,16 @@
             leave-active-class="animated fadeOut"
             mode="out-in"
           >
-            <div class="full-screen" v-if="wordShow">
+            <div
+              class="full-screen"
+              v-if="wordShow"
+              style="background-color=white;"
+            >
               <h2 class="screen-center">I'm skilled at ...</h2>
             </div>
 
             <vue-word-cloud
+              class="front"
               v-else-if="cloudShow"
               :words="words"
               :color="
@@ -176,6 +181,7 @@
             />
           </transition>
           <div v-observe-visibility="visibilityChangedS4"></div>
+
           <!--
             <transition
               enter-active-class="animated bounceIn"
@@ -188,6 +194,19 @@
             </transition>
           -->
         </swiper-slide>
+        <swiper-slide>
+          <div class="full-screen" style="background-color:#E2B4BD">
+            <div class="screen-center text-center">
+              <h2>My Life So Far...</h2>
+              <n-button
+                onclick="location.href='html/life-story.html'"
+                type="warning"
+                round
+                >Click to Launch</n-button
+              >
+            </div>
+          </div>
+        </swiper-slide>
         <div
           class="swiper-pagination swiper-pagination-v"
           slot="pagination"
@@ -198,7 +217,7 @@
 </template>
 
 <script>
-import { SquareLink, SquareTexts } from '../components';
+import { SquareLink, SquareTexts, Button } from '@/components';
 import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 import VueWordCloud from 'vuewordcloud';
 
@@ -269,12 +288,12 @@ export default {
     visibilityChangedS4(isVisible) {
       this.wordShow = isVisible;
       let v = this;
-      let timer = setTimeout(() => {
+      setTimeout(() => {
         v.wordShow = !isVisible;
         v.cloudShow = isVisible;
       }, 2000);
     },
-    visibilityChangedS3(isVisible) {
+    visibilityChangedS3() {
       this.cloudShow = false;
     }
   },
@@ -288,7 +307,8 @@ export default {
     Pin,
     SquareLink,
     SquareTexts,
-    VueWordCloud
+    VueWordCloud,
+    [Button.name]: Button
   },
   mounted() {
     // //do something after mounting vue instance
@@ -396,7 +416,6 @@ svg {
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: white;
 }
 
 .screen-center {
@@ -406,9 +425,15 @@ svg {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.right-corner {
+.screen-corner {
   position: absolute;
-  right: 8%;
-  bottom: 5%;
+  right: 0%;
+  bottom: 0%;
+}
+.behind {
+  z-index: 0;
+}
+.front {
+  z-index: 10;
 }
 </style>

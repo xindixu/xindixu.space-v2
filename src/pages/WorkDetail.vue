@@ -18,12 +18,14 @@
     </div>
 
     <b-container class="mt-5">
-      <!-- md to html tool -->
-      <vue-showdown
-        id="mdContent"
-        :markdown="md"
-        :options="options"
-      ></vue-showdown>
+      <!--
+        md to html tool
+        <vue-showdown
+          id="mdContent"
+          :markdown="md"
+          :options="options"
+        ></vue-showdown>
+      -->
 
       <!-- real content -->
       <div id="htmlContent" v-html="html"></div>
