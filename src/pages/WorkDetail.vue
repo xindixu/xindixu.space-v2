@@ -30,10 +30,6 @@
       <!-- real content -->
       <div id="htmlContent" v-html="html"></div>
 
-      <br />
-      <br />
-      <br />
-      <br />
       <CommentSection></CommentSection>
     </b-container>
 
@@ -120,7 +116,20 @@ export default {
   top: 20vh;
   left: 10vw;
 }
-
+#htmlContent {
+  p,
+  strong,
+  a,
+  li,
+  code {
+    &::selection {
+      background: lighten(#e2b4bd, 6%);
+    }
+  }
+}
+#commentSection {
+  margin-top: 200px;
+}
 /* iframe*/
 .videoWrapper {
   position: relative;
