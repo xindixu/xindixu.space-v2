@@ -93,7 +93,7 @@ export default {
     },
     generateLink() {
       // http://www.sharelinkgenerator.com/
-      this.fullPath = `http://xindixu.space/work/${this.path}`;
+      this.fullPath = `http://xindi-xu.space/work/${this.path}`;
       const facebookPath = `https://www.facebook.com/sharer/sharer.php?u=${
         this.fullPath
       }`;

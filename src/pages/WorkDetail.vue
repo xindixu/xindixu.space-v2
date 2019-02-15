@@ -29,6 +29,13 @@
       <!-- real content -->
       <div id="htmlContent" v-html="html"></div>
       <WorkInProgress v-if="!html"></WorkInProgress>
+      <div class="spacer"></div>
+
+      <router-link :to="{ name: 'work' }">
+        <n-button type="primary">
+          <i class="now-ui-icons arrows-1_minimal-left"></i> &nbsp; Go Back
+        </n-button>
+      </router-link>
 
       <CommentSection></CommentSection>
     </b-container>
@@ -43,7 +50,8 @@ import {
   TableOfContent,
   SocialSideBar,
   CommentSection,
-  WorkInProgress
+  WorkInProgress,
+  Button
 } from '@/components';
 import workList from '../assets/work/data.json';
 
@@ -89,7 +97,8 @@ export default {
     TableOfContent,
     SocialSideBar,
     CommentSection,
-    WorkInProgress
+    WorkInProgress,
+    [Button.name]: Button
   },
   mounted() {
     //do something after mounting vue instance
@@ -128,8 +137,21 @@ export default {
       background: lighten(#e2b4bd, 6%);
     }
   }
+
+  p {
+    text-align: justify;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 60px;
+  }
 }
-#commentSection {
+
+.spacer {
   margin-top: 200px;
 }
 /* iframe*/
