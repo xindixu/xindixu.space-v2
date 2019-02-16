@@ -32,11 +32,11 @@
               v-for="data in works"
               :key="data.index"
             >
-              <b-card-group deck class="md text-center">
+              <b-card-group deck class="text-center">
                 <router-link :to="'/work/' + data.id">
                   <b-card
                     :title="data.title"
-                    class="work-card mx-4 grow"
+                    class="work-card grow"
                     :img-src="'img/work/' + data.id + '.png'"
                   >
                   </b-card>
@@ -57,10 +57,42 @@ export default {
   data: function() {
     return {
       works: workList,
+      sortedWorkList: [],
       categories: ['Development', 'Advertising', 'Marketing', 'Craft'],
       tags: []
     };
   },
+  // computed: {
+  //   development() {
+  //     return workList.filter(w => {
+  //       return w.category == 'development';
+  //     });
+  //   },
+  //   advertising() {
+  //     return workList.filter(w => {
+  //       return w.category == 'advertising';
+  //     });
+  //   },
+  //   marketing() {
+  //     return workList.filter(w => {
+  //       return w.category == 'marketing';
+  //     });
+  //   },
+  //   craft() {
+  //     return workList.filter(w => {
+  //       return w.category == 'craft';
+  //     });
+  //   }
+  // },
+  // methods: {
+  //   getSortedWorkList() {
+  //     for (let c of this.categories) {
+  //       console.log(c);
+  //       this.sortedWorkList.push(this.works.filter(obj => obj.category == c));
+  //     }
+  //     console.log(this.sortedWorkList);
+  //   }
+  // },
   components: {
     Parallax,
     Card,
@@ -85,8 +117,6 @@ img {
   .row {
     margin: 0%;
     padding: 1%;
-    /*     display: flex;
-flex-wrap: wrap; */
     max-width: 95vw;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -95,8 +125,6 @@ flex-wrap: wrap; */
   }
 
   .work-card {
-    /*     width: 300px;
- */
     display: flex;
     flex-direction: column;
     position: relative;
