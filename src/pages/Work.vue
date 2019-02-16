@@ -18,17 +18,21 @@
         centered
         tab-content-classes="tab-subcategories text-center"
       >
-        <tab-pane v-for="category in categories" :key="category.index">
+        <tab-pane
+          v-for="category in categories"
+          :key="category.index"
+          class="text-center"
+        >
           <template slot="label">
             {{ category }}
           </template>
           <b-row>
-            <div v-for="data in works" :key="data.index">
-              <b-card-group
-                v-if="category === data.category"
-                deck
-                class="md text-center"
-              >
+            <div
+              v-if="category === data.category"
+              v-for="data in works"
+              :key="data.index"
+            >
+              <b-card-group deck class="md text-center">
                 <router-link :to="'/work/' + data.id">
                   <b-card
                     :title="data.title"
@@ -79,16 +83,23 @@ img {
   margin: 1%;
 
   .row {
-    margin: 1%;
-    padding: 0.7%;
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: center; */
+    margin: 0%;
+    padding: 1%;
+    /*     display: flex;
+flex-wrap: wrap; */
+    max-width: 95vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: minmax(280px, auto);
+    grid-gap: 1rem 3rem;
   }
 
   .work-card {
-    width: 300px;
-    flex: 1 0 500px;
+    /*     width: 300px;
+ */
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 }
 a:hover,

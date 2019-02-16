@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Index from './backup/Index.vue';
-import Landing from './backup/Landing.vue';
-import Login from './backup/Login.vue';
-import Profile from './backup/Profile.vue';
-import MainNavbar from './layout/MainNavbar.vue';
-import MainFooter from './layout/MainFooter.vue';
+// import Index from './backup/Index.vue';
+// import Landing from './backup/Landing.vue';
+// import Login from './backup/Login.vue';
+// import Profile from './backup/Profile.vue';
+// import MainNavbar from './layout/MainNavbar.vue';
+// import MainFooter from './layout/MainFooter.vue';
 
 import Home from './pages/Home.vue';
 import About from './pages/About.vue';
@@ -23,41 +23,41 @@ Vue.use(Router);
 
 export default new Router({
   routes: [
-    {
-      path: '/original',
-      name: 'index',
-      components: { default: Index, header: AppNavbar, footer: AppFooter },
-      props: {
-        header: { colorOnScroll: 400 },
-        footer: { backgroundColor: 'black' }
-      }
-    },
-    {
-      path: '/landing',
-      name: 'landing',
-      components: { default: Landing, header: MainNavbar, footer: MainFooter },
-      props: {
-        header: { colorOnScroll: 400 },
-        footer: { backgroundColor: 'black' }
-      }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      components: { default: Login, header: MainNavbar },
-      props: {
-        header: { colorOnScroll: 400 }
-      }
-    },
-    {
-      path: '/profile',
-      name: 'profile',
-      components: { default: Profile, header: MainNavbar, footer: AppFooter },
-      props: {
-        header: { colorOnScroll: 400 },
-        footer: { backgroundColor: 'black' }
-      }
-    },
+    // {
+    //   path: '/original',
+    //   name: 'index',
+    //   components: { default: Index, header: AppNavbar, footer: AppFooter },
+    //   props: {
+    //     header: { colorOnScroll: 400 },
+    //     footer: { backgroundColor: 'black' }
+    //   }
+    // },
+    // {
+    //   path: '/landing',
+    //   name: 'landing',
+    //   components: { default: Landing, header: MainNavbar, footer: MainFooter },
+    //   props: {
+    //     header: { colorOnScroll: 400 },
+    //     footer: { backgroundColor: 'black' }
+    //   }
+    // },
+    // {
+    //   path: '/login',
+    //   name: 'login',
+    //   components: { default: Login, header: MainNavbar },
+    //   props: {
+    //     header: { colorOnScroll: 400 }
+    //   }
+    // },
+    // {
+    //   path: '/profile',
+    //   name: 'profile',
+    //   components: { default: Profile, header: MainNavbar, footer: AppFooter },
+    //   props: {
+    //     header: { colorOnScroll: 400 },
+    //     footer: { backgroundColor: 'black' }
+    //   }
+    // },
     {
       path: '/',
       name: 'home',
