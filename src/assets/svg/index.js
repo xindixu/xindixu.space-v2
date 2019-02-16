@@ -8,10 +8,6 @@ import Learning from './learning.svg';
 import Working from './working.svg';
 import Enjoying from './enjoying.svg';
 import Pin from './pin.svg';
-import Route from './route.svg'
+import Route from './route.svg';
 
-export {
-  Xu0, Xu, Xin0, Xin, Di0, Di,
-  Learning, Working, Enjoying,
-  Pin, Route
-}
+export { Xu0, Xu, Xin0, Xin, Di0, Di, Learning, Working, Enjoying, Pin, Route };

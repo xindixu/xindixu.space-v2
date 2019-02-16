@@ -2,8 +2,11 @@
   <div>
     <div class="swiper-container">
       <swiper id="v" :options="swiperOptionV">
-        <swiper-slide id="slide1" style="background-image:url('img/home/2.jpg')"
-          ><!--
+        <swiper-slide
+          id="slide1"
+          style="background-image:url('img/home/2.jpg')"
+        >
+          <!--
             <div id="photo">
               <CurveText id="greeting">{{ greeting }}</CurveText>
             </div>

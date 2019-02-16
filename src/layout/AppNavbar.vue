@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import { NavbarToggleButton, Navbar, NavLink } from '@/components';
+import { Navbar } from '@/components';
 
 export default {
   name: 'app-navbar',
@@ -103,9 +103,7 @@ export default {
     toggled: Boolean
   },
   components: {
-    Navbar,
-    NavbarToggleButton,
-    NavLink
+    Navbar
   }
 };
 </script>

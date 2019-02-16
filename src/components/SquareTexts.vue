@@ -42,16 +42,16 @@ p {
 .en {
   line-height: 30px;
 }
+
 .zh {
   position: absolute;
   right: -20px;
   top: 30px;
 }
-
 .zh4 {
   letter-spacing: 7px;
 }
-.zh5{
+.zh5 {
   letter-spacing: 3px;
 }
 </style>
