@@ -1853,6 +1853,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+batch-processor@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/batch-processor/-/batch-processor-1.0.0.tgz#75c95c32b748e0850d10c2b168f6bdbe9891ace8"
+  integrity sha1-dclcMrdI4IUNEMKxaPa9vpiRrOg=
+
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
@@ -3885,6 +3890,13 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.30, electron-to-chromium@
   version "1.3.85"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.85.tgz#5c46f790aa96445cabc57eb9d17346b1e46476fe"
   integrity sha512-kWSDVVF9t3mft2OHVZy4K85X2beP6c6mFm3teFS/mLSDJpQwuFIWHrULCX+w6H1E55ZYmFRlT+ATAFRwhrYzsw==
+
+element-resize-detector@^1.1.10:
+  version "1.1.15"
+  resolved "https://registry.yarnpkg.com/element-resize-detector/-/element-resize-detector-1.1.15.tgz#48eba1a2eaa26969a4c998d972171128c971d8d2"
+  integrity sha512-16/5avDegXlUxytGgaumhjyQoM6hpp5j3+L79sYq5hlXfTNRy5WMMuTVWkZU3egp/CokCmTmvf18P3KeB57Iog==
+  dependencies:
+    batch-processor "^1.0.0"
 
 element-theme-chalk@^2.4.11:
   version "2.4.11"
@@ -6043,6 +6055,11 @@ inquirer@^6.0.0, inquirer@^6.1.0:
     string-width "^2.1.0"
     strip-ansi "^4.0.0"
     through "^2.3.6"
+
+interactjs@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/interactjs/-/interactjs-1.3.4.tgz#9d5aa886f8fa03ea2f6c711e688792e3d3bde1ff"
+  integrity sha512-AQ2CdPEyHqiEEQ1FFgMBj79UEsU1+rUwSXuhOkflvB65p4iECft28SN/PvhD/Y9OtNge8aH1qTibjAi+RXQMqQ==
 
 internal-ip@^3.0.1:
   version "3.0.1"
@@ -12119,6 +12136,19 @@ vue-functional-data-merge@^2.0.5:
   resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-2.0.7.tgz#bdee655181eacdcb1f96ce95a4cc14e75313d1da"
   integrity sha512-pvLc+H+x2prwBj/uSEIITyxjz/7ZUVVK8uYbrYMmhDvMXnzh9OvQvVEwcOSBQjsubd4Eq41/CSJaWzy4hemMNQ==
 
+vue-gallery-slideshow@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/vue-gallery-slideshow/-/vue-gallery-slideshow-1.3.1.tgz#cbf37925d18b8b48cd63944db37c3fb7facb320a"
+  integrity sha512-eA+/3406ilGZeBrEOq8JJKpeNnmC6dqR6+CQHtwYEeMfSdeDzFKgg/uF6lEb2EF4pmYJ/LUR3tREWtHUzPmMOw==
+
+vue-grid-layout@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/vue-grid-layout/-/vue-grid-layout-2.3.3.tgz#1552beac5e06867d52f2dbe73753bec25063c8a1"
+  integrity sha512-czzQ7TpetYziKb9cfnhxumaP6AVKfx4Jevymy/FdzmZ15HWKSGVVcWSNe1HBrtDE6DywewuO3KcFrCc0OehqYQ==
+  dependencies:
+    element-resize-detector "^1.1.10"
+    interactjs "^1.3.4"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
@@ -12160,6 +12190,11 @@ vue-markdown-loader@^2.4.1:
     highlight.js "^9.4.0"
     loader-utils "^1.1.0"
     markdown-it "^8.4.0"
+
+vue-masonry-css@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vue-masonry-css/-/vue-masonry-css-1.0.3.tgz#a5e7bb248570eeedcd358637d3f1f4fc7f0c5f86"
+  integrity sha512-viecHQiHVLez7HlYUQsv1wJb2MT/RDSzkDp6m3In41vPrk6OsBmT2qRE8LZqYIA4daIwrnx/Xm8h4fjOpuE3hw==
 
 vue-observe-visibility@^0.4.3:
   version "0.4.3"

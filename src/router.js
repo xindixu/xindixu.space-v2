@@ -113,7 +113,7 @@ export default new Router({
       name: 'casper',
       components: { default: Casper, header: AppNavbar, footer: AppFooter },
       props: {
-        header: { colorOnScroll: 400 }
+        header: { colorOnScroll: 0 }
       }
     }
   ],

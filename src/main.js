@@ -9,6 +9,7 @@ import VueScrollReveal from 'vue-scroll-reveal';
 import Scrollactive from 'vue-scrollactive';
 import Animated from 'animate.css';
 import VueShowdown from 'vue-showdown';
+import VueMasonry from 'vue-masonry-css';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
 
@@ -24,8 +25,8 @@ Vue.use(VueAwesomeSwiper);
 Vue.use(VueScrollReveal);
 Vue.use(Scrollactive);
 Vue.use(Animated);
-
 Vue.use(VueShowdown);
+Vue.use(VueMasonry);
 
 Vue.directive('observe-visibility', ObserveVisibility);
 
