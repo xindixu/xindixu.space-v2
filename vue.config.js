@@ -8,13 +8,12 @@ module.exports = {
         },
         {
           test: /\.html$/,
+          exclude: /index.html/,
           use: [
             {
               loader: 'html-loader',
               options: {
-                minimize: true,
-                removeComments: false,
-                collapseWhitespace: false
+                interpolate: true
               }
             }
           ]

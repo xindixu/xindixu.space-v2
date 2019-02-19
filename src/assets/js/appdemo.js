@@ -1,5 +1,5 @@
-var AppShowcase = (function() {
-  var $el = $('#ac-wrapper'),
+window.onload = () => {
+  let $el = $('#ac-wrapper'),
     // device element
     $device = $el.find('.ac-device'),
     // the device image wrapper
@@ -12,29 +12,31 @@ var AppShowcase = (function() {
     $screenTitle = $device.find('.ac-title'),
     // navigation arrows
     $nav = $device.find('nav'),
-    $navPrev = $nav.children('span:first'),
-    $navNext = $nav.children('span:last'),
+    $navPrev = $nav.children('button:first'),
+    $navNext = $nav.children('button:last'),
     // current screen´s element index
     current = 0,
     // if navigating is in process
     animating = false,
     // total number of screens
     screensCount = $screens.length,
-    // csstransitions support
-    support = Modernizr.csstransitions,
-    // transition end event name
-    transEndEventNames = {
-      WebkitTransition: 'webkitTransitionEnd',
-      MozTransition: 'transitionend',
-      OTransition: 'oTransitionEnd',
-      msTransition: 'MSTransitionEnd',
-      transition: 'transitionend'
-    },
-    transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+    // // csstransitions support
+    support = true,
+    // // transition end event name
+    // transEndEventNames = {
+    //   WebkitTransition: 'webkitTransitionEnd',
+    //   MozTransition: 'transitionend',
+    //   OTransition: 'oTransitionEnd',
+    //   msTransition: 'MSTransitionEnd',
+    //   transition: 'transitionend'
+    // },
+    // transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+
     // HTML Body element
     $body = $('body');
 
   function init() {
+    console.log($trigger);
     // show grid
     $trigger.on('click', showGrid);
     // when a grid´s screen is clicked, show the respective image on the device
@@ -42,6 +44,7 @@ var AppShowcase = (function() {
       showScreen($(this));
       return false;
     });
+
     // navigate
     $navPrev.on('click', function() {
       navigate('prev');
@@ -111,7 +114,7 @@ var AppShowcase = (function() {
             opacity: 0,
             transform: direction === 'next' ? 'translateY(100px)' : 'scale(0.9)'
           })
-          .on(transEndEventName, function() {
+          .on('transitionend', function() {
             $(this).remove();
           });
 
@@ -120,8 +123,8 @@ var AppShowcase = (function() {
             opacity: 1,
             transform: direction === 'next' ? 'scale(1)' : 'translateY(0px)'
           })
-          .on(transEndEventName, function() {
-            $screenImg = $(this).off(transEndEventName);
+          .on('transitionend', function() {
+            $screenImg = $(this).off('transitionend');
             animating = false;
           });
       }, 25);
@@ -133,5 +136,5 @@ var AppShowcase = (function() {
     }
   }
 
-  return { init: init };
-})();
+  init();
+};
