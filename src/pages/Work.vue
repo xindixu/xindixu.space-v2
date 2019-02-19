@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="page-header page-header-small">
+    <div class="page-header page-header">
       <parallax
         class="page-header-image"
         style="background-image: url('img/bg/bg23.jpg')"
