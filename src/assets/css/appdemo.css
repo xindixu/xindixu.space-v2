@@ -46,33 +46,24 @@
 
 .ac-device h3 {
 		position: relative;
-		margin: 0;
+		margin: 20px 0;
 		left: auto;
 		top: auto;
 		width: 100%;
-		padding-top: 50px;
 		display: block;
 		text-align: center;
 }
 
 .ac-device nav {
-	position: absolute;
-	bottom: 1em;
-	left: 100%;
-	margin-left: 2em;
-	width: 100%;
-}
-
-.ac-device nav span {
-	display: block;
-	font-size: 36px;
-	cursor: pointer;
-	color: #585858;
-	margin-right: 10px;
-	float: left;
+	position: relative;
 	text-align: center;
 }
 
+.ac-device nav button{
+	position: relative;
+	text-align: center;
+	margin: 0 10px
+}
 .ac-grid {
 	width: 90%;
 	left: 5%;
