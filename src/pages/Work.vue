@@ -62,37 +62,6 @@ export default {
       tags: []
     };
   },
-  // computed: {
-  //   development() {
-  //     return workList.filter(w => {
-  //       return w.category == 'development';
-  //     });
-  //   },
-  //   advertising() {
-  //     return workList.filter(w => {
-  //       return w.category == 'advertising';
-  //     });
-  //   },
-  //   marketing() {
-  //     return workList.filter(w => {
-  //       return w.category == 'marketing';
-  //     });
-  //   },
-  //   craft() {
-  //     return workList.filter(w => {
-  //       return w.category == 'craft';
-  //     });
-  //   }
-  // },
-  // methods: {
-  //   getSortedWorkList() {
-  //     for (let c of this.categories) {
-  //       console.log(c);
-  //       this.sortedWorkList.push(this.works.filter(obj => obj.category == c));
-  //     }
-  //     console.log(this.sortedWorkList);
-  //   }
-  // },
   components: {
     Parallax,
     Card,
@@ -102,10 +71,6 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-/* div {
-  border: 1px solid #000;
-} */
-
 img {
   width: 100%;
   height: auto;

@@ -221,6 +221,10 @@ import { SquareLink, SquareTexts, Button } from '@/components';
 import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 import VueWordCloud from 'vuewordcloud';
 
+import 'swiper/dist/css/swiper.css';
+
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
+
 export default {
   data() {
     return {
@@ -308,7 +312,9 @@ export default {
     SquareLink,
     SquareTexts,
     VueWordCloud,
-    [Button.name]: Button
+    [Button.name]: Button,
+    swiper,
+    swiperSlide
   },
   mounted() {
     // //do something after mounting vue instance

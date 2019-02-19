@@ -4,7 +4,6 @@ import App from './App.vue';
 import router from './router';
 import BootstrapVue from 'bootstrap-vue';
 import NowUiKit from './plugins/now-ui-kit';
-import VueAwesomeSwiper from 'vue-awesome-swiper';
 import Scrollactive from 'vue-scrollactive';
 import Animated from 'animate.css';
 import VueShowdown from 'vue-showdown';
@@ -14,13 +13,11 @@ import { ObserveVisibility } from 'vue-observe-visibility';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
-import 'swiper/dist/css/swiper.css';
 
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
 Vue.use(NowUiKit);
-Vue.use(VueAwesomeSwiper);
 Vue.use(Scrollactive);
 Vue.use(Animated);
 Vue.use(VueShowdown);

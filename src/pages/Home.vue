@@ -197,6 +197,9 @@
 </template>
 <script>
 import { SquareLink, IncreaseNum, CurveText } from '../components';
+import 'swiper/dist/css/swiper.css';
+
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
 
 export default {
   name: '',
@@ -248,7 +251,9 @@ export default {
   components: {
     SquareLink,
     IncreaseNum,
-    CurveText
+    CurveText,
+    swiper,
+    swiperSlide
   }
 };
 </script>
