@@ -1,178 +1,229 @@
 <template>
-	<div class="quick-menu" ref="quickMenu" :style="quickMenuStyle">
-    <div v-for="(n,key) in menuCount" class="sub-menu" :style="getSubMenu(n-1)">
-        <router-link v-if="menuUrlList[n-1].isLink" :to="menuUrlList[n-1].url" :target="openNewTab" :style="subMenuStyle" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu">
-          <i :class="iconClass[n-1]" ref="icon"></i>
-        </router-link>
-        <a v-else :style="subMenuStyle" :href="menuUrlList[n-1].url" target="_blank" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" @click="processCallback(key)">
-          <i :class="iconClass[n-1]" ref="icon"></i>
-        </a>
-
-      </div>
-
-      <div class='menu' :style="menuStyle">
-        <div class='core-menu' @click="toggleMenu">
-          <div class='bar'></div>
-        </div>
-      </div>
+  <div class="quick-menu" ref="quickMenu" :style="quickMenuStyle">
+    <div
+      v-for="(n, key) in menuCount"
+      :key="key"
+      class="sub-menu"
+      :style="getSubMenu(n - 1)"
+    >
+      <router-link
+        v-if="menuUrlList[n - 1].isLink"
+        :to="menuUrlList[n - 1].url"
+        :target="openNewTab"
+        :style="subMenuStyle"
+        @mouseover.stop="mouseEnterSubMenu"
+        @mouseout.stop="mouseOutSubMenu"
+      >
+        <i :class="iconClass[n - 1]" ref="icon"></i>
+      </router-link>
+      <a
+        v-else
+        :style="subMenuStyle"
+        :href="menuUrlList[n - 1].url"
+        target="_blank"
+        @mouseover.stop="mouseEnterSubMenu"
+        @mouseout.stop="mouseOutSubMenu"
+        @click="processCallback(key);"
+      >
+        <i :class="iconClass[n - 1]" ref="icon"></i>
+      </a>
     </div>
+
+    <div class="menu" :style="menuStyle">
+      <div class="core-menu" @click="toggleMenu"><div class="bar"></div></div>
+    </div>
+  </div>
 </template>
 <script>
-export default{
-name:'quick-menu',
-  props:{
-    menuCount:{
+export default {
+  name: 'QuickMenu',
+  props: {
+    menuCount: {
       type: Number,
       required: true,
-      default:4
+      default: 4
     },
-    iconClass:{
-      type:Array,
+    iconClass: {
+      type: Array,
       required: true
     },
-    menuUrlList:{
-      type:Array,
+    menuUrlList: {
+      type: Array,
       required: true
     },
-    backgroundColor:{
-      type:String,
-      default:'#20babb'
+    backgroundColor: {
+      type: String,
+      default: '#20babb'
     },
-    color:{
-      type:String,
-      default:'#fff'
+    color: {
+      type: String,
+      default: '#fff'
     },
-    isOpenNewTab:{
-      type:Boolean,
-      default:false
+    isOpenNewTab: {
+      type: Boolean,
+      default: false
     },
-    position:{
-      type:String,
-      default:'top-left'
+    position: {
+      type: String,
+      default: 'top-left'
     }
   },
-  computed:{
-    openNewTab(){
-      return this.isOpenNewTab?'_blank':'_self'
+  computed: {
+    openNewTab() {
+      return this.isOpenNewTab ? '_blank' : '_self';
     },
-    quickMenuStyle(){
-      const topPosition = {top:'30px'},
-      bottomPosition={bottom:'30px'},
-      leftPosition = {left:'30px'},
-      rightPosition = {right:'30px'}
+    quickMenuStyle() {
+      const topPosition = { top: '30px' },
+        bottomPosition = { bottom: '30px' },
+        leftPosition = { left: '30px' },
+        rightPosition = { right: '30px' };
 
-      let style = this.isTop?topPosition:bottomPosition
-      Object.assign(style, this.isLeft?leftPosition:rightPosition)
-      Object.assign(style,{transform: this.isLeft?"rotate(-180deg)":"rotate(180deg)"})
-      return style
+      let style = this.isTop ? topPosition : bottomPosition;
+      Object.assign(style, this.isLeft ? leftPosition : rightPosition);
+      Object.assign(style, {
+        transform: this.isLeft ? 'rotate(-180deg)' : 'rotate(180deg)'
+      });
+      return style;
     },
-    menuStyle(){
+    menuStyle() {
       return {
         backgroundColor: this.backgroundColor,
         color: this.color
-      }
+      };
     },
-    subMenuStyle(){
+    subMenuStyle() {
       const style = {
         backgroundColor: this.backgroundColor,
         color: this.color
-      }
-      return style
+      };
+      return style;
     },
 
-    isTop(){
-      return !!~this.position.toLowerCase().indexOf('top')
+    isTop() {
+      return !!~this.position.toLowerCase().indexOf('top');
     },
-    isLeft(){
-      return !!~this.position.toLowerCase().indexOf('left')
+    isLeft() {
+      return !!~this.position.toLowerCase().indexOf('left');
     }
   },
-  data(){
-    return{
-      menuSize:60,
-			//  subMenu4:[[["0","-160"],["-80","-138.6"],["-138.6","-80"],["-160","0"]],[["0","-160"],["80", "-138.6"],["138.6","-80"],["160","0"]],[["0","160"],["138.6","80"],["80","138.6"],["160","0"]],[["-160","0"],["-138.6","80"],["-80","138.6"],["0","160"]]],
-			subMenu4:[[["0","-80"],["-40","-69.3"],["-69.3","-40"],["-80","0"]],[["0","-80"],["40", "-69.3"],["69.3","-40"],["80","0"]],[["0","80"],["69.3","40"],["40","69.3"],["80","0"]],[["-80","0"],["-69.3","40"],["-40","69.3"],["0","80"]]],
-      subMenu3:[[["-160","0"],["-113","-113"],["0","-160"]],[["0","-160"],["113","-113"],["160","0"]],[["0","160"],["113","113"],["160","0"]],[["-160","0"],["-113","113"],["0","160"]]],
-      subMenu2:[[["-160","0"],["0","-160"]],[["0","-160"],["160","0"]],[["0","160"],["160","0"]],[["-160","0"],["0","160"]]]
-    }
+  data() {
+    return {
+      menuSize: 60,
+      //  subMenu4:[[["0","-160"],["-80","-138.6"],["-138.6","-80"],["-160","0"]],[["0","-160"],["80", "-138.6"],["138.6","-80"],["160","0"]],[["0","160"],["138.6","80"],["80","138.6"],["160","0"]],[["-160","0"],["-138.6","80"],["-80","138.6"],["0","160"]]],
+      subMenu4: [
+        [['0', '-80'], ['-40', '-69.3'], ['-69.3', '-40'], ['-80', '0']],
+        [['0', '-80'], ['40', '-69.3'], ['69.3', '-40'], ['80', '0']],
+        [['0', '80'], ['69.3', '40'], ['40', '69.3'], ['80', '0']],
+        [['-80', '0'], ['-69.3', '40'], ['-40', '69.3'], ['0', '80']]
+      ],
+      subMenu3: [
+        [['-160', '0'], ['-113', '-113'], ['0', '-160']],
+        [['0', '-160'], ['113', '-113'], ['160', '0']],
+        [['0', '160'], ['113', '113'], ['160', '0']],
+        [['-160', '0'], ['-113', '113'], ['0', '160']]
+      ],
+      subMenu2: [
+        [['-160', '0'], ['0', '-160']],
+        [['0', '-160'], ['160', '0']],
+        [['0', '160'], ['160', '0']],
+        [['-160', '0'], ['0', '160']]
+      ]
+    };
   },
-  methods:{
-    getSubMenu(n){
-      let menuPosition = this.menuCount===4?this.subMenu4:this.menuCount===3?this.subMenu3:this.subMenu2
-      menuPosition = this.isTop&&this.isLeft?menuPosition[2]:this.isTop&&!this.isLeft?menuPosition[1]:!this.isTop&&this.isLeft?menuPosition[3]:menuPosition[0]
-      return {top:menuPosition[n][0]+'px',left:menuPosition[n][1]+'px'}
+  methods: {
+    getSubMenu(n) {
+      let menuPosition =
+        this.menuCount === 4
+          ? this.subMenu4
+          : this.menuCount === 3
+          ? this.subMenu3
+          : this.subMenu2;
+      menuPosition =
+        this.isTop && this.isLeft
+          ? menuPosition[2]
+          : this.isTop && !this.isLeft
+          ? menuPosition[1]
+          : !this.isTop && this.isLeft
+          ? menuPosition[3]
+          : menuPosition[0];
+      return {
+        top: menuPosition[n][0] + 'px',
+        left: menuPosition[n][1] + 'px'
+      };
     },
-    toggleMenu(e){
-      let menuEl = this.$refs.quickMenu
-      let menuIconEl = this.$refs.icon
-      if(!~menuEl.className.indexOf(' active')){
-         menuEl.className += ' active';
-        menuIconEl.forEach( function(element, index) {
+    toggleMenu() {
+      let menuEl = this.$refs.quickMenu;
+      let menuIconEl = this.$refs.icon;
+      if (!~menuEl.className.indexOf(' active')) {
+        menuEl.className += ' active';
+        menuIconEl.forEach(function(element) {
           element.className += ' menu-animate';
         });
       } else {
-        menuEl.className = menuEl.className.replace(' active','')
-        menuIconEl.forEach( function(element, index) {
-        element.className = element.className.replace(' menu-animate','')
+        menuEl.className = menuEl.className.replace(' active', '');
+        menuIconEl.forEach(function(element) {
+          element.className = element.className.replace(' menu-animate', '');
         });
       }
-
     },
-    processCallback(key){
-      this.$emit('process',key)
+    processCallback(key) {
+      this.$emit('process', key);
     },
-    mouseEnterSubMenu(e){
-      if(e.target.tagName==='A'){
-        e.target.style.backgroundColor = this.lightenColor(this.backgroundColor, 20)
+    mouseEnterSubMenu(e) {
+      if (e.target.tagName === 'A') {
+        e.target.style.backgroundColor = this.lightenColor(
+          this.backgroundColor,
+          20
+        );
         // e.target.firstElementChild.style.backgroundColor = this.lightenColor(this.backgroundColor, 20)
-      } else if(e.target.tagName==='I'){
-        e.target.parentElement.style.backgroundColor = this.lightenColor(this.backgroundColor, 20)
+      } else if (e.target.tagName === 'I') {
+        e.target.parentElement.style.backgroundColor = this.lightenColor(
+          this.backgroundColor,
+          20
+        );
         // e.target.style.backgroundColor = this.lightenColor(this.backgroundColor, 20)
       }
-
     },
-    mouseOutSubMenu(e){
-      if(e.target.tagName==='A'){
-        e.target.style.backgroundColor = this.backgroundColor
+    mouseOutSubMenu(e) {
+      if (e.target.tagName === 'A') {
+        e.target.style.backgroundColor = this.backgroundColor;
         // e.target.firstElementChild.style.backgroundColor = this.backgroundColor
-      }else if(e.target.tagName==='I'){
-        e.target.parentElement.style.backgroundColor = this.backgroundColor
+      } else if (e.target.tagName === 'I') {
+        e.target.parentElement.style.backgroundColor = this.backgroundColor;
         // e.target.style.backgroundColor = this.backgroundColor
       }
-
     },
-    lightenColor (hex, amt) {
-
-      var usePound = false
+    lightenColor(hex, amt) {
+      var usePound = false;
 
       if (hex[0] === '#') {
-        hex = hex.slice(1)
-        usePound = true
+        hex = hex.slice(1);
+        usePound = true;
       }
 
-      var num = parseInt(hex, 16)
-      var r = (num >> 16) + amt
+      var num = parseInt(hex, 16);
+      var r = (num >> 16) + amt;
 
-      if (r > 255) r = 255
-      else if (r < 0) r = 0
+      if (r > 255) r = 255;
+      else if (r < 0) r = 0;
 
-          var b = ((num >> 8) & 0x00FF) + amt
+      var b = ((num >> 8) & 0x00ff) + amt;
 
-      if (b > 255) b = 255
-      else if (b < 0) b = 0
+      if (b > 255) b = 255;
+      else if (b < 0) b = 0;
 
-      var g = (num & 0x0000FF) + amt
+      var g = (num & 0x0000ff) + amt;
 
-      if (g > 255) g = 255
-      else if (g < 0) g = 0
-      return (usePound ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16)
+      if (g > 255) g = 255;
+      else if (g < 0) g = 0;
+      return (usePound ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16);
     }
   }
-	}
+};
 </script>
-<style lang="less">
+<style lang="scss">
 .menu-animate {
-/*   -webkit-animation: bounce 1s linear 1s;
+  /*   -webkit-animation: bounce 1s linear 1s;
 -moz-animation: bounce 1s linear 1s;
 animation: bounce 1s linear 1s; */
 }
@@ -186,7 +237,7 @@ animation: bounce 1s linear 1s; */
   -moz-transition: all 1s ease;
   transition: all 1s ease;
   right: 30px;
-	z-index: 100;
+  z-index: 100;
   > .menu {
     display: block;
     position: absolute;
@@ -194,11 +245,8 @@ animation: bounce 1s linear 1s; */
     width: 30px;
     height: 30px;
     text-align: center;
-    //box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
-		color: #fff;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
+    color: #fff;
     transition: all 1s ease;
     .core-menu {
       width: 50%;
@@ -208,18 +256,10 @@ animation: bounce 1s linear 1s; */
       top: 0px;
       width: 30px;
       height: 30px;
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
       transform: rotate(180deg);
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
       transition: all 1s ease;
-			cursor: pointer;
+      cursor: pointer;
       .bar {
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
         transition: all 1s ease;
         width: 14px;
         height: 1.5px;
@@ -228,14 +268,9 @@ animation: bounce 1s linear 1s; */
         top: 35%;
         margin-top: -1.5px;
         left: 8px;
-        -webkit-transform-origin: 0% 50%;
-        -moz-transform-origin: 0% 50%;
-        -ms-transform-origin: 0% 50%;
-        -o-transform-origin: 0% 50%;
         transform-origin: 0% 50%;
-        &:before ,&:after{
-          -webkit-transition: all 1s ease;
-          -moz-transition: all 1s ease;
+        &:before,
+        &:after {
           transition: all 1s ease;
           content: '';
           width: 14px;
@@ -243,13 +278,9 @@ animation: bounce 1s linear 1s; */
           background: #fff;
           position: absolute;
           left: 0px;
-          -webkit-transform-origin: 0% 50%;
-          -moz-transform-origin: 0% 50%;
-          -ms-transform-origin: 0% 50%;
-          -o-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
         }
-        &:before{
+        &:before {
           margin-top: 30%;
         }
         &:after {
@@ -258,9 +289,7 @@ animation: bounce 1s linear 1s; */
       }
     }
   }
-  .sub-menu{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+  .sub-menu {
     box-sizing: border-box;
     position: absolute;
     width: 30px;
@@ -268,7 +297,7 @@ animation: bounce 1s linear 1s; */
     font-size: 15px;
     text-align: center;
     border-radius: 50% !important;
-    a{
+    a {
       outline: none;
       text-decoration: none;
       display: inline-block;
@@ -277,10 +306,10 @@ animation: bounce 1s linear 1s; */
       height: 100%;
       i {
         outline: none;
-        font-size:15px;
-        margin-top:6px;
-        background:transparent;
-        &:before{
+        font-size: 15px;
+        margin-top: 6px;
+        background: transparent;
+        &:before {
           vertical-align: middle;
         }
       }
@@ -289,121 +318,44 @@ animation: bounce 1s linear 1s; */
       }
     }
   }
-  &.active{
-    -webkit-transform: rotate(0deg)!important;
-      -moz-transform: rotate(0deg)!important;
-      -ms-transform: rotate(0deg)!important;
-      -o-transform: rotate(0deg)!important;
-      transform: rotate(0deg)!important;
-      .menu{
-        -webkit-transform: scale(0.7);
-        -moz-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        -o-transform: scale(0.7);
-        transform: scale(0.7);
-        .bar {
-          top: 50%;
-          margin-top: -1.5px;
-          left: 66%;
-          margin-left: -12px;
-          -webkit-transform-origin: 50% 50%;
-          -moz-transform-origin: 50% 50%;
-          -ms-transform-origin: 50% 50%;
-          -o-transform-origin: 50% 50%;
+  &.active {
+    transform: rotate(0deg) !important;
+    .menu {
+      transform: scale(0.7);
+      .bar {
+        top: 50%;
+        margin-top: -1.5px;
+        left: 66%;
+        margin-left: -12px;
+        transform-origin: 50% 50%;
+        transform: rotate(405deg);
+        &:before {
           transform-origin: 50% 50%;
-          -webkit-transform: rotate(405deg);
-          -moz-transform: rotate(405deg);
-          -ms-transform: rotate(405deg);
-          -o-transform: rotate(405deg);
-          transform: rotate(405deg);
-              &:before {
-                -webkit-transform-origin: 50% 50%;
-                -moz-transform-origin: 50% 50%;
-                -ms-transform-origin: 50% 50%;
-                -o-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
-                -webkit-transform: rotate(-450deg);
-                -moz-transform: rotate(-450deg);
-                -ms-transform: rotate(-450deg);
-                -o-transform: rotate(-450deg);
-                transform: rotate(-450deg);
-                margin-top: 0px;
-              }
-          &:after{
-            opacity: 0;
-          }
+          transform: rotate(-450deg);
+          margin-top: 0px;
+        }
+        &:after {
+          opacity: 0;
         }
       }
     }
-}
-@-webkit-keyframes bounce {
-  0%,100% {
-    -webkit-transform: translateY(0px);
-  }
-  10% {
-    -webkit-transform: translateY(6px);
-  }
-  30% {
-    -webkit-transform: translateY(-4px);
-  }
-  70% {
-    -webkit-transform: translateY(3px);
-  }
-  90% {
-    -webkit-transform: translateY(-2px);
-  }
-}
-@-moz-keyframes bounce {
-  0%,100% {
-    -moz-transform: translateY(0px);
-  }
-  10% {
-    -moz-transform: translateY(6px);
-  }
-  30% {
-    -moz-transform: translateY(-4px);
-  }
-  70% {
-    -moz-transform: translateY(3px);
-  }
-  90% {
-    -moz-transform: translateY(-2px);
   }
 }
 @keyframes bounce {
-  0%,100% {
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
+  0%,
+  100% {
     transform: translateY(0px);
   }
   10% {
-    -webkit-transform: translateY(6px);
-    -moz-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    -o-transform: translateY(6px);
     transform: translateY(6px);
   }
   30% {
-    -webkit-transform: translateY(-4px);
-    -moz-transform: translateY(-4px);
-    -ms-transform: translateY(-4px);
-    -o-transform: translateY(-4px);
     transform: translateY(-4px);
   }
   70% {
-    -webkit-transform: translateY(3px);
-    -moz-transform: translateY(3px);
-    -ms-transform: translateY(3px);
-    -o-transform: translateY(3px);
     transform: translateY(3px);
   }
   90% {
-    -webkit-transform: translateY(-2px);
-    -moz-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
-    -o-transform: translateY(-2px);
     transform: translateY(-2px);
   }
 }

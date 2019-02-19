@@ -221,7 +221,7 @@ export default {
   }
 };
 </script>
-<style lang="less">
+<style lang="scss">
 .menu-animate {
   /*   -webkit-animation: bounce 1s linear 1s;
 -moz-animation: bounce 1s linear 1s;
@@ -245,11 +245,8 @@ animation: bounce 1s linear 1s; */
     width: 30px;
     height: 30px;
     text-align: center;
-    //box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
     color: #fff;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
     transition: all 1s ease;
     .core-menu {
       width: 50%;
@@ -259,18 +256,10 @@ animation: bounce 1s linear 1s; */
       top: 0px;
       width: 30px;
       height: 30px;
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
       transform: rotate(180deg);
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
       transition: all 1s ease;
       cursor: pointer;
       .bar {
-        -webkit-transition: all 1s ease;
-        -moz-transition: all 1s ease;
         transition: all 1s ease;
         width: 14px;
         height: 1.5px;
@@ -279,15 +268,9 @@ animation: bounce 1s linear 1s; */
         top: 35%;
         margin-top: -1.5px;
         left: 8px;
-        -webkit-transform-origin: 0% 50%;
-        -moz-transform-origin: 0% 50%;
-        -ms-transform-origin: 0% 50%;
-        -o-transform-origin: 0% 50%;
         transform-origin: 0% 50%;
         &:before,
         &:after {
-          -webkit-transition: all 1s ease;
-          -moz-transition: all 1s ease;
           transition: all 1s ease;
           content: '';
           width: 14px;
@@ -295,10 +278,6 @@ animation: bounce 1s linear 1s; */
           background: #fff;
           position: absolute;
           left: 0px;
-          -webkit-transform-origin: 0% 50%;
-          -moz-transform-origin: 0% 50%;
-          -ms-transform-origin: 0% 50%;
-          -o-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
         }
         &:before {
@@ -311,8 +290,6 @@ animation: bounce 1s linear 1s; */
     }
   }
   .sub-menu {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: absolute;
     width: 30px;
@@ -342,42 +319,18 @@ animation: bounce 1s linear 1s; */
     }
   }
   &.active {
-    -webkit-transform: rotate(0deg) !important;
-    -moz-transform: rotate(0deg) !important;
-    -ms-transform: rotate(0deg) !important;
-    -o-transform: rotate(0deg) !important;
     transform: rotate(0deg) !important;
     .menu {
-      -webkit-transform: scale(0.7);
-      -moz-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-      -o-transform: scale(0.7);
       transform: scale(0.7);
       .bar {
         top: 50%;
         margin-top: -1.5px;
         left: 66%;
         margin-left: -12px;
-        -webkit-transform-origin: 50% 50%;
-        -moz-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-        -o-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
-        -webkit-transform: rotate(405deg);
-        -moz-transform: rotate(405deg);
-        -ms-transform: rotate(405deg);
-        -o-transform: rotate(405deg);
         transform: rotate(405deg);
         &:before {
-          -webkit-transform-origin: 50% 50%;
-          -moz-transform-origin: 50% 50%;
-          -ms-transform-origin: 50% 50%;
-          -o-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-          -webkit-transform: rotate(-450deg);
-          -moz-transform: rotate(-450deg);
-          -ms-transform: rotate(-450deg);
-          -o-transform: rotate(-450deg);
           transform: rotate(-450deg);
           margin-top: 0px;
         }
@@ -388,77 +341,21 @@ animation: bounce 1s linear 1s; */
     }
   }
 }
-@-webkit-keyframes bounce {
-  0%,
-  100% {
-    -webkit-transform: translateY(0px);
-  }
-  10% {
-    -webkit-transform: translateY(6px);
-  }
-  30% {
-    -webkit-transform: translateY(-4px);
-  }
-  70% {
-    -webkit-transform: translateY(3px);
-  }
-  90% {
-    -webkit-transform: translateY(-2px);
-  }
-}
-@-moz-keyframes bounce {
-  0%,
-  100% {
-    -moz-transform: translateY(0px);
-  }
-  10% {
-    -moz-transform: translateY(6px);
-  }
-  30% {
-    -moz-transform: translateY(-4px);
-  }
-  70% {
-    -moz-transform: translateY(3px);
-  }
-  90% {
-    -moz-transform: translateY(-2px);
-  }
-}
 @keyframes bounce {
   0%,
   100% {
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    -o-transform: translateY(0px);
     transform: translateY(0px);
   }
   10% {
-    -webkit-transform: translateY(6px);
-    -moz-transform: translateY(6px);
-    -ms-transform: translateY(6px);
-    -o-transform: translateY(6px);
     transform: translateY(6px);
   }
   30% {
-    -webkit-transform: translateY(-4px);
-    -moz-transform: translateY(-4px);
-    -ms-transform: translateY(-4px);
-    -o-transform: translateY(-4px);
     transform: translateY(-4px);
   }
   70% {
-    -webkit-transform: translateY(3px);
-    -moz-transform: translateY(3px);
-    -ms-transform: translateY(3px);
-    -o-transform: translateY(3px);
     transform: translateY(3px);
   }
   90% {
-    -webkit-transform: translateY(-2px);
-    -moz-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
-    -o-transform: translateY(-2px);
     transform: translateY(-2px);
   }
 }

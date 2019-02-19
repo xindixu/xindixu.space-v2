@@ -1,3 +1,5 @@
+const $ = require('jquery');
+
 window.onload = () => {
   let $el = $('#ac-wrapper'),
     // device element
