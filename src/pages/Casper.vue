@@ -1,3 +1,4 @@
+<!-- vue-gallery-slideshow -->
 <template>
   <div id="imgContainer" class="center-text">
     <h2>Dr. Capser Meowspy!</h2>
@@ -6,16 +7,9 @@
         <img class="image" :src="img" @click="incr(index);" />
       </div>
     </masonry>
-    <vue-gallery-slideshow
-      :images="imgArr"
-      :index="index"
-      @close="index = null;"
-    ></vue-gallery-slideshow>
   </div>
 </template>
 <script>
-import VueGallerySlideshow from 'vue-gallery-slideshow';
-
 export default {
   name: '',
   data: () => ({
@@ -32,9 +26,6 @@ export default {
       this.index = i;
     }
   },
-  components: {
-    VueGallerySlideshow
-  },
   created() {
     //do something after creating vue instance
     this.createImgArr();
@@ -50,7 +41,6 @@ export default {
 .image {
   width: 100%;
   height: 100%;
-  cursor: pointer;
   margin: 10px;
   border-radius: 3px;
 }
