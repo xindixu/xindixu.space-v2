@@ -27,7 +27,7 @@
             </b-col>
           </b-row>
 
-          <b-row style="margin-top:5vh">
+          <b-row style="margin-top:10em">
             <b-col lg="6" offset-lg="5" md="10">
               <div id="map-container" class="mx-4">
                 <img id="map" src="img/about/map.png" />

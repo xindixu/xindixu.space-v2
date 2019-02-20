@@ -17,6 +17,7 @@ import WorkDetail from './pages/WorkDetail.vue';
 
 import AppNavbar from './layout/AppNavbar.vue';
 import AppFooter from './layout/AppFooter.vue';
+import ScrollDown from './layout/ScrollDown.vue';
 
 Vue.use(Router);
 
@@ -60,7 +61,12 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      components: { default: Home, header: AppNavbar, footer: AppFooter },
+      components: {
+        default: Home,
+        header: AppNavbar,
+        footer: AppFooter,
+        scroll: ScrollDown
+      },
       props: {
         header: { colorOnScroll: 4000 }
       }
