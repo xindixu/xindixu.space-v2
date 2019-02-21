@@ -8,7 +8,6 @@ import Scrollactive from 'vue-scrollactive';
 import Animated from 'animate.css';
 import VueShowdown from 'vue-showdown';
 import VueMasonry from 'vue-masonry-css';
-
 import { ObserveVisibility } from 'vue-observe-visibility';
 
 import 'bootstrap-vue/dist/bootstrap-vue.css';

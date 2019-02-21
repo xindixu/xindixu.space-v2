@@ -5,13 +5,15 @@
       <h2>Dr. Capser Meowspy!</h2>
     </transition>
 
-    <button @click="shuffle">Shuffle</button>
     <masonry :cols="5" :gutter="30">
-      <transition-group name="move">
-        <div v-for="(img, index) in imgArr" :key="index">
-          <img class="image" :src="img" />
-        </div>
-      </transition-group>
+      <div
+        v-for="(img, index) in imgArr"
+        :key="index"
+        class="entranceFromTop"
+        :style="{ 'animation-delay': index * 50 + 'ms' }"
+      >
+        <img class="image" :src="img" />
+      </div>
     </masonry>
   </div>
 </template>
@@ -27,20 +29,6 @@ export default {
       for (let i = 1; i < 40; i++) {
         this.imgArr.push('/img/cat/' + i + '.jpeg');
       }
-    },
-    shuffle: function() {
-      let length = this.imgArr.length,
-        pos,
-        temp,
-        clone = [...this.imgArr];
-      for (let i = 0; i < length; i++) {
-        pos = Math.floor(Math.random() * length);
-        temp = clone[i];
-        clone[i] = clone[pos];
-        clone[pos] = temp;
-      }
-      this.imgArr = clone;
-      console.log(this.imgArr);
     }
   },
   created() {
@@ -63,7 +51,21 @@ export default {
   }
 }
 
-.move {
-  transition: all 1s;
+.entranceFromTop {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-name: entranceFromTop;
+}
+
+@keyframes entranceFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
