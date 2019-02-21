@@ -1,6 +1,6 @@
 <template>
   <div id="scrollDown" v-if="show" :style="{ color: color }">
-    <div class="text-center">
+    <div>
       <transition
         name="slideDown"
         enter-active-class="animated slideInDown"
@@ -50,12 +50,14 @@ export default {
 #scrollDown {
   z-index: 90;
   position: absolute;
-  left: 50vw;
+  left: 50%;
+  transform: translate(-50%, 0);
   bottom: 2vh;
+  text-align: center;
 
   #text {
     animation-duration: 3s;
-    animation-iteration-count: 10;
+    animation-iteration-count: infinite;
   }
 }
 

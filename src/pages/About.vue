@@ -154,7 +154,7 @@
         <swiper-slide style="background-color:white">
           <transition
             enter-active-class="animated bounceIn"
-            leave-active-class="animated fadeOut"
+            leave-active-class="animated fadeOut faster"
             mode="out-in"
           >
             <div
@@ -167,7 +167,7 @@
 
             <vue-word-cloud
               class="front"
-              v-else-if="cloudShow"
+              v-if="cloudShow"
               :words="words"
               :color="
                 ([, weight]) =>
@@ -182,18 +182,6 @@
             />
           </transition>
           <div v-observe-visibility="visibilityChangedS4"></div>
-
-          <!--
-            <transition
-              enter-active-class="animated bounceIn"
-              leave-active-class="animated fadeOut"
-              :duration="{ enter: 16000, leave: 800 }"
-            >
-              <div class="right-corner" v-if="!wordShow">
-                <h4>and more... because I am always learning...</h4>
-              </div>
-            </transition>
-          -->
         </swiper-slide>
         <swiper-slide>
           <div class="full-screen" style="background-color:#E2B4BD">
@@ -300,6 +288,9 @@ export default {
     },
     visibilityChangedS3() {
       this.cloudShow = false;
+    },
+    callback() {
+      console.log('change');
     }
   },
   components: {

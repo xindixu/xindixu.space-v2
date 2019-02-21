@@ -1,11 +1,17 @@
 <!-- vue-gallery-slideshow -->
 <template>
   <div id="imgContainer" class="center-text">
-    <h2>Dr. Capser Meowspy!</h2>
+    <transition appear enter-active-class="animated bounceIn">
+      <h2>Dr. Capser Meowspy!</h2>
+    </transition>
+
+    <button @click="shuffle">Shuffle</button>
     <masonry :cols="5" :gutter="30">
-      <div v-for="(img, index) in imgArr" :key="index">
-        <img class="image" :src="img" @click="incr(index);" />
-      </div>
+      <transition-group name="move">
+        <div v-for="(img, index) in imgArr" :key="index">
+          <img class="image" :src="img" />
+        </div>
+      </transition-group>
     </masonry>
   </div>
 </template>
@@ -22,8 +28,19 @@ export default {
         this.imgArr.push('/img/cat/' + i + '.jpeg');
       }
     },
-    incr(i) {
-      this.index = i;
+    shuffle: function() {
+      let length = this.imgArr.length,
+        pos,
+        temp,
+        clone = [...this.imgArr];
+      for (let i = 0; i < length; i++) {
+        pos = Math.floor(Math.random() * length);
+        temp = clone[i];
+        clone[i] = clone[pos];
+        clone[pos] = temp;
+      }
+      this.imgArr = clone;
+      console.log(this.imgArr);
     }
   },
   created() {
@@ -37,11 +54,16 @@ export default {
   text-align: center;
   margin-top: 10vh;
   padding: 0 1vw 0 0;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border-radius: 3px;
+  }
 }
-.image {
-  width: 100%;
-  height: 100%;
-  margin: 10px;
-  border-radius: 3px;
+
+.move {
+  transition: all 1s;
 }
 </style>
