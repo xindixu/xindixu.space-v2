@@ -30,6 +30,7 @@ import TableOfContent from './TableOfContent.vue';
 import SocialSideBar from './SocialSideBar.vue';
 import CommentSection from './CommentSection.vue';
 import WorkInProgress from './WorkInProgress.vue';
+import ScrollDown from './ScrollDown.vue';
 
 export {
   Alert,
@@ -61,5 +62,6 @@ export {
   TableOfContent,
   SocialSideBar,
   CommentSection,
-  WorkInProgress
+  WorkInProgress,
+  ScrollDown
 };

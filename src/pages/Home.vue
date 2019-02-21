@@ -30,6 +30,7 @@
               </div>
             </div>
           </b-col>
+          <scroll-down> </scroll-down>
         </swiper-slide>
         <swiper-slide
           id="slide2"
@@ -196,7 +197,7 @@
   </div>
 </template>
 <script>
-import { SquareLink, IncreaseNum, CurveText } from '../components';
+import { SquareLink, IncreaseNum, CurveText, ScrollDown } from '../components';
 import 'swiper/dist/css/swiper.css';
 
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
@@ -207,7 +208,7 @@ export default {
     return {
       swiperOptionV: {
         direction: 'vertical',
-        speed: 500,
+        speed: 600,
         pagination: {
           el: '.swiper-pagination-v',
           clickable: true,
@@ -253,7 +254,8 @@ export default {
     IncreaseNum,
     CurveText,
     swiper,
-    swiperSlide
+    swiperSlide,
+    ScrollDown
   }
 };
 </script>

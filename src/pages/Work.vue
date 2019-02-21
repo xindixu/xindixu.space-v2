@@ -9,6 +9,7 @@
       <div class="content-center">
         <div class="container"><h1 class="title">Work</h1></div>
       </div>
+      <scrollDown></scrollDown>
     </div>
     <card>
       <tabs
@@ -51,7 +52,7 @@
   </div>
 </template>
 <script>
-import { Parallax, Card, Tabs, TabPane } from '@/components';
+import { Parallax, Card, Tabs, TabPane, ScrollDown } from '@/components';
 import workList from '../assets/work/data.json';
 export default {
   data: function() {
@@ -66,7 +67,8 @@ export default {
     Parallax,
     Card,
     Tabs,
-    TabPane
+    TabPane,
+    ScrollDown
   }
 };
 </script>

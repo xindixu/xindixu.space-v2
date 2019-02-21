@@ -9,18 +9,20 @@
       <div class="content-center">
         <div class="container"><h1 class="title">Blog</h1></div>
       </div>
+      <ScrollDown></ScrollDown>
     </div>
     <WorkInProgress></WorkInProgress>
   </div>
 </template>
 
 <script>
-import { WorkInProgress } from '@/components';
+import { WorkInProgress, ScrollDown } from '@/components';
 export default {
   name: '',
   data: () => ({}),
   components: {
-    WorkInProgress
+    WorkInProgress,
+    ScrollDown
   }
 };
 </script>

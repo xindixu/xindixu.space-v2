@@ -69,6 +69,7 @@
               </div>
             </b-col>
           </b-row>
+          <scroll-down color="#000000"></scroll-down>
         </swiper-slide>
 
         <swiper-slide style="background-image: url('img/bg/bg31.jpg');">
@@ -217,7 +218,7 @@
 </template>
 
 <script>
-import { SquareLink, SquareTexts, Button } from '@/components';
+import { SquareLink, SquareTexts, Button, ScrollDown } from '@/components';
 import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 import VueWordCloud from 'vuewordcloud';
 
@@ -314,7 +315,8 @@ export default {
     VueWordCloud,
     [Button.name]: Button,
     swiper,
-    swiperSlide
+    swiperSlide,
+    ScrollDown
   },
   mounted() {
     // //do something after mounting vue instance
