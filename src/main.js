@@ -8,6 +8,8 @@ import Scrollactive from 'vue-scrollactive';
 import Animated from 'animate.css';
 import VueShowdown from 'vue-showdown';
 import VueMasonry from 'vue-masonry-css';
+import VueAnalytics from 'vue-analytics';
+
 import { ObserveVisibility } from 'vue-observe-visibility';
 
 import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -20,6 +22,10 @@ Vue.use(Scrollactive);
 Vue.use(Animated);
 Vue.use(VueShowdown);
 Vue.use(VueMasonry);
+Vue.use(VueAnalytics, {
+  id: 'UA-115061046-1',
+  disable: true
+});
 
 Vue.directive('observe-visibility', ObserveVisibility);
 
