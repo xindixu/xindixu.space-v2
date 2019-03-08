@@ -22,14 +22,20 @@ Vue.use(Scrollactive);
 Vue.use(Animated);
 Vue.use(VueShowdown);
 Vue.use(VueMasonry);
-Vue.use(VueAnalytics, {
-  id: 'UA-115061046-1',
-  disable: true
-});
 
 Vue.directive('observe-visibility', ObserveVisibility);
 
-Vue.prototype.$eventBus = new Vue();
+Vue.use(VueAnalytics, {
+  id: 'UA-115061046-1',
+  router,
+  autoTracking: {
+    shouldRouterUpdate(to, from) {
+      // Here I'm allowing tracking only when
+      // next route path is not the same as the previous
+      return to.path !== from.path;
+    }
+  }
+});
 
 new Vue({
   router,
