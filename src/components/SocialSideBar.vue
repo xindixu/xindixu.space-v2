@@ -10,11 +10,7 @@
         </n-button>
       </div>
     </transition-group>
-    <!--
-      <button class="btn btn-info btn-icon btn-round" @click="modalOn = true;">
-        <i class="now-ui-icons arrows-1_share-66"></i>
-      </button>
-    -->
+
     <modal
       :show.sync="modalOn"
       class="modal-primary"

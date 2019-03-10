@@ -32,6 +32,7 @@
     "vue-scrollactive": "^0.8.0",
     "vue-showdown": "^2.3.0",
     "vue2-transitions": "^0.2.3",
+    "vueg": "^1.4.5",
     "vuepress": "^1.0.0-alpha.25",
     "vuewordcloud": "^18.7.11"
   },

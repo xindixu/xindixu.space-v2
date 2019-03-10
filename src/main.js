@@ -9,6 +9,7 @@ import Animated from 'animate.css';
 import VueShowdown from 'vue-showdown';
 import VueMasonry from 'vue-masonry-css';
 import VueAnalytics from 'vue-analytics';
+import vueg from 'vueg';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
 
@@ -23,7 +24,10 @@ Vue.use(Animated);
 Vue.use(VueShowdown);
 Vue.use(VueMasonry);
 
-Vue.directive('observe-visibility', ObserveVisibility);
+Vue.use(vueg, router, {
+  duration: 0.2,
+  enter: 'touchPoint'
+});
 
 Vue.use(VueAnalytics, {
   id: 'UA-115061046-1',
@@ -36,6 +40,9 @@ Vue.use(VueAnalytics, {
     }
   }
 });
+
+Vue.prototype.$eventBus = new Vue();
+Vue.directive('observe-visibility', ObserveVisibility);
 
 new Vue({
   router,
