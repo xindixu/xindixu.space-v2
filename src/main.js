@@ -10,6 +10,7 @@ import VueShowdown from 'vue-showdown';
 import VueMasonry from 'vue-masonry-css';
 import VueAnalytics from 'vue-analytics';
 import vueg from 'vueg';
+import VueResource from 'vue-resource';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
 
@@ -23,6 +24,7 @@ Vue.use(Scrollactive);
 Vue.use(Animated);
 Vue.use(VueShowdown);
 Vue.use(VueMasonry);
+Vue.use(VueResource);
 
 Vue.use(vueg, router, {
   duration: 0.2,

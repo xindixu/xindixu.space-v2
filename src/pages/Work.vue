@@ -8,7 +8,7 @@
       <div class="content-center">
         <div class="container"><h1 class="title">Work</h1></div>
       </div>
-      <scrollDown></scrollDown>
+      <ScrollDown />
     </div>
     <card>
       <tabs

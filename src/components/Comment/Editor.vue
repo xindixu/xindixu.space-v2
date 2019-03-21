@@ -1,11 +1,11 @@
 <template>
   <div id="commentSection">
-    <h2>Share your thoughts...</h2>
+    <h3>Share your thoughts...</h3>
     <form @submit.prevent="checkForm">
       <div class="row">
         <div class="col-sm-6 col-lg-6">
           <fg-input
-            v-model="name"
+            v-model="comment.name"
             addon-left-icon="now-ui-icons users_single-02"
             placeholder="Casper Meowspy"
           >
@@ -13,7 +13,7 @@
         </div>
         <div class="col-sm-6 col-lg-6">
           <fg-input
-            v-model="email"
+            v-model="comment.email"
             addon-left-icon="now-ui-icons ui-1_email-85"
             placeholder="casper.meow@gmail.com"
           >
@@ -22,12 +22,16 @@
       </div>
 
       <b-row id="editor">
-        <textarea v-model="md" :rows="md.split('\n').length + 4"> </textarea>
+        <textarea
+          v-model="comment.message"
+          :rows="comment.message.split('\n').length + 4"
+        >
+        </textarea>
         <vue-showdown
           id="result"
-          :markdown="md"
+          :markdown="comment.message"
           :options="options"
-          v-model="md"
+          v-model="comment.message"
         ></vue-showdown>
       </b-row>
       <div class="text-right">
@@ -52,9 +56,10 @@ import { Button, FormGroupInput } from '@/components';
 export default {
   name: 'Editor',
   data: () => ({
-    name: null,
-    email: null,
-    md: `# Yay! You've found this great way of sharing thoughts! :tada:
+    comment: {
+      name: null,
+      email: null,
+      message: `# Yay! You've found this great way of sharing thoughts! :tada:
 
 I really like your website! :smile::cat::heart_eyes:
 
@@ -65,7 +70,8 @@ THINK ... before you submit
 - [x] Is it insightful?
 - [x] Is it nice?
 - [x] Is it kind?
-`,
+`
+    },
     options: {
       omitExtraWLInCodeBlocks: false,
       noHeaderId: false,
@@ -114,33 +120,20 @@ THINK ... before you submit
     submit() {
       //https://medium.com/codingthesmartway-com-blog/vue-js-2-firebase-e4b2479e35a8
       //use firebase storage instead
-      const newMessage = {
-        name: this.name,
-        email: this.email,
-        message: this.md
-      };
-      const json = JSON.stringify(newMessage);
-      console.log(json);
-      const filename = `../../assets/json/${this.work}.json`;
 
-      let blob = new Blob([json], { type: 'text/plain;charset=utf-8;' });
-      if (navigator.msSaveBlob) {
-        // IE 10+
-        navigator.msSaveBlob(blob, filename);
-      } else {
-        let link = document.createElement('a');
-        if (link.download !== undefined) {
-          // feature detection
-          // Browsers that support HTML5 download attribute
-          let url = URL.createObjectURL(blob);
-          link.setAttribute('href', url);
-          link.setAttribute('download', filename);
-          link.style.visibility = 'hidden';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        }
-      }
+      this.$http
+        .post(
+          `https://xindixuspace-v2.firebaseio.com/comment/${this.work}.json`,
+          this.comment
+        )
+        .then(
+          response => {
+            console.log(response);
+          },
+          error => {
+            console.log(error);
+          }
+        );
     }
   }
 };

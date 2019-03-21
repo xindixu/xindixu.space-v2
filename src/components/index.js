@@ -29,10 +29,10 @@ import CurveText from './CurveText.vue';
 import TableOfContent from './TableOfContent.vue';
 import SocialSideBar from './SocialSideBar.vue';
 import Editor from './Comment/Editor.vue';
+import Message from './Comment/Message.vue';
 import CommentSection from './Comment/CommentSection.vue';
 import WorkInProgress from './WorkInProgress.vue';
 import ScrollDown from './ScrollDown.vue';
-
 export {
   Alert,
   Collapse,
@@ -65,5 +65,6 @@ export {
   WorkInProgress,
   ScrollDown,
   Editor,
+  Message,
   CommentSection
 };
