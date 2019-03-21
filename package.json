@@ -2,6 +2,10 @@
   "name": "xindixu.space",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "11.11.0",
+    "yarn": "1.13.0"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
