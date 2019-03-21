@@ -1,7 +1,7 @@
 <template>
   <div id="commentSection">
     <h2>Share your thoughts...</h2>
-    <form @submit="checkForm">
+    <form @submit.prevent="checkForm">
       <div class="row">
         <div class="col-sm-6 col-lg-6">
           <fg-input
@@ -50,7 +50,7 @@
 <script>
 import { Button, FormGroupInput } from '@/components';
 export default {
-  name: 'CommentSection',
+  name: 'Editor',
   data: () => ({
     name: null,
     email: null,
@@ -63,8 +63,8 @@ THINK ... before you submit
 - [x] Is it true?
 - [x] Is it helpful?
 - [x] Is it insightful?
-- [x] Is is nice?
-- [x] Is is kind?
+- [x] Is it nice?
+- [x] Is it kind?
 `,
     options: {
       omitExtraWLInCodeBlocks: false,
@@ -101,19 +101,52 @@ THINK ... before you submit
       splitAdjacentBlockquotes: false
     }
   }),
+  props: ['work'],
   components: {
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput
   },
   methods: {
     checkForm() {
+      this.submit();
       console.log('check');
+    },
+    submit() {
+      //https://medium.com/codingthesmartway-com-blog/vue-js-2-firebase-e4b2479e35a8
+      //use firebase storage instead
+      const newMessage = {
+        name: this.name,
+        email: this.email,
+        message: this.md
+      };
+      const json = JSON.stringify(newMessage);
+      console.log(json);
+      const filename = `../../assets/json/${this.work}.json`;
+
+      let blob = new Blob([json], { type: 'text/plain;charset=utf-8;' });
+      if (navigator.msSaveBlob) {
+        // IE 10+
+        navigator.msSaveBlob(blob, filename);
+      } else {
+        let link = document.createElement('a');
+        if (link.download !== undefined) {
+          // feature detection
+          // Browsers that support HTML5 download attribute
+          let url = URL.createObjectURL(blob);
+          link.setAttribute('href', url);
+          link.setAttribute('download', filename);
+          link.style.visibility = 'hidden';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+      }
     }
   }
 };
 </script>
 <style lang="scss" scoped>
-@import '../assets/scss/now-ui-kit/variables.scss';
+@import '../../assets/scss/now-ui-kit/variables.scss';
 #commentSection {
   #editor {
     margin: 0;

@@ -1,11 +1,10 @@
 <template>
   <div>
-    <div class="page-header page-header">
-      <parallax
+    <div class="page-header">
+      <Parallax
         class="page-header-image"
-        style="background-image: url('img/bg/bg23.jpg')"
-      >
-      </parallax>
+        style="background-image:url('img/bg/bg7.jpg')"
+      ></Parallax>
       <div class="content-center">
         <div class="container"><h1 class="title">Work</h1></div>
       </div>

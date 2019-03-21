@@ -34,10 +34,13 @@ Vue.use(VueAnalytics, {
   router,
   autoTracking: {
     shouldRouterUpdate(to, from) {
-      // Here I'm allowing tracking only when
-      // next route path is not the same as the previous
       return to.path !== from.path;
     }
+  },
+  debug: {
+    enabled: false, // default false
+    trace: false, // default false
+    sendHitTask: true // default false
   }
 });
 

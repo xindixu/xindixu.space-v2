@@ -23,7 +23,10 @@ module.exports = {
         }
       ]
     },
-    plugins: [new BundleAnalyzerPlugin()]
+    plugins: [new BundleAnalyzerPlugin()],
+    node: {
+      fs: 'empty'
+    }
   },
 
   chainWebpack: config => {

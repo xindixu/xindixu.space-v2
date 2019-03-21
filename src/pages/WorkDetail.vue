@@ -28,8 +28,7 @@
           <i class="now-ui-icons arrows-1_minimal-left"></i> &nbsp; Go Back
         </n-button>
       </router-link>
-
-      <CommentSection></CommentSection>
+      <CommentSection :work="id"></CommentSection>
     </b-container>
 
     <TableOfContent></TableOfContent>

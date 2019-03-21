@@ -11,16 +11,17 @@
       </div>
       <ScrollDown></ScrollDown>
     </div>
-    <WorkInProgress></WorkInProgress>
+    <b-container> <WorkInProgress></WorkInProgress> </b-container>
   </div>
 </template>
 
 <script>
-import { WorkInProgress, ScrollDown } from '@/components';
+import { parallax, WorkInProgress, ScrollDown } from '@/components';
 export default {
   name: '',
   data: () => ({}),
   components: {
+    parallax,
     WorkInProgress,
     ScrollDown
   }

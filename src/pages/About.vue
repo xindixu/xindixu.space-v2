@@ -238,6 +238,7 @@ export default {
       words: [
         ['Angular', 40],
         ['Vue.js', 40],
+        ['React', 40],
         ['JavaScript', 30],
         ['TypeScript', 20],
         ['Express.js', 20],
@@ -261,7 +262,7 @@ export default {
         ['AfterEffects', 10],
         ['Maya', 10],
         ['CMS', 10],
-        ['Analytics', 5],
+        ['Google Analytics', 5],
         ['Tableau', 8],
         ['Adwords', 5]
       ],
