@@ -1,5 +1,5 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+//   .BundleAnalyzerPlugin;
 
 module.exports = {
   configureWebpack: {
@@ -22,11 +22,8 @@ module.exports = {
           ]
         }
       ]
-    },
-    plugins: [new BundleAnalyzerPlugin()],
-    node: {
-      fs: 'empty'
     }
+    // plugins: [new BundleAnalyzerPlugin()],
   },
 
   chainWebpack: config => {
