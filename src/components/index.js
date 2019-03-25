@@ -33,6 +33,7 @@ import Message from './Comment/Message.vue';
 import CommentSection from './Comment/CommentSection.vue';
 import WorkInProgress from './WorkInProgress.vue';
 import ScrollDown from './ScrollDown.vue';
+
 export {
   Alert,
   Collapse,
