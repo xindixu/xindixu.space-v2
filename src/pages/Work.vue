@@ -48,14 +48,14 @@
 </template>
 <script>
 import { Card, Tabs, TabPane, ScrollDown } from '@/components';
-import workList from '../assets/work/data.json';
+import workList from '../assets/json/work.json';
 export default {
   data: function() {
     return {
       works: workList,
       sortedWorkList: [],
-      categories: ['Development', 'Advertising', 'Marketing', 'Craft'],
-      tags: []
+      categories: ['coding'],
+      tags: ['javaScript']
     };
   },
   components: {

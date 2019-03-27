@@ -44,7 +44,7 @@ import {
   WorkInProgress,
   Button
 } from '@/components';
-import workList from '../assets/work/data.json';
+import workList from '../assets/json/work.json';
 
 export default {
   name: 'WorkDetail',

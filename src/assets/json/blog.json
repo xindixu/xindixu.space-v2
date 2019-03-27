@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Basic Javascript",
+    "date": "2018-09-20",
+    "prev": "",
+    "next": "fcc2",
+    "id": "fcc1",
+    "category": "coding",
+    "tags": [
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "ES6",
+    "date": "2018-09-26",
+    "prev": "fcc1",
+    "next": "fcc3",
+    "id": "fcc2",
+    "category": "coding",
+    "tags": [
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "Regular Expression",
+    "date": "2018-09-28",
+    "prev": "fcc2",
+    "next": "fcc4",
+    "id": "fcc3",
+    "category": "coding",
+    "tags": [
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "Debugging",
+    "date": "2018-09-30",
+    "prev": "fcc3",
+    "next": "",
+    "id": "fcc4",
+    "category": "coding",
+    "tags": [
+      "JavaScript"
+    ]
+  },
+  {
+    "title": "Big Bend Window Trail",
+    "date": "2019-03-23",
+    "prev": "",
+    "next": "",
+    "id": "bigbend1",
+    "category": "life",
+    "tags": [
+      "Travel"
+    ]
+  }
+]
