@@ -7,11 +7,9 @@
     "yarn": "1.13.0"
   },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "docs:build": "vuepress build docs",
-    "docs:dev": "vuepress dev docs"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@tweenjs/tween.js": "^17.3.0",
@@ -37,7 +35,6 @@
     "vue-showdown": "^2.3.0",
     "vue2-transitions": "^0.2.3",
     "vueg": "^1.4.5",
-    "vuepress": "^1.0.0-alpha.25",
     "vuewordcloud": "^18.7.11"
   },
   "devDependencies": {
