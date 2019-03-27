@@ -51,7 +51,7 @@ export default new Router({
     // {
     //   path: '/profile',
     //   name: 'profile',
-    //   components: { default: Profile, header: MainNavbar, footer: AppFooter },
+    //   components: { default: Profile, header: AppNavbar, footer: AppFooter },
     //   props: {
     //     header: { colorOnScroll: 400 },
     //     footer: { backgroundColor: 'black' }

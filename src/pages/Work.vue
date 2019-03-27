@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div class="page-header">
-      <Parallax
-        class="page-header-image"
-        style="background-image:url('img/bg/bg7.jpg')"
-      ></Parallax>
+    <div class="page-header" style="background-image:url('img/bg/bg7.jpg')">
       <div class="content-center">
         <div class="container"><h1 class="title">Work</h1></div>
       </div>
@@ -51,7 +47,7 @@
   </div>
 </template>
 <script>
-import { Parallax, Card, Tabs, TabPane, ScrollDown } from '@/components';
+import { Card, Tabs, TabPane, ScrollDown } from '@/components';
 import workList from '../assets/work/data.json';
 export default {
   data: function() {
@@ -63,7 +59,6 @@ export default {
     };
   },
   components: {
-    Parallax,
     Card,
     Tabs,
     TabPane,
@@ -72,6 +67,11 @@ export default {
 };
 </script>
 <style scoped lang="scss">
+.page-header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 img {
   width: 100%;
   height: auto;
