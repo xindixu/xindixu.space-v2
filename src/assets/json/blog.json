@@ -1,4 +1,5 @@
-[{
+[
+  {
     "title": "Basic Javascript",
     "date": "2018-09-20",
     "prev": "",
@@ -67,7 +68,7 @@
     "category": "life",
     "collection": "Big Bend",
     "tags": [
-      "Travel","Food"
+      "Travel", "Food"
     ]
   }
 ]
