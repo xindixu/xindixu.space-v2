@@ -1,13 +1,13 @@
-[
-  {
+[{
     "title": "Basic Javascript",
     "date": "2018-09-20",
     "prev": "",
     "next": "fcc2",
     "id": "fcc1",
     "category": "coding",
+    "collection": "freeCodeCamp",
     "tags": [
-      "JavaScript"
+      "JavaScript", "FrontEnd"
     ]
   },
   {
@@ -17,8 +17,9 @@
     "next": "fcc3",
     "id": "fcc2",
     "category": "coding",
+    "collection": "freeCodeCamp",
     "tags": [
-      "JavaScript"
+      "JavaScript", "FrontEnd"
     ]
   },
   {
@@ -28,8 +29,9 @@
     "next": "fcc4",
     "id": "fcc3",
     "category": "coding",
+    "collection": "freeCodeCamp",
     "tags": [
-      "JavaScript"
+      "JavaScript", "FrontEnd"
     ]
   },
   {
@@ -39,8 +41,9 @@
     "next": "",
     "id": "fcc4",
     "category": "coding",
+    "collection": "freeCodeCamp",
     "tags": [
-      "JavaScript"
+      "JavaScript", "FrontEnd"
     ]
   },
   {
@@ -50,8 +53,21 @@
     "next": "",
     "id": "bigbend1",
     "category": "life",
+    "collection": "Big Bend",
     "tags": [
       "Travel"
+    ]
+  },
+  {
+    "title": "Big Bend Food",
+    "date": "2019-03-23",
+    "prev": "",
+    "next": "",
+    "id": "bigbend2",
+    "category": "life",
+    "collection": "Big Bend",
+    "tags": [
+      "Travel","Food"
     ]
   }
 ]

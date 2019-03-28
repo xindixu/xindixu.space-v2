@@ -54,8 +54,8 @@ export default {
     return {
       works: workList,
       sortedWorkList: [],
-      categories: ['coding'],
-      tags: ['javaScript']
+      categories: ['Development', 'Advertising', 'Marketing', 'Craft'],
+      tags: []
     };
   },
   components: {
