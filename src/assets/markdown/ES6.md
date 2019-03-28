@@ -1,21 +1,13 @@
----
-title: ES6
-lang: en-US
-postDate: "Sept. 24, 2018"
-sidebar: auto
-prev: ./1-BasicJavaScript
-next: ./3-RegularExpression
----
 # ES6
 
-## var, let, const
+### var, let, const
 |          	| var      	| let                        	| const                      	|
 |----------	|----------	|----------------------------	|----------------------------	|
 | redeclare | yes      	| no                         	| no                         	|
 | reassign  | yes      	| yes                        	| no                         	|
 | scope    	| function 	| block,statement,expression 	| block,statement,expression 	|
 
-### redeclare
+#### redeclare
 **var** allows redeclaring the variable
 
 ```javascript
@@ -32,15 +24,15 @@ const C = "Meow";
 const C = "Woof"; // throws an error
 ```
 
-*use strict*
+*use strict* 
 error if no declare
 ```javascript
 'use strict';
 x = 3.14 // throws an error because x is not declared
 ```
 
-### scope
-**var** - global/local in function
+#### scope
+**var** - global/local in function 
 ```javascript
 var a; //global
 
@@ -52,7 +44,7 @@ function foo(){
 **let & const**- gloabl/local in block, statement, expression
 
 *example - compare:*
-var:
+var: 
 ```javascript
 var printNumTwo;
 for (var i = 0; i < 3; i++) {
@@ -65,9 +57,9 @@ for (var i = 0; i < 3; i++) {
 console.log(printNumTwo());
 // returns 3
 ```
-1. var i - global because it is not declared in a function
+1. var i - global because it is not declared in a function 
 2. equal to `var i; for(i = 0; i < 3; i++){}`
-3. after for loop, console.log calls printNumTwo()
+3. after for loop, console.log calls printNumTwo() 
 4. var i, which is globle, has been updated to 3
 
 <br>
@@ -88,18 +80,18 @@ console.log(printNumTwo());
 console.log(i);
 // returns "i is not defined"
 ```
-1. since let does not allow redeclaring, let creates three different `i` variables with values (0,1,2), so function returns correctly
+1. since let does not allow redeclaring, let creates three different `i` variables with values (0,1,2), so function returns correctly 
 2. within the loop statement, so it can't be accessed outside
 
-### reassign
-**var & let** - allow reassign
+#### reassign 
+**var & let** - allow reassign 
 **const** - does not allow reassign
 ```javascript
 "use strict"
 const FAV_PET = "Cats";
 FAV_PET = "Dogs"; // returns error
 ```
-but it is still mutable
+but it is still mutable 
 ```javascript
 "use strict";
 const s = [5, 6, 7];
@@ -110,11 +102,11 @@ console.log(s); // returns [5, 6, 45]
 const naming common practice: ALL_CAPS
 
 
-## Prevent object mutation
+### Prevent object mutation 
 `Object.freeze(obj)`
 once freeze the object, you can no longer add, update, or delete properties
 
-## Arrow functions
+### Arrow functions
 - Anonymous function
 function that has no name = inline functions
 ```javascript
@@ -154,16 +146,16 @@ const add = (x,y) => x + y;
 add = (x,y) => x - y; // error because of const
 ```
 
-## Arrow functions & array
-### filter()
+#### Higer order arrow functions
+##### filter()
 ```javascript
 FBPosts.filter((post) => post.thumbnail != null && post.shares > 100 && post.likes > 500);
 ```
-### map()
+##### map()
 ```javascript
 arr.map((num) => num * 2));
 ```
-### reduce()
+##### reduce()
 ```javascript
 [0, 1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) => {
     return accumulator + currentValue;
@@ -171,15 +163,15 @@ arr.map((num) => num * 2));
 ```
 .reduce() starts from currentIndex, default is 0
 
-### Chaining functions
+##### Chaining functions
 ```javascript
   const squaredIntegers = arr.filter((num) => num > 0 && Number.isInteger(num)).map((num) => num * num);
 ```
-## Operators
+### Operators 
 - function parameter with default value
 function(arg1 = 1, arg2){}
 
-### spread operator
+#### spread operator 
 spread the array to its elements
 - spread to unpack the array
 ```javascript
@@ -206,12 +198,12 @@ const spreaded = ...arr; // error!
 ```javascript
 var arr1 = [0,1,2];
 var arr2 = [3,4,5];
-arr1 = [...arr1,"mmm",...arr2];
+arr1 = [...arr1,"mmm",...arr2]; 
 ```
 
-### rest operator
+#### rest operator
 collect elements and pack them into an array
-able to use array methods, since it is an array now
+able to use array methods, since it is an array now 
 ```javascript
 function sum(...args){
   return args.reduce((acc,cur) => acc + cur,0);
@@ -219,8 +211,8 @@ sum(1,2,3,4,5,3);
 }
 ```
 
-## Destructuring assignment
-assigning values to multiple variables from an object
+### Destructuring assignment 
+assigning values to multiple variables from an object 
 ES5:
 ```javascript
 var voxel = {x: 3.6, y: 7.4, z: 6.54 };
@@ -228,7 +220,7 @@ var x = voxel.x; // x = 3.6
 var y = voxel.y; // y = 7.4
 var z = voxel.z; // z = 6.54
 ```
-### to object
+#### to object
 ES6:
 - basic
 ```javascript
@@ -248,7 +240,7 @@ const a = {
 const { start : { x: startX, y: startY }} = a;
 console.log(startX, startY); // 5, 6
 ```
-### to array
+#### to array
 - basic
 ```javascript
 const [a,b,,,c] = [1,2,3,4,5,6];
@@ -267,7 +259,7 @@ similar to Array.prototype.slice()
 const [a,b,...arr] = [1,2,3,4,5,6];
 // a = 1, b = 2, arr = [3,4,5,6]
 ```
-### to function
+#### to function 
 destruct object in a function arg
 ```javascript
 const stats = {
@@ -279,7 +271,7 @@ const stats = {
   average: 35.85
 };
 const half = (function() {
-  "use strict";
+  "use strict"; 
   return function half({max,min}) {
     // use function argument destructuring
     return (max + min) / 2.0;
@@ -295,7 +287,7 @@ const half = ({max,min}) => (max + min) / 2.0;
 ```
 
 
-## Template literals
+### Template literals 
 ```javascript
 const person = {
   name: "Zodiac Hasbro",
@@ -328,12 +320,12 @@ function makeList(arr) {
 const resultDisplayArray = makeList(result.failure);
 ```
 
-## Object literal
+### Object literal
 `const getMousePos = (x,y) => { x,y };`
 which is the same as:
 `const getMousePos = (x,y) => { x:x, y:y };`
 
-## Function in a Object
+### Function in a Object
 ```javascript
 //ES 5
 const person = {
@@ -352,11 +344,11 @@ const person = {
 };
 ```
 
-## Class syntax
+### Class syntax
 *this is just a syntax, not a real class based on implementation of object oriented programming*
 
 class is a special function
-### Constructor
+#### Constructor
 ```javascript
 // ES5
 var SpaceShuttle = function(targetPlanet){
@@ -373,7 +365,7 @@ class SpaceShuttle {
 var zeus = new SpaceShuttle('Jupiter');
 ```
 
-### Getter & setter
+#### Getter & setter
 
 ```javascript
 class Thermostat{
@@ -393,15 +385,15 @@ thermos.temperature = 26;
 temp = thermos.temperature; // 26 in C
 ```
 
-## Import & export
+### Import & export
 - require(ES5)
 require() - import the code in external files and modules
 - import(ES6)
   - import partial
 `import { } from "path/to/file"`
-only import parts of a module or file, save time and memory
+only import parts of a module or file, save time and memory 
 file path starts with `./` in most cases; otherwise it will load from `node_modules`
-  - import all
+  - import all 
 `import * as name from "path/to/file"`
   - import export default
 `import add from "path/to/file"`
@@ -409,7 +401,7 @@ file path starts with `./` in most cases; otherwise it will load from `node_modu
   - named export
 `export { capitalizeString } //How to export functions.`
 `export const foo = "bar"; //How to export variables.`
-`export { capitalizeString, foo } //Compact`
+`export { capitalizeString, foo } //Compact` 
   - export default
 `export default function add(x,y){
   return x + y;

@@ -1,13 +1,6 @@
----
-title: Debugging
-lang: en-US
-postDate: "Sept. 30, 2018"
-sidebar: auto
-prev: ./3-RegularExpression
----
 # Debugging
 
-## Three Types of Errors
+### Three Types of Errors
 1. Syntax error - often detected by the code editor
 
 ```javascript
@@ -26,7 +19,7 @@ function loopy() {
 }
 // Calling loopy starts an infinite loop, which may crash your browser
 ```
-3. Semantic error - often detected after testing code output
+3. Semantic error - often detected after testing code output 
 ```javascript
 function calcAreaOfRect(w, h) {
   return w + h; // This should be w * h
@@ -35,24 +28,24 @@ let myRectArea = calcAreaOfRect(2, 3);
 // Correct syntax and the program executes, but this gives the wrong answer
 ```
 
-## Process of Elimination
-1. by function
+### Process of elimiation
+1. by function 
 2. start from the middle of the block
 
-## Code to check intermediate values and types
+### Code to check intermediate values and types
 - `console.log()`
 - `console.clear()`
 - `console.log(typeof ...)`
   - 6 primitive data types:
     - Boolean, Null, Undefined, Number, String, and Symbol
-  - 1 mutatable data:
-    - object
+  - 1 mutatble data:
+    - object 
 
-## Common errors
-- misspelling, miscapitalization...
+### Common errors
+- misspelling, miscapitalization... 
 - unclosed brackets
 - mixed usage of single and double quotes
-- assignment operator & equality operator
+- assigment operator & equality operator
 - missing parenthesis after a function call
 - arguments passed in the wrong order
-- off by one errors (OBOE) for indexing
+- off by one errors (OBOE) for indexing 
