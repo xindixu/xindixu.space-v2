@@ -4,7 +4,7 @@
       <swiper id="v" :options="swiperOptionV">
         <swiper-slide
           id="slide1"
-          style="background-image:url('img/home/2.jpg')"
+          style="background-image:url('img/home/2.webp')"
         >
           <!--
             <div id="photo">
@@ -35,7 +35,7 @@
         <swiper-slide
           id="slide2"
           class="slideHelp"
-          style="background-image: url('img/bg/bg12.jpg');"
+          style="background-image: url('img/bg/bg12.webp');"
         >
           <b-row>
             <b-col lg="6" md="8">
@@ -85,7 +85,7 @@
         </swiper-slide>
         <swiper-slide
           class="slideHelp"
-          style="background-image: url('img/bg/bg10.jpg');"
+          style="background-image: url('img/bg/bg10.webp');"
         >
           <b-row>
             <b-col lg="6" md="8">
@@ -138,7 +138,7 @@
         </swiper-slide>
         <swiper-slide
           class="slideHelp"
-          style="background-image: url('img/bg/bg25.jpg');"
+          style="background-image: url('img/bg/bg25.webp');"
         >
           <b-row>
             <b-col lg="6" md="8">

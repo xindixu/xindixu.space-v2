@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="page-header" style="background-image:url('img/bg/bg7.jpg')">
+    <div class="page-header" style="background-image:url('img/bg/bg7.webp')">
       <div class="content-center">
         <div class="container"><h1 class="title">Work</h1></div>
       </div>
@@ -33,7 +33,7 @@
                   <b-card
                     :title="data.title"
                     class="work-card grow"
-                    :img-src="'img/work/' + data.id + '.png'"
+                    :img-src="'img/work/' + data.id + '.webp'"
                   >
                   </b-card>
                 </router-link>

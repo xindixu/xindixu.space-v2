@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="page-header" style="background-image: url('img/bg/bg22.jpg')">
+    <div class="page-header" style="background-image: url('img/bg/bg22.webp')">
       <div class="content-center">
         <div class="container"><h1 class="title">Blog</h1></div>
       </div>
@@ -10,7 +10,7 @@
     <b-container fluid class="mt-5 px-5">
       <section>
         <b-row>
-          <b-col cols="sm"> <img src="img/bg/bg1.jpg" /> </b-col>
+          <b-col cols="sm"> <img src="img/bg/bg1.webp" /> </b-col>
           <b-col cols="sm">
             <!-- TODO: add search bar -->
             <h3>Search bar</h3>

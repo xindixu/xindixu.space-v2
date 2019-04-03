@@ -2,7 +2,7 @@
   <div>
     <div class="swiper-container">
       <swiper ref="swiper" :options="swiperOptionV">
-        <swiper-slide style="background-image: url('img/bg/bg29.jpg');">
+        <swiper-slide style="background-image: url('img/bg/bg29.webp');">
           <b-row>
             <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
             <div class="svg-wrapper"><Xin></Xin><Xin0></Xin0></div>
@@ -30,7 +30,7 @@
           <b-row style="margin-top:10em">
             <b-col lg="6" offset-lg="5" md="10">
               <div id="map-container" class="mx-4">
-                <img id="map" src="img/about/map.png" />
+                <img id="map" src="img/about/map.webp" />
                 <Pin class="label pinFZ"></Pin>
                 <Pin class="label pinAUS"></Pin>
                 <!-- <Route class="label route"></Route> -->
@@ -72,7 +72,7 @@
           <scroll-down color="#000000"></scroll-down>
         </swiper-slide>
 
-        <swiper-slide style="background-image: url('img/bg/bg31.jpg');">
+        <swiper-slide style="background-image: url('img/bg/bg31.webp');">
           <b-row>
             <b-col class="half">
               <div class="white left top">
@@ -102,7 +102,7 @@
           </b-row>
         </swiper-slide>
 
-        <swiper-slide style="background-image: url('img/bg/bg33.jpg');">
+        <swiper-slide style="background-image: url('img/bg/bg33.webp');">
           <b-row>
             <b-col class="half">
               <div class="white left bottom">
@@ -126,7 +126,7 @@
             </b-col>
           </b-row>
         </swiper-slide>
-        <swiper-slide style="background-image: url('img/bg/bg19.jpg');">
+        <swiper-slide style="background-image: url('img/bg/bg19.webp');">
           <b-row>
             <b-col class="half">
               <div class="white left top">
