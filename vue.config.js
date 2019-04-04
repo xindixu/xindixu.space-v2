@@ -22,6 +22,14 @@ module.exports = {
           ]
         },
         {
+          test: /\.(jpe?g|png)$/i,
+          use: [
+            {
+              loader: 'webp-loader?{quality: 80}'
+            }
+          ]
+        },
+        {
           test: /\.webp$/,
           use: [
             {
