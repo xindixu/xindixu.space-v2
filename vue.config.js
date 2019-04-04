@@ -1,5 +1,6 @@
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 //   .BundleAnalyzerPlugin;
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 module.exports = {
   configureWebpack: {
@@ -20,26 +21,25 @@ module.exports = {
               }
             }
           ]
-        },
-        {
-          test: /\.(jpe?g|png)$/i,
-          use: [
-            {
-              loader: 'webp-loader?{quality: 80}'
-            }
-          ]
-        },
-        {
-          test: /\.webp$/,
-          use: [
-            {
-              loader: 'webp-loader?{quality: 80}'
-            }
-          ]
         }
       ]
-    }
-    // plugins: [new BundleAnalyzerPlugin()],
+    },
+    plugins: [
+      new ImageminWebpWebpackPlugin({
+        config: [
+          {
+            test: /\.(jpe?g|png)/,
+            options: {
+              quality: 75
+            }
+          }
+        ],
+        overrideExtension: true,
+        detailedLogs: false,
+        strict: true
+      })
+      // new BundleAnalyzerPlugin()
+    ]
   },
 
   chainWebpack: config => {

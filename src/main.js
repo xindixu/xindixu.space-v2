@@ -13,10 +13,6 @@ import VueResource from 'vue-resource';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
 
-import 'bootstrap-vue/dist/bootstrap-vue.css';
-
-Vue.config.productionTip = false;
-
 Vue.use(BootstrapVue);
 Vue.use(NowUiKit);
 Vue.use(Scrollactive);
@@ -24,6 +20,8 @@ Vue.use(Animated);
 Vue.use(VueShowdown);
 Vue.use(VueMasonry);
 Vue.use(VueResource);
+
+Vue.config.productionTip = false;
 
 Vue.use(vueg, router, {
   duration: 0.2,
@@ -39,7 +37,7 @@ Vue.use(VueAnalytics, {
     }
   },
   debug: {
-    enabled: false, // default false
+    enabled: true, // default false
     trace: false, // default false
     sendHitTask: true // default false
   }

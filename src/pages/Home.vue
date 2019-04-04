@@ -4,13 +4,8 @@
       <swiper id="v" :options="swiperOptionV">
         <swiper-slide
           id="slide1"
-          style="background-image:url('img/home/2.webp')"
+          style="background-image:url('img/home/2.jpg')"
         >
-          <!--
-            <div id="photo">
-              <CurveText id="greeting">{{ greeting }}</CurveText>
-            </div>
-          -->
           <b-col lg="5" offset-lg="7" md="6" offset-md="6">
             <div class="zhIntro vertical">
               <h1 class="chineseTitle">徐欣笛</h1>
@@ -35,7 +30,7 @@
         <swiper-slide
           id="slide2"
           class="slideHelp"
-          style="background-image: url('img/bg/bg12.webp');"
+          style="background-image: url('img/bg/bg12.jpg');"
         >
           <b-row>
             <b-col lg="6" md="8">
@@ -85,7 +80,7 @@
         </swiper-slide>
         <swiper-slide
           class="slideHelp"
-          style="background-image: url('img/bg/bg10.webp');"
+          style="background-image: url('img/bg/bg10.jpg');"
         >
           <b-row>
             <b-col lg="6" md="8">
@@ -138,7 +133,7 @@
         </swiper-slide>
         <swiper-slide
           class="slideHelp"
-          style="background-image: url('img/bg/bg25.webp');"
+          style="background-image: url('img/bg/bg25.jpg');"
         >
           <b-row>
             <b-col lg="6" md="8">

@@ -3,7 +3,7 @@
     <div class="page-header clear-filter" :filter-color="filter">
       <div
         class="page-header-image"
-        style="background-image: url('img/bg/bg23.webp')"
+        style="background-image: url('img/bg/bg23.jpg')"
       ></div>
       <div class="content-center">
         <div class="container">

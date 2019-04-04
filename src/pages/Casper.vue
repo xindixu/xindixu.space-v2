@@ -27,7 +27,7 @@ export default {
   methods: {
     createImgArr() {
       for (let i = 1; i < 40; i++) {
-        this.imgArr.push('/img/cat/' + i + '.webp');
+        this.imgArr.push('/img/cat/' + i + '.jpeg');
       }
     }
   },
