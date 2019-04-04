@@ -20,6 +20,14 @@ module.exports = {
               }
             }
           ]
+        },
+        {
+          test: /\.webp$/,
+          use: [
+            {
+              loader: 'webp-loader?{quality: 80}'
+            }
+          ]
         }
       ]
     }
