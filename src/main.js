@@ -37,7 +37,7 @@ Vue.use(VueAnalytics, {
     }
   },
   debug: {
-    enabled: true, // default false
+    enabled: false, // default false
     trace: false, // default false
     sendHitTask: true // default false
   }

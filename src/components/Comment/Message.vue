@@ -57,16 +57,19 @@ export default {
       completeHTMLDocument: false,
       metadata: false,
       splitAdjacentBlockquotes: false
-    }
+    },
+    inital: null
   }),
   props: ['name', 'email', 'message'],
-  methods: {},
-  computed: {
-    inital() {
+  methods: {
+    getInital() {
       let nameArr = this.name.split(' ');
       let inital = nameArr[0].substring(0, 1) + nameArr[1].substring(0, 1);
-      return inital;
+      this.inital = inital;
     }
+  },
+  created() {
+    this.getInital();
   }
 };
 </script>

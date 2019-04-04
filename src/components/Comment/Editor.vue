@@ -49,10 +49,28 @@
         />
       </div>
     </form>
+    <Modal
+      :show.sync="modalOn"
+      class="modal-primary"
+      :show-close="false"
+      headerClasses="justify-content-center"
+      type="mini"
+    >
+      <div slot="header" class="modal-profile">
+        <img src="/img/share/avatar.jpg" class="rounded-circle img-raised" />
+      </div>
+      <div class="text-center">
+        <h5>Nice! You just posted your comment! Refresh to check it out!</h5>
+      </div>
+
+      <template slot="footer">
+        <div class="text-center"></div>
+      </template>
+    </Modal>
   </div>
 </template>
 <script>
-import { Button, FormGroupInput } from '@/components';
+import { Button, FormGroupInput, Modal } from '@/components';
 export default {
   name: 'Editor',
   data: () => ({
@@ -105,12 +123,14 @@ THINK ... before you submit
       completeHTMLDocument: false,
       metadata: false,
       splitAdjacentBlockquotes: false
-    }
+    },
+    modalOn: false
   }),
   props: ['work'],
   components: {
     [Button.name]: Button,
-    [FormGroupInput.name]: FormGroupInput
+    [FormGroupInput.name]: FormGroupInput,
+    Modal
   },
   methods: {
     checkForm() {
@@ -118,9 +138,6 @@ THINK ... before you submit
       console.log('check');
     },
     submit() {
-      //https://medium.com/codingthesmartway-com-blog/vue-js-2-firebase-e4b2479e35a8
-      //use firebase storage instead
-
       this.$http
         .post(
           `https://xindixuspace-v2.firebaseio.com/comment/${this.work}.json`,
@@ -129,6 +146,7 @@ THINK ... before you submit
         .then(
           response => {
             console.log(response);
+            this.modalOn = true;
           },
           error => {
             console.log(error);

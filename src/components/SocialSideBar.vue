@@ -11,7 +11,7 @@
       </div>
     </transition-group>
 
-    <modal
+    <Modal
       :show.sync="modalOn"
       class="modal-primary"
       :show-close="false"
@@ -37,7 +37,7 @@
       <template slot="footer">
         <div class="text-center"></div>
       </template>
-    </modal>
+    </Modal>
   </div>
 </template>
 <script>

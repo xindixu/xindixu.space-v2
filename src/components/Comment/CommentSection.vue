@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Comments</h2>
-    <div v-for="m in messages" :key="m.name">
+    <div v-for="m in messages" :key="m.id">
       <Message :name="m.name" :email="m.email" :message="m.message" />
     </div>
     <Editor :work="work" />
@@ -30,7 +30,9 @@ export default {
         .then(data => {
           const result = [];
           for (let key in data) {
-            result.push(data[key]);
+            const entry = data[key];
+            entry.id = key;
+            result.push(entry);
           }
           this.messages = result;
         });
@@ -42,4 +44,4 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped></style>
