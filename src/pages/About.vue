@@ -3,7 +3,7 @@
     <div class="swiper-container">
       <swiper ref="swiper" :options="swiperOptionV">
         <swiper-slide style="background-image: url('img/bg/bg29.jpg');">
-          <b-row>
+          <div class="row">
             <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
             <div class="svg-wrapper"><Xin></Xin><Xin0></Xin0></div>
             <div class="svg-wrapper"><Di></Di><Di0></Di0></div>
@@ -13,9 +13,9 @@
               </span>
             </div>
             <audio src="audio/name.mp3" id="audio"></audio>
-          </b-row>
-          <b-row class="mt-5">
-            <b-col md="6" lg="5">
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-6 col-lg-5">
               <p>
                 My name consists of 3 Chinese characters, family name,
                 <span class="chinese">徐</span> and given name,
@@ -24,11 +24,11 @@
                 <span class="chinese">笛</span> means bamboo flutes, whose music
                 often triggers a peaceful joy among the listeners.
               </p>
-            </b-col>
-          </b-row>
+            </div>
+          </div>
 
-          <b-row style="margin-top:10em">
-            <b-col lg="6" offset-lg="5" md="10">
+          <div class="row" style="margin-top:10em">
+            <div class="col-lg-6 col-md-10 offset-lg-5">
               <div id="map-container" class="mx-4">
                 <img id="map" src="img/about/map.png" />
                 <Pin class="label pinFZ"></Pin>
@@ -59,22 +59,22 @@
                   at the University of Texas at Austin.
                 </p>
               </div>
-            </b-col>
-            <b-col lg="1" md="2">
+            </div>
+            <div class="col-lg-1 col-md-2">
               <div class="vertical chinese">
                 <p>
                   我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。<br />
                   现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
                 </p>
               </div>
-            </b-col>
-          </b-row>
+            </div>
+          </div>
           <scroll-down color="#000000"></scroll-down>
         </swiper-slide>
 
         <swiper-slide style="background-image: url('img/bg/bg31.jpg');">
-          <b-row>
-            <b-col class="half">
+          <div class="row">
+            <div class="col half">
               <div class="white left top">
                 <h1>Learning...</h1>
                 <p>
@@ -87,8 +87,8 @@
                   dedicated to learn lots of modern web technologies online.
                 </p>
               </div>
-            </b-col>
-            <b-col class="half chinese">
+            </div>
+            <div class="col half chinese">
               <div class="white right bottom">
                 <h1 class="chineseTitle">学习中...</h1>
                 <p>
@@ -98,13 +98,13 @@
                   我毕业后想做个网页开发工程师，所以全身心地学习各种现代网页开发技术。
                 </p>
               </div>
-            </b-col>
-          </b-row>
+            </div>
+          </div>
         </swiper-slide>
 
         <swiper-slide style="background-image: url('img/bg/bg33.jpg');">
-          <b-row>
-            <b-col class="half">
+          <div class="row">
+            <div class="col half">
               <div class="white left bottom">
                 <h1>Working...</h1>
                 <p>
@@ -114,8 +114,8 @@
                   Python Django.
                 </p>
               </div>
-            </b-col>
-            <b-col class="half chinese">
+            </div>
+            <div class="col half chinese">
               <div class="white right top">
                 <h1 class="chineseTitle">工作中...</h1>
                 <p>
@@ -123,12 +123,12 @@
                   Django.
                 </p>
               </div>
-            </b-col>
-          </b-row>
+            </div>
+          </div>
         </swiper-slide>
         <swiper-slide style="background-image: url('img/bg/bg19.jpg');">
-          <b-row>
-            <b-col class="half">
+          <div class="row">
+            <div class="col half">
               <div class="white left top">
                 <h1>Enjoying...</h1>
                 <p>
@@ -138,8 +138,8 @@
                   and explore new places.
                 </p>
               </div>
-            </b-col>
-            <b-col class="half chinese">
+            </div>
+            <div class="col half chinese">
               <div class="white right bottom">
                 <h1 class="chineseTitle">玩耍中...</h1>
                 <p>
@@ -147,8 +147,8 @@
                   我乐于锻炼身体，健身房，跆拳道，游泳，任何和“球”无关的运动。在放假时，我喜欢出游，探索各种地方。
                 </p>
               </div>
-            </b-col>
-          </b-row>
+            </div>
+          </div>
           <div v-observe-visibility="visibilityChangedS3"></div>
         </swiper-slide>
         <swiper-slide style="background-color:white">
