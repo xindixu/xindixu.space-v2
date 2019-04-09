@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-card>
+    <Card>
       <div>
         <div class="inital">{{ inital }}</div>
         <div class="info">
@@ -9,18 +9,19 @@
         </div>
       </div>
       <hr />
-      <b-card-text>
+      <div class="card-body">
         <vue-showdown
           id="result"
           :markdown="message"
           :options="options"
         ></vue-showdown>
-      </b-card-text>
-    </b-card>
+      </div>
+    </Card>
   </div>
 </template>
 
 <script>
+import { Card } from '@/components';
 export default {
   name: 'Message',
   data: () => ({
@@ -70,7 +71,8 @@ export default {
   },
   created() {
     this.getInital();
-  }
+  },
+  components: { Card }
 };
 </script>
 

@@ -21,7 +21,7 @@
       enter-active-class="animated slideInDown"
       leave-active-class="animated bounceOutUp"
     >
-      <b-card id="card" v-show="isTOCShown">
+      <Card id="card" v-show="isTOCShown">
         <scrollactive
           v-on:itemchanged="onItemChanged"
           ref="scrollactive"
@@ -40,11 +40,12 @@
             </a>
           </div>
         </scrollactive>
-      </b-card>
+      </Card>
     </transition>
   </div>
 </template>
 <script>
+import { Card } from '@/components';
 export default {
   name: 'TableOfContent',
   data: () => ({
@@ -89,7 +90,8 @@ export default {
     sendData() {
       this.$eventBus.$emit('workContentVisible', this.isContentShown);
     }
-  }
+  },
+  components: { Card }
 };
 </script>
 <style lang="scss" scoped>

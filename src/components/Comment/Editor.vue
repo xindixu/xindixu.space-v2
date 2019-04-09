@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <b-row id="editor">
+      <div class="row" id="editor">
         <textarea
           v-model="comment.message"
           :rows="comment.message.split('\n').length + 4"
@@ -33,7 +33,7 @@
           :options="options"
           v-model="comment.message"
         ></vue-showdown>
-      </b-row>
+      </div>
       <div class="text-right">
         <input
           class="btn btn-primary btn-sm"

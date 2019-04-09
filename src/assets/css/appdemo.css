@@ -10,7 +10,7 @@
 }
 
 
-.ac-device {
+#ac-device {
 	width: 320px;
 	height: auto;
 	margin-left: auto;
@@ -28,7 +28,7 @@
 	transform-style: preserve-3d;
 }
 
-.ac-device a {
+#ac-device a {
 	width: 275px;
 	height: 539px;
 	margin: 80px 0 0 22px;
@@ -37,7 +37,7 @@
 	overflow: hidden;
 }
 
-.ac-device a img {
+#ac-device a img {
 	display: block;
 	position: absolute;
 	height: auto;
@@ -45,7 +45,7 @@
 	margin: 0;
 }
 
-.ac-device h3 {
+#ac-device h3 {
 		position: relative;
 		margin: 20px 0;
 		left: auto;
@@ -55,17 +55,17 @@
 		text-align: center;
 }
 
-.ac-device nav {
+#ac-device nav {
 	position: relative;
 	text-align: center;
 }
 
-.ac-device nav button{
+#ac-device nav button{
 	position: relative;
 	text-align: center;
 	margin: 0 10px
 }
-.ac-grid {
+#ac-grid {
 	width: 90%;
 	left: 5%;
 	background-color: rgba(196,196,196,0.43);
@@ -85,7 +85,7 @@
 	-moz-transform: translateZ(-350px);
 	transform: translateZ(-350px);
 }
-.ac-grid a {
+#ac-grid a {
 	width: 120px;
 	display: inline-block;
 	position: relative;
@@ -93,12 +93,12 @@
 	cursor: pointer;
 }
 
-.ac-grid a img {
+#ac-grid a img {
 	display: block;
 	width: 100%;
 }
 
-.ac-grid a span {
+#ac-grid a span {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -117,21 +117,21 @@
 	transition: all 0.2s ease;
 }
 
-.ac-grid a:hover span {
+#ac-grid a:hover span {
 	opacity: 1;
 	-webkit-transform: translateY(0);
 	-moz-transform: translateY(0);
 	transform: translateY(0);
 }
 
-.ac-wrapper.ac-gridview .ac-device {
+#ac-wrapper#ac-gridview #ac-device {
 	-webkit-transform: translateZ(-350px);
 	-moz-transform: translateZ(-350px);
 	transform: translateZ(-350px);
 	opacity: .6;
 }
 
-.ac-wrapper.ac-gridview .ac-grid {
+#ac-wrapper#ac-gridview #ac-grid {
 	-webkit-transform: translateZ(0px);
 	-moz-transform: translateZ(0px);
 	transform: translateZ(0px);
@@ -139,21 +139,26 @@
 	pointer-events: auto;
 }
 
+
+#ac-grid img{
+	transition: all 0.5s ease
+}
+
 @media (max-width:599px) {
 
-.ac-grid a {
-	width: 100px;
+	#ac-grid a {
+		width: 100px;
 
+		}
+
+
+	#ac-device nav {
+		position: absolute;
+		left: 0%;
+		top:100%;
+		width: 100%;
+		text-align: center;
 	}
-
-
-.ac-device nav {
-	position: absolute;
-	left: 0%;
-	top:100%;
-	width: 100%;
-	text-align: center;
-}
 }
 
 
@@ -171,15 +176,15 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-.ac-grid a {
-	width: 150px;
+	#ac-grid a {
+		width: 150px;
 	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
-	.ac-grid a {
-	width: 150px;
+	#ac-grid a {
+		width: 150px;
 	}
 }
