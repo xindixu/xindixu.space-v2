@@ -42,7 +42,7 @@ xindixu.space
 ```
 
 
-[CHANGELOG]: ./CHANGELOG.md
+
 [version-badge]: https://img.shields.io/badge/version-3.0-blue.svg
 
 
