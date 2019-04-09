@@ -72,7 +72,7 @@
                   <h4 class="chinese">个项目可以证明我</h4>
                 </div>
                 <div class="link">
-                  <SquareLink link="work">take a look</SquareLink>
+                  <SquareLink link="work#development">take a look</SquareLink>
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@
                   <h4 class="chinese">个项目可以证明我</h4>
                 </div>
                 <div class="link">
-                  <SquareLink link="work">take a look</SquareLink>
+                  <SquareLink link="work#advertising">take a look</SquareLink>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@
                 <img class="introPic" src="img/home/visual.svg" alt="" />
               </div>
               <h4 class="english">
-                Got an amazing idea, but don't know how to execute?
+                Got an amazing idea, but don't know how to execute it?
               </h4>
               <h4 class="english">
                 No worries. I can help you get your idea across with compelling

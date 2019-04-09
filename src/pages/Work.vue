@@ -18,6 +18,7 @@
           v-for="category in categories"
           :key="category.index"
           class="text-center"
+          :activeTab="tab"
         >
           <template slot="label">
             {{ category }}
@@ -56,8 +57,9 @@ export default {
     return {
       works: workList,
       sortedWorkList: [],
-      categories: ['Development', 'Advertising', 'Marketing', 'Craft'],
-      tags: []
+      categories: ['development', 'advertising', 'marketing', 'craft'],
+      tags: [],
+      tab: ''
     };
   },
   components: {
@@ -65,6 +67,13 @@ export default {
     Tabs,
     TabPane,
     ScrollDown
+  },
+  created() {
+    if (this.$route.hash) {
+      const str = this.$route.hash;
+      this.tab = str.substring(1, str.length);
+      console.log(this.tab);
+    }
   }
 };
 </script>

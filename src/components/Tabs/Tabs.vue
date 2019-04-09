@@ -56,7 +56,11 @@
     </div>
   </div>
 </template>
-
+<style lang="scss" scoped>
+.nav-link {
+  text-transform: capitalize;
+}
+</style>
 <script>
 export default {
   name: 'tabs',

@@ -2,10 +2,10 @@
   {
     "title":"Nokia Demo System",
     "id": "nokia-demo-system",
-    "category": "Development",
+    "category": "development",
     "tags":[
       "UX/UI Design",
-      "Full-Stack Development",
+      "Full-Stack development",
       "Single Page Application"
     ],
     "tools":[
@@ -18,11 +18,11 @@
   {
     "title":"Nokia Demo Center Website",
     "id": "nokia-demo-center",
-    "category": "Development",
+    "category": "development",
     "tags":[
       "UX/UI Design",
       "Content Management System",
-      "Front-End Development"
+      "Front-End development"
     ],
     "tools":[
       "Wordpress",
@@ -34,7 +34,7 @@
   {
     "title": "Clif Bar",
     "id": "clif-bar",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "Research",
       "Strategy",
@@ -50,7 +50,7 @@
   {
     "title": "Triobike",
     "id": "triobike",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "Research",
       "Strategy",
@@ -67,7 +67,7 @@
   {
     "title":"Leweno Freelancer Website",
     "id": "leweno-freelancer-website",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "UX/UI Design"
     ],
@@ -80,7 +80,7 @@
   {
     "title":"Stay At Home & Let's Cook",
     "id": "stay-at-home",
-    "category": "Development",
+    "category": "development",
     "tags":[
       "UX/UI Design",
       "Full-stack Developement",
@@ -98,7 +98,7 @@
   {
     "title":"Texas Central Star",
     "id": "texas-central-star",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "Research",
       "Strategy",
@@ -114,7 +114,7 @@
   {
     "title":"Shih's Lab Website",
     "id": "shihs-lab",
-    "category": "Development",
+    "category": "development",
     "tags":[
       "UX/UI Design",
       "Structure",
@@ -129,7 +129,7 @@
   {
     "title":"Brand Safety",
     "id": "brand-safety",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "Research"
     ],
@@ -142,7 +142,7 @@
   {
     "title":"Our Next Branch",
     "id":"our-next-branch",
-    "category": "Marketing",
+    "category": "marketing",
     "tags":[
       "Analysis",
       "Data Visualization"
@@ -161,9 +161,9 @@
   {
     "title":"DaikinBot & Absolute Unit",
     "id": "daikinbot",
-    "category": "Marketing",
+    "category": "marketing",
     "tags":[
-      "Marketing",
+      "marketing",
       "Product Design"
     ],
     "tools":[
@@ -178,7 +178,7 @@
   {
     "title":"Groovy Automotive",
     "id": "groovy-automotive",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "Research",
       "Strategy",
@@ -193,7 +193,7 @@
   {
     "title":"InspiroFest",
     "id": "inspirofest",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "Strategy",
       "Creative"
@@ -210,10 +210,10 @@
   {
     "title":"Chemistry Monopoly",
     "id": "chemistry-monopoly",
-    "category": "Development",
+    "category": "development",
     "tags":[
       "Original Idea",
-      "Game Development",
+      "Game development",
       "UX/UI Design",
       "Object Oriented Programming"
     ],
@@ -227,9 +227,9 @@
   {
     "title":"Look For UT",
     "id": "look-for-ut",
-    "category": "Development",
+    "category": "development",
     "tags":[
-      "iOS Development",
+      "iOS development",
       "UX/UI Design",
       "Realtime Database"
     ],
@@ -243,9 +243,9 @@
   {
     "title":"Defend The Throne",
     "id": "defend-the-throne",
-    "category": "Development",
+    "category": "development",
     "tags":[
-      "Game Development",
+      "Game development",
       "UX/UI Design",
       "Object Oriented Programming"
     ],
@@ -259,7 +259,7 @@
   {
     "title":"State Capitol",
     "id": "state-capitol",
-    "category": "Craft",
+    "category": "craft",
     "tags":[
     ],
     "tools":[
@@ -270,7 +270,7 @@
   {
     "title":"Enron Raptors",
     "id": "enron-raptors",
-    "category": "Craft",
+    "category": "craft",
     "tags":[
     ],
     "tools":[
@@ -283,10 +283,10 @@
   {
     "title":"Catformer",
     "id": "catformer",
-    "category": "Development",
+    "category": "development",
     "tags":[
       "Computer Graphics",
-      "Game Development",
+      "Game development",
       "UX/UI Design"
     ],
     "tools":[
@@ -299,7 +299,7 @@
   {
     "title":"UT Tower",
     "id": "ut-tower",
-    "category": "Development",
+    "category": "development",
     "tags":[
       "Computer Graphics",
       "UX/UI Design"
@@ -314,7 +314,7 @@
   {
     "title":"Tèo Gelato Branding",
     "id": "teo-gelato",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "Strategy",
       "Creative",
@@ -330,7 +330,7 @@
   {
     "title":"Tesla Motors",
     "id": "tesla-motors",
-    "category": "Advertising",
+    "category": "advertising",
     "tags":[
       "Strategy",
       "Creative",
