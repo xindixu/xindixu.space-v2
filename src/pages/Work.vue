@@ -22,25 +22,27 @@
           <template slot="label">
             {{ category }}
           </template>
-          <b-row>
+          <div class="row">
             <div
               v-if="category === data.category"
               v-for="data in works"
               :key="data.index"
             >
-              <b-card-group deck class="text-center">
+              <div class="card-deck text-center">
                 <router-link :to="'/work/' + data.id">
-                  <b-card
-                    :title="data.title"
-                    class="work-card grow"
-                    :img-src="'img/work/' + data.id + '.png'"
-                  >
-                  </b-card>
+                  <Card class="work-card grow">
+                    <template slot="image">
+                      <img :src="'img/work/' + data.id + '.png'" />
+                    </template>
+
+                    <template slot="raw-content">
+                      <h5 class="my-3">{{ data.title }}</h5>
+                    </template>
+                  </Card>
                 </router-link>
-              </b-card-group>
-              <br />
+              </div>
             </div>
-          </b-row>
+          </div>
         </tab-pane>
       </tabs>
     </card>

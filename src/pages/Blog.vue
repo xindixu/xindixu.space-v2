@@ -7,21 +7,21 @@
       <ScrollDown></ScrollDown>
     </div>
 
-    <b-container fluid class="mt-5 px-5">
+    <div class="fluid-container mt-5 px-5">
       <section>
-        <b-row>
-          <b-col cols="sm"> <img src="img/bg/bg1.jpg" /> </b-col>
-          <b-col cols="sm">
+        <div class="row">
+          <div class="col-sm"><img src="img/bg/bg1.jpg" /></div>
+          <div class="col-sm">
             <!-- TODO: add search bar -->
             <h3>Search bar</h3>
             <!-- TODO: make the list smaller -->
 
-            <b-list-group flush>
-              <b-list-group-item
+            <div class="list-group list-group-flush">
+              <div
                 v-for="article in categories['life']"
                 :key="article.title"
                 href="#"
-                class="flex-column align-items-start"
+                class="list-group-item flex-column align-items-start"
               >
                 <div class="d-flex w-100 justify-content-between">
                   <h5>{{ article.title }}</h5>
@@ -37,24 +37,24 @@
                 <badge v-for="tag in article.tags" :key="tag" type="success">
                   {{ tag }}
                 </badge>
-              </b-list-group-item>
-            </b-list-group>
-          </b-col>
-        </b-row>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
         <!-- TODO: change it to collection + layout 3 cols -->
         <h2>Collection ---------</h2>
-        <b-card-group deck>
-          <b-card no-body v-for="category in categoryList" :key="category">
+        <div class="card-deck">
+          <div class="card" v-for="category in categoryList" :key="category">
             <h2 slot="header" class="mb-1 ml-3">{{ category }}</h2>
-            <b-list-group flush>
-              <b-list-group-item
+            <div class="list-group list-group-flush">
+              <div
                 v-for="article in categories[category]"
                 :key="article.title"
                 href="#"
-                class="flex-column align-items-start"
+                class="list-group-item flex-column align-items-start"
               >
                 <div class="d-flex w-100 justify-content-between">
                   <h5>{{ article.title }}</h5>
@@ -72,17 +72,17 @@
                 <badge v-for="tag in article.tags" :key="tag" type="success">
                   {{ tag }}
                 </badge>
-              </b-list-group-item>
-            </b-list-group>
-          </b-card>
-        </b-card-group>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section>
         <h2>Category ---------</h2>
 
-        <b-card-group deck>
-          <b-card
-            no-body
+        <div class="card-deck">
+          <div
+            class="card"
             header-tag="header"
             v-for="(category, index) in categoryList"
             :key="category"
@@ -93,12 +93,12 @@
               </h3>
             </div>
 
-            <b-list-group flush>
-              <b-list-group-item
+            <div class="list-group list-group-flush">
+              <div
                 v-for="article in categories[category]"
                 :key="article.title"
                 href="#"
-                class="flex-column align-items-start"
+                class="list-group-item flex-column align-items-start"
               >
                 <div class="d-flex w-100 justify-content-between">
                   <h5>{{ article.title }}</h5>
@@ -116,10 +116,10 @@
                 <badge v-for="tag in article.tags" :key="tag" type="success">
                   {{ tag }}
                 </badge>
-              </b-list-group-item>
-            </b-list-group>
-          </b-card>
-        </b-card-group>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section>
         <h2>Tags ---------</h2>
@@ -134,7 +134,7 @@
           >{{ tag }}</n-button
         >
       </section>
-    </b-container>
+    </div>
   </div>
 </template>
 

@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import BootstrapVue from 'bootstrap-vue';
 import NowUiKit from './plugins/now-ui-kit';
 import Scrollactive from 'vue-scrollactive';
 import Animated from 'animate.css';
@@ -13,7 +12,6 @@ import VueResource from 'vue-resource';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
 
-Vue.use(BootstrapVue);
 Vue.use(NowUiKit);
 Vue.use(Scrollactive);
 Vue.use(Animated);

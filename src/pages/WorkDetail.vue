@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <b-container class="mt-5">
+    <div class="container mt-5">
       <!-- real content -->
       <div id="htmlContent" v-html="html"></div>
       <WorkInProgress v-if="!html"></WorkInProgress>
@@ -29,7 +29,7 @@
         </n-button>
       </router-link>
       <CommentSection class="my-5" :work="id"></CommentSection>
-    </b-container>
+    </div>
 
     <TableOfContent></TableOfContent>
     <SocialSideBar :path="id"></SocialSideBar>
