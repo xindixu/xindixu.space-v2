@@ -19,7 +19,7 @@
 
     <div class="container mt-5">
       <!-- real content -->
-      <div id="htmlContent" v-html="html"></div>
+      <div ref="htmlContent" id="htmlContent" v-html="html"></div>
       <WorkInProgress v-if="!html"></WorkInProgress>
       <div class="spacer"></div>
 
@@ -91,8 +91,7 @@ export default {
     WorkInProgress,
     [Button.name]: Button
   },
-  mounted() {
-    //do something after mounting vue instance
+  created() {
     this.getWorkObj();
     //this.getMd();
     this.getHtml();

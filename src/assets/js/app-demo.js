@@ -1,28 +1,30 @@
-window.onload = () => {
-  var on = function(event, elem, callback, capture) {
-    if (typeof elem === 'function') {
-      capture = callback;
-      callback = elem;
-      elem = window;
-    }
-    capture = capture ? true : false;
-    elem = typeof elem === 'string' ? document.querySelector(elem) : elem;
-    if (!elem) return;
-    elem.addEventListener(event, callback, capture);
-  };
+'use strict';
 
-  var off = function(event, elem, callback, capture) {
-    if (typeof elem === 'function') {
-      capture = callback;
-      callback = elem;
-      elem = window;
-    }
-    capture = capture ? true : false;
-    elem = typeof elem === 'string' ? document.querySelector(elem) : elem;
-    if (!elem) return;
-    elem.removeEventListener(event, callback, capture);
-  };
+const on = function(event, elem, callback, capture) {
+  if (typeof elem === 'function') {
+    capture = callback;
+    callback = elem;
+    elem = window;
+  }
+  capture = capture ? true : false;
+  elem = typeof elem === 'string' ? document.querySelector(elem) : elem;
+  if (!elem) return;
+  elem.addEventListener(event, callback, capture);
+};
 
+const off = function(event, elem, callback, capture) {
+  if (typeof elem === 'function') {
+    capture = callback;
+    callback = elem;
+    elem = window;
+  }
+  capture = capture ? true : false;
+  elem = typeof elem === 'string' ? document.querySelector(elem) : elem;
+  if (!elem) return;
+  elem.removeEventListener(event, callback, capture);
+};
+
+const callback = () => {
   const el = document.getElementById('ac-wrapper'),
     // device element
     device = document.getElementById('ac-device'),
@@ -48,7 +50,7 @@ window.onload = () => {
     // the device screen image
     screenImg = device.querySelector('img');
 
-  function init() {
+  const init = () => {
     // show grid
     on('click', trigger, showGrid);
     // when a grid´s screen is clicked, show the respective image on the device
@@ -58,11 +60,10 @@ window.onload = () => {
     // navigate
     on('click', navPrev, () => navigate('prev'));
     on('click', navNext, () => navigate('next'));
-  }
+  };
 
-  function showGrid() {
+  const showGrid = () => {
     el.classList.add('ac-gridview');
-    // TODO click outside: clicking somewhere else on the page closes the grid view
 
     const hideOnClickOutside = element => {
       const outsideClickListener = event => {
@@ -79,9 +80,9 @@ window.onload = () => {
     };
 
     hideOnClickOutside(el);
-  }
+  };
 
-  function showScreen(screen) {
+  const showScreen = screen => {
     el.classList.remove('ac-gridview');
     if (screen) {
       // update current
@@ -92,9 +93,9 @@ window.onload = () => {
 
       screenTitle['text'] = screen.querySelector('span')['text'];
     }
-  }
+  };
 
-  function navigate(direction) {
+  const navigate = direction => {
     if (animating) {
       return false;
     }
@@ -148,7 +149,9 @@ window.onload = () => {
       screenTitle['text'] = nextScreen.querySelector('span')['text'];
       animating = false;
     }
-  }
-
+  };
+  console.log('exe');
   init();
 };
+
+setTimeout(callback, 2000);
