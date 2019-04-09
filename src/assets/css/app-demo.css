@@ -1,30 +1,21 @@
 .ac-wrapper {
 	width: 100%;
 	position: relative;
-	-webkit-perspective: 1000px;
-	-moz-perspective: 1000px;
 	perspective: 1000px;
-	-webkit-perspective-origin: 50% 25%;
-	-moz-perspective-origin: 50% 25%;
 	perspective-origin: 50% 25%;
 }
-
 
 #ac-device {
 	width: 320px;
 	height: auto;
 	margin-left: auto;
-   	margin-right: auto;
+  margin-right: auto;
 	background: url('/img/work/look-for-ut/iPhone.png') no-repeat;
 	background-size: contain;
 	margin: 0 auto;
 	position: relative;
 	cursor: pointer;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 
@@ -43,16 +34,17 @@
 	height: auto;
 	width:100%;
 	margin: 0;
+	transition: all 0.5s ease;
 }
 
 #ac-device h3 {
-		position: relative;
-		margin: 20px 0;
-		left: auto;
-		top: auto;
-		width: 100%;
-		display: block;
-		text-align: center;
+	position: relative;
+	margin: 50px 0 20px 0;
+	left: auto;
+	top: auto;
+	width: 100%;
+	display: block;
+	text-align: center;
 }
 
 #ac-device nav {
@@ -75,14 +67,8 @@
 	opacity: 0;
 	text-align: center;
 	pointer-events: none;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-	-webkit-transform: translateZ(-350px);
-	-moz-transform: translateZ(-350px);
 	transform: translateZ(-350px);
 }
 #ac-grid a {
@@ -109,31 +95,21 @@
 	color: #ddd;
 	background: rgba(0,0,0,0.4);
 	opacity: 0;
-	-webkit-transform: translateY(-5px);
-	-moz-transform: translateY(-5px);
 	transform: translateY(-5px);
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
 #ac-grid a:hover span {
 	opacity: 1;
-	-webkit-transform: translateY(0);
-	-moz-transform: translateY(0);
 	transform: translateY(0);
 }
 
-#ac-wrapper#ac-gridview #ac-device {
-	-webkit-transform: translateZ(-350px);
-	-moz-transform: translateZ(-350px);
+#ac-wrapper.ac-gridview #ac-device {
 	transform: translateZ(-350px);
 	opacity: .6;
 }
 
-#ac-wrapper#ac-gridview #ac-grid {
-	-webkit-transform: translateZ(0px);
-	-moz-transform: translateZ(0px);
+#ac-wrapper.ac-gridview #ac-grid {
 	transform: translateZ(0px);
 	opacity: 1;
 	pointer-events: auto;
@@ -150,7 +126,6 @@
 		width: 100px;
 
 		}
-
 
 	#ac-device nav {
 		position: absolute;

@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <p style="display:none">${require('../css/appdemo.css')}</p>
+
+  <p style="display:none">${require('../css/app-demo.css')}</p>
+
 </head>
 
 <body>
@@ -10,11 +12,11 @@
   <h2>Final App</h2>
   <div id="ac-wrapper" class="ac-wrapper">
     <div id="ac-device">
-      <a onclick="showGrid()"><img src="/img/work/look-for-ut/lookForUT1.webp" /></a>
+      <a id="trigger"><img id="triggerImg" src="/img/work/look-for-ut/lookForUT1.webp" /></a>
       <h3 id="ac-title">Scavenger hunt at UT</h3>
       <nav>
-        <button type="button" class="btn btn-icon btn-round btn-primary btn-shown"><i class="now-ui-icons arrows-1_minimal-left"></i></button>
-        <button type="button" class="btn btn-icon btn-round btn-primary btn-shown"><i class="now-ui-icons arrows-1_minimal-right"></i></button>
+        <button id="navPrev" type="button" class="btn btn-icon btn-round btn-primary btn-shown"><i class="now-ui-icons arrows-1_minimal-left"></i></button>
+        <button id="navNext" type="button" class="btn btn-icon btn-round btn-primary btn-shown"><i class="now-ui-icons arrows-1_minimal-right"></i></button>
       </nav>
     </div>
     <div id="ac-grid">
@@ -36,7 +38,7 @@
     </div>
   </div>
 
-  <p style="display:none">${require('../js/appdemo.js')}</p>
+<p style="display:none">${require('../js/app-demo.js')}</p>
 
 </body>
 </html>
