@@ -21,6 +21,10 @@ module.exports = {
               }
             }
           ]
+        },
+        {
+          test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+          use: ['file-loader']
         }
       ]
     },
@@ -28,7 +32,7 @@ module.exports = {
       new ImageminWebpWebpackPlugin({
         config: [
           {
-            test: /\.(jpe?g|png)/,
+            test: /\.(jpe?g|png)$/,
             options: {
               quality: 75
             }
@@ -44,9 +48,7 @@ module.exports = {
 
   chainWebpack: config => {
     const svgRule = config.module.rule('svg');
-
     svgRule.uses.clear();
-
     svgRule.use('vue-svg-loader').loader('vue-svg-loader');
   }
 };

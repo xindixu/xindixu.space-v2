@@ -79,7 +79,7 @@ export default {
     }
   },
   methods: {
-    onItemChanged(event, currentItem, lastActiveItem) {
+    onItemChanged(event, currentItem) {
       //console.log(currentItem);
       if (typeof currentItem == 'undefined') {
         this.isContentShown = false;

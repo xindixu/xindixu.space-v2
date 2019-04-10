@@ -15,6 +15,17 @@
 
  */
 
+ @font-face {
+     font-family: 'SentyTEA';
+     src: url('../fonts/SentyTEA.eot');
+     src: url('../fonts/SentyTEA.eot') format('embedded-opentype'),
+     url('../fonts/SentyTEA.woff2') format('woff2'),
+     url('../fonts/SentyTEA.woff') format('woff'),
+     url('../fonts/SentyTEA.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+ }
+
 @import 'now-ui-kit/variables';
 @import 'now-ui-kit/mixins';
 
