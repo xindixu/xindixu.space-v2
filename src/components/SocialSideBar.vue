@@ -30,7 +30,7 @@
           target="_blank"
           class="btn btn-success btn-icon btn-round socialLinks"
         >
-          <i class="fab" :class="so.name"></i>
+          <component class="icon" :is="so.name"></component>
         </a>
       </div>
 
@@ -42,6 +42,7 @@
 </template>
 <script>
 import { Modal, Button } from '@/components';
+import { Facebook, Linkedin, Twitter } from '../assets/svg';
 
 export default {
   name: 'SocialSideBar',
@@ -54,15 +55,15 @@ export default {
     ],
     socialIcons: [
       {
-        name: 'fa-facebook-f',
+        name: Facebook,
         link: ''
       },
       {
-        name: 'fa-linkedin-in',
+        name: Linkedin,
         link: ''
       },
       {
-        name: 'fa-twitter',
+        name: Twitter,
         link: ''
       }
     ],
@@ -157,7 +158,10 @@ export default {
   },
   components: {
     Modal,
-    [Button.name]: Button
+    [Button.name]: Button,
+    Facebook,
+    Linkedin,
+    Twitter
   }
 };
 </script>
@@ -180,6 +184,16 @@ html {
     .modal-body {
       a {
         margin: 5px;
+      }
+      .icon {
+        width: 18px;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        background: transparent;
+        &:before {
+          vertical-align: middle;
+        }
       }
     }
   }
