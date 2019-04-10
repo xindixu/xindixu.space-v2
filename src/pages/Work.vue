@@ -6,19 +6,20 @@
       </div>
       <ScrollDown />
     </div>
-    <card>
-      <tabs
+    <Card>
+      <Tabs
+        ref="tabs"
         slot="raw-content"
         type="primary"
         square
         centered
         tab-content-classes="tab-subcategories text-center"
       >
-        <tab-pane
+        <TabPane
           v-for="category in categories"
           :key="category.index"
           class="text-center"
-          :activeTab="tab"
+          :label="category"
         >
           <template slot="label">
             {{ category }}
@@ -37,16 +38,16 @@
                     </template>
 
                     <template slot="raw-content">
-                      <h5 class="my-3">{{ data.title }}</h5>
+                      <h4 class="my-4">{{ data.title }}</h4>
                     </template>
                   </Card>
                 </router-link>
               </div>
             </div>
           </div>
-        </tab-pane>
-      </tabs>
-    </card>
+        </TabPane>
+      </Tabs>
+    </Card>
   </div>
 </template>
 <script>
@@ -68,11 +69,12 @@ export default {
     TabPane,
     ScrollDown
   },
-  created() {
+  mounted() {
     if (this.$route.hash) {
       const str = this.$route.hash;
-      this.tab = str.substring(1, str.length);
-      console.log(this.tab);
+      const label = str.substring(1, str.length);
+      console.log(label);
+      this.$refs.tabs.findAndActivateTab(label);
     }
   }
 };

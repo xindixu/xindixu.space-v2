@@ -23,7 +23,7 @@
       >
         <li
           v-for="tab in tabs"
-          class="nav-item active"
+          class="nav-item"
           data-toggle="tab"
           role="tablist"
           aria-expanded="true"
@@ -178,6 +178,7 @@ export default {
     this.$nextTick(() => {
       if (this.value) {
         this.findAndActivateTab(this.value);
+        console.log(this.value);
       }
     });
   },
