@@ -26,20 +26,24 @@ Vue.use(vueg, router, {
   enter: 'touchPoint'
 });
 
-Vue.use(VueAnalytics, {
-  id: 'UA-115061046-1',
-  router,
-  autoTracking: {
-    shouldRouterUpdate(to, from) {
-      return to.path !== from.path;
+if (document.location.hostname.search('localhost') !== -1) {
+  console.log('dev time!! GA not enabled');
+} else {
+  Vue.use(VueAnalytics, {
+    id: 'UA-115061046-1',
+    router,
+    autoTracking: {
+      shouldRouterUpdate(to, from) {
+        return to.path !== from.path;
+      }
+    },
+    debug: {
+      enabled: false, // default false
+      trace: false, // default false
+      sendHitTask: true // default false
     }
-  },
-  debug: {
-    enabled: false, // default false
-    trace: false, // default false
-    sendHitTask: true // default false
-  }
-});
+  });
+}
 
 Vue.prototype.$eventBus = new Vue();
 Vue.directive('observe-visibility', ObserveVisibility);
