@@ -58,7 +58,7 @@ export default {
     return {
       works: workList,
       sortedWorkList: [],
-      categories: ['development', 'advertising', 'marketing', 'craft'],
+      categories: ['development', 'marketing', 'creative', 'craft'],
       tags: [],
       tab: ''
     };

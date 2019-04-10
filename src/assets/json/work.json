@@ -34,7 +34,7 @@
   {
     "title": "Clif Bar",
     "id": "clif-bar",
-    "category": "advertising",
+    "category": "marketing",
     "tags":[
       "Research",
       "Strategy",
@@ -50,7 +50,7 @@
   {
     "title": "Triobike",
     "id": "triobike",
-    "category": "advertising",
+    "category": "marketing",
     "tags":[
       "Research",
       "Strategy",
@@ -67,7 +67,7 @@
   {
     "title":"Leweno Freelancer Website",
     "id": "leweno-freelancer-website",
-    "category": "advertising",
+    "category": "creative",
     "tags":[
       "UX/UI Design"
     ],
@@ -98,7 +98,7 @@
   {
     "title":"Texas Central Star",
     "id": "texas-central-star",
-    "category": "advertising",
+    "category": "marketing",
     "tags":[
       "Research",
       "Strategy",
@@ -129,7 +129,7 @@
   {
     "title":"Brand Safety",
     "id": "brand-safety",
-    "category": "advertising",
+    "category": "marketing",
     "tags":[
       "Research"
     ],
@@ -178,7 +178,7 @@
   {
     "title":"Groovy Automotive",
     "id": "groovy-automotive",
-    "category": "advertising",
+    "category": "marketing",
     "tags":[
       "Research",
       "Strategy",
@@ -193,7 +193,7 @@
   {
     "title":"InspiroFest",
     "id": "inspirofest",
-    "category": "advertising",
+    "category": "creative",
     "tags":[
       "Strategy",
       "Creative"
@@ -312,9 +312,24 @@
     "end":"02/2017"
   },
   {
+    "title":"Tesla Motors",
+    "id": "tesla-motors",
+    "category": "creative",
+    "tags":[
+      "Strategy",
+      "Creative",
+      "Execution"
+    ],
+    "tools":[
+      "Photoshop"
+    ],
+    "start":"11/2017",
+    "end":"11/2017"
+  },
+  {
     "title":"Tèo Gelato Branding",
     "id": "teo-gelato",
-    "category": "advertising",
+    "category": "creative",
     "tags":[
       "Strategy",
       "Creative",
@@ -326,20 +341,5 @@
     ],
     "start":"10/2017",
     "end":"10/2017"
-  },
-  {
-    "title":"Tesla Motors",
-    "id": "tesla-motors",
-    "category": "advertising",
-    "tags":[
-      "Strategy",
-      "Creative",
-      "Execution"
-    ],
-    "tools":[
-      "Photoshop"
-    ],
-    "start":"11/2017",
-    "end":"11/2017"
   }
 ]
