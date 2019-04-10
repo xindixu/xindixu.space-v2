@@ -48,17 +48,19 @@
             <p>Work</p>
           </router-link>
         </li>
-        <li class="nav-item">
-          <router-link
-            tag="a"
-            class="nav-link"
-            active-class="active"
-            to="/blog"
-          >
-            <i class="now-ui-icons education_agenda-bookmark"></i>
-            <p>Blog</p>
-          </router-link>
-        </li>
+        <!--
+          <li class="nav-item">
+            <router-link
+              tag="a"
+              class="nav-link"
+              active-class="active"
+              to="/blog"
+            >
+              <i class="now-ui-icons education_agenda-bookmark"></i>
+              <p>Blog</p>
+            </router-link>
+          </li>
+        -->
         <li class="nav-item">
           <router-link
             tag="a"

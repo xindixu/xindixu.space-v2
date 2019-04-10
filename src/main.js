@@ -27,10 +27,9 @@ Vue.use(vueg, router, {
 });
 
 if (document.location.hostname.search('localhost') !== -1) {
-  console.log('dev time!! GA not enabled');
-} else {
+  console.log('dev time!! GA enabled in a seperate account');
   Vue.use(VueAnalytics, {
-    id: 'UA-115061046-1',
+    id: 'UA-115061046-3',
     router,
     autoTracking: {
       shouldRouterUpdate(to, from) {
@@ -41,6 +40,16 @@ if (document.location.hostname.search('localhost') !== -1) {
       enabled: false, // default false
       trace: false, // default false
       sendHitTask: true // default false
+    }
+  });
+} else {
+  Vue.use(VueAnalytics, {
+    id: 'UA-115061046-1',
+    router,
+    autoTracking: {
+      shouldRouterUpdate(to, from) {
+        return to.path !== from.path;
+      }
     }
   });
 }
