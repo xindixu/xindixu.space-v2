@@ -114,25 +114,12 @@
             off-text="OFF"
           ></n-switch>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <p class="category">Sliders</p>
-          <slider v-model="sliders.simple"> </slider> <br />
-          <slider v-model="sliders.rangeSlider" type="primary" :connect="true">
-          </slider>
-        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import {
-  Button,
-  Checkbox,
-  Radio,
-  FormGroupInput,
-  Slider,
-  Switch
-} from '@/components';
+import { Button, Checkbox, Radio, FormGroupInput, Switch } from '@/components';
 
 export default {
   components: {
@@ -141,8 +128,7 @@ export default {
     [Radio.name]: Radio,
     [FormGroupInput.name]: FormGroupInput,
     [Switch.name]: Switch,
-    [Option.name]: Option,
-    Slider
+    [Option.name]: Option
   },
   data() {
     return {
@@ -159,10 +145,6 @@ export default {
       switches: {
         defaultOn: true,
         defaultOff: false
-      },
-      sliders: {
-        simple: 30,
-        rangeSlider: [20, 60]
       }
     };
   }

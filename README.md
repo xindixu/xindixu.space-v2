@@ -50,6 +50,21 @@ xindixu.space
 
 ## Design
 
+## `Package.json`
+### `dependencies`
+### `devDependencies`
+babel-plugin-component: https://github.com/ElementUI/babel-plugin-component
+Converts
+```js
+import { Button } from 'components'
+```
+
+to
+
+```js
+var button = require('components/lib/button')
+require('components/lib/button/style.css')
+```
 
 ## Performance Improvement
 ### Removing Unused Code
