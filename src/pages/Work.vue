@@ -73,7 +73,6 @@ export default {
     if (this.$route.hash) {
       const str = this.$route.hash;
       const label = str.substring(1, str.length);
-      console.log(label);
       this.$refs.tabs.findAndActivateTab(label);
     }
   }
