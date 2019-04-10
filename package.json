@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "author": "Xindi Xu",
-  "engines": {
-    "node": "11.13.0",
-    "yarn": "1.15.2"
-  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -33,7 +29,8 @@
     "vue-showdown": "^2.3.0",
     "vue2-transitions": "^0.2.3",
     "vueg": "^1.4.5",
-    "vuewordcloud": "^18.7.11"
+    "vuewordcloud": "^18.7.11",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -68,5 +65,9 @@
     "vue-template-compiler": "^2.5.17",
     "webp-loader": "^0.4.0",
     "webpack": "^4.29.5"
+  },
+  "engines": {
+    "node": "11.13.0",
+    "yarn": "1.15.2"
   }
 }
