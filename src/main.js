@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
+
+// Third party
 import NowUiKit from './plugins/now-ui-kit';
 import Scrollactive from 'vue-scrollactive';
 import Animated from 'animate.css';
