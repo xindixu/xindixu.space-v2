@@ -11,6 +11,8 @@
 </template>
 <script>
 import { QuickMenu } from '@/components';
+import { Github, Linkedin, Email, Youtube } from '../assets/svg';
+
 export default {
   props: {
     type: String
@@ -19,12 +21,7 @@ export default {
     return {
       year: new Date().getFullYear(),
       count: 4,
-      icons: [
-        'fab fa-github',
-        'fab fa-linkedin-in',
-        'fas fa-envelope',
-        'fab fa-youtube'
-      ],
+      icons: [Github, Linkedin, Email, Youtube],
       list: [
         {
           isLink: false,
@@ -48,7 +45,11 @@ export default {
     };
   },
   components: {
-    QuickMenu
+    QuickMenu,
+    Github,
+    Linkedin,
+    Email,
+    Youtube
   }
 };
 </script>

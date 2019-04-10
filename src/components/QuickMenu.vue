@@ -14,7 +14,7 @@
         @mouseover.stop="mouseEnterSubMenu"
         @mouseout.stop="mouseOutSubMenu"
       >
-        <i :class="iconClass[n - 1]" ref="icon"></i>
+        <component class="icon" :is="iconClass[n - 1]"></component>
       </router-link>
       <a
         v-else
@@ -25,7 +25,7 @@
         @mouseout.stop="mouseOutSubMenu"
         @click="processCallback(key);"
       >
-        <i :class="iconClass[n - 1]" ref="icon"></i>
+        <component class="icon" :is="iconClass[n - 1]"></component>
       </a>
     </div>
 
@@ -296,10 +296,11 @@ export default {
       border-radius: 50% !important;
       width: 100%;
       height: 100%;
-      i {
-        outline: none;
-        font-size: 15px;
-        margin-top: 6px;
+      .icon {
+        width: 15px;
+        position: absolute;
+        top: 25%;
+        left: 25%;
         background: transparent;
         &:before {
           vertical-align: middle;

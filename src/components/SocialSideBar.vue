@@ -42,6 +42,7 @@
 </template>
 <script>
 import { Modal, Button } from '@/components';
+
 export default {
   name: 'SocialSideBar',
   data: () => ({
