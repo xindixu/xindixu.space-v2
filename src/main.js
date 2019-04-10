@@ -57,8 +57,6 @@ if (document.location.hostname.search('localhost') !== -1) {
 Vue.prototype.$eventBus = new Vue();
 Vue.directive('observe-visibility', ObserveVisibility);
 
-Element.prototype.scrollIntoView = () => {};
-
 new Vue({
   router,
   render: h => h(App)

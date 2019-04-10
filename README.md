@@ -1,10 +1,17 @@
 # [XindiXu.space](http://xindixu.space)
 ![version][version-badge]
-[version-badge]: https://img.shields.io/badge/version-3.0-blue.svg
+
 **[xindixu.space](http://xindixu.space)** is a personal website for Xindi Xu.
 
-## Third Party Plugins
+## Plugins
 - Now UI Kit
+- Element.UI
+- Bootstrap
+- Animated.css (Animation effects)
+- VueAnalytics (Google Analytics)
+- VueResource (HTTP requests)
+- VueShowdown (Markdown live editor)
+- Swiper
 
 ## File Structure
 ```
@@ -54,4 +61,5 @@ xindixu.space
 ### Progressive Web App
 
 ## Heroku Deployment
-## Google Analysis
+## Google Analytics
+[version-badge]: https://img.shields.io/badge/version-3.0-blue.svg
