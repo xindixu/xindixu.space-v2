@@ -1,49 +1,49 @@
 <template>
   <div id="">
     <transition name="" appear>
-      <h2 v-observe-visibility="visibilityChanged">{{ tweeningValue }}</h2>
+      <h2 v-observe-visibility="visibilityChanged">{{ displayNumber }}</h2>
     </transition>
   </div>
 </template>
 <script>
-import TWEEN from '@tweenjs/tween.js';
-
 export default {
   name: 'IncreaseNum',
   props: ['start', 'end'],
   data: () => {
     return {
       isVisible: false,
-      tweeningValue: 0
+      displayNumber: 0,
+      interal: false
     };
   },
   watch: {
     isVisible() {
       if (this.isVisible) {
-        return this.tween(0, this.end);
+        return this.animate(0, this.end);
       }
     }
   },
   methods: {
-    visibilityChanged(isVisible, entry) {
+    visibilityChanged(isVisible) {
       this.isVisible = isVisible;
     },
-    tween: function(startValue, endValue) {
-      var vm = this;
-      function animate() {
-        if (TWEEN.update()) {
-          requestAnimationFrame(animate);
-        }
+    animate() {
+      clearInterval(this.interval);
+
+      if (this.end == this.displayNumber) {
+        return;
       }
 
-      new TWEEN.Tween({ tweeningValue: startValue })
-        .to({ tweeningValue: endValue }, 1000)
-        .onUpdate(function(object) {
-          vm.tweeningValue = object.tweeningValue.toFixed(0);
-        })
-        .start();
-
-      animate();
+      this.interval = window.setInterval(
+        function() {
+          if (this.end != this.displayNumber) {
+            let change = (this.end - this.displayNumber) / 10;
+            change = change >= 0 ? Math.ceil(change) : Math.floor(change);
+            this.displayNumber = this.displayNumber + change;
+          }
+        }.bind(this),
+        40
+      );
     }
   }
 };
