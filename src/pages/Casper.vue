@@ -1,4 +1,3 @@
-<!-- vue-gallery-slideshow -->
 <template>
   <div id="imgContainer" class="center-text">
     <transition appear enter-active-class="animated bounceIn">

@@ -25,11 +25,7 @@
             {{ category }}
           </template>
           <div class="row">
-            <div
-              v-if="category === data.category"
-              v-for="data in works"
-              :key="data.index"
-            >
+            <div v-for="data in sortedWorkList[category]" :key="data.index">
               <div class="card-deck text-center">
                 <router-link :to="'/work/' + data.id">
                   <Card class="work-card grow">
@@ -56,7 +52,6 @@ import workList from '../assets/json/work.json';
 export default {
   data: function() {
     return {
-      works: workList,
       sortedWorkList: [],
       categories: ['development', 'marketing', 'creative', 'craft'],
       tags: [],
@@ -68,6 +63,14 @@ export default {
     Tabs,
     TabPane,
     ScrollDown
+  },
+  created() {
+    for (let category of this.categories) {
+      const arr = workList.filter(obj => {
+        return obj.category === category;
+      });
+      this.sortedWorkList[category] = arr;
+    }
   },
   mounted() {
     if (this.$route.hash) {
