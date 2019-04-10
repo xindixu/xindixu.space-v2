@@ -1,6 +1,6 @@
 # [XindiXu.space](http://xindixu.space)
-[![version][version-badge]][CHANGELOG]
-
+![version][version-badge]
+[version-badge]: https://img.shields.io/badge/version-3.0-blue.svg
 **[xindixu.space](http://xindixu.space)** is a personal website for Xindi Xu.
 
 ## Third Party Plugins
@@ -41,9 +41,17 @@ xindixu.space
         |-- plugins
 ```
 
+## Design
 
 
-[version-badge]: https://img.shields.io/badge/version-3.0-blue.svg
+## Performance Improvement
+### Removing Unused Code
+#### Uncss
+#### Packages
 
+### Code Splitting
+### Image Loading Technique
+### Progressive Web App
 
 ## Heroku Deployment
+## Google Analysis
