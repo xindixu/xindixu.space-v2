@@ -1,15 +1,17 @@
 <template>
-  <div id="scrollDown" v-if="show" :style="{ color: color }">
-    <div>
-      <transition
-        name="slideDown"
-        enter-active-class="animated slideInDown"
-        leave-active-class="animated fadeOut "
-      >
-        <i class="fa fa-angle-down" v-if="animated" aria-hidden="true"></i>
-      </transition>
-      <p id="text" class="tada">Scroll Down</p>
-    </div>
+  <div id="scrollDown" v-if="show">
+    <a @click="toggleScrollTo" :style="{ color: color }">
+      <div>
+        <transition
+          name="slideDown"
+          enter-active-class="animated slideInDown"
+          leave-active-class="animated fadeOut "
+        >
+          <i class="fa fa-angle-down" v-if="animated" aria-hidden="true"></i>
+        </transition>
+        <p id="text" class="tada">Scroll Down</p>
+      </div>
+    </a>
   </div>
 </template>
 <script>
@@ -19,6 +21,10 @@ export default {
     color: {
       type: String,
       default: '#FFFFFF'
+    },
+    scrollTo: {
+      type: Number,
+      default: 1000
     }
   },
   data: () => ({
@@ -28,12 +34,25 @@ export default {
     show() {
       let scrollValue =
         document.body.scrollTop || document.documentElement.scrollTop;
-
       if (scrollValue < 500) {
         return true;
       } else {
         return false;
       }
+    }
+  },
+  methods: {
+    toggleScrollTo() {
+      // if (typeof this.scrollTo === 'number') {
+      window.scroll({
+        top: 1000,
+        left: 0,
+        behavior: 'smooth'
+      });
+      // } else {
+      //   console.log(this.scrollTo);
+      //   this.scrollTo.scrollIntoView(true, { behavior: 'smooth' });
+      // }
     }
   },
   mounted() {
@@ -55,9 +74,14 @@ export default {
   bottom: 2vh;
   text-align: center;
 
-  #text {
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+  a {
+    text-decoration: none;
+
+    #text {
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      cursor: pointer;
+    }
   }
 }
 

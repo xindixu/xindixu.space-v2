@@ -69,7 +69,7 @@
               </div>
             </div>
           </div>
-          <scroll-down color="#000000"></scroll-down>
+          <scroll-down color="#000000" :scrollTo="5000"></scroll-down>
         </swiper-slide>
 
         <swiper-slide style="background-image: url('img/bg/bg31.jpg');">
@@ -267,7 +267,8 @@ export default {
         ['Adwords', 5]
       ],
       wordShow: false,
-      cloudShow: false
+      cloudShow: false,
+      eleToScrollTo: ''
     };
   },
   methods: {

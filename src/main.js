@@ -44,6 +44,8 @@ Vue.use(VueAnalytics, {
 Vue.prototype.$eventBus = new Vue();
 Vue.directive('observe-visibility', ObserveVisibility);
 
+Element.prototype.scrollIntoView = () => {};
+
 new Vue({
   router,
   render: h => h(App)
