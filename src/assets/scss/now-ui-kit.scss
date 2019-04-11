@@ -14,14 +14,10 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
-
+// use font spider to reduce chinese font size
  @font-face {
      font-family: 'SentyTEA';
-     src: url('../fonts/SentyTEA.eot');
-     src: url('../fonts/SentyTEA.eot') format('embedded-opentype'),
-     url('../fonts/SentyTEA.woff2') format('woff2'),
-     url('../fonts/SentyTEA.woff') format('woff'),
-     url('../fonts/SentyTEA.ttf') format('truetype');
+     src: url('../fonts/SentyTEA.woff') format('woff');
      font-weight: normal;
      font-style: normal;
  }

@@ -196,7 +196,7 @@ import 'swiper/dist/css/swiper.css';
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 
 export default {
-  name: '',
+  name: 'Home',
   data() {
     return {
       swiperOptionV: {
@@ -217,30 +217,6 @@ export default {
         }
       }
     };
-  },
-  computed: {
-    greeting() {
-      let time = new Date().getHours();
-      let greeting = 'Hey There!';
-      switch (true) {
-        case time < 5:
-          greeting = 'Good Night';
-          break;
-        case time < 12:
-          greeting = 'Good Morning';
-          break;
-        case time < 17:
-          greeting = 'Good Afternoon';
-          break;
-        case time < 20:
-          greeting = 'Good Evening';
-          break;
-        case time < 24:
-          greeting = 'Good Night';
-          break;
-      }
-      return greeting;
-    }
   },
   components: {
     SquareLink,

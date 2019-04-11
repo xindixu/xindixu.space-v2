@@ -70,6 +70,7 @@ export default {
         return obj.category === category;
       });
       this.sortedWorkList[category] = arr;
+      console.log(this.sortedWorkList);
     }
   },
   mounted() {

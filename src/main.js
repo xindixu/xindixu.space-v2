@@ -29,7 +29,7 @@ Vue.use(vueg, router, {
 });
 
 if (document.location.hostname.search('localhost') !== -1) {
-  console.log('dev time!! GA enabled in a seperate account');
+  // console.log('dev time!! GA enabled in a seperate account');
   Vue.use(VueAnalytics, {
     id: 'UA-115061046-3',
     router,
