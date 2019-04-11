@@ -1,6 +1,6 @@
 # Chinese Font Minifier
 font-spider
-
+https://blog.csdn.net/qq_33744228/article/details/80613496
 ## Steps
 1. Copy all Chinese type needed for the website and paste into corresponding html files
 2. Put the original font file to the directory
