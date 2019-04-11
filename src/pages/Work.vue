@@ -30,10 +30,13 @@
                 <router-link :to="'/work/' + data.id">
                   <Card class="work-card grow">
                     <template slot="image">
-                      <img
+                      <BlurLazyImage
+                        class="work-card-img"
                         :src="'img/work/' + data.id + '.png'"
-                        :alt="'Image for ' + data.title"
-                      />
+                        :src-placeholder="
+                          'img/work/placeholder' + data.id + '.png'
+                        "
+                      ></BlurLazyImage>
                     </template>
 
                     <template slot="raw-content">
@@ -50,10 +53,11 @@
   </div>
 </template>
 <script>
-import { Card, Tabs, TabPane, ScrollDown } from '@/components';
+import { Card, Tabs, TabPane, ScrollDown, BlurLazyImage } from '@/components';
 import workList from '../assets/json/work.json';
 export default {
-  data: function() {
+  name: 'Work',
+  data: () => {
     return {
       sortedWorkList: [],
       categories: ['development', 'marketing', 'creative', 'craft'],
@@ -65,7 +69,8 @@ export default {
     Card,
     Tabs,
     TabPane,
-    ScrollDown
+    ScrollDown,
+    BlurLazyImage
   },
   created() {
     for (let category of this.categories) {
@@ -73,8 +78,8 @@ export default {
         return obj.category === category;
       });
       this.sortedWorkList[category] = arr;
-      console.log(this.sortedWorkList);
     }
+    console.log(this.sortedWorkList);
   },
   mounted() {
     if (this.$route.hash) {

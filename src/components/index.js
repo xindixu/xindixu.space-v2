@@ -32,6 +32,7 @@ import Message from './Comment/Message.vue';
 import CommentSection from './Comment/CommentSection.vue';
 import WorkInProgress from './WorkInProgress.vue';
 import ScrollDown from './ScrollDown.vue';
+import BlurLazyImage from './BlurLazyImage.vue';
 
 export {
   Alert,
@@ -65,5 +66,6 @@ export {
   ScrollDown,
   Editor,
   Message,
-  CommentSection
+  CommentSection,
+  BlurLazyImage
 };
