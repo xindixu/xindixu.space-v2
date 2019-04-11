@@ -139,7 +139,7 @@
 </template>
 
 <script>
-import { Button, Card, Tabs, TabPane, Badge, ScrollDown } from '@/components';
+import { Button, Badge, ScrollDown } from '@/components';
 import blogList from '../assets/json/blog.json';
 
 export default {
@@ -192,9 +192,6 @@ export default {
   },
   computed: {},
   components: {
-    Card,
-    Tabs,
-    TabPane,
     Badge,
     ScrollDown,
     [Button.name]: Button

@@ -47,6 +47,7 @@ export default {
       if (this.inline) {
         return `form-check-inline`;
       }
+      return '';
     }
   },
   created() {
@@ -54,5 +55,5 @@ export default {
       .toString(16)
       .slice(2);
   }
-};</script
->>
+};
+</script>

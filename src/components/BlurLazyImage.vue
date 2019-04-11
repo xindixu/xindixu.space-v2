@@ -20,7 +20,7 @@ export default {
     srcPlaceholder: String,
     blurLevel: {
       type: Number,
-      default: 30
+      default: 20
     },
     duration: {
       type: Number,

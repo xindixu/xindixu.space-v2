@@ -71,6 +71,8 @@
 </template>
 <script>
 import { Button, FormGroupInput, Modal } from '@/components';
+import { VueShowdown } from 'vue-showdown';
+
 export default {
   name: 'Editor',
   data: () => ({
@@ -130,7 +132,8 @@ THINK ... before you submit
   components: {
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput,
-    Modal
+    Modal,
+    VueShowdown
   },
   methods: {
     checkForm() {

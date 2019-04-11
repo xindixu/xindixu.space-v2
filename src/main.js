@@ -9,12 +9,13 @@ import Scrollactive from 'vue-scrollactive';
 import { VLazyImagePlugin } from 'v-lazy-image';
 
 import Animated from 'animate.css';
-import VueShowdown from 'vue-showdown';
 import VueMasonry from 'vue-masonry-css';
 import VueAnalytics from 'vue-analytics';
 import vueg from 'vueg';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
+
+Vue.config.productionTip = false;
 
 Vue.use(NowUiKit);
 Vue.use(VueResource);
@@ -22,16 +23,14 @@ Vue.use(Scrollactive);
 Vue.use(VLazyImagePlugin);
 
 Vue.use(Animated);
-Vue.use(VueShowdown);
 Vue.use(VueMasonry);
-
-Vue.config.productionTip = false;
 
 Vue.use(vueg, router, {
   duration: 0.2,
   enter: 'touchPoint'
 });
 
+// google analytics
 if (document.location.hostname.search('localhost') !== -1) {
   // console.log('dev time!! GA enabled in a seperate account');
   Vue.use(VueAnalytics, {

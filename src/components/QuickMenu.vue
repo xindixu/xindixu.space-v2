@@ -14,7 +14,7 @@
         @mouseover.stop="mouseEnterSubMenu"
         @mouseout.stop="mouseOutSubMenu"
       >
-        <component class="icon" :is="iconClass[n - 1]"></component>
+        <component ref="icon" class="icon" :is="iconClass[n - 1]"></component>
       </router-link>
       <a
         v-else
@@ -25,7 +25,7 @@
         @mouseout.stop="mouseOutSubMenu"
         @click="processCallback(key);"
       >
-        <component class="icon" :is="iconClass[n - 1]"></component>
+        <component ref="icon" class="icon" :is="iconClass[n - 1]"></component>
       </a>
     </div>
 

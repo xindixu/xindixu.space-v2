@@ -10,11 +10,11 @@
       </div>
       <hr />
       <div class="card-body">
-        <vue-showdown
+        <VueShowdown
           id="result"
           :markdown="message"
           :options="options"
-        ></vue-showdown>
+        ></VueShowdown>
       </div>
     </Card>
   </div>
@@ -22,6 +22,8 @@
 
 <script>
 import { Card } from '@/components';
+import { VueShowdown } from 'vue-showdown';
+
 export default {
   name: 'Message',
   data: () => ({
@@ -72,7 +74,7 @@ export default {
   created() {
     this.getInital();
   },
-  components: { Card }
+  components: { Card, VueShowdown }
 };
 </script>
 
