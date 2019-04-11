@@ -30,7 +30,10 @@
                 <router-link :to="'/work/' + data.id">
                   <Card class="work-card grow">
                     <template slot="image">
-                      <img :src="'img/work/' + data.id + '.png'" />
+                      <img
+                        :src="'img/work/' + data.id + '.png'"
+                        :alt="'Image for ' + data.title"
+                      />
                     </template>
 
                     <template slot="raw-content">

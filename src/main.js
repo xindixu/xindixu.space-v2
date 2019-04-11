@@ -4,22 +4,31 @@ import router from './router';
 
 // Third party
 import NowUiKit from './plugins/now-ui-kit';
+import VueResource from 'vue-resource';
+import VueLazyload from 'vue-lazyload';
 import Scrollactive from 'vue-scrollactive';
 import Animated from 'animate.css';
 import VueShowdown from 'vue-showdown';
 import VueMasonry from 'vue-masonry-css';
 import VueAnalytics from 'vue-analytics';
 import vueg from 'vueg';
-import VueResource from 'vue-resource';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
 
 Vue.use(NowUiKit);
 Vue.use(Scrollactive);
+Vue.use(VueResource);
+// @TODO https://codepen.io/zkilo/pen/ZLyweL
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: 'dist/error.png',
+  loading: 'dist/loading.gif',
+  attempt: 1
+});
+
 Vue.use(Animated);
 Vue.use(VueShowdown);
 Vue.use(VueMasonry);
-Vue.use(VueResource);
 
 Vue.config.productionTip = false;
 

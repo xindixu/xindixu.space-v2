@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-  name: '',
+  name: 'Casper',
   data: () => ({
     imgArr: [],
     index: null
@@ -31,7 +31,6 @@ export default {
     }
   },
   created() {
-    //do something after creating vue instance
     this.createImgArr();
   }
 };
