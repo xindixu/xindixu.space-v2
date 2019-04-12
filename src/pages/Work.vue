@@ -30,13 +30,16 @@
                 <router-link :to="'/work/' + data.id">
                   <Card class="work-card grow">
                     <template slot="image">
-                      <BlurLazyImage
-                        class="work-card-img"
-                        :src="'img/work/' + data.id + '.png'"
-                        :src-placeholder="
-                          'img/work/placeholder' + data.id + '.png'
-                        "
-                      ></BlurLazyImage>
+                      <img :src="'img/work/' + data.id + '.png'" alt="" />
+                      <!--
+                        <BlurLazyImage
+                          class="work-card-img"
+                          :src="'img/work/' + data.id + '.png'"
+                          :src-placeholder="
+                            'img/work/placeholder' + data.id + '.png'
+                          "
+                        ></BlurLazyImage>
+                      -->
                     </template>
 
                     <template slot="raw-content">
@@ -53,7 +56,7 @@
   </div>
 </template>
 <script>
-import { Card, Tabs, TabPane, ScrollDown, BlurLazyImage } from '@/components';
+import { Card, Tabs, TabPane, ScrollDown } from '@/components';
 import workList from '../assets/json/work.json';
 export default {
   name: 'Work',
@@ -69,8 +72,7 @@ export default {
     Card,
     Tabs,
     TabPane,
-    ScrollDown,
-    BlurLazyImage
+    ScrollDown
   },
   created() {
     for (let category of this.categories) {

@@ -52,7 +52,6 @@
     "vue-observe-visibility": "^0.4.3",
     "vue-svg-loader": "^0.11.0",
     "vue-template-compiler": "^2.5.17",
-    "webp-loader": "^0.4.0",
     "webpack": "^4.29.5"
   },
   "engines": {

@@ -35,7 +35,7 @@ module.exports = {
           }
         ],
         overrideExtension: true,
-        detailedLogs: false,
+        detailedLogs: true,
         strict: true
       })
       // new BundleAnalyzerPlugin()
