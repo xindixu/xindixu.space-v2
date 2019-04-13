@@ -57,9 +57,71 @@
         <swiper-slide id="slide2" class="slideHelp">
           <div class="bg-img swiper-lazy" data-background="img/bg/bg12.jpg">
             <div class="swiper-lazy-preloader"></div>
+            <div v-if="!$isMobile">
+              <div class="row">
+                <div class="col-lg-6 col-md-8">
+                  <h1>Web Development</h1>
+                  <div>
+                    <img class="introPic" src="img/home/web.svg" alt="" />
+                  </div>
+                  <h4 class="english">
+                    Establishing web presence contributes a lot to the success
+                    of your business.
+                  </h4>
+                  <h4 class="english">
+                    Why not build a stunning website together?
+                  </h4>
+                </div>
 
-            <div class="row">
-              <div class="col-lg-6 col-md-8">
+                <div class="offset-lg-4 offset-md-2 col-lg-2 col-md-2">
+                  <div class="zhIntro vertical">
+                    <h1 class="chineseTitle">网页开发</h1>
+                    <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
+                    <h4 class="chinese indentV">不如让我来帮你？</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4 col-md-6 offset-lg-6 offset-md-2 project">
+                  <div>
+                    <img class="projectPic" src="img/home/code.svg" alt="" />
+                  </div>
+                  <div class="row substitle">
+                    <div class="col-1">
+                      <h4>These</h4>
+                      <h4 class="chinese">这</h4>
+                    </div>
+                    <div class="col-2">
+                      <IncreaseNum start="0" end="10"></IncreaseNum>
+                    </div>
+                    <div class="col-9">
+                      <h4>projects can prove my ability</h4>
+                      <h4 class="chinese">个项目可以证明我</h4>
+                    </div>
+                    <div class="link">
+                      <SquareLink link="work#development"
+                        >take a look</SquareLink
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div v-else>
+              <div v-if="$userReadChinese">
+                <div class="row">
+                  <div class="offset-lg-4 offset-md-2 col-lg-2 col-md-2">
+                    <div class="zhIntro vertical">
+                      <h1 class="chineseTitle">网页开发</h1>
+                      <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
+                      <h4 class="chinese indentV">不如让我来帮你？</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div v-else>
                 <h1>Web Development</h1>
                 <div>
                   <img class="introPic" src="img/home/web.svg" alt="" />
@@ -71,36 +133,24 @@
                 <h4 class="english">
                   Why not build a stunning website together?
                 </h4>
-              </div>
 
-              <div class="offset-lg-4 offset-md-2 col-lg-2 col-md-2">
-                <div class="zhIntro vertical">
-                  <h1 class="chineseTitle">网页开发</h1>
-                  <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
-                  <h4 class="chinese indentV">不如让我来帮你？</h4>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-4 col-md-6 offset-lg-6 offset-md-2 project">
-                <div>
-                  <img class="projectPic" src="img/home/code.svg" alt="" />
-                </div>
-                <div class="row substitle">
-                  <div class="col-1">
-                    <h4>These</h4>
-                    <h4 class="chinese">这</h4>
+                <div class="project">
+                  <div>
+                    <img class="projectPic" src="img/home/code.svg" alt="" />
                   </div>
-                  <div class="col-2">
-                    <IncreaseNum start="0" end="10"></IncreaseNum>
-                  </div>
-                  <div class="col-9">
-                    <h4>projects can prove my ability</h4>
-                    <h4 class="chinese">个项目可以证明我</h4>
-                  </div>
-                  <div class="link">
-                    <SquareLink link="work#development">take a look</SquareLink>
+                  <div class="row substitle">
+                    <div class="col-2"><h4>These</h4></div>
+                    <div class="col-1">
+                      <IncreaseNum start="0" end="10"></IncreaseNum>
+                    </div>
+                    <div class="col-auto">
+                      <h4>projects can prove my ability</h4>
+                    </div>
+                    <div class="link">
+                      <SquareLink link="work#development"
+                        >take a look</SquareLink
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -167,7 +217,7 @@
             <div class="swiper-lazy-preloader"></div>
 
             <div class="row">
-              <div class="col" lg="6" md="8">
+              <div class="col-lg-6 col-md-8">
                 <h1>Creative Execution</h1>
                 <div>
                   <img class="introPic" src="img/home/visual.svg" alt="" />
@@ -334,9 +384,6 @@ export default {
       letter-spacing: 15px;
     }
   }
-  .placeholder {
-    height: 200px;
-  }
 
   .project {
     margin-top: 10vh;
@@ -386,6 +433,69 @@ export default {
       top: 58vh;
     }
   }
+
+  .slideHelp {
+    h1 {
+      font-size: 2em;
+      line-height: 0.8em;
+      margin-bottom: 10px;
+    }
+    h4 {
+      font-size: 1.15em;
+      line-height: 1.5em;
+    }
+
+    .introPic {
+      margin-top: 20px;
+      width: 500px;
+    }
+
+    .zhIntro {
+      height: 580px;
+      position: absolute;
+      top: auto;
+      right: auto;
+
+      .chineseTitle {
+        letter-spacing: 15px;
+      }
+
+      .chinese {
+        letter-spacing: 15px;
+      }
+    }
+
+    .project {
+      margin-top: 0px;
+
+      h4 {
+        font-size: 1.1em;
+        line-height: 1.5em;
+      }
+      .projectPic {
+        width: 40px;
+        margin-left: 75vw;
+      }
+
+      .increase-num h2 {
+        font-size: 1.2em;
+        line-height: 1.5em;
+        margin: 0px;
+      }
+
+      .substitle {
+        margin-top: -20px;
+        h4 {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .link {
+      margin-left: 50vw;
+      margin-top: -10px;
+    }
+  }
 }
 
 // iphone 5 / 5S / SE
@@ -410,6 +520,57 @@ export default {
       top: 58vh;
     }
   }
+
+  .slideHelp {
+    h1 {
+      font-size: 2.5em;
+    }
+    h4 {
+      font-size: 1.3em;
+      line-height: 1.7em;
+    }
+
+    .zhIntro {
+      height: 580px;
+      position: absolute;
+      top: auto;
+      right: auto;
+
+      .chineseTitle {
+        letter-spacing: 15px;
+      }
+
+      .chinese {
+        letter-spacing: 15px;
+      }
+    }
+
+    .project {
+      margin-top: 20px;
+
+      h4 {
+        font-size: 1.2em;
+        line-height: 1.5em;
+      }
+      .projectPic {
+        width: 50px;
+        margin-left: 75vw;
+      }
+
+      .increase-num h2 {
+        font-size: 1.4em;
+        margin-left: -8px;
+      }
+
+      .substitle {
+        margin-top: -20px;
+        margin-left: 15px;
+      }
+      .link {
+        margin-left: 45vw;
+      }
+    }
+  }
 }
 
 // iphone 6 / 7 / 8 +
@@ -430,6 +591,58 @@ export default {
       top: 55vh;
     }
   }
+
+  .slideHelp {
+    h1 {
+      font-size: 3em;
+    }
+    h4 {
+      font-size: 1.4em;
+      line-height: 1.8em;
+    }
+
+    .zhIntro {
+      height: 580px;
+      position: absolute;
+      top: auto;
+      right: auto;
+
+      .chineseTitle {
+        letter-spacing: 15px;
+      }
+
+      .chinese {
+        letter-spacing: 15px;
+      }
+    }
+
+    .project {
+      margin-top: 50px;
+
+      h4 {
+        font-size: 1.2em;
+        line-height: 1.5em;
+      }
+      .projectPic {
+        width: 60px;
+        margin-left: 75vw;
+      }
+
+      .increase-num h2 {
+        font-size: 1.4em;
+        margin-left: -8px;
+      }
+
+      .substitle {
+        margin-top: -20px;
+        margin-left: 40px;
+      }
+      .link {
+        margin-left: 43vw;
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 // iphone X
@@ -448,6 +661,58 @@ export default {
       }
       right: 50px;
       top: 55vh;
+    }
+  }
+
+  .slideHelp {
+    h1 {
+      font-size: 3em;
+    }
+    h4 {
+      font-size: 1.4em;
+      line-height: 1.8em;
+    }
+
+    .zhIntro {
+      height: 580px;
+      position: absolute;
+      top: auto;
+      right: auto;
+
+      .chineseTitle {
+        letter-spacing: 15px;
+      }
+
+      .chinese {
+        letter-spacing: 15px;
+      }
+    }
+
+    .project {
+      margin-top: 50px;
+
+      h4 {
+        font-size: 1.35em;
+        line-height: 1.5em;
+      }
+      .projectPic {
+        width: 60px;
+        margin-left: 75vw;
+      }
+
+      .increase-num h2 {
+        font-size: 1.4em;
+        margin-left: 0;
+      }
+
+      .substitle {
+        margin-top: -25px;
+        margin-left: 5px;
+      }
+      .link {
+        margin-left: 50vw;
+        margin-top: -5px;
+      }
     }
   }
 }

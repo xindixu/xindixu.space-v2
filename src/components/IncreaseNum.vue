@@ -1,5 +1,5 @@
 <template>
-  <div id="">
+  <div class="increase-num">
     <transition name="" appear>
       <h2 v-observe-visibility="visibilityChanged">{{ displayNumber }}</h2>
     </transition>
