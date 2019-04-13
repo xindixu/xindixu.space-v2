@@ -127,6 +127,9 @@ export default {
     //this.getMd();
     this.getHtml();
     this.getFilter();
+  },
+  beforeDestroy() {
+    this.$eventBus.$off('loading_script');
   }
 };
 </script>

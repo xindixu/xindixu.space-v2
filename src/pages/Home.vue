@@ -235,11 +235,7 @@ export default {
     swiperSlide,
     ScrollDown
   },
-  created() {
-    console.log(window.navigator.language); //works both in Mozilla and chrome
-    console.log(navigator.language); //works both in Mozilla and chrome
-    console.log(navigator.userLanguage); // Works in IE
-  }
+  created() {}
 };
 </script>
 <style lang="scss">

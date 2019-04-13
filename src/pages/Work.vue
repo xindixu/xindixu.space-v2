@@ -81,7 +81,7 @@ export default {
       });
       this.sortedWorkList[category] = arr;
     }
-    console.log(this.sortedWorkList);
+    // console.log(this.sortedWorkList);
   },
   mounted() {
     if (this.$route.hash) {
