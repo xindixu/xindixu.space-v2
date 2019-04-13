@@ -65,7 +65,8 @@ export default {
       sortedWorkList: [],
       categories: ['development', 'marketing', 'creative', 'craft'],
       tags: [],
-      tab: ''
+      tab: '',
+      is_script_loading: false
     };
   },
   components: {
@@ -74,6 +75,35 @@ export default {
     TabPane,
     ScrollDown
   },
+  methods: {
+    addIssuuScript() {
+      let self = this;
+      return new Promise(resolve => {
+        // if script is already loading via another component
+        if (self.is_script_loading) {
+          // Resolve when the other component has loaded the script
+          this.$root.$on('script_loaded', resolve);
+          return;
+        }
+
+        let script = document.createElement('script');
+        script.setAttribute('src', 'https://e.issuu.com/embed.js');
+        script.async = true;
+
+        this.$eventBus.$emit('loading_script');
+        console.log('loaded');
+
+        script.onload = () => {
+          /* emit to global event bus to inform other components
+           * we are already loading the script */
+          this.$eventBus.$emit('script_loaded');
+          resolve();
+        };
+
+        document.head.appendChild(script);
+      });
+    }
+  },
   created() {
     for (let category of this.categories) {
       const arr = workList.filter(obj => {
@@ -81,6 +111,9 @@ export default {
       });
       this.sortedWorkList[category] = arr;
     }
+    this.$eventBus.$on('loading_script', e => {
+      this.is_script_loading = true;
+    });
     // console.log(this.sortedWorkList);
   },
   mounted() {
@@ -89,6 +122,9 @@ export default {
       const label = str.substring(1, str.length);
       this.$refs.tabs.findAndActivateTab(label);
     }
+  },
+  beforeDestroy() {
+    this.$eventBus.$off('loading_script');
   }
 };
 </script>

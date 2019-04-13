@@ -505,6 +505,27 @@ export default {
       background-position: bottom left;
     }
 
+    .zhIntro {
+      h1 {
+        font-size: 2.5em;
+        line-height: 0.8em;
+        margin-bottom: 10px;
+      }
+
+      height: 80vh;
+      position: absolute;
+      top: 12vh;
+      right: 5vw;
+
+      .indentV {
+        margin-top: 10vh;
+        h4 {
+          font-size: 1.15em;
+          line-height: 0.8em;
+        }
+      }
+    }
+
     .enIntro {
       padding: 0 10px;
 

@@ -56,8 +56,7 @@ export default {
     tags: [],
     md: '',
     filter: '',
-    path: '',
-    is_script_loading: false
+    path: ''
   }),
   props: ['id'],
   watch: {
@@ -82,32 +81,6 @@ export default {
     },
     getHtml() {
       this.html = require(`../assets/html/${this.work[0].id}.html`);
-    },
-    addIssuuScript() {
-      let self = this;
-      return new Promise((resolve, reject) => {
-        // if script is already loading via another component
-        if (self.is_script_loading) {
-          // Resolve when the other component has loaded the script
-          this.$root.$on('script_loaded', resolve);
-          return;
-        }
-
-        let script = document.createElement('script');
-        script.setAttribute('src', 'https://e.issuu.com/embed.js');
-        script.async = true;
-
-        this.$eventBus.$emit('loading_script');
-
-        script.onload = () => {
-          /* emit to global event bus to inform other components
-           * we are already loading the script */
-          this.$eventBus.$emit('script_loaded');
-          resolve();
-        };
-
-        document.head.appendChild(script);
-      });
     }
   },
   components: {
@@ -119,17 +92,10 @@ export default {
     [Button.name]: Button
   },
   created() {
-    this.$eventBus.$on('loading_script', e => {
-      this.is_script_loading = true;
-    });
-
     this.getWorkObj();
     //this.getMd();
     this.getHtml();
     this.getFilter();
-  },
-  beforeDestroy() {
-    this.$eventBus.$off('loading_script');
   }
 };
 </script>
