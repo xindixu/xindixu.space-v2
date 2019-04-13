@@ -180,7 +180,7 @@
                     <img class="introPic" src="img/home/analysis.svg" alt="" />
                   </div>
                   <h4 class="english">
-                    Research is the cornerstone of an effective marketing
+                    Research is the cornerstone of any effective marketing
                     strategy.
                   </h4>
                   <h4 class="english">
@@ -226,9 +226,9 @@
               <div v-if="$userReadChinese">
                 <div class="row">
                   <div class="zhIntro vertical">
-                    <h1 class="chineseTitle">网页开发</h1>
-                    <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
-                    <h4 class="chinese indentV">不如让我来帮你？</h4>
+                    <h1 class="chineseTitle">营销企划</h1>
+                    <h4 class="chinese indentV">从市场调研中披沙沥金</h4>
+                    <h4 class="chinese indentV">规划出有效的广告策略</h4>
                   </div>
                 </div>
 
@@ -237,32 +237,33 @@
                     <h4 class="chinese">这<span>10</span>个项目可以证明我</h4>
                     <IncreaseNum start="0" end="10"></IncreaseNum>
                     <div class="link">
-                      <SquareLink class="chinese" link="work#development"
+                      <SquareLink class="chinese" link="work#marketing"
                         >看看</SquareLink
                       >
                     </div>
                   </div>
                   <div>
-                    <img class="projectPic" src="img/home/code.svg" alt="" />
+                    <img class="projectPic" src="img/home/project.svg" alt="" />
                   </div>
                 </div>
               </div>
               <div v-else>
-                <h1>Web Development</h1>
+                <h1>Strategic Marketing</h1>
                 <div>
-                  <img class="introPic" src="img/home/web.svg" alt="" />
+                  <img class="introPic" src="img/home/analysis.svg" alt="" />
                 </div>
                 <h4 class="english">
-                  Establishing web presence contributes a lot to the success of
-                  your business.
+                  Research is the cornerstone of any effective marketing
+                  strategy.
                 </h4>
                 <h4 class="english">
-                  Why not build a stunning website together?
+                  Let me translate the facts and numbers to actionable business
+                  plans that make an impact.
                 </h4>
 
                 <div class="project">
                   <div>
-                    <img class="projectPic" src="img/home/code.svg" alt="" />
+                    <img class="projectPic" src="img/home/project.svg" alt="" />
                   </div>
                   <div class="row substitle">
                     <div class="col-2"><h4>These</h4></div>
@@ -273,9 +274,7 @@
                       <h4>projects can prove my ability</h4>
                     </div>
                     <div class="link">
-                      <SquareLink link="work#development"
-                        >take a look</SquareLink
-                      >
+                      <SquareLink link="work#marketing">take a look</SquareLink>
                     </div>
                   </div>
                 </div>
@@ -340,9 +339,11 @@
               <div v-if="$userReadChinese">
                 <div class="row">
                   <div class="zhIntro vertical">
-                    <h1 class="chineseTitle">网页开发</h1>
-                    <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
-                    <h4 class="chinese indentV">不如让我来帮你？</h4>
+                    <h1 class="chineseTitle">创意设计</h1>
+                    <h4 class="chinese indentV">有想法却不知如何表达？</h4>
+                    <h4 class="chinese indentV">
+                      让我帮你以最有趣的形式传达它
+                    </h4>
                   </div>
                 </div>
 
@@ -351,32 +352,32 @@
                     <h4 class="chinese">这<span>10</span>个项目可以证明我</h4>
                     <IncreaseNum start="0" end="10"></IncreaseNum>
                     <div class="link">
-                      <SquareLink class="chinese" link="work#development"
+                      <SquareLink class="chinese" link="work#creative"
                         >看看</SquareLink
                       >
                     </div>
                   </div>
                   <div>
-                    <img class="projectPic" src="img/home/code.svg" alt="" />
+                    <img class="projectPic" src="img/home/graphic.svg" alt="" />
                   </div>
                 </div>
               </div>
               <div v-else>
-                <h1>Web Development</h1>
+                <h1>Creative Execution</h1>
                 <div>
-                  <img class="introPic" src="img/home/web.svg" alt="" />
+                  <img class="introPic" src="img/home/visual.svg" alt="" />
                 </div>
                 <h4 class="english">
-                  Establishing web presence contributes a lot to the success of
-                  your business.
+                  Got an amazing idea, but don't know how to execute it?
                 </h4>
                 <h4 class="english">
-                  Why not build a stunning website together?
+                  No worries. I can help you get your idea across with
+                  compelling visuals.
                 </h4>
 
                 <div class="project">
                   <div>
-                    <img class="projectPic" src="img/home/code.svg" alt="" />
+                    <img class="projectPic" src="img/home/graphic.svg" alt="" />
                   </div>
                   <div class="row substitle">
                     <div class="col-2"><h4>These</h4></div>
@@ -387,9 +388,7 @@
                       <h4>projects can prove my ability</h4>
                     </div>
                     <div class="link">
-                      <SquareLink link="work#development"
-                        >take a look</SquareLink
-                      >
+                      <SquareLink link="work#creative">take a look</SquareLink>
                     </div>
                   </div>
                 </div>
@@ -594,8 +593,8 @@ export default {
       margin-bottom: 10px;
     }
     h4 {
-      font-size: 1.15em;
-      line-height: 1.5em;
+      font-size: 1em;
+      line-height: 1.4em;
     }
 
     .introPic {
@@ -628,7 +627,7 @@ export default {
       margin-top: 0px;
 
       h4 {
-        font-size: 1.1em;
+        font-size: 1em;
         line-height: 1.5em;
       }
       .projectPic {
@@ -747,8 +746,8 @@ export default {
       font-size: 2.5em;
     }
     h4 {
-      font-size: 1.3em;
-      line-height: 1.7em;
+      font-size: 1.2em;
+      line-height: 1.5em;
     }
 
     .zhIntro {
@@ -761,8 +760,8 @@ export default {
       margin-top: 20px;
 
       h4 {
-        font-size: 1.2em;
-        line-height: 1.5em;
+        font-size: 1.1em;
+        line-height: 1.2em;
       }
       .projectPic {
         width: 50px;
