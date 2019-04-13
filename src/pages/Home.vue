@@ -5,7 +5,13 @@
         <swiper-slide id="slide1">
           <div class="bg-img swiper-lazy" data-background="img/home/2.jpg">
             <div class="swiper-lazy-preloader"></div>
-            <div class="col-lg-5 offset-lg-7 col-md-6 offset-md-6">
+            <!--
+              <p>Mobile: {{ $isMobile }} Chinese: {{ $userReadChinese }}</p>
+            -->
+            <div
+              v-if="!$isMobile"
+              class="col-lg-5 offset-lg-7 col-md-6 offset-md-6"
+            >
               <div class="zhIntro vertical">
                 <h1 class="chineseTitle">徐欣笛</h1>
                 <div class="chinese indentV">
@@ -14,13 +20,34 @@
                   <h4>终身学习家</h4>
                 </div>
               </div>
-
               <div class="enIntro">
                 <h1>Xindi Xu</h1>
                 <div class="english indentH">
                   <h4>Dedicated Web Developer</h4>
                   <h4>Passionate Advertiser</h4>
                   <h4>Lifelong Learner</h4>
+                </div>
+              </div>
+            </div>
+            <div v-else>
+              <div v-if="$userReadChinese" class="">
+                <div class="zhIntro vertical">
+                  <h1 class="chineseTitle">徐欣笛</h1>
+                  <div class="chinese indentV">
+                    <h4>网页开发工程师</h4>
+                    <h4>疯狂广告人</h4>
+                    <h4>终身学习家</h4>
+                  </div>
+                </div>
+              </div>
+              <div v-else style="">
+                <div class="enIntro">
+                  <h1>Xindi Xu</h1>
+                  <div class="english indentH">
+                    <h4>Dedicated Web Developer</h4>
+                    <h4>Passionate Advertiser</h4>
+                    <h4>Lifelong Learner</h4>
+                  </div>
                 </div>
               </div>
             </div>
@@ -234,8 +261,7 @@ export default {
     swiper,
     swiperSlide,
     ScrollDown
-  },
-  created() {}
+  }
 };
 </script>
 <style lang="scss">
@@ -266,43 +292,6 @@ export default {
 
 #slide1 {
   color: white;
-
-  #photo {
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 100vh;
-    width: 100vh;
-
-    #mask {
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      height: 100%;
-    }
-
-    #greeting {
-      position: absolute;
-      top: -40px;
-      /*   left: 15%; */
-      letter-spacing: 4px;
-
-      @media screen and (max-width: 768px) {
-        left: 10%;
-      }
-      @media screen and (min-width: 769px) {
-        left: 20%;
-      }
-    }
-
-    #headline {
-      background-position: center center;
-      background-size: cover;
-    }
-  }
-
   .zhIntro {
     height: 500px;
     position: absolute;
@@ -368,5 +357,108 @@ export default {
   .link {
     margin-left: 280px;
   }
+}
+// all iphones
+@media only screen and (min-device-width: 320px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+  #slide1 {
+    .bg-img {
+      background-position: bottom left;
+    }
+
+    .enIntro {
+      padding: 0 10px;
+
+      h1 {
+        font-size: 2em;
+        line-height: 0.8em;
+        margin-bottom: 10px;
+        text-align: right;
+      }
+      .indentH {
+        h4 {
+          font-size: 1.15em;
+          line-height: 0.8em;
+          text-align: right;
+        }
+        margin-left: 0px;
+      }
+      right: 30px;
+      top: 58vh;
+    }
+  }
+}
+
+// iphone 5 / 5S / SE
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+// iphone 6 / 6S / 7 / 8
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #slide1 {
+    .enIntro {
+      h1 {
+        font-size: 2.5em;
+        line-height: 1em;
+      }
+      .indentH {
+        h4 {
+          font-size: 1.3em;
+          line-height: 1em;
+        }
+      }
+      right: 40px;
+      top: 58vh;
+    }
+  }
+}
+
+// iphone 6 / 7 / 8 +
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  #slide1 {
+    .enIntro {
+      h1 {
+        font-size: 3em;
+        line-height: 1.4em;
+      }
+      .indentH {
+        h4 {
+          font-size: 1.4em;
+          line-height: 1.2em;
+        }
+      }
+      right: 50px;
+      top: 55vh;
+    }
+  }
+}
+
+// iphone X
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  #slide1 {
+    .enIntro {
+      h1 {
+        font-size: 3.5em;
+        line-height: 1.5em;
+      }
+      .indentH {
+        h4 {
+          font-size: 1.6em;
+          line-height: 1.2em;
+        }
+      }
+      right: 50px;
+      top: 55vh;
+    }
+  }
+}
+
+// iphone XR
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+}
+// iphone XS
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+}
+// iphone XS Max
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
 }
 </style>
