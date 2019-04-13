@@ -78,7 +78,7 @@ const checkMobile = () => {
 };
 const isMobile = checkMobile();
 
-Vue.prototype.$userReadChinese = userReadChinese;
+Vue.prototype.$userReadChinese = !userReadChinese;
 Vue.prototype.$isMobile = isMobile;
 
 new Vue({
