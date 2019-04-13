@@ -1,8 +1,16 @@
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 //   .BundleAnalyzerPlugin;
+
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 module.exports = {
+  pwa: {
+    name: 'XindiXu.space',
+    themeColor: '#E2B4BD',
+    msTileColor: '#000000',
+    appleMobileWebAppCapable: 'yes',
+    appleMobileWebAppStatusBarStyle: '#E2B4BD'
+  },
   configureWebpack: {
     module: {
       rules: [

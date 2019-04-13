@@ -14,6 +14,7 @@ import VueAnalytics from 'vue-analytics';
 import vueg from 'vueg';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
+import './registerServiceWorker'
 
 Vue.config.productionTip = false;
 
