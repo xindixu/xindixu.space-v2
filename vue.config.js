@@ -5,11 +5,17 @@ const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 module.exports = {
   pwa: {
-    name: 'XindiXu.space',
     themeColor: '#E2B4BD',
-    msTileColor: '#000000',
+    msTileColor: '#E2B4BD',
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: '#E2B4BD'
+    appleMobileWebAppStatusBarStyle: '#E2B4BD',
+    iconPaths: {
+      favicon32: 'img/icons/favicon-32x32.png',
+      favicon16: 'img/icons/favicon-16x16.png',
+      appleTouchIcon: 'img/icons/apple-touch-icon.png',
+      maskIcon: 'img/icons/safari-pinned-tab.svg',
+      msTileImage: 'img/icons/mstile-310x310.png'
+    }
   },
   configureWebpack: {
     module: {
