@@ -144,6 +144,8 @@
               <div class="chinese">
                 <p>
                   我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。
+                </p>
+                <p>
                   现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
                 </p>
               </div>
@@ -318,8 +320,14 @@
               v-if="wordShow"
               style="background-color=white;"
             >
-              <h4 v-if="$isMobile" class="screen-center">I'm Skilled At ...</h4>
-              <h2 v-else class="screen-center">I'm Skilled At ...</h2>
+              <div v-if="$isMobile" class="screen-center text-center">
+                <h4 v-if="$userReadChinese" class="chinese">我擅长于…</h4>
+                <h4 v-else>I'm Skilled At ...</h4>
+              </div>
+              <div v-else class="screen-center text-center">
+                <h2 class="chinese">我擅长于…</h2>
+                <h2>I'm Skilled At ...</h2>
+              </div>
             </div>
 
             <vue-word-cloud
@@ -343,13 +351,26 @@
         <swiper-slide>
           <div class="full-screen" style="background-color:#E2B4BD">
             <div class="screen-center text-center">
-              <h2>My Life So Far...</h2>
-              <n-button
-                onclick="window.open('html/life-story.html','_blank');"
-                type="warning"
-                round
-                >Click to Launch</n-button
-              >
+              <div v-if="$isMobile">
+                <h4 v-if="$userReadChinese" class="chinese">人生轨迹 ...</h4>
+                <h4 v-else>My Life So Far ...</h4>
+                <n-button
+                  onclick="window.open('html/life-story.html','_blank');"
+                  type="warning"
+                  round
+                  >Click to Launch</n-button
+                >
+              </div>
+              <div v-else>
+                <h2 class="chinese">人生轨迹 ...</h2>
+                <h2>My Life So Far ...</h2>
+                <n-button
+                  onclick="window.open('html/life-story.html','_blank');"
+                  type="warning"
+                  round
+                  >Click to Launch</n-button
+                >
+              </div>
             </div>
           </div>
         </swiper-slide>
