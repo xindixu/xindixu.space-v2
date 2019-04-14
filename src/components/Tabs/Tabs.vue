@@ -60,6 +60,9 @@
 .nav-link {
   text-transform: capitalize;
 }
+.nav {
+  padding: 15px 10px;
+}
 </style>
 <script>
 export default {

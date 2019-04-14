@@ -4,7 +4,17 @@
       <h2>Dr. Capser Meowspy!</h2>
     </transition>
 
-    <masonry :cols="5" :gutter="30">
+    <masonry v-if="!$isMobile" :cols="5" :gutter="30">
+      <div
+        v-for="(img, index) in imgArr"
+        :key="index"
+        class="entranceFromTop"
+        :style="{ 'animation-delay': index * 50 + 'ms' }"
+      >
+        <img class="image" :src="img" />
+      </div>
+    </masonry>
+    <masonry v-else :cols="3" :gutter="10">
       <div
         v-for="(img, index) in imgArr"
         :key="index"
@@ -51,9 +61,7 @@ export default {
 
 .entranceFromTop {
   opacity: 0;
-  animation-fill-mode: forwards;
-  animation-duration: 2s;
-  animation-name: entranceFromTop;
+  animation: entranceFromTop 2s forwards;
 }
 
 @keyframes entranceFromTop {
@@ -64,6 +72,22 @@ export default {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// all phone
+@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #imgContainer {
+    text-align: center;
+    margin-top: 10vh;
+    padding: 0 1vw 0 0;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      margin: 5px;
+      border-radius: 3px;
+    }
   }
 }
 </style>
