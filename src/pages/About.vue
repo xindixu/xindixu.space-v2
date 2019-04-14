@@ -3,7 +3,7 @@
     <div class="swiper-container">
       <swiper ref="swiper" :options="swiperOptionV">
         <swiper-slide v-if="!$isMobile">
-          <div class="bg-img swiper-lazy" data-background="img/bg/bg29.jpg">
+          <div class="bg-img swiper-lazy" data-background="img/bg/bg20.jpg">
             <div class="swiper-lazy-preloader"></div>
             <div class="row">
               <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
@@ -74,7 +74,7 @@
           </div>
         </swiper-slide>
         <swiper-slide v-else>
-          <div class="bg-img swiper-lazy" data-background="img/bg/bg29.jpg">
+          <div class="bg-img swiper-lazy" data-background="img/bg/bg20.jpg">
             <div class="swiper-lazy-preloader"></div>
             <div class="row">
               <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
@@ -267,8 +267,8 @@
                   <h1>Enjoying...</h1>
                   <p>
                     I love my super needy kitty, Dr. Casper Meowspy. I love to
-                    exercise, weight trainning, Tae Kwon Do, swimming, anything
-                    without "balls". During my vocations, I love to travel
+                    exercise, weight training, Tae Kwon Do, swimming, anything
+                    without "balls". During my vacations, I love to travel
                     around and explore new places.
                   </p>
                 </div>
@@ -289,8 +289,8 @@
                   <h1>Enjoying...</h1>
                   <p>
                     I love my super needy kitty, Dr. Casper Meowspy. I love to
-                    exercise, weight trainning, Tae Kwon Do, swimming, anything
-                    without "balls". During my vocations, I love to travel
+                    exercise, weight training, Tae Kwon Do, swimming, anything
+                    without "balls". During my vacations, I love to travel
                     around and explore new places.
                   </p>
                 </div>
