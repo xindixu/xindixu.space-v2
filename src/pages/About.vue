@@ -132,7 +132,9 @@
             <div v-if="!$userReadChinese">
               <p>
                 I was born in Fuzhou, China and spent my first 18 years there. I
-                moved to the US for college. <br />
+                moved to the US for college.
+              </p>
+              <p>
                 Now, I am a senior studying Advertising and Computer Science at
                 the University of Texas at Austin.
               </p>
@@ -316,7 +318,8 @@
               v-if="wordShow"
               style="background-color=white;"
             >
-              <h2 class="screen-center" id="prompt">I'm skilled at ...</h2>
+              <h4 v-if="$isMobile" class="screen-center">I'm Skilled At ...</h4>
+              <h2 v-else class="screen-center">I'm Skilled At ...</h2>
             </div>
 
             <vue-word-cloud
@@ -594,6 +597,7 @@ svg {
   z-index: 10;
 }
 
+// all phone
 @media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   p {
     font-size: 1rem;
@@ -623,8 +627,8 @@ svg {
 
   #text-container {
     position: relative;
-    height: 100px;
-    margin: 0 0 10px 0;
+    height: 80px;
+    margin: -10px 0 30px 0;
 
     #tagFZ {
       position: absolute;
@@ -636,8 +640,33 @@ svg {
       right: 10%;
     }
   }
+
   .screen-center h2 {
     font-size: 1.5em;
+  }
+}
+
+// iphone 6 / 6S / 7 / 8
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  #text-container {
+    margin: -10px 0 50px 0;
+  }
+}
+
+// iphone 6 / 7 / 8 +
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  #text-container {
+    margin: 10px 0 90px 0;
+  }
+}
+
+// iphone X
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  p {
+    font-size: 1.2em;
+  }
+  #text-container {
+    margin: 20px 0 80px 0;
   }
 }
 </style>

@@ -69,4 +69,34 @@ p {
     top: 30px;
   }
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  p {
+    font-size: 0.8em;
+  }
+
+  p.h2.num {
+    line-height: 1.2;
+    font-size: 1.8em;
+  }
+  .zh5 {
+    right: -5px;
+    top: 30px;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  p {
+    font-size: 1em;
+  }
+
+  p.h2.num {
+    line-height: 1.2;
+    font-size: 2em;
+  }
+  .zh5 {
+    right: -20px;
+    top: 30px;
+  }
+}
 </style>
