@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="container" class="square-texts">
     <div>
       <p class="en">{{ en }}</p>
     </div>
@@ -53,5 +53,20 @@ p {
 }
 .zh5 {
   letter-spacing: 3px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  p {
+    font-size: 0.6em;
+  }
+
+  p.h2.num {
+    line-height: 1.2;
+    font-size: 1.5em;
+  }
+  .zh5 {
+    right: -5px;
+    top: 30px;
+  }
 }
 </style>

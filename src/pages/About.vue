@@ -2,7 +2,7 @@
   <div>
     <div class="swiper-container">
       <swiper ref="swiper" :options="swiperOptionV">
-        <swiper-slide>
+        <swiper-slide v-if="!$isMobile">
           <div class="bg-img swiper-lazy" data-background="img/bg/bg29.jpg">
             <div class="swiper-lazy-preloader"></div>
             <div class="row">
@@ -35,7 +35,6 @@
                   <img id="map" src="img/about/map.png" />
                   <Pin class="label pinFZ"></Pin>
                   <Pin class="label pinAUS"></Pin>
-                  <!-- <Route class="label route"></Route> -->
                 </div>
                 <div id="text-container">
                   <SquareTexts
@@ -74,10 +73,84 @@
             <scroll-down color="#000000" :scrollTo="5000"></scroll-down>
           </div>
         </swiper-slide>
+        <swiper-slide v-else>
+          <div class="bg-img swiper-lazy" data-background="img/bg/bg29.jpg">
+            <div class="swiper-lazy-preloader"></div>
+            <div class="row">
+              <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
+              <div class="svg-wrapper"><Xin></Xin><Xin0></Xin0></div>
+              <div class="svg-wrapper"><Di></Di><Di0></Di0></div>
+            </div>
+            <div id="link" class="text-right">
+              <span @click="pronounce">
+                <SquareLink>pronounce</SquareLink>
+              </span>
+            </div>
+            <audio src="audio/name.mp3" id="audio"></audio>
 
+            <div class="row mt-5">
+              <div class="col-md-6 col-lg-5">
+                <p>
+                  My name consists of 3 Chinese characters, family name,
+                  <span class="chinese">徐</span> and given name,
+                  <span class="chinese">欣笛</span>.
+                  <span class="chinese">欣</span> means happiness.
+                  <span class="chinese">笛</span> means bamboo flutes, whose
+                  music often triggers a peaceful joy among the listeners.
+                </p>
+              </div>
+            </div>
+
+            <scroll-down color="#000000" :scrollTo="5000"></scroll-down>
+          </div>
+        </swiper-slide>
+        <swiper-slide v-if="$isMobile">
+          <div class="bg-img swiper-lazy" data-background="img/bg/bg22.jpg">
+            <div class="swiper-lazy-preloader"></div>
+
+            <div id="map-container">
+              <img id="map" src="img/about/map.png" />
+              <Pin class="label pinFZ"></Pin>
+              <Pin class="label pinAUS"></Pin>
+            </div>
+            <div id="text-container">
+              <SquareTexts
+                id="tagFZ"
+                num1="0324"
+                num2="1998"
+                en="Fuzhou, China"
+                zh="中国福州"
+              ></SquareTexts>
+              <SquareTexts
+                id="tagAUS"
+                num1="0809"
+                num2="2016"
+                en="Austin, U.S.A."
+                zh="美国奥斯汀"
+              ></SquareTexts>
+            </div>
+            <div v-if="!$userReadChinese">
+              <p>
+                I was born in Fuzhou, China and spent my first 18 years there. I
+                moved to the US for college. <br />
+                Now, I am a senior studying Advertising and Computer Science at
+                the University of Texas at Austin.
+              </p>
+            </div>
+
+            <div v-else>
+              <div class="chinese">
+                <p>
+                  我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。
+                  现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
+                </p>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
         <swiper-slide>
           <div class="bg-img swiper-lazy" data-background="img/bg/bg31.jpg">
-            <div class="row">
+            <div v-if="!$isMobile" class="row">
               <div class="col half">
                 <div class="white left top">
                   <h1>Learning...</h1>
@@ -104,12 +177,39 @@
                 </div>
               </div>
             </div>
+            <div v-else>
+              <div v-if="!$userReadChinese" class="half">
+                <div class="white left top">
+                  <h1>Learning...</h1>
+                  <p>
+                    I major in advertising and I am part of TexasMedia. I just
+                    finished my certificate for Computer Science and I will keep
+                    explore more.
+                  </p>
+                  <p>
+                    I want to be a web developer after graduation so I am
+                    dedicated to learn lots of modern web technologies online.
+                  </p>
+                </div>
+              </div>
+              <div v-else class="half chinese">
+                <div class="white right top">
+                  <h1 class="chineseTitle">学习中...</h1>
+                  <p>
+                    我主修广告，是TexasMedia的一员。我刚刚拿到了我的计算机科学的证书，我也会继续深入学习。
+                  </p>
+                  <p>
+                    我毕业后想做个网页开发工程师，所以全身心地学习各种现代网页开发技术。
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </swiper-slide>
 
         <swiper-slide>
           <div class="bg-img swiper-lazy" data-background="img/bg/bg33.jpg">
-            <div class="row">
+            <div v-if="!$isMobile" class="row">
               <div class="col half">
                 <div class="white left bottom">
                   <h1>Working...</h1>
@@ -131,11 +231,33 @@
                 </div>
               </div>
             </div>
+            <div v-else>
+              <div v-if="!$userReadChinese" class="half">
+                <div class="white left top">
+                  <h1>Working...</h1>
+                  <p>
+                    I am currently interning at Nokia as a front-end web
+                    developer. My work includes designing, implementing, and
+                    maintaining websites with Sketch, WordPress, HTML, JS, and
+                    Python Django.
+                  </p>
+                </div>
+              </div>
+              <div v-else class="half chinese">
+                <div class="white right top">
+                  <h1 class="chineseTitle">工作中...</h1>
+                  <p>
+                    我现在在Nokia实习，做前端开发。我的工作包括设计，开发，维护网站，主要用Sketch，WordPress，HTML，JS，和Python
+                    Django.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="bg-img swiper-lazy" data-background="img/bg/bg19.jpg">
-            <div class="row">
+            <div v-if="!$isMobile" class="row">
               <div class="col half">
                 <div class="white left top">
                   <h1>Enjoying...</h1>
@@ -157,6 +279,29 @@
                 </div>
               </div>
             </div>
+            <div v-else>
+              <div v-if="!$userReadChinese" class="half">
+                <div class="white left top">
+                  <h1>Enjoying...</h1>
+                  <p>
+                    I love my super needy kitty, Dr. Casper Meowspy. I love to
+                    exercise, weight trainning, Tae Kwon Do, swimming, anything
+                    without "balls". During my vocations, I love to travel
+                    around and explore new places.
+                  </p>
+                </div>
+              </div>
+              <div v-else class="half chinese">
+                <div class="white right top">
+                  <h1 class="chineseTitle">玩耍中...</h1>
+                  <p>
+                    我爱我的猫猫，Dr. Casper Meowspy。
+                    我乐于锻炼身体，健身房，跆拳道，游泳，任何和“球”无关的运动。在放假时，我喜欢出游，探索各种地方。
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div v-observe-visibility="visibilityChangedS3"></div>
           </div>
         </swiper-slide>
@@ -171,7 +316,7 @@
               v-if="wordShow"
               style="background-color=white;"
             >
-              <h2 class="screen-center">I'm skilled at ...</h2>
+              <h2 class="screen-center" id="prompt">I'm skilled at ...</h2>
             </div>
 
             <vue-word-cloud
@@ -361,6 +506,8 @@ svg {
   }
 }
 
+// all iphones
+
 #map-container {
   #map {
     width: 95%;
@@ -377,10 +524,6 @@ svg {
   .pinAUS {
     top: 17.5%;
     left: 68.5%;
-  }
-  .route {
-    top: 20%;
-    left: 30%;
   }
 }
 #text-container {
@@ -449,5 +592,52 @@ svg {
 }
 .front {
   z-index: 10;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  p {
+    font-size: 1rem;
+  }
+  #link {
+    margin-top: 100px;
+  }
+
+  #map-container {
+    #map {
+      width: 95%;
+      height: 95%;
+    }
+
+    .label {
+      position: absolute;
+    }
+    .pinFZ {
+      top: 16%;
+      left: 32%;
+    }
+    .pinAUS {
+      top: 15%;
+      left: 68%;
+    }
+  }
+
+  #text-container {
+    position: relative;
+    height: 100px;
+    margin: 0 0 10px 0;
+
+    #tagFZ {
+      position: absolute;
+      left: 10%;
+    }
+
+    #tagAUS {
+      position: absolute;
+      right: 10%;
+    }
+  }
+  .screen-center h2 {
+    font-size: 1.5em;
+  }
 }
 </style>
