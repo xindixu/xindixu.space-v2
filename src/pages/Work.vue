@@ -14,6 +14,7 @@
         square
         centered
         tab-content-classes="tab-subcategories text-center"
+        @input="updateHash();"
       >
         <TabPane
           v-for="category in categories"
@@ -100,6 +101,11 @@ export default {
 
         document.head.appendChild(script);
       });
+    },
+    updateHash() {
+      // this.$route.hash = '#' + String();
+      this.$router.replace(`work#${this.$refs.tabs.activatedTab}`);
+      console.log(this.$refs.tabs.activatedTab);
     }
   },
   created() {
@@ -112,7 +118,7 @@ export default {
     this.$eventBus.$on('loading_script', e => {
       this.is_script_loading = true;
     });
-    console.log(this.sortedWorkList);
+    // console.log(this.sortedWorkList);
   },
   mounted() {
     if (this.$route.hash) {

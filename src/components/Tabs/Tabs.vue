@@ -124,7 +124,8 @@ export default {
   },
   data() {
     return {
-      tabs: []
+      tabs: [],
+      activatedTab: ''
     };
   },
   computed: {
@@ -144,6 +145,8 @@ export default {
       }
     },
     activateTab(tab) {
+      this.activatedTab = tab.label;
+
       if (tab.disabled) {
         return;
       }
@@ -181,7 +184,6 @@ export default {
     this.$nextTick(() => {
       if (this.value) {
         this.findAndActivateTab(this.value);
-        console.log(this.value);
       }
     });
   },

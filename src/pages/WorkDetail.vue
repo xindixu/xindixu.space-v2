@@ -23,7 +23,7 @@
       <WorkInProgress v-if="!html"></WorkInProgress>
       <div class="spacer"></div>
 
-      <router-link :to="{ name: 'work' }">
+      <router-link :to="'/work#' + category">
         <n-button type="primary">
           <i class="now-ui-icons arrows-1_minimal-left"></i> &nbsp; Go Back
         </n-button>
@@ -68,6 +68,7 @@ export default {
   methods: {
     getWorkObj() {
       this.work = workList.filter(work => work.id === this.id);
+      this.category = this.work[0].category;
       this.title = this.work[0].title;
       this.tags = this.work[0].tags;
     },

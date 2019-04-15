@@ -9,8 +9,11 @@
 <script>
 export default {};
 </script>
-<style media="screen">
+<style>
 v-cloak {
   display: none;
+}
+body {
+  overflow: auto;
 }
 </style>

@@ -7,7 +7,13 @@
         </filter>
       </defs>
     </svg>
-    <v-lazy-image :src="src" :src-placeholder="srcPlaceholder" @load="animate">
+    <v-lazy-image
+      :src="src"
+      :src-placeholder="srcPlaceholder"
+      :intersection-options="options"
+      @load="animate"
+      @interset="interseting"
+    >
     </v-lazy-image>
   </div>
 </template>
@@ -25,10 +31,19 @@ export default {
     duration: {
       type: Number,
       default: 1000
+    },
+    selector: {
+      type: String,
+      default: 'body'
     }
   },
   data: () => ({
-    rate: 1
+    rate: 1,
+    options: {
+      root: document.querySelector('body'),
+      rootMargin: '0px',
+      threshold: 1.0
+    }
   }),
   computed: {
     deviation() {
@@ -50,6 +65,9 @@ export default {
         }
       };
       requestAnimationFrame(step);
+    },
+    interseting() {
+      console.log('interseting');
     }
   }
 };
