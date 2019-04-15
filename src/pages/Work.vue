@@ -31,17 +31,17 @@
                 <router-link :to="'/work/' + data.id">
                   <Card class="work-card grow">
                     <template slot="image">
-                      <!--
-                        <img :src="'img/work/' + data.id + '.png'" alt="" />
-                      -->
+                      <img :src="'img/work/' + data.id + '.png'" alt="" />
 
-                      <BlurLazyImage
-                        class="work-card-img"
-                        :src="'img/work/' + data.id + '.png'"
-                        :src-placeholder="
-                          'img/work/placeholder' + data.id + '.png'
-                        "
-                      ></BlurLazyImage>
+                      <!--
+                        <BlurLazyImage
+                          class="work-card-img"
+                          :src="'img/work/' + data.id + '.png'"
+                          :src-placeholder="
+                            'img/work/placeholder' + data.id + '.png'
+                          "
+                        ></BlurLazyImage>
+                      -->
                     </template>
 
                     <template slot="raw-content">
@@ -58,7 +58,7 @@
   </div>
 </template>
 <script>
-import { Card, Tabs, TabPane, ScrollDown, BlurLazyImage } from '@/components';
+import { Card, Tabs, TabPane, ScrollDown } from '@/components';
 import workList from '../assets/json/work.json';
 
 export default {
@@ -76,8 +76,7 @@ export default {
     Card,
     Tabs,
     TabPane,
-    ScrollDown,
-    BlurLazyImage
+    ScrollDown
   },
   methods: {
     addIssuuScript() {
@@ -103,9 +102,7 @@ export default {
       });
     },
     updateHash() {
-      // this.$route.hash = '#' + String();
       this.$router.replace(`work#${this.$refs.tabs.activatedTab}`);
-      console.log(this.$refs.tabs.activatedTab);
     }
   },
   created() {

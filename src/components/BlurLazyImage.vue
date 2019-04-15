@@ -12,7 +12,6 @@
       :src-placeholder="srcPlaceholder"
       :intersection-options="options"
       @load="animate"
-      @interset="interseting"
     >
     </v-lazy-image>
   </div>
@@ -40,9 +39,9 @@ export default {
   data: () => ({
     rate: 1,
     options: {
-      root: document.querySelector('body'),
-      rootMargin: '0px',
-      threshold: 1.0
+      root: document.querySelector('.page-header'),
+      rootMargin: '-120px',
+      threshold: 1
     }
   }),
   computed: {
