@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <router-view name="header" />
     <div><router-view v-transition /></div>
     <router-view name="scroll" />
@@ -9,3 +9,8 @@
 <script>
 export default {};
 </script>
+<style media="screen">
+v-cloak {
+  display: none;
+}
+</style>

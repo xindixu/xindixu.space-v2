@@ -1,10 +1,9 @@
 <template>
   <div>
-    <div class="swiper-container">
-      <swiper id="v" :options="swiperOptionV">
+    <div v-cloak class="swiper-container">
+      <swiper id="v" :options="swiperOptionV" ref="homeSwiper">
         <swiper-slide id="slide1">
-          <div class="bg-img swiper-lazy" data-background="img/home/2.jpg">
-            <div class="swiper-lazy-preloader"></div>
+          <div class="bg-img" style="background-image:url(img/home/2.jpg)">
             <!--
               <p>Mobile: {{ $isMobile }} Chinese: {{ $userReadChinese }}</p>
             -->
@@ -413,6 +412,7 @@ export default {
   name: 'Home',
   data() {
     return {
+      loading: true,
       swiperOptionV: {
         direction: 'vertical',
         speed: 600,
@@ -447,9 +447,37 @@ export default {
 </script>
 <style lang="scss">
 @import '../assets/scss/now-ui-kit/variables.scss';
-.swiper-container {
+v-cloak {
+  display: none;
+}
+.full-screen {
+  z-index: 10;
+  position: absolute;
   height: 100vh;
   width: 100vw;
+  top: 0;
+  left: 0;
+
+  .semipolar-spinner {
+    margin: 0;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  .swiper-lazy-preloader {
+    display: none;
+  }
 
   .swiper-slide,
   .bg-img {
