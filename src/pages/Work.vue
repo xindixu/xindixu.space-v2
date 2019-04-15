@@ -92,13 +92,8 @@ export default {
         let script = document.createElement('script');
         script.setAttribute('src', 'https://e.issuu.com/embed.js');
         script.async = true;
-
         this.$eventBus.$emit('loading_script');
-        console.log('loaded');
-
         script.onload = () => {
-          /* emit to global event bus to inform other components
-           * we are already loading the script */
           this.$eventBus.$emit('script_loaded');
           resolve();
         };
@@ -117,7 +112,7 @@ export default {
     this.$eventBus.$on('loading_script', e => {
       this.is_script_loading = true;
     });
-    // console.log(this.sortedWorkList);
+    console.log(this.sortedWorkList);
   },
   mounted() {
     if (this.$route.hash) {

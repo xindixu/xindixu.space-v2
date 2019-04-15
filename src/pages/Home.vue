@@ -208,7 +208,7 @@
                       <h4 class="chinese">这</h4>
                     </div>
                     <div class="col-2">
-                      <IncreaseNum start="0" end="10"></IncreaseNum>
+                      <IncreaseNum start="0" end="7"></IncreaseNum>
                     </div>
                     <div class="col-9">
                       <h4>projects can prove my ability</h4>
@@ -234,7 +234,7 @@
                 <div class="verticalProject">
                   <div class="substitle vertical">
                     <h4 class="chinese">这<span>10</span>个项目可以证明我</h4>
-                    <IncreaseNum start="0" end="10"></IncreaseNum>
+                    <IncreaseNum start="0" end="7"></IncreaseNum>
                     <div class="link">
                       <SquareLink class="chinese" link="work#marketing"
                         >看看</SquareLink
@@ -267,7 +267,7 @@
                   <div class="row substitle">
                     <div class="col-2"><h4>These</h4></div>
                     <div class="col-1">
-                      <IncreaseNum start="0" end="10"></IncreaseNum>
+                      <IncreaseNum start="0" end="7"></IncreaseNum>
                     </div>
                     <div class="col-auto">
                       <h4>projects can prove my ability</h4>

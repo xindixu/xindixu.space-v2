@@ -3,28 +3,28 @@
 
 **[xindixu.space](http://xindixu.space)** is a personal website for Xindi Xu.
 
-## Plugins
-- Now UI Kit
-- Element.UI
-- Bootstrap
-- Animated.css (Animation effects)
-- VueAnalytics (Google Analytics)
-- VueResource (HTTP requests)
-- VueShowdown (Markdown live editor)
-- Swiper
+# Plugins
+- [Now UI Kit](https://demos.creative-tim.com/now-ui-kit/index.html)
+- [Element.UI](https://element.eleme.io/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Animated.css](https://daneden.github.io/animate.css/) (Animation effects)
+- [VueAnalytics](https://matteogabriele.gitbooks.io/vue-analytics/content/) (Google Analytics)
+- [VueResource](https://github.com/pagekit/vue-resource) (HTTP requests)
+- [VueShowdown](https://vue-showdown.js.org/) (Markdown live editor)
+- [Swiper](https://idangero.us/swiper/)
 
-## File Structure
+# File Structure
 ```
-xindixu.space
 |-- public
         |-- audio
         |-- html
         |-- img
         |-- index.html
+        |-- manifest.json
+        |-- robots.txt
+        |-- favicon.ico
+
 |-- src
-        |-- App.vue
-        |-- main.js
-        |-- router.js
         |-- assets
         |   |-- fonts
         |   |-- scss
@@ -46,14 +46,30 @@ xindixu.space
         |   |-- Work.vue
         |   |-- WorkDetail.vue
         |-- plugins
+        |-- App.vue
+        |-- main.js
+        |-- router.js
+        |-- registerServiceWorker.js
+
+|-- util
+        |-- Font-spider
+
+
+|-- server.js
+|-- vue.config.js
+|-- .eslintrc.js
+|-- .postcssrc.js
+|-- babel.config.js
+
 ```
 
-## Design
-
-## `Package.json`
+# Design
+[link to other folder]
+# `Package.json`
 ### `dependencies`
 ### `devDependencies`
-babel-plugin-component: https://github.com/ElementUI/babel-plugin-component
+[babel-plugin-component](https://github.com/ElementUI/babel-plugin-component)
+
 Converts
 ```js
 import { Button } from 'components'
@@ -66,15 +82,38 @@ var button = require('components/lib/button')
 require('components/lib/button/style.css')
 ```
 
-## Performance Improvement
-### Removing Unused Code
-#### Uncss
-#### Packages
+# Performance Improvement
+## Removing Unused Code
+### Uncss
+### Packages
 
-### Code Splitting
-### Image Loading Technique
-### Progressive Web App
+## Minify
+### Font
+**Chinese Font Minifier**: [font-spider](https://blog.csdn.net/qq_33744228/article/details/80613496)
 
-## Heroku Deployment
-## Google Analytics
+**How to use**
+1. Copy all Chinese type needed for the website and paste into corresponding html files
+2. Put the original font file to the directory
+3. Use css `@font-face` to load font file
+*Must use .tff format*
+```css
+ @font-face {
+    font-family: 'SentyTEA';
+    src: url('./SentyTEA.ttf#font-spider') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+```
+4. Run `$ font-spider ./filename.html`
+
+## Code Splitting
+## Image Loading Technique
+# Progressive Web App
+# Accessibility
+# SEO
+
+
+
+# Heroku Deployment
+# Google Analytics
 [version-badge]: https://img.shields.io/badge/version-3.0-blue.svg
