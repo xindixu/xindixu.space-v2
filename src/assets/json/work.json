@@ -1,21 +1,5 @@
 [
   {
-    "title":"Prep For Job",
-    "id": "prep-for-job",
-    "category": "development",
-    "tags":[
-      "UX/UI Design",
-      "Full-Stack development",
-      "API connection"
-    ],
-    "tools":[
-      "Python Django",
-      "React"
-    ],
-    "start":"12/2018",
-    "end": "now"
-  },
-  {
     "title":"Nokia Demo System",
     "id": "nokia-demo-system",
     "category": "development",
