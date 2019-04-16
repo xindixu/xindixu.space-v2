@@ -72,9 +72,6 @@ export default {
       this.title = this.work[0].title;
       this.tags = this.work[0].tags;
     },
-    getMd() {
-      this.md = require(`../assets/markdown/${this.work[0].id}.md`);
-    },
     getFilter() {
       let arr = ['pink', 'red', 'purple', 'blue'];
       let i = Math.floor(Math.random() * arr.length);
@@ -94,7 +91,6 @@ export default {
   },
   created() {
     this.getWorkObj();
-    //this.getMd();
     this.getHtml();
     this.getFilter();
   }
