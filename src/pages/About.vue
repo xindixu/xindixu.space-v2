@@ -389,7 +389,6 @@ import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 import VueWordCloud from 'vuewordcloud';
 
 import 'swiper/dist/css/swiper.css';
-
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 
 export default {
@@ -503,6 +502,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  .swiper-lazy-preloader {
+    display: none;
+  }
+
+  .swiper-slide,
+  .bg-img {
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+  .bg-img {
+    padding: 70px 5%;
+  }
+
+  .swiper-pagination {
+    z-index: 10;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #e2b4bd;
+  }
+}
 svg {
   width: 100%;
   height: 100%;

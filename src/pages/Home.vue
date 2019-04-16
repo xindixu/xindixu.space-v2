@@ -445,29 +445,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-@import '../assets/scss/now-ui-kit/variables.scss';
-v-cloak {
-  display: none;
-}
-.full-screen {
-  z-index: 10;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-
-  .semipolar-spinner {
-    margin: 0;
-    position: absolute;
-    z-index: 100;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
+<style lang="scss" scoped>
 .swiper-container {
   position: absolute;
   top: 0;
@@ -495,7 +473,7 @@ v-cloak {
   }
 
   .swiper-pagination-bullet-active {
-    background: $primary-color;
+    background: #e2b4bd;
   }
 }
 
