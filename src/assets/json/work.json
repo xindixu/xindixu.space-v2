@@ -1,5 +1,19 @@
 [
   {
+  "title":"Prep for Job",
+  "id": "prep-for-job",
+  "category": "development",
+  "tags":[
+    "Full-Stack development",
+    "API integrations"
+  ],
+  "tools":[
+    "Python Flask"
+  ],
+  "start":"03/2019",
+  "end": "now"
+},
+  {
     "title":"Nokia Demo System",
     "id": "nokia-demo-system",
     "category": "development",
@@ -281,37 +295,7 @@
     "start":"09/2017",
     "end":"12/2017"
   },
-  {
-    "title":"Catformer",
-    "id": "catformer",
-    "category": "development",
-    "tags":[
-      "Computer Graphics",
-      "Game development",
-      "UX/UI Design"
-    ],
-    "tools":[
-      "Processing",
-      "P5.js"
-    ],
-    "start":"02/2017",
-    "end":"02/2017"
-  },
-  {
-    "title":"UT Tower",
-    "id": "ut-tower",
-    "category": "development",
-    "tags":[
-      "Computer Graphics",
-      "UX/UI Design"
-    ],
-    "tools":[
-      "Processing",
-      "P5.js"
-    ],
-    "start":"02/2017",
-    "end":"02/2017"
-  },
+
   {
     "title":"Tesla Motors",
     "id": "tesla-motors",
@@ -342,5 +326,75 @@
     ],
     "start":"10/2017",
     "end":"10/2017"
+  },
+  {
+    "title":"Catformer",
+    "id": "catformer",
+    "category": "development",
+    "tags":[
+      "Computer Graphics",
+      "Game development",
+      "UX/UI Design"
+    ],
+    "tools":[
+      "Processing",
+      "P5.js"
+    ],
+    "start":"05/2017",
+    "end":"05/2017"
+  },
+  {
+    "title":"US Commute",
+    "id": "us-commute",
+    "category": "development",
+    "tags":[
+      "Computer Graphics",
+      "UX/UI Design"
+    ],
+    "tools":[
+      "Processing"
+    ],
+    "start":"03/2017",
+    "end":"03/2017"
+  },
+  {
+    "title":"Flocking Behavior",
+    "id": "flocking-behavior",
+    "category": "development",
+    "tags":[
+      "Computer Graphics"
+    ],
+    "tools":[
+      "Processing"
+    ],
+    "start":"03/2017",
+    "end":"03/2017"
+  },
+  {
+    "title":"Space Shooter",
+    "id": "space-shooter",
+    "category": "development",
+    "tags":[
+      "Computer Graphics"
+    ],
+    "tools":[
+      "Processing"
+    ],
+    "start":"03/2017",
+    "end":"03/2017"
+  },
+  {
+    "title":"UT Tower",
+    "id": "ut-tower",
+    "category": "development",
+    "tags":[
+      "Computer Graphics"
+    ],
+    "tools":[
+      "Processing",
+      "P5.js"
+    ],
+    "start":"02/2017",
+    "end":"02/2017"
   }
 ]
