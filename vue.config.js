@@ -1,5 +1,5 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-  .BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+//   .BundleAnalyzerPlugin;
 
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
@@ -51,8 +51,8 @@ module.exports = {
         overrideExtension: true,
         detailedLogs: true,
         strict: true
-      }),
-      new BundleAnalyzerPlugin()
+      })
+      // new BundleAnalyzerPlugin()
     ]
   },
 
