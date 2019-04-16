@@ -6,9 +6,7 @@ import router from './router';
 import NowUiKit from './plugins/now-ui-kit';
 import VueResource from 'vue-resource';
 import Scrollactive from 'vue-scrollactive';
-import { VLazyImagePlugin } from 'v-lazy-image';
 
-import Animated from 'animate.css';
 import VueMasonry from 'vue-masonry-css';
 import VueAnalytics from 'vue-analytics';
 import vueg from 'vueg';
@@ -21,9 +19,6 @@ Vue.config.productionTip = false;
 Vue.use(NowUiKit);
 Vue.use(VueResource);
 Vue.use(Scrollactive);
-Vue.use(VLazyImagePlugin);
-
-Vue.use(Animated);
 Vue.use(VueMasonry);
 
 Vue.use(vueg, router, {

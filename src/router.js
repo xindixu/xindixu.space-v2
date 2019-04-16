@@ -1,11 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './pages/Home.vue';
-import About from './pages/About.vue';
-import Work from './pages/Work.vue';
+
+const Home = () => import('./pages/Home.vue');
+const About = () => import('./pages/About.vue');
+const Work = () => import('./pages/Work.vue');
 // import Blog from './pages/Blog.vue';
-import Casper from './pages/Casper.vue';
-import WorkDetail from './pages/WorkDetail.vue';
+const Casper = () => import('./pages/Casper.vue');
+const WorkDetail = () => import('./pages/WorkDetail.vue');
 
 import AppNavbar from './layout/AppNavbar.vue';
 import AppFooter from './layout/AppFooter.vue';
