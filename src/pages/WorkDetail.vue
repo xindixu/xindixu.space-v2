@@ -179,6 +179,7 @@ div[id^='issuu-embed-container-'] {
   max-width: 100%;
   margin: 12px 0px;
 }
+
 #issuu-embed-container-texas-central,
 #issuu-embed-container-clif,
 #issuu-embed-container-brand-safty,
@@ -186,6 +187,7 @@ div[id^='issuu-embed-container-'] {
 #issuu-embed-container-tesla {
   padding-bottom: 77.27%;
 }
+#issuu-embed-container-goodman,
 #issuu-embed-container-groovy,
 #issuu-embed-container-groovy2 {
   padding-bottom: 56.25%; /* set the aspect ratio here as (height / width) * 100% */

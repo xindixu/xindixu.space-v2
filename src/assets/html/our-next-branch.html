@@ -1,30 +1,66 @@
 <h2>Project Description</h2>
 <h3>Background</h3>
-<p>During the summer of 2018, I interned at Daikin of North America, Goodman Manufacturing LLC. Our-next-branch is my personal project. This was my first time working with Tableau and I feel so honored until today when I learned that the company was actually using this visualization to make decisions. </p>
+<p>During the summer of 2018, I interned at Daikin of North America, Goodman Manufacturing LLC. Our-next-branch is my personal project. This was my first time working with Tableau and I feel so honored until today when I learned that the company was
+  actually using this visualization to make decisions. </p>
 
 
 <h2>Goal</h2>
 <p>This tool is designed to help users find out which area in North America has an insufficient supply of HVAC distributors.</p>
 
+<h2>Data</h2>
+<p>There are three categories of data: <strong>demand, supply, and performance.</strong> Users can toggle filters to narrow down to specific data range, as well as highlight a certain value in a specific field. They can also collapse tabs to switch
+  views among state, city and zip code.</p>
+<div class="text-center">
+  <img class="img-fluid" src="/img/work/our-next-branch/viz5.png" alt="Data category" width="100%" />
+</div>
+
+<h3>Values</h3>
+
+<h4>Demand</h4>
+<p>From US Census Bureau</p>
+<ul>
+  <li>Household population [HH#]</li>
+  <li>Percent of households using electricity as a source of home heating/cooling fuel [%Electricity]</li>
+  <li>Percent of the houses built in 2000-2009 (10-20 years old) [%10-20]</li>
+</ul>
+
+<h4>Supply</h4>
+<p>From distributor company websites</p>
+<ul>
+  <li>Company name at the location</li>
+  <li>Category (COD, IND, Competitors’ COD, Distributors not carrying our brand)</li>
+  <li>Brands the location is carrying</li>
+  <li>Address of the location</li>
+  <li>Total number of distributors in an area [D#]</li>
+</ul>
+
+<h4>Performance</h4>
+<p>From Goodman database</p>
+<ul>
+  <li>Goodman market share</li>
+  <li>Goodman unit sales from COD & IND (Jul. 2017 – Jun. 2018)</li>
+</ul>
+
+<h3>Geographic Levels</h3>
+<h4>Demand</h4>
+<p>All: State – City – ZIP Code</p>
+
+<h4>Supply</h4>
+<p>All: State – City – ZIP Code</p>
+
+<h4>Performance</h4>
+<p>Market share: Division – State – Trade Area – County – ZIP Code</p>
+<p>Sales: State – Trade Area – County – ZIP Code</p>
+
 
 <h2>Functionalities</h2>
 <div class="text-center">
-  <img
-    class="img-fluid"
-    src="/img/work/our-next-branch/viz6.png"
-    alt="Functionalities for data viz"
-    width="100%"
-  />
+  <img class="img-fluid" src="/img/work/our-next-branch/viz6.png" alt="Functionalities for data viz" width="100%" />
 </div>
 
 <h2>Challenges</h2>
 <div class="text-center">
-  <img
-    class="img-fluid"
-    src="/img/work/our-next-branch/viz4.png"
-    alt="Challenges for Our-next-branch project"
-    width="100%"
-  />
+  <img class="img-fluid" src="/img/work/our-next-branch/viz4.png" alt="Challenges for Our-next-branch project" width="100%" />
 </div>
 
 <h2>Steps</h2>
@@ -32,53 +68,30 @@
 <p>Since there are more than 60 distributors's website to go through, I turned to <em>ParseHub</em> for web scraping. I first inspected the HTML structure of the webpage and constructed the <em>code</em> to scrape data.</p>
 <p>Scraping web data makes future update a lot easier! The company just have to run the scraping script every once a while and collect all data in .csv format.</p>
 <div class="text-center">
-  <img
-    class="img-fluid"
-    src="/img/work/our-next-branch/viz1.png"
-    alt="Website data scripting with ParseHub"
-    width="100%"
-  />
+  <img class="img-fluid" src="/img/work/our-next-branch/viz1.png" alt="Website data scripting with ParseHub" width="100%" />
 </div>
 
 <h3>2. Batch Geocoding with Google Map API</h3>
 <p>Because the address data I collected are not precise enough, I used Google Map API to standardize the address and batch geocode.</p>
 <p><strong>Python</strong> script for outputing standardized address:</p>
 <div class="text-center">
-  <img
-    class="img-fluid"
-    src="/img/work/our-next-branch/viz16.png"
-    alt="Python code for standardizing address"
-    width="100%"
-  />
+  <img class="img-fluid" src="/img/work/our-next-branch/viz16.png" alt="Python code for standardizing address" width="100%" />
 </div>
 <p><strong>Excel Macro</strong> script for batch geocoding:</p>
 <div class="text-center">
-  <img
-    class="img-fluid"
-    src="/img/work/our-next-branch/viz17.png"
-    alt="Macro for batch geocoding"
-    width="100%"
-  />
+  <img class="img-fluid" src="/img/work/our-next-branch/viz17.png" alt="Macro for batch geocoding" width="100%" />
 </div>
 
 <h3>3. Work in Tableau</h3>
 <div class="text-center">
-  <img
-    class="img-fluid"
-    src="/img/work/our-next-branch/viz3.png"
-    alt="Tableau workflow"
-    width="100%"
-  />
+  <img class="img-fluid" src="/img/work/our-next-branch/viz3.png" alt="Tableau workflow" width="100%" />
 </div>
 
 
-<h2>Data</h2>
-<p>There are three categories of data: <strong>demand, supply, and performance.</strong> Users can toggle filters to narrow down to specific data range, as well as highlight a certain value in a specific field. They can also collapse tabs to switch views among state, city and zip code.</p>
-<div class="text-center">
-  <img
-    class="img-fluid"
-    src="/img/work/our-next-branch/viz5.png"
-    alt="Data category"
-    width="100%"
-  />
+
+
+<h2>Final Visualization Flip Book</h2>
+<div id="issuu-embed-container-goodman">
+  <iframe class="issuuembed" src="https://e.issuu.com/embed.html#29585443/69193001" allowfullscreen>
+  </iframe>
 </div>
