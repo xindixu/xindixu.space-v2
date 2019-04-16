@@ -4,7 +4,7 @@
       enter-active-class="animated zoomIn"
       leave-active-class="animated zoomOut"
     >
-      <div v-show="isShow" v-for="(icon, index) in icons" :key="index">
+      <div v-show="isShow" v-for="(icon, index) in icons" :key="icon">
         <n-button type="info" round icon @click="process(index);">
           <i class="now-ui-icons" :class="icon"></i>
         </n-button>
