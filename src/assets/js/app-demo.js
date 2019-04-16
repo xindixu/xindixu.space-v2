@@ -150,7 +150,6 @@ const callback = () => {
       animating = false;
     }
   };
-  console.log('exe');
   init();
 };
 

@@ -138,7 +138,6 @@ THINK ... before you submit
   methods: {
     checkForm() {
       this.submit();
-      console.log('check');
     },
     submit() {
       this.$http
@@ -148,12 +147,9 @@ THINK ... before you submit
         )
         .then(
           response => {
-            console.log(response);
             this.modalOn = true;
           },
-          error => {
-            console.log(error);
-          }
+          error => {}
         );
     }
   }

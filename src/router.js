@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Home from './pages/Home.vue';
 import About from './pages/About.vue';
 import Work from './pages/Work.vue';
-import Blog from './pages/Blog.vue';
+// import Blog from './pages/Blog.vue';
 import Casper from './pages/Casper.vue';
 import WorkDetail from './pages/WorkDetail.vue';
 
@@ -55,14 +55,14 @@ export default new Router({
         header: { colorOnScroll: 400 }
       }
     },
-    {
-      path: '/blog',
-      name: 'blog',
-      components: { default: Blog, header: AppNavbar, footer: AppFooter },
-      props: {
-        header: { colorOnScroll: 400 }
-      }
-    },
+    // {
+    //   path: '/blog',
+    //   name: 'blog',
+    //   components: { default: Blog, header: AppNavbar, footer: AppFooter },
+    //   props: {
+    //     header: { colorOnScroll: 400 }
+    //   }
+    // },
     {
       path: '/casper',
       name: 'casper',
