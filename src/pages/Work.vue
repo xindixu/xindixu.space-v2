@@ -27,29 +27,26 @@
           </template>
           <div class="row">
             <div v-for="data in sortedWorkList[category]" :key="data.index">
-              <div class="card-deck text-center">
-                <router-link :to="'/work/' + data.id">
-                  <Card class="work-card grow">
-                    <template slot="image">
-                      <img :src="'img/work/' + data.id + '.png'" alt="" />
+              <router-link :to="'/work/' + data.id">
+                <Card class="work-card grow">
+                  <template slot="image">
+                    <img :src="'img/work/' + data.id + '.png'" alt="" />
+                    <!--
+                      <BlurLazyImage
+                        class="work-card-img"
+                        :src="'img/work/' + data.id + '.png'"
+                        :src-placeholder="
+                          'img/work/placeholder' + data.id + '.png'
+                        "
+                      ></BlurLazyImage>
+                    -->
+                  </template>
 
-                      <!--
-                        <BlurLazyImage
-                          class="work-card-img"
-                          :src="'img/work/' + data.id + '.png'"
-                          :src-placeholder="
-                            'img/work/placeholder' + data.id + '.png'
-                          "
-                        ></BlurLazyImage>
-                      -->
-                    </template>
-
-                    <template slot="raw-content">
-                      <h4 class="my-4">{{ data.title }}</h4>
-                    </template>
-                  </Card>
-                </router-link>
-              </div>
+                  <template slot="raw-content">
+                    <h4 class="my-4">{{ data.title }}</h4>
+                  </template>
+                </Card>
+              </router-link>
             </div>
           </div>
         </TabPane>
@@ -144,19 +141,21 @@ img {
   margin: 1%;
 
   .row {
-    margin: 0%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1%;
     max-width: 95vw;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-auto-rows: minmax(280px, auto);
-    grid-gap: 1rem 3rem;
+    grid-gap: 1rem 2rem;
   }
 
   .work-card {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
   }
 }
 a:hover,
