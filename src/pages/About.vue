@@ -4,7 +4,6 @@
       <swiper ref="swiper" :options="swiperOptionV">
         <swiper-slide v-if="!$isMobile">
           <div class="bg-img swiper-lazy" data-background="img/bg/bg20.jpg">
-            <div class="swiper-lazy-preloader"></div>
             <div class="row">
               <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
               <div class="svg-wrapper"><Xin></Xin><Xin0></Xin0></div>
@@ -152,167 +151,19 @@
             </div>
           </div>
         </swiper-slide>
-        <swiper-slide>
-          <div class="bg-img swiper-lazy" data-background="img/bg/bg31.jpg">
-            <div v-if="!$isMobile" class="row">
-              <div class="col half">
-                <div class="white left top">
-                  <h1>Learning...</h1>
-                  <p>
-                    I major in advertising and I am part of TexasMedia. I just
-                    finished my certificate for Computer Science and I will keep
-                    explore more.
-                  </p>
-                  <p>
-                    I want to be a web developer after graduation so I am
-                    dedicated to learn lots of modern web technologies online.
-                  </p>
-                </div>
-              </div>
-              <div class="col half chinese">
-                <div class="white right bottom">
-                  <h1 class="chineseTitle">学习中...</h1>
-                  <p>
-                    我主修广告，是TexasMedia的一员。我刚刚拿到了我的计算机科学的证书，我也会继续深入学习。
-                  </p>
-                  <p>
-                    我毕业后想做个网页开发工程师，所以全身心地学习各种现代网页开发技术。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div v-else>
-              <div v-if="!$userReadChinese" class="half">
-                <div class="white left top">
-                  <h1>Learning...</h1>
-                  <p>
-                    I major in advertising and I am part of TexasMedia. I just
-                    finished my certificate for Computer Science and I will keep
-                    explore more.
-                  </p>
-                  <p>
-                    I want to be a web developer after graduation so I am
-                    dedicated to learn lots of modern web technologies online.
-                  </p>
-                </div>
-              </div>
-              <div v-else class="half chinese">
-                <div class="white right top">
-                  <h1 class="chineseTitle">学习中...</h1>
-                  <p>
-                    我主修广告，是TexasMedia的一员。我刚刚拿到了我的计算机科学的证书，我也会继续深入学习。
-                  </p>
-                  <p>
-                    我毕业后想做个网页开发工程师，所以全身心地学习各种现代网页开发技术。
-                  </p>
-                </div>
-              </div>
-            </div>
+        <swiper-slide v-for="obj in slideObjects" :key="obj.enTitle">
+          <div
+            class="bg-img swiper-lazy"
+            :data-background="'img/bg/' + obj.background + '.jpg'"
+          >
+            <DoingSlide :obj="obj"></DoingSlide>
           </div>
         </swiper-slide>
 
-        <swiper-slide>
-          <div class="bg-img swiper-lazy" data-background="img/bg/bg33.jpg">
-            <div v-if="!$isMobile" class="row">
-              <div class="col half">
-                <div class="white left bottom">
-                  <h1>Working...</h1>
-                  <p>
-                    I am currently interning at Nokia as a front-end web
-                    developer. My work includes designing, implementing, and
-                    maintaining websites with Sketch, WordPress, HTML, JS, and
-                    Python Django.
-                  </p>
-                </div>
-              </div>
-              <div class="col half chinese">
-                <div class="white right top">
-                  <h1 class="chineseTitle">工作中...</h1>
-                  <p>
-                    我现在在Nokia实习，做前端开发。我的工作包括设计，开发，维护网站，主要用Sketch，WordPress，HTML，JS，和Python
-                    Django.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div v-else>
-              <div v-if="!$userReadChinese" class="half">
-                <div class="white left top">
-                  <h1>Working...</h1>
-                  <p>
-                    I am currently interning at Nokia as a front-end web
-                    developer. My work includes designing, implementing, and
-                    maintaining websites with Sketch, WordPress, HTML, JS, and
-                    Python Django.
-                  </p>
-                </div>
-              </div>
-              <div v-else class="half chinese">
-                <div class="white right top">
-                  <h1 class="chineseTitle">工作中...</h1>
-                  <p>
-                    我现在在Nokia实习，做前端开发。我的工作包括设计，开发，维护网站，主要用Sketch，WordPress，HTML，JS，和Python
-                    Django.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="bg-img swiper-lazy" data-background="img/bg/bg19.jpg">
-            <div v-if="!$isMobile" class="row">
-              <div class="col half">
-                <div class="white left top">
-                  <h1>Enjoying...</h1>
-                  <p>
-                    I love my super needy kitty, Dr. Casper Meowspy. I love to
-                    exercise, weight training, Tae Kwon Do, swimming, anything
-                    without "balls". During my vacations, I love to travel
-                    around and explore new places.
-                  </p>
-                </div>
-              </div>
-              <div class="col half chinese">
-                <div class="white right bottom">
-                  <h1 class="chineseTitle">玩耍中...</h1>
-                  <p>
-                    我爱我的猫猫，Dr. Casper Meowspy。
-                    我乐于锻炼身体，健身房，跆拳道，游泳，任何和“球”无关的运动。在放假时，我喜欢出游，探索各种地方。
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div v-else>
-              <div v-if="!$userReadChinese" class="half">
-                <div class="white left top">
-                  <h1>Enjoying...</h1>
-                  <p>
-                    I love my super needy kitty, Dr. Casper Meowspy. I love to
-                    exercise, weight training, Tae Kwon Do, swimming, anything
-                    without "balls". During my vacations, I love to travel
-                    around and explore new places.
-                  </p>
-                </div>
-              </div>
-              <div v-else class="half chinese">
-                <div class="white right top">
-                  <h1 class="chineseTitle">玩耍中...</h1>
-                  <p>
-                    我爱我的猫猫，Dr. Casper Meowspy。
-                    我乐于锻炼身体，健身房，跆拳道，游泳，任何和“球”无关的运动。在放假时，我喜欢出游，探索各种地方。
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div v-observe-visibility="visibilityChangedS3"></div>
-          </div>
-        </swiper-slide>
         <swiper-slide style="background-color:white">
           <transition
             enter-active-class="animated bounceIn"
-            leave-active-class="animated fadeOut faster"
+            leave-active-class="animated fadeOut fastest"
             mode="out-in"
           >
             <div
@@ -384,6 +235,7 @@
 import { SquareLink, SquareTexts, Button, ScrollDown } from '@/components';
 import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 import VueWordCloud from 'vuewordcloud';
+import DoingSlide from '../layout/DoingSlide.vue';
 
 import 'swiper/dist/css/swiper.css';
 import { swiper, swiperSlide, a11y } from 'vue-awesome-swiper';
@@ -414,6 +266,38 @@ export default {
         preloadImages: false,
         a11y: true
       },
+      slideObjects: [
+        {
+          enTitle: 'Learning...',
+          zhTitle: '学习中...',
+          enPara:
+            'I major in advertising and I am part of TexasMedia. I just finished my certificate for Computer Science and I will keep explore more. I want to be a web developer after graduation so I am dedicated to learn lots of modern web technologies online.',
+          zhPara:
+            '我主修广告，是TexasMedia的一员。我刚刚拿到了我的计算机科学的证书，我也会继续深入学习。我毕业后想做个网页开发工程师，所以全身心地学习各种现代网页开发技术。',
+          background: 'bg31',
+          enTop: true
+        },
+        {
+          enTitle: 'Working...',
+          zhTitle: '工作中...',
+          enPara:
+            'I am currently interning at Nokia as a front-end web developer. My work includes designing, implementing, and maintaining websites with Sketch, WordPress, JavaScript, and Python Django.',
+          zhPara:
+            '我现在在Nokia实习，做前端开发。我的工作包括设计，开发，维护网站，主要用Sketch，WordPress，HTML，JS，和Python Django.',
+          background: 'bg33',
+          enTop: false
+        },
+        {
+          enTitle: 'Engjoying...',
+          zhTitle: '玩耍中...',
+          enPara:
+            'I love my super needy kitty, Dr. Casper Meowspy. I love to exercise, weight training, Tae Kwon Do, swimming, anything without "balls". During my vacations, I love to travel around and explore new places.',
+          zhPara:
+            '我爱我的猫猫，Dr. Casper Meowspy。我常锻炼身体，健身房，跆拳道，游泳，任何和“球”无关的运动。在放假时，我喜欢出游，探索各种地方。',
+          background: 'bg19',
+          enTop: true
+        }
+      ],
       words: [
         ['Angular', 40],
         ['Vue.js', 40],
@@ -470,9 +354,7 @@ export default {
     visibilityChangedS3() {
       this.cloudShow = false;
     },
-    callback() {
-      console.log('change');
-    }
+    callback() {}
   },
   components: {
     Xu0,
@@ -488,7 +370,8 @@ export default {
     [Button.name]: Button,
     swiper,
     swiperSlide,
-    ScrollDown
+    ScrollDown,
+    DoingSlide
   }
 };
 </script>
@@ -578,25 +461,6 @@ svg {
     position: absolute;
     left: 65%;
   }
-}
-
-.half {
-  height: 90vh;
-  .white {
-    color: white;
-  }
-}
-.left {
-  text-align: right;
-}
-.top {
-  margin-top: 30vh;
-}
-.bottom {
-  margin-top: 60vh;
-}
-.right {
-  text-align: left;
 }
 
 .tint {
