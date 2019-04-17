@@ -24,7 +24,7 @@ export default new Router({
         footer: AppFooter
       },
       props: {
-        header: { colorOnScroll: 400 }
+        header: { transparent: true }
       }
     },
     {
@@ -32,7 +32,7 @@ export default new Router({
       name: 'about',
       components: { default: About, header: AppNavbar, footer: AppFooter },
       props: {
-        header: { colorOnScroll: 400 }
+        header: { transparent: true }
       }
     },
     {

@@ -374,10 +374,7 @@
             </div>
           </div>
         </swiper-slide>
-        <div
-          class="swiper-pagination swiper-pagination-v"
-          slot="pagination"
-        ></div>
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
   </div>
@@ -389,7 +386,7 @@ import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 import VueWordCloud from 'vuewordcloud';
 
 import 'swiper/dist/css/swiper.css';
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import { swiper, swiperSlide, a11y } from 'vue-awesome-swiper';
 
 export default {
   data() {
@@ -399,9 +396,12 @@ export default {
         effect: 'slide',
         speed: 500,
         pagination: {
-          el: '.swiper-pagination-v',
+          el: '.swiper-pagination',
           clickable: true,
-          dynamicBullets: true
+          dynamicBullets: true,
+          renderBullet: (index, className) => {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
         },
         mousewheel: {
           forceToAxis: true,
@@ -414,7 +414,8 @@ export default {
         lazy: {
           loadPrevNext: true
         },
-        preloadImages: false
+        preloadImages: false,
+        a11y: true
       },
       words: [
         ['Angular', 40],
@@ -523,15 +524,8 @@ export default {
   .bg-img {
     padding: 70px 5%;
   }
-
-  .swiper-pagination {
-    z-index: 10;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: #e2b4bd;
-  }
 }
+
 svg {
   width: 100%;
   height: 100%;

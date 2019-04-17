@@ -16,4 +16,7 @@ v-cloak {
 body {
   overflow: auto;
 }
+.swiper-pagination-bullet-active {
+  background: #e2b4bd !important;
+}
 </style>

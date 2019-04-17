@@ -4,9 +4,6 @@
       <swiper id="v" :options="swiperOptionV" ref="homeSwiper">
         <swiper-slide id="slide1">
           <div class="bg-img" style="background-image:url(img/home/2.jpg)">
-            <!--
-              <p>Mobile: {{ $isMobile }} Chinese: {{ $userReadChinese }}</p>
-            -->
             <div
               v-if="!$isMobile"
               class="col-lg-5 offset-lg-7 col-md-6 offset-md-6"
@@ -53,360 +50,21 @@
           </div>
           <scroll-down> </scroll-down>
         </swiper-slide>
-        <swiper-slide class="slideHelp">
-          <div class="bg-img swiper-lazy" data-background="img/bg/bg12.jpg">
-            <div class="swiper-lazy-preloader"></div>
-            <div v-if="!$isMobile">
-              <div class="row">
-                <div class="col-lg-6 col-md-8">
-                  <h1>Web Development</h1>
-                  <div>
-                    <img class="introPic" src="img/home/web.svg" alt="" />
-                  </div>
-                  <h4 class="english">
-                    Establishing web presence contributes a lot to the success
-                    of your business.
-                  </h4>
-                  <h4 class="english">
-                    Why not build a stunning website together?
-                  </h4>
-                </div>
 
-                <div class="offset-lg-4 offset-md-2 col-lg-2 col-md-2">
-                  <div class="zhIntro vertical">
-                    <h1 class="chineseTitle">网页开发</h1>
-                    <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
-                    <h4 class="chinese indentV">不如让我来帮你？</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-4 col-md-6 offset-lg-6 offset-md-2 project">
-                  <div>
-                    <img class="projectPic" src="img/home/code.svg" alt="" />
-                  </div>
-                  <div class="row substitle">
-                    <div class="col-1">
-                      <h4>These</h4>
-                      <h4 class="chinese">这</h4>
-                    </div>
-                    <div class="col-2">
-                      <IncreaseNum start="0" end="10"></IncreaseNum>
-                    </div>
-                    <div class="col-9">
-                      <h4>projects can prove my ability</h4>
-                      <h4 class="chinese">个项目可以证明我</h4>
-                    </div>
-                    <div class="link">
-                      <SquareLink link="work#development"
-                        >take a look</SquareLink
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div v-else>
-              <div v-if="$userReadChinese">
-                <div class="row">
-                  <div class="zhIntro vertical">
-                    <h1 class="chineseTitle">网页开发</h1>
-                    <h4 class="chinese indentV">在网络上刷存在感很重要</h4>
-                    <h4 class="chinese indentV">不如让我来帮你？</h4>
-                  </div>
-                </div>
-
-                <div class="verticalProject">
-                  <div class="substitle vertical">
-                    <h4 class="chinese">这<span>10</span>个项目可以证明我</h4>
-                    <IncreaseNum start="0" end="10"></IncreaseNum>
-                    <div class="link">
-                      <SquareLink class="chinese" link="work#development"
-                        >看看</SquareLink
-                      >
-                    </div>
-                  </div>
-                  <div>
-                    <img class="projectPic" src="img/home/code.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div v-else>
-                <h1>Web Development</h1>
-                <div>
-                  <img class="introPic" src="img/home/web.svg" alt="" />
-                </div>
-                <h4 class="english">
-                  Establishing web presence contributes a lot to the success of
-                  your business.
-                </h4>
-                <h4 class="english">
-                  Why not build a stunning website together?
-                </h4>
-
-                <div class="project">
-                  <div>
-                    <img class="projectPic" src="img/home/code.svg" alt="" />
-                  </div>
-                  <div class="row substitle">
-                    <div class="col-2"><h4>These</h4></div>
-                    <div class="col-1">
-                      <IncreaseNum start="0" end="10"></IncreaseNum>
-                    </div>
-                    <div class="col-auto">
-                      <h4>projects can prove my ability</h4>
-                    </div>
-                    <div class="link">
-                      <SquareLink link="work#development"
-                        >take a look</SquareLink
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide class="slideHelp">
-          <div class="bg-img swiper-lazy" data-background="img/bg/bg10.jpg">
-            <div class="swiper-lazy-preloader"></div>
-            <div v-if="!$isMobile">
-              <div class="row">
-                <div class="col-lg-6 col-md-8">
-                  <h1>Strategic Marketing</h1>
-                  <div>
-                    <img class="introPic" src="img/home/analysis.svg" alt="" />
-                  </div>
-                  <h4 class="english">
-                    Research is the cornerstone of any effective marketing
-                    strategy.
-                  </h4>
-                  <h4 class="english">
-                    Let me help you to translate the facts and numbers to
-                    actionable business decisions that make an impact.
-                  </h4>
-                </div>
-
-                <div class="offset-lg-4 offset-md-2 col-lg-2 col-md-2">
-                  <div class="zhIntro vertical">
-                    <h1 class="chineseTitle">营销企划</h1>
-                    <h4 class="chinese indentV">从市场调研中披沙沥金</h4>
-                    <h4 class="chinese indentV">规划出有效的广告策略</h4>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-4 col-md-6 offset-lg-6 offset-md-2 project">
-                  <div>
-                    <img class="projectPic" src="img/home/project.svg" alt="" />
-                  </div>
-                  <div class="row substitle">
-                    <div class="col-1">
-                      <h4>These</h4>
-                      <h4 class="chinese">这</h4>
-                    </div>
-                    <div class="col-2">
-                      <IncreaseNum start="0" end="7"></IncreaseNum>
-                    </div>
-                    <div class="col-9">
-                      <h4>projects can prove my ability</h4>
-                      <h4 class="chinese">个项目可以证明我</h4>
-                    </div>
-                    <div class="link">
-                      <SquareLink link="work#marketing">take a look</SquareLink>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div v-else>
-              <div v-if="$userReadChinese">
-                <div class="row">
-                  <div class="zhIntro vertical">
-                    <h1 class="chineseTitle">营销企划</h1>
-                    <h4 class="chinese indentV">从市场调研中披沙沥金</h4>
-                    <h4 class="chinese indentV">规划出有效的广告策略</h4>
-                  </div>
-                </div>
-
-                <div class="verticalProject">
-                  <div class="substitle vertical">
-                    <h4 class="chinese">这<span>10</span>个项目可以证明我</h4>
-                    <IncreaseNum start="0" end="7"></IncreaseNum>
-                    <div class="link">
-                      <SquareLink class="chinese" link="work#marketing"
-                        >看看</SquareLink
-                      >
-                    </div>
-                  </div>
-                  <div>
-                    <img class="projectPic" src="img/home/project.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div v-else>
-                <h1>Strategic Marketing</h1>
-                <div>
-                  <img class="introPic" src="img/home/analysis.svg" alt="" />
-                </div>
-                <h4 class="english">
-                  Research is the cornerstone of any effective marketing
-                  strategy.
-                </h4>
-                <h4 class="english">
-                  Let me translate the facts and numbers to actionable business
-                  plans that make an impact.
-                </h4>
-
-                <div class="project">
-                  <div>
-                    <img class="projectPic" src="img/home/project.svg" alt="" />
-                  </div>
-                  <div class="row substitle">
-                    <div class="col-2"><h4>These</h4></div>
-                    <div class="col-1">
-                      <IncreaseNum start="0" end="7"></IncreaseNum>
-                    </div>
-                    <div class="col-auto">
-                      <h4>projects can prove my ability</h4>
-                    </div>
-                    <div class="link">
-                      <SquareLink link="work#marketing">take a look</SquareLink>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide class="slideHelp">
-          <div class="bg-img swiper-lazy" data-background="img/bg/bg25.jpg">
-            <div class="swiper-lazy-preloader"></div>
-            <div v-if="!$isMobile">
-              <div class="row">
-                <div class="col-lg-6 col-md-8">
-                  <h1>Creative Execution</h1>
-                  <div>
-                    <img class="introPic" src="img/home/visual.svg" alt="" />
-                  </div>
-                  <h4 class="english">
-                    Got an amazing idea, but don't know how to execute it?
-                  </h4>
-                  <h4 class="english">
-                    No worries. I can help you get your idea across with
-                    compelling visuals.
-                  </h4>
-                </div>
-
-                <div class="offset-lg-4 offset-md-2 col-lg-2 col-md-2">
-                  <div class="zhIntro vertical">
-                    <h1 class="chineseTitle">创意设计</h1>
-                    <h4 class="chinese indentV">有想法却不知如何表达？</h4>
-                    <h4 class="chinese indentV">
-                      让我帮你以最有趣的形式传达它
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-4 col-md-6 offset-lg-6 offset-md-2 project">
-                  <div>
-                    <img class="projectPic" src="img/home/graphic.svg" alt="" />
-                  </div>
-                  <div class="row substitle">
-                    <div class="col-1">
-                      <h4>These</h4>
-                      <h4 class="chinese">这</h4>
-                    </div>
-                    <div class="col-2">
-                      <IncreaseNum start="0" end="15"></IncreaseNum>
-                    </div>
-                    <div class="col-9">
-                      <h4>projects can prove my ability</h4>
-                      <h4 class="chinese">个项目可以证明我</h4>
-                    </div>
-                    <div class="link">
-                      <SquareLink link="work#creative">take a look</SquareLink>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div v-else>
-              <div v-if="$userReadChinese">
-                <div class="row">
-                  <div class="zhIntro vertical">
-                    <h1 class="chineseTitle">创意设计</h1>
-                    <h4 class="chinese indentV">有想法却不知如何表达？</h4>
-                    <h4 class="chinese indentV">
-                      让我帮你以最有趣的形式传达它
-                    </h4>
-                  </div>
-                </div>
-
-                <div class="verticalProject">
-                  <div class="substitle vertical">
-                    <h4 class="chinese">这<span>10</span>个项目可以证明我</h4>
-                    <IncreaseNum start="0" end="10"></IncreaseNum>
-                    <div class="link">
-                      <SquareLink class="chinese" link="work#creative"
-                        >看看</SquareLink
-                      >
-                    </div>
-                  </div>
-                  <div>
-                    <img class="projectPic" src="img/home/graphic.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div v-else>
-                <h1>Creative Execution</h1>
-                <div>
-                  <img class="introPic" src="img/home/visual.svg" alt="" />
-                </div>
-                <h4 class="english">
-                  Got an amazing idea, but don't know how to execute it?
-                </h4>
-                <h4 class="english">
-                  No worries. I can help you get your idea across with
-                  compelling visuals.
-                </h4>
-
-                <div class="project">
-                  <div>
-                    <img class="projectPic" src="img/home/graphic.svg" alt="" />
-                  </div>
-                  <div class="row substitle">
-                    <div class="col-2"><h4>These</h4></div>
-                    <div class="col-1">
-                      <IncreaseNum start="0" end="10"></IncreaseNum>
-                    </div>
-                    <div class="col-auto">
-                      <h4>projects can prove my ability</h4>
-                    </div>
-                    <div class="link">
-                      <SquareLink link="work#creative">take a look</SquareLink>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <div
-          class="swiper-pagination swiper-pagination-v"
-          slot="pagination"
-        ></div>
+        <HelpSlide
+          v-for="obj in slideObjects"
+          :key="obj.link"
+          :obj="obj"
+        ></HelpSlide>
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
   </div>
 </template>
 <script>
-import { SquareLink, IncreaseNum, ScrollDown } from '@/components';
-import 'swiper/dist/css/swiper.css';
+import { ScrollDown } from '@/components';
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import HelpSlide from '../layout/HelpSlide.vue';
 
 export default {
   name: 'Home',
@@ -417,7 +75,7 @@ export default {
         direction: 'vertical',
         speed: 600,
         pagination: {
-          el: '.swiper-pagination-v',
+          el: '.swiper-pagination',
           clickable: true,
           dynamicBullets: true
         },
@@ -433,15 +91,60 @@ export default {
           loadPrevNext: true
         },
         preloadImages: false
-      }
+      },
+      slideObjects: [
+        {
+          enTitle: 'Web Development',
+          zhTitle: '网页开发',
+          enSubTitle1:
+            'Establishing web presence contributes a lot to the success of your business.',
+          enSubTitle2: 'Why not build a stunning website together?',
+          zhSubTitle1: '在网络上刷存在感很重要',
+          zhSubTitle2: '不如让我来帮你？',
+          numOfProjects: 15,
+          link: 'development',
+          introPic: 'web',
+          projectPic: 'code',
+          background: 'bg12'
+        },
+        {
+          enTitle: 'Strategic Marketing',
+          zhTitle: '营销企划',
+          enSubTitle1:
+            'Research is the cornerstone of any effective marketing strategy.',
+          enSubTitle2:
+            'Let me help you to translate the facts and numbers to actionable business decisions that make an impact.',
+          zhSubTitle1: '从市场调研中披沙沥金',
+          zhSubTitle2: '规划出有效的广告策略',
+          numOfProjects: 10,
+          link: 'marketing',
+          introPic: 'analysis',
+          projectPic: 'project',
+          background: 'bg10'
+        },
+        {
+          enTitle: 'Creative Execution',
+          zhTitle: '创意设计',
+          enSubTitle1:
+            " Got an amazing idea, but don't know how to execute it?",
+          enSubTitle2:
+            'No worries. I can help you get your idea across with compelling visuals.',
+          zhSubTitle1: '有想法却不知如何表达？',
+          zhSubTitle2: '让我帮你以最有趣的形式传达它',
+          numOfProjects: 25,
+          link: 'creative',
+          introPic: 'visual',
+          projectPic: 'graphic',
+          background: 'bg25'
+        }
+      ]
     };
   },
   components: {
-    SquareLink,
-    IncreaseNum,
     swiper,
     swiperSlide,
-    ScrollDown
+    ScrollDown,
+    HelpSlide
   }
 };
 </script>
@@ -502,47 +205,6 @@ export default {
   }
 }
 
-.slideHelp {
-  .introPic {
-    width: 500px;
-  }
-
-  .zhIntro {
-    height: 580px;
-    position: absolute;
-    top: auto;
-    right: auto;
-
-    .chineseTitle {
-      letter-spacing: 15px;
-    }
-
-    .chinese {
-      letter-spacing: 15px;
-    }
-  }
-
-  .project {
-    margin-top: 10vh;
-    .projectPic {
-      width: 80px;
-      opacity: 0.5;
-      margin-left: -50px;
-    }
-
-    .substitle {
-      margin-top: -50px;
-      h4 {
-        margin-top: 0px;
-      }
-    }
-  }
-
-  .link {
-    margin-left: 280px;
-  }
-}
-
 /* ----------- Non-Retina Screens ----------- */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
 }
@@ -600,121 +262,6 @@ export default {
       top: 58vh;
     }
   }
-
-  .slideHelp {
-    h1 {
-      font-size: 2em;
-      line-height: 0.8em;
-      margin-bottom: 10px;
-    }
-    h4 {
-      font-size: 1em;
-      line-height: 1.4em;
-    }
-
-    .introPic {
-      margin-top: 20px;
-      width: 500px;
-    }
-
-    .zhIntro {
-      h1 {
-        font-size: 2.5em;
-        line-height: 0.8em;
-        margin-bottom: 10px;
-      }
-
-      height: 90vh;
-      position: absolute;
-      top: 12vh;
-      right: 5vw;
-
-      .indentV {
-        margin-top: 15vh;
-        h4 {
-          font-size: 1.15em;
-          line-height: 0.8em;
-        }
-      }
-    }
-
-    .project {
-      margin-top: 0px;
-
-      h4 {
-        font-size: 1em;
-        line-height: 1.5em;
-      }
-      .projectPic {
-        width: 40px;
-        margin-left: 75vw;
-      }
-
-      .increase-num h2 {
-        font-size: 1.2em;
-        line-height: 1.5em;
-        margin: 0px;
-      }
-
-      .substitle {
-        margin-top: -20px;
-        h4 {
-          margin-top: 0px;
-        }
-      }
-      .link {
-        margin-left: 50vw;
-        margin-top: -10px;
-      }
-    }
-
-    .verticalProject {
-      position: absolute;
-      left: 15vw;
-      top: 40vh;
-      height: auto;
-      width: auto;
-
-      .chinese {
-        letter-spacing: 6px;
-        font-size: 0.9em;
-        line-height: 0.8em;
-      }
-
-      .projectPic {
-        width: 40px;
-        opacity: 0.5;
-        margin-top: 0;
-        margin-right: 8vw;
-      }
-
-      .substitle {
-        height: 50vh;
-
-        span {
-          color: #ffffff00;
-        }
-
-        .increase-num {
-          position: absolute;
-          right: 5%;
-          top: 15%;
-          writing-mode: horizontal-tb;
-          h2 {
-            font-size: 1.2em;
-          }
-        }
-      }
-
-      .link {
-        margin-top: 50%;
-        a {
-          letter-spacing: 8px;
-          font-size: 0.9em;
-        }
-      }
-    }
-  }
 }
 
 // iphone 5 / 5S / SE
@@ -755,86 +302,6 @@ export default {
       top: 58vh;
     }
   }
-
-  .slideHelp {
-    h1 {
-      font-size: 2.5em;
-    }
-    h4 {
-      font-size: 1.2em;
-      line-height: 1.5em;
-    }
-
-    .zhIntro {
-      h1 {
-        font-size: 2.8em;
-      }
-    }
-
-    .project {
-      margin-top: 20px;
-
-      h4 {
-        font-size: 1.1em;
-        line-height: 1.2em;
-      }
-      .projectPic {
-        width: 50px;
-        margin-left: 75vw;
-      }
-
-      .increase-num h2 {
-        font-size: 1.4em;
-        margin-left: -8px;
-      }
-
-      .substitle {
-        margin-top: -20px;
-        margin-left: 15px;
-      }
-      .link {
-        margin-left: 45vw;
-      }
-    }
-
-    .verticalProject {
-      position: absolute;
-      left: 15vw;
-      top: 45vh;
-
-      .chinese {
-        letter-spacing: 8px;
-        font-size: 1.1em;
-        line-height: 1em;
-      }
-
-      .projectPic {
-        width: 50px;
-        opacity: 0.5;
-        margin-top: 0;
-        margin-right: 6vw;
-      }
-
-      .substitle {
-        .increase-num {
-          position: absolute;
-          right: 6%;
-          top: 15%;
-          h2 {
-            font-size: 1.3em;
-          }
-        }
-      }
-
-      .link {
-        margin-top: 50%;
-        a {
-          letter-spacing: 10px;
-          font-size: 1em;
-        }
-      }
-    }
-  }
 }
 
 // iphone 6 / 7 / 8 +
@@ -872,108 +339,6 @@ export default {
       top: 55vh;
     }
   }
-
-  .slideHelp {
-    h1 {
-      font-size: 3em;
-    }
-    h4 {
-      font-size: 1.4em;
-      line-height: 1.8em;
-    }
-
-    .zhIntro {
-      height: 90vh;
-
-      h1 {
-        font-size: 2.5em;
-        line-height: 0.8em;
-        margin-bottom: 10px;
-      }
-
-      .indentV {
-        margin-top: 15vh;
-        h4 {
-          font-size: 1.15em;
-          line-height: 0.8em;
-        }
-      }
-    }
-
-    .project {
-      margin-top: 50px;
-
-      h4 {
-        font-size: 1.2em;
-        line-height: 1.5em;
-      }
-      .projectPic {
-        width: 60px;
-        margin-left: 75vw;
-      }
-
-      .increase-num h2 {
-        font-size: 1.4em;
-        margin-left: -8px;
-      }
-
-      .substitle {
-        margin-top: -20px;
-        margin-left: 40px;
-      }
-      .link {
-        margin-left: 43vw;
-        margin-top: 0;
-      }
-    }
-
-    .verticalProject {
-      position: absolute;
-      left: 15vw;
-      top: 40vh;
-      height: auto;
-      width: auto;
-
-      .chinese {
-        letter-spacing: 8px;
-        font-size: 1.1em;
-        line-height: 1em;
-      }
-
-      .projectPic {
-        width: 50px;
-        opacity: 0.5;
-        margin-top: 0;
-        margin-right: 6vw;
-      }
-
-      .substitle {
-        height: 50vh;
-
-        span {
-          color: #ffffff00;
-        }
-
-        .increase-num {
-          position: absolute;
-          right: 5%;
-          top: 15%;
-          writing-mode: horizontal-tb;
-          h2 {
-            font-size: 1.3em;
-          }
-        }
-      }
-
-      .link {
-        margin-top: 50%;
-        a {
-          letter-spacing: 10px;
-          font-size: 1em;
-        }
-      }
-    }
-  }
 }
 
 // iphone X
@@ -1003,93 +368,6 @@ export default {
       }
       right: 50px;
       top: 55vh;
-    }
-  }
-
-  .slideHelp {
-    h1 {
-      font-size: 3em;
-    }
-    h4 {
-      font-size: 1.4em;
-      line-height: 1.8em;
-    }
-
-    .zhIntro {
-      height: 90vh;
-
-      h1 {
-        font-size: 3em;
-        line-height: 0.8em;
-        margin-bottom: 10px;
-      }
-
-      .indentV {
-        margin-top: 15vh;
-        h4 {
-          font-size: 1.15em;
-          line-height: 0.8em;
-        }
-      }
-    }
-
-    .project {
-      margin-top: 50px;
-
-      h4 {
-        font-size: 1.35em;
-        line-height: 1.5em;
-      }
-      .projectPic {
-        width: 60px;
-        margin-left: 75vw;
-      }
-
-      .increase-num h2 {
-        font-size: 1.4em;
-        margin-left: 0;
-      }
-
-      .substitle {
-        margin-top: -25px;
-        margin-left: 5px;
-      }
-      .link {
-        margin-left: 50vw;
-        margin-top: -5px;
-      }
-    }
-
-    .verticalProject {
-      top: 50vh;
-
-      .chinese {
-        letter-spacing: 8px;
-        font-size: 1.2em;
-      }
-
-      .projectPic {
-        width: 60px;
-        margin-top: -10px;
-        margin-right: 6vw;
-      }
-
-      .substitle {
-        .increase-num {
-          right: 6%;
-          top: 12%;
-          h2 {
-            font-size: 1.4em;
-          }
-        }
-      }
-
-      .link {
-        a {
-          letter-spacing: 10px;
-          font-size: 1.1em;
-        }
-      }
     }
   }
 }
