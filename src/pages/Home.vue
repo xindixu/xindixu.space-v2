@@ -134,8 +134,8 @@ export default {
             " Got an amazing idea, but don't know how to execute it?",
           enSubTitle2:
             'No worries. I can help you get your idea across with compelling visuals.',
-          zhSubTitle1: '有想法却不知如何表达？',
-          zhSubTitle2: '让我帮你以最有趣的形式传达它',
+          zhSubTitle1: '有想法却不知如何执行？',
+          zhSubTitle2: '让我帮你传达吧',
           numOfProjects: 25,
           link: 'creative',
           introPic: 'visual',

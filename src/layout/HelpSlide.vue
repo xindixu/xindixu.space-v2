@@ -93,8 +93,8 @@
             :alt="'Intro picture for' + obj.enTitle"
           />
         </div>
-        <h4 class="english">{{ enSubTitle1 }}</h4>
-        <h4 class="english">{{ enSubTitle2 }}</h4>
+        <h4 class="english">{{ obj.enSubTitle1 }}</h4>
+        <h4 class="english">{{ obj.enSubTitle2 }}</h4>
 
         <div class="project">
           <div>
@@ -222,23 +222,15 @@ export default {
     }
 
     .zhIntro {
-      h1 {
-        font-size: 2.5em;
-        line-height: 0.8em;
-        margin-bottom: 10px;
-      }
-
       height: 90vh;
       position: absolute;
       top: 12vh;
       right: 5vw;
 
-      .indentV {
-        margin-top: 15vh;
-        h4 {
-          font-size: 1.15em;
-          line-height: 0.8em;
-        }
+      .chineseTitle {
+        font-size: 2.5em;
+        line-height: 0.8em;
+        margin-bottom: 10px;
       }
     }
 
@@ -254,8 +246,8 @@ export default {
         margin-left: 75vw;
       }
 
-      .increase-num h2 {
-        font-size: 1.2em;
+      .increase-num /deep/ h2 {
+        font-size: 1.3em;
         line-height: 1.5em;
         margin: 0px;
       }
@@ -304,7 +296,7 @@ export default {
           right: 5%;
           top: 15%;
           writing-mode: horizontal-tb;
-          h2 {
+          /deep/ h2 {
             font-size: 1.2em;
           }
         }
@@ -323,6 +315,24 @@ export default {
 
 // iphone 5 / 5S / SE
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .slideHelp {
+    .zhIntro {
+      .indentV {
+        margin-top: 15vh;
+        h4 {
+          font-size: 1.15em;
+          line-height: 0.8em;
+          letter-spacing: 10px;
+        }
+      }
+      h4.chinese {
+        margin-top: 15vh;
+        font-size: 1.15em;
+        line-height: 1.2em;
+        letter-spacing: 14px;
+      }
+    }
+  }
 }
 
 // iphone 6 / 6S / 7 / 8
@@ -340,6 +350,9 @@ export default {
       h1 {
         font-size: 2.8em;
       }
+      h4.chinese {
+        font-size: 1.3em;
+      }
     }
 
     .project {
@@ -354,7 +367,7 @@ export default {
         margin-left: 75vw;
       }
 
-      .increase-num h2 {
+      .increase-num /deep/ h2 {
         font-size: 1.4em;
         margin-left: -8px;
       }
@@ -391,7 +404,7 @@ export default {
           position: absolute;
           right: 6%;
           top: 15%;
-          h2 {
+          /deep/ h2 {
             font-size: 1.3em;
           }
         }
@@ -409,30 +422,30 @@ export default {
 }
 
 // iphone 6 / 7 / 8 +
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 414px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   .slideHelp {
     h1 {
       font-size: 3em;
     }
     h4 {
-      font-size: 1.4em;
-      line-height: 1.8em;
+      font-size: 1.2em;
+      line-height: 1.6em;
     }
 
     .zhIntro {
       height: 90vh;
 
       h1 {
-        font-size: 2.5em;
+        font-size: 3em;
         line-height: 0.8em;
         margin-bottom: 10px;
       }
 
       .indentV {
         margin-top: 15vh;
-        h4 {
-          font-size: 1.15em;
-          line-height: 0.8em;
+        h4.chinese {
+          font-size: 1.3em;
+          line-height: 1.1em;
         }
       }
     }
@@ -449,7 +462,7 @@ export default {
         margin-left: 75vw;
       }
 
-      .increase-num h2 {
+      .increase-num /deep/ h2 {
         font-size: 1.4em;
         margin-left: -8px;
       }
@@ -493,11 +506,11 @@ export default {
 
         .increase-num {
           position: absolute;
-          right: 5%;
+          right: 6%;
           top: 15%;
           writing-mode: horizontal-tb;
-          h2 {
-            font-size: 1.3em;
+          /deep/ h2 {
+            font-size: 1.2em;
           }
         }
       }
@@ -514,10 +527,10 @@ export default {
 }
 
 // iphone X
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   .slideHelp {
     h1 {
-      font-size: 3em;
+      font-size: 2.9em;
     }
     h4 {
       font-size: 1.4em;
@@ -535,8 +548,8 @@ export default {
 
       .indentV {
         margin-top: 15vh;
-        h4 {
-          font-size: 1.15em;
+        h4.chinese {
+          font-size: 1.3em;
           line-height: 0.8em;
         }
       }
@@ -554,9 +567,9 @@ export default {
         margin-left: 75vw;
       }
 
-      .increase-num h2 {
+      .increase-num /deep/ h2 {
         font-size: 1.4em;
-        margin-left: 0;
+        margin-left: -5px;
       }
 
       .substitle {
@@ -587,7 +600,7 @@ export default {
         .increase-num {
           right: 6%;
           top: 12%;
-          h2 {
+          /deep/ h2 {
             font-size: 1.4em;
           }
         }
