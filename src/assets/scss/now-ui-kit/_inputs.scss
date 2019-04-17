@@ -131,6 +131,7 @@
         }
     }
     .input-group-prepend{
+      height: 35px !important;
       .input-group-text{
           background-color: $opacity-gray-3;
           border: none;
@@ -208,6 +209,7 @@
 .form-group{
   .input-group-prepend{
     margin-right: 0;
+    height: 35px !important;
 
     .input-group-text {
       border-left: 1px solid #E3E3E3;
@@ -220,10 +222,10 @@
 
   &.input-group-focus {
     .input-group-prepend .input-group-text {
-      border-left: 1px solid #f96332;
+      border-left: 1px solid $primary-color;
     }
     .input-group-append .input-group-text {
-      border-right: 1px solid #f96332;
+      border-right: 1px solid $primary-color;
     }
     &.no-border{
       .input-group-prepend .input-group-text{

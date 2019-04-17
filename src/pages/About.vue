@@ -205,23 +205,17 @@
               <div v-if="$isMobile">
                 <h4 v-if="$userReadChinese" class="chinese">人生轨迹 ...</h4>
                 <h4 v-else>My Life So Far ...</h4>
-                <n-button
-                  onclick="window.open('html/life-story.html','_blank');"
-                  type="warning"
-                  round
-                  >Click to Launch</n-button
-                >
               </div>
               <div v-else>
                 <h2 class="chinese">人生轨迹 ...</h2>
                 <h2>My Life So Far ...</h2>
-                <n-button
-                  onclick="window.open('html/life-story.html','_blank');"
-                  type="warning"
-                  round
-                  >Click to Launch</n-button
-                >
               </div>
+              <n-button
+                onclick="window.open('html/life-story.html','_blank');"
+                type="warning"
+                round
+                >Click to Launch</n-button
+              >
             </div>
           </div>
         </swiper-slide>
@@ -238,7 +232,7 @@ import VueWordCloud from 'vuewordcloud';
 import DoingSlide from '../layout/DoingSlide.vue';
 
 import 'swiper/dist/css/swiper.css';
-import { swiper, swiperSlide, a11y } from 'vue-awesome-swiper';
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
 
 export default {
   data() {

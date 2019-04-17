@@ -6,18 +6,24 @@
         <div class="col-sm-6 col-lg-6">
           <fg-input
             v-model="comment.name"
+            type="text"
             addon-left-icon="now-ui-icons users_single-02"
             placeholder="Casper Meowspy"
           >
           </fg-input>
+          <Alert type="info" :visible="nameError">Name is required.</Alert>
         </div>
         <div class="col-sm-6 col-lg-6">
           <fg-input
             v-model="comment.email"
+            type="email"
             addon-left-icon="now-ui-icons ui-1_email-85"
             placeholder="casper.meow@gmail.com"
           >
           </fg-input>
+          <Alert type="info" :visible="emailError"
+            >Valid email is required.</Alert
+          >
         </div>
       </div>
 
@@ -34,10 +40,13 @@
           v-model="comment.message"
         ></vue-showdown>
       </div>
+      <Alert type="info" :visible="messageError">Please enter your own message.</Alert>
+      </form>
+
       <div class="text-right">
         <input
           class="btn btn-primary btn-sm"
-          type="submit"
+          @click="checkForm();"
           name=""
           value="Submit"
         />
@@ -60,7 +69,8 @@
         <img src="/img/share/avatar.jpg" class="rounded-circle img-raised" />
       </div>
       <div class="text-center">
-        <h5>Nice! You just posted your comment! Refresh to check it out!</h5>
+        <h5>Yay! You just posted your comment! Refresh to check it out!</h5>
+        {{ response }}
       </div>
 
       <template slot="footer">
@@ -70,7 +80,7 @@
   </div>
 </template>
 <script>
-import { Button, FormGroupInput, Modal } from '@/components';
+import { Button, FormGroupInput, Modal, Alert } from '@/components';
 import { VueShowdown } from 'vue-showdown';
 
 export default {
@@ -81,16 +91,7 @@ export default {
       email: null,
       message: `# Yay! You've found this great way of sharing thoughts! :tada:
 
-I really like your website! :smile::cat::heart_eyes:
-
-<hr/>
-THINK ... before you submit
-- [x] Is it true?
-- [x] Is it helpful?
-- [x] Is it insightful?
-- [x] Is it nice?
-- [x] Is it kind?
-`
+I really like your website and Casper! :heart_eyes_cat:`
     },
     options: {
       omitExtraWLInCodeBlocks: false,
@@ -126,18 +127,54 @@ THINK ... before you submit
       metadata: false,
       splitAdjacentBlockquotes: false
     },
-    modalOn: false
+    modalOn: false,
+    nameError: false,
+    emailError: false,
+    messageError: false,
+    response: ''
   }),
   props: ['work'],
   components: {
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput,
     Modal,
-    VueShowdown
+    VueShowdown,
+    Alert
   },
   methods: {
     checkForm() {
-      this.submit();
+      if (this.comment.email && this.comment.name) {
+        this.submit();
+      }
+
+      if (!this.comment.name) {
+        this.nameError = true;
+      } else {
+        this.nameError = false;
+      }
+
+      if (!this.comment.email) {
+        this.emailError = true;
+      } else if (!this.validEmail(this.comment.email)) {
+        this.emailError = true;
+      } else {
+        this.emailError = false;
+      }
+
+      if (
+        this.comment.message ===
+        `# Yay! You've found this great way of sharing thoughts! :tada:
+
+I really like your website and Casper! :heart_eyes_cat:`
+      ) {
+        this.messageError = true;
+      } else {
+        this.messageError = false;
+      }
+    },
+    validEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
     },
     submit() {
       this.$http
@@ -148,8 +185,12 @@ THINK ... before you submit
         .then(
           response => {
             this.modalOn = true;
+            this.response = response;
           },
-          error => {}
+          error => {
+            this.modalOn = true;
+            this.response = error;
+          }
         );
     }
   }
@@ -159,7 +200,7 @@ THINK ... before you submit
 @import '../../assets/scss/now-ui-kit/variables.scss';
 #commentSection {
   #editor {
-    margin: 0;
+    margin: 0 0 10px 0;
     height: 100%;
     border: 1px solid $primary-color;
     border-radius: 10px;
@@ -183,6 +224,7 @@ THINK ... before you submit
       font-size: 14px;
       font-family: 'Monaco', courier, monospace;
       padding: 20px;
+      border-radius: 10px 0 0 10px;
     }
 
     code {

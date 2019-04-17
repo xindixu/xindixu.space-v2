@@ -97,7 +97,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .badge {
   margin-left: 5px;
   margin-right: 5px;

@@ -37,12 +37,11 @@ export default {
     dismissible: {
       type: Boolean,
       default: false
+    },
+    visible: {
+      type: Boolean,
+      default: true
     }
-  },
-  data() {
-    return {
-      visible: true
-    };
   },
   methods: {
     dismissAlert() {
