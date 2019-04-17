@@ -398,10 +398,7 @@ export default {
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
-          dynamicBullets: true,
-          renderBullet: (index, className) => {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-          }
+          dynamicBullets: true
         },
         mousewheel: {
           forceToAxis: true,
@@ -492,12 +489,6 @@ export default {
     swiper,
     swiperSlide,
     ScrollDown
-  },
-  mounted() {
-    // //do something after mounting vue instance
-    // let scriptTag = document.createElement('script');
-    // scriptTag.src = 'https://cdn.wordart.com/wordart.min.js';
-    // document.getElementsByTagName('head')[0].appendChild(scriptTag);
   }
 };
 </script>

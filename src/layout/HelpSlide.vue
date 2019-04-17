@@ -1,95 +1,8 @@
 <template>
-  <swiper-slide class="slideHelp">
-    <div
-      class="bg-img swiper-lazy"
-      :data-background="'img/bg/' + obj.background + '.jpg'"
-    >
-      <div class="swiper-lazy-preloader"></div>
-      <div v-if="!$isMobile">
-        <div class="row">
-          <div class="col-lg-6 col-md-8">
-            <h1>{{ obj.enTitle }}</h1>
-            <div>
-              <img
-                class="introPic"
-                :src="'img/home/' + obj.introPic + '.svg'"
-                :alt="'Intro picture for' + obj.enTitle"
-              />
-            </div>
-            <h4 class="english">{{ obj.enSubTitle1 }}</h4>
-            <h4 class="english">{{ obj.enSubTitle2 }}</h4>
-          </div>
-
-          <div class="offset-lg-4 offset-md-2 col-lg-2 col-md-2">
-            <div class="zhIntro vertical">
-              <h1 class="chineseTitle">{{ obj.zhTitle }}</h1>
-              <h4 class="chinese indentV">{{ obj.zhSubTitle1 }}</h4>
-              <h4 class="chinese indentV">{{ obj.zhSubTitle2 }}</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 offset-lg-6 offset-md-2 project">
-            <div>
-              <img
-                class="projectPic"
-                :src="'img/home/' + obj.projectPic + '.svg'"
-                :alt="'Project icon for ' + obj.enTitle"
-              />
-            </div>
-            <div class="row substitle">
-              <div class="col-1">
-                <h4>These</h4>
-                <h4 class="chinese">这</h4>
-              </div>
-              <div class="col-2">
-                <IncreaseNum start="0" :end="obj.numOfProjects"></IncreaseNum>
-              </div>
-              <div class="col-9">
-                <h4>projects can prove my ability</h4>
-                <h4 class="chinese">个项目可以证明我</h4>
-              </div>
-              <div class="link">
-                <SquareLink :link="'work#' + obj.link">take a look</SquareLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div v-else>
-        <div v-if="$userReadChinese">
-          <div class="row">
-            <div class="zhIntro vertical">
-              <h1 class="chineseTitle">{{ obj.zhTitle }}</h1>
-              <h4 class="chinese indentV">{{ obj.zhSubTitle1 }}</h4>
-              <h4 class="chinese indentV">{{ obj.zhSubTitle2 }}</h4>
-            </div>
-          </div>
-
-          <div class="verticalProject">
-            <div class="substitle vertical">
-              <h4 class="chinese">
-                这<span>{{ 10 }}</span
-                >个项目可以证明我
-              </h4>
-              <IncreaseNum start="0" :end="obj.numOfProjects"></IncreaseNum>
-              <div class="link">
-                <SquareLink class="chinese" :link="'work#' + obj.link"
-                  >看看</SquareLink
-                >
-              </div>
-            </div>
-            <div>
-              <img
-                class="projectPic"
-                :src="'img/home/' + obj.projectPic + '.svg'"
-                :alt="'Project icon for ' + obj.enTitle"
-              />
-            </div>
-          </div>
-        </div>
-        <div v-else>
+  <div class="slideHelp">
+    <div v-if="!$isMobile">
+      <div class="row">
+        <div class="col-lg-6 col-md-8">
           <h1>{{ obj.enTitle }}</h1>
           <div>
             <img
@@ -98,44 +11,123 @@
               :alt="'Intro picture for' + obj.enTitle"
             />
           </div>
-          <h4 class="english">{{ enSubTitle1 }}</h4>
-          <h4 class="english">{{ enSubTitle2 }}</h4>
+          <h4 class="english">{{ obj.enSubTitle1 }}</h4>
+          <h4 class="english">{{ obj.enSubTitle2 }}</h4>
+        </div>
 
-          <div class="project">
-            <div>
-              <img
-                class="projectPic"
-                :src="'img/home/' + obj.projectPic + '.svg'"
-                :alt="'Project icon for ' + obj.enTitle"
-              />
+        <div class="offset-lg-4 offset-md-2 col-lg-2 col-md-2">
+          <div class="zhIntro vertical">
+            <h1 class="chineseTitle">{{ obj.zhTitle }}</h1>
+            <h4 class="chinese indentV">{{ obj.zhSubTitle1 }}</h4>
+            <h4 class="chinese indentV">{{ obj.zhSubTitle2 }}</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 offset-lg-6 offset-md-2 project">
+          <div>
+            <img
+              class="projectPic"
+              :src="'img/home/' + obj.projectPic + '.svg'"
+              :alt="'Project icon for ' + obj.enTitle"
+            />
+          </div>
+          <div class="row substitle">
+            <div class="col-1">
+              <h4>These</h4>
+              <h4 class="chinese">这</h4>
             </div>
-            <div class="row substitle">
-              <div class="col-2"><h4>These</h4></div>
-              <div class="col-1">
-                <IncreaseNum start="0" :end="obj.numOfProjects"></IncreaseNum>
-              </div>
-              <div class="col-auto"><h4>projects can prove my ability</h4></div>
-              <div class="link">
-                <SquareLink :link="'work#' + obj.link">take a look</SquareLink>
-              </div>
+            <div class="col-2">
+              <IncreaseNum start="0" :end="obj.numOfProjects"></IncreaseNum>
+            </div>
+            <div class="col-9">
+              <h4>projects can prove my ability</h4>
+              <h4 class="chinese">个项目可以证明我</h4>
+            </div>
+            <div class="link">
+              <SquareLink :link="'work#' + obj.link">take a look</SquareLink>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </swiper-slide>
+    <div v-else>
+      <div v-if="$userReadChinese">
+        <div class="row">
+          <div class="zhIntro vertical">
+            <h1 class="chineseTitle">{{ obj.zhTitle }}</h1>
+            <h4 class="chinese indentV">{{ obj.zhSubTitle1 }}</h4>
+            <h4 class="chinese indentV">{{ obj.zhSubTitle2 }}</h4>
+          </div>
+        </div>
+
+        <div class="verticalProject">
+          <div class="substitle vertical">
+            <h4 class="chinese">
+              这<span>{{ 10 }}</span
+              >个项目可以证明我
+            </h4>
+            <IncreaseNum start="0" :end="obj.numOfProjects"></IncreaseNum>
+            <div class="link">
+              <SquareLink class="chinese" :link="'work#' + obj.link"
+                >看看</SquareLink
+              >
+            </div>
+          </div>
+          <div>
+            <img
+              class="projectPic"
+              :src="'img/home/' + obj.projectPic + '.svg'"
+              :alt="'Project icon for ' + obj.enTitle"
+            />
+          </div>
+        </div>
+      </div>
+      <div v-else>
+        <h1>{{ obj.enTitle }}</h1>
+        <div>
+          <img
+            class="introPic"
+            :src="'img/home/' + obj.introPic + '.svg'"
+            :alt="'Intro picture for' + obj.enTitle"
+          />
+        </div>
+        <h4 class="english">{{ enSubTitle1 }}</h4>
+        <h4 class="english">{{ enSubTitle2 }}</h4>
+
+        <div class="project">
+          <div>
+            <img
+              class="projectPic"
+              :src="'img/home/' + obj.projectPic + '.svg'"
+              :alt="'Project icon for ' + obj.enTitle"
+            />
+          </div>
+          <div class="row substitle">
+            <div class="col-2"><h4>These</h4></div>
+            <div class="col-1">
+              <IncreaseNum start="0" :end="obj.numOfProjects"></IncreaseNum>
+            </div>
+            <div class="col-auto"><h4>projects can prove my ability</h4></div>
+            <div class="link">
+              <SquareLink :link="'work#' + obj.link">take a look</SquareLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import { SquareLink, IncreaseNum } from '@/components';
-import { swiperSlide } from 'vue-awesome-swiper';
 
 export default {
   name: 'HelpSlide',
   components: {
     SquareLink,
-    IncreaseNum,
-    swiperSlide
+    IncreaseNum
   },
   props: {
     obj: {

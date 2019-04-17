@@ -51,11 +51,15 @@
           <scroll-down> </scroll-down>
         </swiper-slide>
 
-        <HelpSlide
-          v-for="obj in slideObjects"
-          :key="obj.link"
-          :obj="obj"
-        ></HelpSlide>
+        <swiper-slide v-for="obj in slideObjects" :key="obj.link">
+          <div
+            class="bg-img swiper-lazy"
+            :data-background="'img/bg/' + obj.background + '.jpg'"
+          >
+            <div class="swiper-lazy-preloader"></div>
+            <HelpSlide :obj="obj"></HelpSlide>
+          </div>
+        </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
@@ -63,6 +67,7 @@
 </template>
 <script>
 import { ScrollDown } from '@/components';
+import 'swiper/dist/css/swiper.css';
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import HelpSlide from '../layout/HelpSlide.vue';
 
@@ -169,10 +174,6 @@ export default {
   }
   .bg-img {
     padding: 70px 5%;
-  }
-
-  .swiper-pagination {
-    z-index: 10;
   }
 
   .swiper-pagination-bullet-active {
