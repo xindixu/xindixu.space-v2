@@ -29,7 +29,7 @@
             </div>
 
             <div class="row" id="rowBelow">
-              <div class="col-lg-6 col-md-10 offset-lg-5">
+              <div class="col-lg-6 col-md-10 offset-lg-5 content-container">
                 <div id="map-container" class="mx-4">
                   <img id="map" src="img/about/map.png" />
                   <Pin class="label pinFZ"></Pin>
@@ -421,8 +421,6 @@ svg {
   }
 }
 
-// all iphones
-
 #map-container {
   #map {
     width: 95%;
@@ -563,11 +561,68 @@ svg {
   }
 }
 
-@media only screen and (min-device-width: 960px) and (max-device-width: 1960px) and (-webkit-min-device-pixel-ratio: 1) {
+// Laptop M
+@media only screen and (min-width: 1024px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+  #rowBelow {
+    margin-top: -10vh;
+
+    .vertical {
+      margin-left: 10px;
+    }
+
+    .chinese p {
+      font-size: 1em;
+    }
+    .content-container {
+      #map-container {
+        #map {
+          width: 95%;
+          height: 95%;
+        }
+
+        .label {
+          position: absolute;
+        }
+        .pinFZ {
+          top: 20%;
+          left: 35.5%;
+        }
+        .pinAUS {
+          top: 17.5%;
+          left: 68.5%;
+        }
+      }
+      #text-container {
+        position: relative;
+        margin-top: -80px;
+        height: 150px;
+
+        #tagFZ {
+          position: absolute;
+          left: 20%;
+        }
+
+        #tagAUS {
+          position: absolute;
+          left: 60%;
+        }
+      }
+    }
+  }
 }
 
+// Laptop L
+@media only screen and (min-width: 1440px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 1) {
+  p {
+    font-size: 1.4em;
+  }
+
+  #rowBelow {
+    margin-top: -5vh;
+  }
+}
 // Retina
-@media screen and (min-device-width: 960px) and (max-device-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+@media screen and (min-width: 1024px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   #rowBelow {
     margin-top: 10vh;
   }
