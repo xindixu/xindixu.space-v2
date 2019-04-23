@@ -563,16 +563,16 @@ svg {
 
 // Laptop M
 @media only screen and (min-width: 1024px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+  p {
+    font-size: 1em;
+  }
   #rowBelow {
-    margin-top: -10vh;
+    margin-top: -20vh;
 
     .vertical {
       margin-left: 10px;
     }
 
-    .chinese p {
-      font-size: 1em;
-    }
     .content-container {
       #map-container {
         #map {
