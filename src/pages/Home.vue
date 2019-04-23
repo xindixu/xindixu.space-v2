@@ -406,23 +406,25 @@ export default {
 
       .indentV {
         h4 {
-          font-size: 1.3em;
+          font-size: 1.2em;
+          line-height: 1em;
         }
+        margin-top: 8vh;
       }
     }
     .enIntro {
       h1 {
         font-size: 3em;
-        line-height: 1.5em;
       }
       .indentH {
         h4 {
-          font-size: 1.3em;
-          line-height: 1.2em;
+          font-size: 1.2em;
+          line-height: 1em;
         }
+        margin-left: 50px;
       }
-      right: 50px;
-      top: 50vh;
+      left: -5vw;
+      top: 45vh;
     }
   }
 }

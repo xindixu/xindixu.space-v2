@@ -617,18 +617,40 @@ export default {
 }
 
 // Non-retina
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1024px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
   .slideHelp {
     h1 {
       font-size: 2.5em;
     }
     h4 {
-      font-size: 1.2em;
-      line-height: 1.5em;
+      font-size: 1em;
+      line-height: 1.5;
+    }
+
+    .introPic {
+      width: 400px;
+    }
+
+    .zhIntro {
+      height: 680px;
+      position: absolute;
+      top: auto;
+      right: auto;
+
+      .chineseTitle {
+        letter-spacing: 10px;
+      }
+
+      .chinese {
+        letter-spacing: 10px;
+      }
+      .indentV {
+        margin-top: 15vh;
+      }
     }
 
     .project {
-      margin-top: 0;
+      margin-top: -30px;
 
       h4 {
         font-size: 1.2em;
