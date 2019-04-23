@@ -25,7 +25,7 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-4 col-md-6 offset-lg-6 offset-md-2 project">
+        <div class="col-lg-6 col-md-6 offset-lg-6 offset-md-2 project">
           <div>
             <img
               class="projectPic"
@@ -612,6 +612,126 @@ export default {
           font-size: 1.1em;
         }
       }
+    }
+  }
+}
+
+// Non-retina
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+  .slideHelp {
+    h1 {
+      font-size: 2.5em;
+    }
+    h4 {
+      font-size: 1.2em;
+      line-height: 1.5em;
+    }
+
+    .project {
+      margin-top: 0;
+
+      h4 {
+        font-size: 1.2em;
+        line-height: 1.5em;
+      }
+      .projectPic {
+        width: 70px;
+        margin-left: -2vw;
+      }
+
+      .increase-num /deep/ h2 {
+        font-size: 2.5em;
+        margin-left: 20px;
+      }
+
+      .substitle {
+        margin-top: -25px;
+        margin-left: 5px;
+      }
+      .link {
+        margin-left: 20vw;
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
+// Laptop L
+@media only screen and (min-width: 1440px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 1) {
+  .slideHelp {
+    h1 {
+      font-size: 3.5em;
+    }
+    h4 {
+      font-size: 1.5em;
+      line-height: 1.5em;
+    }
+
+    .project {
+      margin-top: 10px;
+
+      h4 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+      }
+    }
+  }
+}
+
+// Retina
+@media screen and (min-width: 1024px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .slideHelp {
+    h1 {
+      font-size: 3.5em;
+    }
+    h4 {
+      font-size: 1.8em;
+      line-height: 2em;
+    }
+    .introPic {
+      width: 600px;
+      margin-top: 10px;
+    }
+
+    .zhIntro {
+      height: 680px;
+      position: absolute;
+      top: auto;
+      right: auto;
+
+      .chineseTitle {
+        letter-spacing: 20px;
+      }
+
+      .chinese {
+        letter-spacing: 20px;
+      }
+    }
+
+    .project {
+      margin-top: 10vh;
+      .projectPic {
+        width: 100px;
+        opacity: 0.5;
+        margin-left: -50px;
+      }
+
+      .increase-num /deep/ h2 {
+        font-size: 3.5em;
+        margin-left: 20px;
+      }
+
+      .substitle {
+        margin-top: -50px;
+        h4 {
+          font-size: 1.8em;
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .link {
+      margin-left: 280px;
     }
   }
 }

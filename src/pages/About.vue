@@ -28,7 +28,7 @@
               </div>
             </div>
 
-            <div class="row" style="margin-top:10em">
+            <div class="row" id="rowBelow">
               <div class="col-lg-6 col-md-10 offset-lg-5">
                 <div id="map-container" class="mx-4">
                   <img id="map" src="img/about/map.png" />
@@ -560,6 +560,16 @@ svg {
   }
   #text-container {
     margin: 20px 0 80px 0;
+  }
+}
+
+@media only screen and (min-device-width: 960px) and (max-device-width: 1960px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+// Retina
+@media screen and (min-device-width: 960px) and (max-device-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  #rowBelow {
+    margin-top: 10vh;
   }
 }
 </style>

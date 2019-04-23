@@ -206,16 +206,8 @@ export default {
   }
 }
 
-/* ----------- Non-Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-}
-
 // all iphones
-@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
   #slide1 {
     .bg-img {
       background-position: bottom left;
@@ -266,11 +258,11 @@ export default {
 }
 
 // iphone 5 / 5S / SE
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) {
 }
 
 // iphone 6 / 6S / 7 / 8
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
   #slide1 {
     .zhIntro {
       h1 {
@@ -306,7 +298,7 @@ export default {
 }
 
 // iphone 6 / 7 / 8 +
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 414px) and (-webkit-min-device-pixel-ratio: 3) {
   #slide1 {
     .zhIntro {
       h1 {
@@ -343,7 +335,7 @@ export default {
 }
 
 // iphone X
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (min-device-width: 375px) and (-webkit-device-pixel-ratio: 3) {
   #slide1 {
     .zhIntro {
       h1 {
@@ -364,6 +356,102 @@ export default {
       .indentH {
         h4 {
           font-size: 1.6em;
+          line-height: 1.2em;
+        }
+      }
+      right: 50px;
+      top: 55vh;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  #slide1 {
+    .zhIntro {
+      h1 {
+        font-size: 3.2em;
+      }
+
+      .indentV {
+        h4 {
+          font-size: 1.6em;
+        }
+      }
+    }
+    .enIntro {
+      h1 {
+        font-size: 3.5em;
+        line-height: 1.5em;
+      }
+      .indentH {
+        h4 {
+          font-size: 1.6em;
+          line-height: 1.2em;
+        }
+      }
+      right: 50px;
+      top: 55vh;
+    }
+  }
+}
+
+// Laptop M
+@media only screen and (min-width: 1024px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+  #slide1 {
+    .zhIntro {
+      h1 {
+        font-size: 3em;
+      }
+
+      .indentV {
+        h4 {
+          font-size: 1.3em;
+        }
+      }
+    }
+    .enIntro {
+      h1 {
+        font-size: 3em;
+        line-height: 1.5em;
+      }
+      .indentH {
+        h4 {
+          font-size: 1.3em;
+          line-height: 1.2em;
+        }
+      }
+      right: 50px;
+      top: 50vh;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  #slide1 {
+    .zhIntro {
+      h1 {
+        font-size: 4em;
+        line-height: 1.2;
+      }
+
+      .indentV {
+        height: 500px;
+        margin-top: 8vh;
+        h4 {
+          font-size: 2em;
+          letter-spacing: 20px;
+        }
+      }
+    }
+    .enIntro {
+      h1 {
+        font-size: 4em;
+        line-height: 1.5em;
+      }
+      .indentH {
+        h4 {
+          font-size: 2em;
           line-height: 1.2em;
         }
       }
