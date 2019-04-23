@@ -54,12 +54,21 @@ export default {
   text-align: right;
 }
 .top {
-  margin-top: 30vh;
+  margin-top: 20vh;
 }
 .bottom {
-  margin-top: 60vh;
+  margin-top: 50vh;
 }
 .right {
   text-align: left;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  h1 {
+    font-size: 5em;
+  }
+  p {
+    font-size: 2em;
+  }
 }
 </style>

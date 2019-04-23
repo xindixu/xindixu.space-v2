@@ -679,7 +679,7 @@ export default {
 }
 
 // Retina
-@media screen and (min-width: 1024px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+@media only screen and (min-width: 1024px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .slideHelp {
     h1 {
       font-size: 3.5em;
