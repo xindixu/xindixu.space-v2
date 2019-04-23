@@ -16,7 +16,7 @@
               <audio src="audio/name.mp3" id="audio"></audio>
             </div>
             <div class="row mt-5">
-              <div class="col-md-6 col-lg-5">
+              <div class="col-lg-6">
                 <p>
                   My name consists of 3 Chinese characters, family name,
                   <span class="chinese">徐</span> and given name,
@@ -29,7 +29,7 @@
             </div>
 
             <div class="row" id="rowBelow">
-              <div class="col-lg-6 col-md-10 offset-lg-5 content-container">
+              <div class="col-lg-5 col-md-10 offset-lg-6 content-container">
                 <div id="map-container" class="mx-4">
                   <img id="map" src="img/about/map.png" />
                   <Pin class="label pinFZ"></Pin>
@@ -562,7 +562,7 @@ svg {
 }
 
 // Laptop M
-@media only screen and (min-width: 1024px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1024px) and (max-width: 1439px) and (-webkit-device-pixel-ratio: 1) {
   p {
     font-size: 1em;
   }
@@ -612,7 +612,7 @@ svg {
 }
 
 // Laptop L
-@media only screen and (min-width: 1440px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 1440px) and (max-width: 1960px) and (-webkit-device-pixel-ratio: 1) {
   p {
     font-size: 1.4em;
   }
@@ -625,7 +625,7 @@ svg {
 // Retina
 @media only screen and (min-width: 760px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   #rowBelow {
-    margin-top: 10vh;
+    margin-top: 20vh;
   }
 }
 </style>
