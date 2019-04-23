@@ -1,13 +1,13 @@
 <template>
   <div class="">
     <div v-if="!$isMobile" class="row">
-      <div class="col half">
+      <div class="col-lg half">
         <div class="white left" :class="obj.enTop ? 'top' : 'bottom'">
           <h1>{{ obj.enTitle }}</h1>
           <p>{{ obj.enPara }}</p>
         </div>
       </div>
-      <div class="col half chinese">
+      <div class="col-lg half chinese">
         <div class="white right" :class="obj.enTop ? 'bottom' : 'top'">
           <h1 class="chineseTitle">{{ obj.zhTitle }}</h1>
           <p>{{ obj.zhPara }}</p>
@@ -45,7 +45,6 @@ export default {
 
 <style lang="scss" scoped>
 .half {
-  height: 90vh;
   .white {
     color: white;
   }
@@ -65,10 +64,16 @@ export default {
 
 @media only screen and (min-width: 1024px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   h1 {
-    font-size: 5em;
+    font-size: 4em;
   }
   p {
-    font-size: 2em;
+    font-size: 1.8em;
+  }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 990px) {
+  .bottom {
+    margin-top: 20vh;
   }
 }
 </style>

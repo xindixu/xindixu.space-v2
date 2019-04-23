@@ -282,7 +282,7 @@ export default {
           enTop: false
         },
         {
-          enTitle: 'Engjoying...',
+          enTitle: 'Enjoying...',
           zhTitle: '玩耍中...',
           enPara:
             'I love my super needy kitty, Dr. Casper Meowspy. I love to exercise, weight training, Tae Kwon Do, swimming, anything without "balls". During my vacations, I love to travel around and explore new places.',
@@ -621,8 +621,9 @@ svg {
     margin-top: -5vh;
   }
 }
+
 // Retina
-@media only screen and (min-width: 1024px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+@media only screen and (min-width: 760px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   #rowBelow {
     margin-top: 10vh;
   }
