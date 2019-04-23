@@ -567,7 +567,7 @@ svg {
     font-size: 1em;
   }
   #rowBelow {
-    margin-top: -20vh;
+    margin-top: -10vh;
 
     .vertical {
       margin-left: 10px;
@@ -584,12 +584,12 @@ svg {
           position: absolute;
         }
         .pinFZ {
-          top: 20%;
-          left: 35.5%;
+          top: 9%;
+          left: 33.5%;
         }
         .pinAUS {
-          top: 17.5%;
-          left: 68.5%;
+          top: 9.5%;
+          left: 66.5%;
         }
       }
       #text-container {
@@ -618,7 +618,7 @@ svg {
   }
 
   #rowBelow {
-    margin-top: -5vh;
+    margin-top: 6vh;
   }
 }
 
