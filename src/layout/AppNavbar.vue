@@ -22,7 +22,7 @@
             exact
             to="/"
           >
-            <i class="now-ui-icons objects_globe"></i>
+            <i class="now-ui-icons travel_istanbul"></i>
             <p>Home</p>
           </router-link>
         </li>
