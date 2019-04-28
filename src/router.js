@@ -7,7 +7,7 @@ const Work = () => import('./pages/Work.vue');
 // import Blog from './pages/Blog.vue';
 const Casper = () => import('./pages/Casper.vue');
 const WorkDetail = () => import('./pages/WorkDetail.vue');
-const NotFound = () => import('./pages/404.vue');
+const NotFound = () => import('./pages/NotFound.vue');
 
 
 import AppNavbar from './layout/AppNavbar.vue';
