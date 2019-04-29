@@ -8,8 +8,10 @@ import VueResource from 'vue-resource';
 import Scrollactive from 'vue-scrollactive';
 
 import VueMasonry from 'vue-masonry-css';
-import VueAnalytics from 'vue-analytics';
 import vueg from 'vueg';
+import VueHead from 'vue-head';
+
+import VueAnalytics from 'vue-analytics';
 
 import { ObserveVisibility } from 'vue-observe-visibility';
 import './registerServiceWorker';
@@ -20,6 +22,7 @@ Vue.use(NowUiKit);
 Vue.use(VueResource);
 Vue.use(Scrollactive);
 Vue.use(VueMasonry);
+Vue.use(VueHead);
 
 Vue.use(vueg, router, {
   duration: 0.2,

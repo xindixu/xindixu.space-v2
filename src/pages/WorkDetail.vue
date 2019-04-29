@@ -93,6 +93,15 @@ export default {
     this.getWorkObj();
     this.getHtml();
     this.getFilter();
+    self.$emit('updateHead')
+  }, 
+  head: {
+    title:function () {
+      return {
+        inner: this.title,
+        complement: 'Work | XindiXu.space'
+      }
+    }
   }
 };
 </script>

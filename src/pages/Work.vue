@@ -65,8 +65,7 @@ export default {
       sortedWorkList: [],
       categories: ['development', 'marketing', 'creative', 'craft'],
       tags: [],
-      tab: '',
-      is_script_loading: false
+      tab: ''
     };
   },
   components: {
@@ -76,28 +75,6 @@ export default {
     ScrollDown
   },
   methods: {
-    addIssuuScript() {
-      let self = this;
-      return new Promise(resolve => {
-        // if script is already loading via another component
-        if (self.is_script_loading) {
-          // Resolve when the other component has loaded the script
-          this.$root.$on('script_loaded', resolve);
-          return;
-        }
-
-        let script = document.createElement('script');
-        script.setAttribute('src', 'https://e.issuu.com/embed.js');
-        script.async = true;
-        this.$eventBus.$emit('loading_script');
-        script.onload = () => {
-          this.$eventBus.$emit('script_loaded');
-          resolve();
-        };
-
-        document.head.appendChild(script);
-      });
-    },
     updateHash() {
       this.$router.replace(`work#${this.$refs.tabs.activatedTab}`);
     }
@@ -109,10 +86,6 @@ export default {
       });
       this.sortedWorkList[category] = arr;
     }
-    this.$eventBus.$on('loading_script', e => {
-      this.is_script_loading = true;
-    });
-    // console.log(this.sortedWorkList);
   },
   mounted() {
     if (this.$route.hash) {
@@ -123,7 +96,16 @@ export default {
   },
   beforeDestroy() {
     this.$eventBus.$off('loading_script');
+  },
+  head:{
+    title: {
+      inner: 'Work'
+    },
+    script: [
+      { type: 'text/javascript', src: 'https://e.issuu.com/embed.js', async: true, body: true}, 
+    ]
   }
+
 };
 </script>
 <style scoped lang="scss">

@@ -366,6 +366,11 @@ export default {
     swiperSlide,
     ScrollDown,
     DoingSlide
+  },
+  head: {
+    title: {
+      inner: 'About'
+    }
   }
 };
 </script>

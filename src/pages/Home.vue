@@ -150,6 +150,11 @@ export default {
     swiperSlide,
     ScrollDown,
     HelpSlide
+  },
+   head: {
+    title: {
+      inner: 'Home'
+    }
   }
 };
 </script>

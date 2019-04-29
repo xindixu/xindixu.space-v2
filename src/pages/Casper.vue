@@ -42,6 +42,11 @@ export default {
   },
   created() {
     this.createImgArr();
+  },
+  head: {
+    title: {
+      inner: 'Casper'
+    }
   }
 };
 </script>
