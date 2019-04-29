@@ -9,7 +9,6 @@ const Casper = () => import('./pages/Casper.vue');
 const WorkDetail = () => import('./pages/WorkDetail.vue');
 const NotFound = () => import('./pages/NotFound.vue');
 
-
 import AppNavbar from './layout/AppNavbar.vue';
 import AppFooter from './layout/AppFooter.vue';
 
