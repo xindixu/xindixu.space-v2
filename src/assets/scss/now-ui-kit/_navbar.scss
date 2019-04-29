@@ -177,11 +177,11 @@
 
 .navbar-transparent{
     a:not(.btn):not(.dropdown-item) {
-        color: $primary-color;
+        color: $warning-color;
     }
     .navbar-toggler{
         .middle-bar, .top-bar, .bottom-bar{
-            background-color: $primary-color !important;
+            background-color: $warning-color !important;
         }
     }
 
