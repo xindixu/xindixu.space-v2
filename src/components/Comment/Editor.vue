@@ -41,7 +41,6 @@
         ></vue-showdown>
       </div>
       <Alert type="info" :visible="messageError">Please enter your own message.</Alert>
-      </form>
 
       <div class="text-right">
         <input

@@ -175,8 +175,3 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.navbar .navbar-toggler-bar{
-  background-color: #E2B4BD;
-}
-</style>

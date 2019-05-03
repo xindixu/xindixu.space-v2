@@ -30,7 +30,6 @@
       </router-link>
       <CommentSection class="my-5" :work="id"></CommentSection>
     </div>
-
     <TableOfContent></TableOfContent>
     <SocialSideBar :path="id"></SocialSideBar>
   </div>

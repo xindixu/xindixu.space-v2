@@ -375,7 +375,8 @@
     "id": "space-shooter",
     "category": "development",
     "tags":[
-      "Computer Graphics"
+      "Computer Graphics",
+      "Game development"
     ],
     "tools":[
       "Processing"
