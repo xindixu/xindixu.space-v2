@@ -2,7 +2,9 @@
   <div>
     <div class="page-header" style="background-image: url('img/bg/bg22.jpg')">
       <div class="content-center">
-        <div class="container"><h1 class="title">Blog</h1></div>
+        <div class="container">
+          <h1 class="title">Blog</h1>
+        </div>
       </div>
       <ScrollDown></ScrollDown>
     </div>
@@ -10,7 +12,9 @@
     <div class="fluid-container mt-5 px-5">
       <section>
         <div class="row">
-          <div class="col-sm"><img src="img/bg/bg1.jpg" /></div>
+          <div class="col-sm">
+            <img src="img/bg/bg1.jpg">
+          </div>
           <div class="col-sm">
             <!-- TODO: add search bar -->
             <h3>Search bar</h3>
@@ -31,12 +35,8 @@
                   </h5>
                 </div>
 
-                <p class="mb-1">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-                <badge v-for="tag in article.tags" :key="tag" type="success">
-                  {{ tag }}
-                </badge>
+                <p class="mb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <badge v-for="tag in article.tags" :key="tag" type="success">{{ tag }}</badge>
               </div>
             </div>
           </div>
@@ -69,9 +69,7 @@
                   repellat, deserunt minus ullam ut quam aspernatur quod
                   voluptatem accusamus laborum.
                 </p>
-                <badge v-for="tag in article.tags" :key="tag" type="success">
-                  {{ tag }}
-                </badge>
+                <badge v-for="tag in article.tags" :key="tag" type="success">{{ tag }}</badge>
               </div>
             </div>
           </div>
@@ -89,7 +87,8 @@
           >
             <div slot="header" class="mb-1 ml-3">
               <h3>
-                <i :class="'now-ui-icons ' + icons[index]"></i>{{ category }}
+                <i :class="'now-ui-icons ' + icons[index]"></i>
+                {{ category }}
               </h3>
             </div>
 
@@ -113,9 +112,7 @@
                   repellat, deserunt minus ullam ut quam aspernatur quod
                   voluptatem accusamus laborum.
                 </p>
-                <badge v-for="tag in article.tags" :key="tag" type="success">
-                  {{ tag }}
-                </badge>
+                <badge v-for="tag in article.tags" :key="tag" type="success">{{ tag }}</badge>
               </div>
             </div>
           </div>
@@ -131,8 +128,7 @@
           :key="tag"
           type="primary"
           class="mx-1"
-          >{{ tag }}</n-button
-        >
+        >{{ tag }}</n-button>
       </section>
     </div>
   </div>

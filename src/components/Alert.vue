@@ -5,12 +5,7 @@
       <div v-else class="container">
         <slot></slot>
         <slot name="dismiss-icon">
-          <button
-            type="button"
-            class="close"
-            aria-label="Close"
-            @click="dismissAlert"
-          >
+          <button type="button" class="close" aria-label="Close" @click="dismissAlert">
             <span aria-hidden="true">
               <i class="now-ui-icons ui-1_simple-remove"></i>
             </span>

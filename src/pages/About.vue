@@ -5,9 +5,18 @@
         <swiper-slide v-if="!$isMobile">
           <div class="bg-img swiper-lazy" data-background="img/bg/bg20.jpg">
             <div class="row">
-              <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
-              <div class="svg-wrapper"><Xin></Xin><Xin0></Xin0></div>
-              <div class="svg-wrapper"><Di></Di><Di0></Di0></div>
+              <div class="svg-wrapper">
+                <Xu></Xu>
+                <Xu0></Xu0>
+              </div>
+              <div class="svg-wrapper">
+                <Xin></Xin>
+                <Xin0></Xin0>
+              </div>
+              <div class="svg-wrapper">
+                <Di></Di>
+                <Di0></Di0>
+              </div>
               <div style="margin-top:130px">
                 <span @click="pronounce">
                   <SquareLink>pronounce</SquareLink>
@@ -31,31 +40,19 @@
             <div class="row" id="rowBelow">
               <div class="col-lg-5 col-md-10 offset-lg-6 content-container">
                 <div id="map-container" class="mx-4">
-                  <img id="map" src="img/about/map.png" />
+                  <img id="map" src="img/about/map.png">
                   <Pin class="label pinFZ"></Pin>
                   <Pin class="label pinAUS"></Pin>
                 </div>
                 <div id="text-container">
-                  <SquareTexts
-                    id="tagFZ"
-                    num1="0324"
-                    num2="1998"
-                    en="Fuzhou, China"
-                    zh="中国福州"
-                  ></SquareTexts>
-                  <SquareTexts
-                    id="tagAUS"
-                    num1="0809"
-                    num2="2016"
-                    en="Austin, U.S.A."
-                    zh="美国奥斯汀"
-                  ></SquareTexts>
+                  <SquareTexts id="tagFZ" num1="0324" num2="1998" en="Fuzhou, China" zh="中国福州"></SquareTexts>
+                  <SquareTexts id="tagAUS" num1="0809" num2="2016" en="Austin, U.S.A." zh="美国奥斯汀"></SquareTexts>
                 </div>
                 <div>
                   <p>
                     I was born in Fuzhou, China and spent my first 18 years
-                    there. I moved to the US for college. <br />
-                    Now, I am a senior studying Advertising and Computer Science
+                    there. I moved to the US for college.
+                    <br>Now, I am a senior studying Advertising and Computer Science
                     at the University of Texas at Austin.
                   </p>
                 </div>
@@ -63,8 +60,8 @@
               <div class="col-lg-1 col-md-2">
                 <div class="vertical chinese">
                   <p>
-                    我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。<br />
-                    现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
+                    我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。
+                    <br>现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
                   </p>
                 </div>
               </div>
@@ -76,9 +73,18 @@
           <div class="bg-img swiper-lazy" data-background="img/bg/bg20.jpg">
             <div class="swiper-lazy-preloader"></div>
             <div class="row">
-              <div class="svg-wrapper"><Xu></Xu><Xu0></Xu0></div>
-              <div class="svg-wrapper"><Xin></Xin><Xin0></Xin0></div>
-              <div class="svg-wrapper"><Di></Di><Di0></Di0></div>
+              <div class="svg-wrapper">
+                <Xu></Xu>
+                <Xu0></Xu0>
+              </div>
+              <div class="svg-wrapper">
+                <Xin></Xin>
+                <Xin0></Xin0>
+              </div>
+              <div class="svg-wrapper">
+                <Di></Di>
+                <Di0></Di0>
+              </div>
             </div>
             <div id="link" class="text-right">
               <span @click="pronounce">
@@ -108,25 +114,13 @@
             <div class="swiper-lazy-preloader"></div>
 
             <div id="map-container">
-              <img id="map" src="img/about/map.png" />
+              <img id="map" src="img/about/map.png">
               <Pin class="label pinFZ"></Pin>
               <Pin class="label pinAUS"></Pin>
             </div>
             <div id="text-container">
-              <SquareTexts
-                id="tagFZ"
-                num1="0324"
-                num2="1998"
-                en="Fuzhou, China"
-                zh="中国福州"
-              ></SquareTexts>
-              <SquareTexts
-                id="tagAUS"
-                num1="0809"
-                num2="2016"
-                en="Austin, U.S.A."
-                zh="美国奥斯汀"
-              ></SquareTexts>
+              <SquareTexts id="tagFZ" num1="0324" num2="1998" en="Fuzhou, China" zh="中国福州"></SquareTexts>
+              <SquareTexts id="tagAUS" num1="0809" num2="2016" en="Austin, U.S.A." zh="美国奥斯汀"></SquareTexts>
             </div>
             <div v-if="!$userReadChinese">
               <p>
@@ -141,21 +135,14 @@
 
             <div v-else>
               <div class="chinese">
-                <p>
-                  我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。
-                </p>
-                <p>
-                  现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
-                </p>
+                <p>我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。</p>
+                <p>现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。</p>
               </div>
             </div>
           </div>
         </swiper-slide>
         <swiper-slide v-for="obj in slideObjects" :key="obj.enTitle">
-          <div
-            class="bg-img swiper-lazy"
-            :data-background="'img/bg/' + obj.background + '.jpg'"
-          >
+          <div class="bg-img swiper-lazy" :data-background="'img/bg/' + obj.background + '.jpg'">
             <DoingSlide :obj="obj"></DoingSlide>
           </div>
         </swiper-slide>
@@ -166,11 +153,7 @@
             leave-active-class="animated fadeOut fastest"
             mode="out-in"
           >
-            <div
-              class="full-screen"
-              v-if="wordShow"
-              style="background-color=white;"
-            >
+            <div class="full-screen" v-if="wordShow" style="background-color=white;">
               <div v-if="$isMobile" class="screen-center text-center">
                 <h4 v-if="$userReadChinese" class="chinese">我擅长于…</h4>
                 <h4 v-else>I'm Skilled At ...</h4>
@@ -214,8 +197,7 @@
                 onclick="window.open('html/life-story.html','_blank');"
                 type="warning"
                 round
-                >Click to Launch</n-button
-              >
+              >Click to Launch</n-button>
             </div>
           </div>
         </swiper-slide>

@@ -13,10 +13,7 @@
       role="dialog"
       :aria-hidden="!show"
     >
-      <div
-        class="modal-dialog"
-        :class="[{ 'modal-notice': type === 'notice' }, modalClasses]"
-      >
+      <div class="modal-dialog" :class="[{ 'modal-notice': type === 'notice' }, modalClasses]">
         <div class="modal-content">
           <slot name="base-content">
             <div class="modal-header" :class="headerClasses">
@@ -35,7 +32,9 @@
               <slot name="header"></slot>
             </div>
 
-            <div class="modal-body" :class="bodyClasses"><slot></slot></div>
+            <div class="modal-body" :class="bodyClasses">
+              <slot></slot>
+            </div>
 
             <div class="modal-footer" :class="footerClasses">
               <slot name="footer"></slot>

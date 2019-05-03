@@ -1,11 +1,6 @@
 <template>
   <div class="quick-menu" ref="quickMenu" :style="quickMenuStyle">
-    <div
-      v-for="(n, key) in menuCount"
-      :key="key"
-      class="sub-menu"
-      :style="getSubMenu(n - 1)"
-    >
+    <div v-for="(n, key) in menuCount" :key="key" class="sub-menu" :style="getSubMenu(n - 1)">
       <router-link
         v-if="menuUrlList[n - 1].isLink"
         :to="menuUrlList[n - 1].url"
@@ -30,7 +25,9 @@
     </div>
 
     <div class="menu" :style="menuStyle">
-      <div class="core-menu" @click="toggleMenu"><div class="bar"></div></div>
+      <div class="core-menu" @click="toggleMenu">
+        <div class="bar"></div>
+      </div>
     </div>
   </div>
 </template>

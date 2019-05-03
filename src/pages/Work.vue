@@ -2,9 +2,11 @@
   <div>
     <div class="page-header" style="background-image:url('img/bg/bg7.jpg')">
       <div class="content-center">
-        <div class="container"><h1 class="title">Work</h1></div>
+        <div class="container">
+          <h1 class="title">Work</h1>
+        </div>
       </div>
-      <ScrollDown />
+      <ScrollDown/>
     </div>
     <Card>
       <Tabs
@@ -22,15 +24,13 @@
           class="text-center"
           :label="category"
         >
-          <template slot="label">
-            {{ category }}
-          </template>
+          <template slot="label">{{ category }}</template>
           <div class="row">
             <div v-for="data in sortedWorkList[category]" :key="data.index">
               <router-link :to="'/work/' + data.id">
                 <Card class="work-card grow">
                   <template slot="image">
-                    <img :src="'img/work/' + data.id + '.png'" alt="" />
+                    <img :src="'img/work/' + data.id + '.png'" alt>
                     <!--
                       <BlurLazyImage
                         class="work-card-img"
@@ -97,15 +97,19 @@ export default {
   beforeDestroy() {
     this.$eventBus.$off('loading_script');
   },
-  head:{
+  head: {
     title: {
       inner: 'Work'
     },
     script: [
-      { type: 'text/javascript', src: 'https://e.issuu.com/embed.js', async: true, body: true}, 
+      {
+        type: 'text/javascript',
+        src: 'https://e.issuu.com/embed.js',
+        async: true,
+        body: true
+      }
     ]
   }
-
 };
 </script>
 <style scoped lang="scss">

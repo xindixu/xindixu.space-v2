@@ -9,7 +9,7 @@
               class="introPic"
               :src="'img/home/' + obj.introPic + '.svg'"
               :alt="'Intro picture for' + obj.enTitle"
-            />
+            >
           </div>
           <h4 class="english">{{ obj.enSubTitle1 }}</h4>
           <h4 class="english">{{ obj.enSubTitle2 }}</h4>
@@ -31,7 +31,7 @@
               class="projectPic"
               :src="'img/home/' + obj.projectPic + '.svg'"
               :alt="'Project icon for ' + obj.enTitle"
-            />
+            >
           </div>
           <div class="row substitle">
             <div class="col-1">
@@ -65,14 +65,12 @@
         <div class="verticalProject">
           <div class="substitle vertical">
             <h4 class="chinese">
-              这<span>{{ 10 }}</span
-              >个项目可以证明我
+              这
+              <span>{{ 10 }}</span>个项目可以证明我
             </h4>
             <IncreaseNum start="0" :end="obj.numOfProjects"></IncreaseNum>
             <div class="link">
-              <SquareLink class="chinese" :link="'work#' + obj.link"
-                >看看</SquareLink
-              >
+              <SquareLink class="chinese" :link="'work#' + obj.link">看看</SquareLink>
             </div>
           </div>
           <div>
@@ -80,7 +78,7 @@
               class="projectPic"
               :src="'img/home/' + obj.projectPic + '.svg'"
               :alt="'Project icon for ' + obj.enTitle"
-            />
+            >
           </div>
         </div>
       </div>
@@ -91,7 +89,7 @@
             class="introPic"
             :src="'img/home/' + obj.introPic + '.svg'"
             :alt="'Intro picture for' + obj.enTitle"
-          />
+          >
         </div>
         <h4 class="english">{{ obj.enSubTitle1 }}</h4>
         <h4 class="english">{{ obj.enSubTitle2 }}</h4>
@@ -102,14 +100,18 @@
               class="projectPic"
               :src="'img/home/' + obj.projectPic + '.svg'"
               :alt="'Project icon for ' + obj.enTitle"
-            />
+            >
           </div>
           <div class="row substitle">
-            <div class="col-2"><h4>These</h4></div>
+            <div class="col-2">
+              <h4>These</h4>
+            </div>
             <div class="col-1">
               <IncreaseNum start="0" :end="obj.numOfProjects"></IncreaseNum>
             </div>
-            <div class="col-auto"><h4>projects can prove my ability</h4></div>
+            <div class="col-auto">
+              <h4>projects can prove my ability</h4>
+            </div>
             <div class="link">
               <SquareLink :link="'work#' + obj.link">take a look</SquareLink>
             </div>

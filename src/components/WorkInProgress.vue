@@ -2,15 +2,15 @@
   <div id="workInProgress">
     <div class="row">
       <div class="col">
-        <div><img src="/img/share/wip.jpg" alt="" /></div>
+        <div>
+          <img src="/img/share/wip.jpg" alt>
+        </div>
       </div>
       <div class="col">
         <h3>Sorry, work in progress...Please check back later</h3>
 
         <p>You could bookmark this page and I will keep you updated.</p>
-        <n-button type="primary" round @click="addToFavorate">
-          Add to Favorite
-        </n-button>
+        <n-button type="primary" round @click="addToFavorate">Add to Favorite</n-button>
       </div>
     </div>
   </div>

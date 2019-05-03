@@ -1,6 +1,8 @@
 <template>
   <div>
-    <router-link :to="link" tag="a"><slot /></router-link>
+    <router-link :to="link" tag="a">
+      <slot/>
+    </router-link>
   </div>
 </template>
 <script>

@@ -1,9 +1,6 @@
 <template>
   <div id="socialSideBar">
-    <transition-group
-      enter-active-class="animated zoomIn"
-      leave-active-class="animated zoomOut"
-    >
+    <transition-group enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">
       <div v-show="isShow" v-for="(icon, index) in icons" :key="icon">
         <n-button type="info" round icon @click="process(index);">
           <i class="now-ui-icons" :class="icon"></i>
@@ -19,7 +16,7 @@
       type="mini"
     >
       <div slot="header" class="modal-profile">
-        <img src="/img/share/avatar.jpg" class="rounded-circle img-raised" />
+        <img src="/img/share/avatar.jpg" class="rounded-circle img-raised">
       </div>
       <div class="text-center">
         <h5>Want to share my article to your social network?</h5>

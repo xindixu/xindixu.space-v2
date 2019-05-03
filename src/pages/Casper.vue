@@ -11,7 +11,7 @@
         class="entranceFromTop"
         :style="{ 'animation-delay': index * 50 + 'ms' }"
       >
-        <img class="image" :src="img" />
+        <img class="image" :src="img">
       </div>
     </masonry>
     <masonry v-else :cols="3" :gutter="10">
@@ -21,7 +21,7 @@
         class="entranceFromTop"
         :style="{ 'animation-delay': index * 50 + 'ms' }"
       >
-        <img class="image" :src="img" />
+        <img class="image" :src="img">
       </div>
     </masonry>
   </div>

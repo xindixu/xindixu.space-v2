@@ -1,9 +1,6 @@
 <template>
   <div id="tableOfContent">
-    <transition
-      enter-active-class="animated zoomIn"
-      leave-active-class="animated zoomOut"
-    >
+    <transition enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">
       <button
         v-if="isContentShown"
         :class="isTOCShown ? 'btn-shown' : 'btn-hidden'"
@@ -17,10 +14,7 @@
         ></i>
       </button>
     </transition>
-    <transition
-      enter-active-class="animated slideInDown"
-      leave-active-class="animated bounceOutUp"
-    >
+    <transition enter-active-class="animated slideInDown" leave-active-class="animated bounceOutUp">
       <Card id="card" v-show="isTOCShown">
         <scrollactive
           v-on:itemchanged="onItemChanged"
@@ -35,9 +29,7 @@
               :href="'#' + header.id"
               class="scrollactive-item"
               :class="header.tagName === 'H3' ? 'sub' : ''"
-            >
-              {{ header.innerHTML }}
-            </a>
+            >{{ header.innerHTML }}</a>
           </div>
         </scrollactive>
       </Card>

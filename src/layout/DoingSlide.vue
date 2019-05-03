@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class>
     <div v-if="!$isMobile" class="row">
       <div class="col-lg half">
         <div class="white left" :class="obj.enTop ? 'top' : 'bottom'">
