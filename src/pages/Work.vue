@@ -30,7 +30,7 @@
               <router-link :to="'/work/' + data.id">
                 <Card class="work-card grow">
                   <template slot="image">
-                    <img :src="'img/work/' + data.id + '.png'" alt>
+                    <img :src="'img/work/' + data.id + '.png'" :alt="data.id">
                     <!--
                       <BlurLazyImage
                         class="work-card-img"
