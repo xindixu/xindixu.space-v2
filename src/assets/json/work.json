@@ -1,167 +1,191 @@
-[
+[{
+    "title": "Lammes Candies",
+    "id": "lammes-candies",
+    "category": "marketing",
+    "tags": [
+      "Media Investment",
+      "Research"
+    ],
+    "tools": [],
+    "start": "03/2019",
+    "end": "05/2019"
+  },
   {
-  "title":"Prep for Job",
-  "id": "prep-for-job",
-  "category": "development",
-  "tags":[
-    "Full-Stack development",
-    "API integrations"
-  ],
-  "tools":[
-    "Python Flask"
-  ],
-  "start":"03/2019",
-  "end": "now"
-},
+    "title": "Jack's Link",
+    "id": "jacks-link",
+    "category": "marketing",
+    "tags": [
+      "Creative",
+      "Media Planning",
+      "Strategy"
+    ],
+    "tools": [],
+    "start": "03/2019",
+    "end": "05/2019"
+  },
   {
-    "title":"Nokia Demo System",
+    "title": "Prep for Job",
+    "id": "prep-for-job",
+    "category": "development",
+    "tags": [
+      "Full-Stack development",
+      "API integrations"
+    ],
+    "tools": [
+      "Python Flask"
+    ],
+    "start": "03/2019",
+    "end": "05/2019"
+  },
+  {
+    "title": "Nokia Demo System",
     "id": "nokia-demo-system",
     "category": "development",
-    "tags":[
+    "tags": [
       "UX/UI Design",
       "Full-Stack development",
       "Single Page Application"
     ],
-    "tools":[
+    "tools": [
       "Python Django",
       "React"
     ],
-    "start":"12/2018",
+    "start": "12/2018",
     "end": "now"
   },
   {
-    "title":"Nokia Demo Center Website",
+    "title": "Nokia Demo Center Website",
     "id": "nokia-demo-center",
     "category": "development",
-    "tags":[
+    "tags": [
       "UX/UI Design",
       "Content Management System",
       "Front-End development"
     ],
-    "tools":[
+    "tools": [
       "Wordpress",
       "Sketch"
     ],
-    "start":"09/2018",
+    "start": "09/2018",
     "end": "12/2018"
   },
   {
     "title": "Clif Bar",
     "id": "clif-bar",
     "category": "marketing",
-    "tags":[
+    "tags": [
       "Research",
       "Strategy",
       "Media"
     ],
-    "tools":[
+    "tools": [
       "ESRI",
       "SQAD"
     ],
-    "start":"11/2018",
-    "end":"12/2018"
+    "start": "11/2018",
+    "end": "12/2018"
   },
   {
     "title": "Triobike",
     "id": "triobike",
     "category": "marketing",
-    "tags":[
+    "tags": [
       "Research",
       "Strategy",
       "Creative",
       "Media"
     ],
-    "tools":[
+    "tools": [
       "ESRI",
       "SQAD"
     ],
-    "start":"11/2018",
-    "end":"12/2018"
+    "start": "11/2018",
+    "end": "12/2018"
   },
   {
-    "title":"Leweno Freelancer Website",
+    "title": "Leweno Freelancer Website",
     "id": "leweno-freelancer-website",
     "category": "creative",
-    "tags":[
+    "tags": [
       "UX/UI Design"
     ],
-    "tools":[
+    "tools": [
       "Sketch"
     ],
-    "start":"11/2018",
+    "start": "11/2018",
     "end": "11/2018"
   },
   {
-    "title":"Stay At Home & Let's Cook",
+    "title": "Stay At Home & Let's Cook",
     "id": "stay-at-home",
     "category": "development",
-    "tags":[
+    "tags": [
       "UX/UI Design",
       "Full-stack Developement",
       "External API"
     ],
-    "tools":[
+    "tools": [
       "Angular",
       "Node.js",
       "MangoDB",
       "Express.js"
     ],
-    "start":"11/2018",
+    "start": "11/2018",
     "end": "12/2018"
   },
   {
-    "title":"Texas Central Star",
+    "title": "Texas Central Star",
     "id": "texas-central-star",
     "category": "marketing",
-    "tags":[
+    "tags": [
       "Research",
       "Strategy",
       "Media"
     ],
-    "tools":[
+    "tools": [
       "ESRI",
       "SQAD"
     ],
-    "start":"09/2018",
-    "end":"10/2018"
+    "start": "09/2018",
+    "end": "10/2018"
   },
   {
-    "title":"Shih's Lab Website",
+    "title": "Shih's Lab Website",
     "id": "shihs-lab",
     "category": "development",
-    "tags":[
+    "tags": [
       "UX/UI Design",
       "Structure",
       "Developement"
     ],
-    "tools":[
+    "tools": [
       "Vue.js"
     ],
-    "start":"09/2018",
+    "start": "09/2018",
     "end": "now"
   },
   {
-    "title":"Brand Safety",
+    "title": "Brand Safety",
     "id": "brand-safety",
     "category": "marketing",
-    "tags":[
+    "tags": [
       "Research"
     ],
-    "tools":[
+    "tools": [
       ""
     ],
-    "start":"09/2018",
-    "end":"09/2018"
+    "start": "09/2018",
+    "end": "09/2018"
   },
   {
-    "title":"Our Next Branch",
-    "id":"our-next-branch",
+    "title": "Our Next Branch",
+    "id": "our-next-branch",
     "category": "marketing",
-    "tags":[
+    "tags": [
       "Analysis",
       "Data Visualization"
     ],
-    "tools":[
+    "tools": [
       "Tableau",
       "Google Maps API",
       "ParseHub",
@@ -169,233 +193,230 @@
       "VBA Macro",
       "MS Excel"
     ],
-    "start":"06/2018",
-    "end":"08/2018"
+    "start": "06/2018",
+    "end": "08/2018"
   },
   {
-    "title":"DaikinBot & Absolute Unit",
+    "title": "DaikinBot & Absolute Unit",
     "id": "daikinbot",
     "category": "marketing",
-    "tags":[
+    "tags": [
       "marketing",
       "Product Design"
     ],
-    "tools":[
+    "tools": [
       "Maya",
       "Block.ly",
       "Javascript",
       "MS PowerPoint"
     ],
-    "start":"06/2018",
-    "end":"08/2018"
+    "start": "06/2018",
+    "end": "08/2018"
   },
   {
-    "title":"Groovy Automotive",
+    "title": "Groovy Automotive",
     "id": "groovy-automotive",
     "category": "marketing",
-    "tags":[
+    "tags": [
       "Research",
       "Strategy",
       "Media"
     ],
-    "tools":[
+    "tools": [
       "SQUD"
     ],
-    "start":"02/2018",
-    "end":"05/2018"
+    "start": "02/2018",
+    "end": "05/2018"
   },
   {
-    "title":"InspiroFest",
+    "title": "InspiroFest",
     "id": "inspirofest",
     "category": "creative",
-    "tags":[
+    "tags": [
       "Strategy",
       "Coding",
       "Execution"
     ],
-    "tools":[
+    "tools": [
       "Illustrator",
       "Photoshop",
       "After Effects",
       "P5.js"
     ],
-    "start":"02/2018",
-    "end":"05/2018"
+    "start": "02/2018",
+    "end": "05/2018"
   },
   {
-    "title":"Chemistry Monopoly",
+    "title": "Chemistry Monopoly",
     "id": "chemistry-monopoly",
     "category": "development",
-    "tags":[
+    "tags": [
       "Original Idea",
       "Game development",
       "UX/UI Design",
       "Object Oriented Programming"
     ],
-    "tools":[
+    "tools": [
       "JavaScript",
       "Phaser"
     ],
-    "start":"10/2017",
-    "end":"12/2017"
+    "start": "10/2017",
+    "end": "12/2017"
   },
   {
-    "title":"Look For UT",
+    "title": "Look For UT",
     "id": "look-for-ut",
     "category": "development",
-    "tags":[
+    "tags": [
       "iOS development",
       "UX/UI Design",
       "Realtime Database"
     ],
-    "tools":[
+    "tools": [
       "Swift",
       "Google Firebase"
     ],
-    "start":"10/2017",
-    "end":"12/2017"
+    "start": "10/2017",
+    "end": "12/2017"
   },
   {
-    "title":"Defend The Throne",
+    "title": "Defend The Throne",
     "id": "defend-the-throne",
     "category": "development",
-    "tags":[
+    "tags": [
       "Game development",
       "UX/UI Design",
       "Object Oriented Programming"
     ],
-    "tools":[
+    "tools": [
       "JavaScript",
       "Phaser"
     ],
-    "start":"10/2017",
-    "end":"12/2017"
+    "start": "10/2017",
+    "end": "12/2017"
   },
   {
-    "title":"State Capitol",
+    "title": "State Capitol",
     "id": "state-capitol",
     "category": "craft",
-    "tags":[
-    ],
-    "tools":[
-    ],
-    "start":"01/2017",
-    "end":"05/2017"
+    "tags": [],
+    "tools": [],
+    "start": "01/2017",
+    "end": "05/2017"
   },
   {
-    "title":"Enron Raptors",
+    "title": "Enron Raptors",
     "id": "enron-raptors",
     "category": "craft",
-    "tags":[
-    ],
-    "tools":[
+    "tags": [],
+    "tools": [
       "3D Printer",
       "Laser Cutter"
     ],
-    "start":"09/2017",
-    "end":"12/2017"
+    "start": "09/2017",
+    "end": "12/2017"
   },
 
   {
-    "title":"Tesla Motors",
+    "title": "Tesla Motors",
     "id": "tesla-motors",
     "category": "creative",
-    "tags":[
+    "tags": [
       "Strategy",
       "Graphic",
       "Targeting"
     ],
-    "tools":[
+    "tools": [
       "Photoshop"
     ],
-    "start":"11/2017",
-    "end":"11/2017"
+    "start": "11/2017",
+    "end": "11/2017"
   },
   {
-    "title":"Tèo Gelato Branding",
+    "title": "Tèo Gelato Branding",
     "id": "teo-gelato",
     "category": "creative",
-    "tags":[
+    "tags": [
       "Strategy",
       "Video",
       "Branding"
     ],
-    "tools":[
+    "tools": [
       "Premiere",
       "After Effects"
     ],
-    "start":"10/2017",
-    "end":"10/2017"
+    "start": "10/2017",
+    "end": "10/2017"
   },
   {
-    "title":"Catformer",
+    "title": "Catformer",
     "id": "catformer",
     "category": "development",
-    "tags":[
+    "tags": [
       "Computer Graphics",
       "Game development",
       "UX/UI Design"
     ],
-    "tools":[
+    "tools": [
       "Processing",
       "P5.js"
     ],
-    "start":"05/2017",
-    "end":"05/2017"
+    "start": "05/2017",
+    "end": "05/2017"
   },
   {
-    "title":"US Commute",
+    "title": "US Commute",
     "id": "us-commute",
     "category": "development",
-    "tags":[
+    "tags": [
       "Computer Graphics",
       "UX/UI Design"
     ],
-    "tools":[
+    "tools": [
       "Processing"
     ],
-    "start":"03/2017",
-    "end":"03/2017"
+    "start": "03/2017",
+    "end": "03/2017"
   },
   {
-    "title":"Flocking Behavior",
+    "title": "Flocking Behavior",
     "id": "flocking-behavior",
     "category": "development",
-    "tags":[
+    "tags": [
       "Computer Graphics"
     ],
-    "tools":[
+    "tools": [
       "Processing"
     ],
-    "start":"03/2017",
-    "end":"03/2017"
+    "start": "03/2017",
+    "end": "03/2017"
   },
   {
-    "title":"Space Shooter",
+    "title": "Space Shooter",
     "id": "space-shooter",
     "category": "development",
-    "tags":[
+    "tags": [
       "Computer Graphics",
       "Game development"
     ],
-    "tools":[
+    "tools": [
       "Processing"
     ],
-    "start":"03/2017",
-    "end":"03/2017"
+    "start": "03/2017",
+    "end": "03/2017"
   },
   {
-    "title":"UT Tower",
+    "title": "UT Tower",
     "id": "ut-tower",
     "category": "development",
-    "tags":[
+    "tags": [
       "Computer Graphics"
     ],
-    "tools":[
+    "tools": [
       "Processing",
       "P5.js"
     ],
-    "start":"02/2017",
-    "end":"02/2017"
+    "start": "02/2017",
+    "end": "02/2017"
   }
 ]

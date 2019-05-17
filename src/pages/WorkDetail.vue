@@ -179,16 +179,11 @@ div[id^='issuu-embed-container-'] {
   margin: 12px 0px;
 }
 
-#issuu-embed-container-texas-central,
-#issuu-embed-container-clif,
-#issuu-embed-container-brand-safty,
-#issuu-embed-container-triobike,
-#issuu-embed-container-tesla {
+#issuu-embed-container-standard,
+#issuu-embed-container-portrait {
   padding-bottom: 77.27%;
 }
-#issuu-embed-container-goodman,
-#issuu-embed-container-groovy,
-#issuu-embed-container-groovy2 {
+#issuu-embed-container-widescreen {
   padding-bottom: 56.25%; /* set the aspect ratio here as (height / width) * 100% */
 }
 .issuuembed {
