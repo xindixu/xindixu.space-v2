@@ -182,7 +182,15 @@
               <template slot-scope="props">
                 <el-tooltip class="item" effect="dark" placement="top">
                   <div slot="content">
-                    <p style="color:white;">{{props.weight}}</p>
+                    <vue-stars
+                      name="slotDemo"
+                      :readonly="true"
+                      :max="5"
+                      :value="props.weight/40*5 | round"
+                    >
+                      <span slot="activeLabel">⭐</span>
+                      <span slot="inactiveLabel" style="display:none">😔</span>
+                    </vue-stars>
                   </div>
                   <div slot="activator" style="cursor: pointer;">{{ props.text }}</div>
                   <div style="text-align: center;">{{ props.text }}</div>
@@ -223,6 +231,7 @@ import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 import VueWordCloud from 'vuewordcloud';
 import DoingSlide from '../layout/DoingSlide.vue';
 import { Tooltip } from 'element-ui';
+import { VueStars } from 'vue-stars';
 
 import 'swiper/dist/css/swiper.css';
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
@@ -345,6 +354,11 @@ export default {
       return this.words[skill];
     }
   },
+  filters: {
+    round: function(value) {
+      return Math.round(value);
+    }
+  },
   components: {
     Xu0,
     Xu,
@@ -356,6 +370,7 @@ export default {
     SquareLink,
     SquareTexts,
     VueWordCloud,
+    VueStars,
     [Button.name]: Button,
     [Tooltip.name]: Tooltip,
     swiper,

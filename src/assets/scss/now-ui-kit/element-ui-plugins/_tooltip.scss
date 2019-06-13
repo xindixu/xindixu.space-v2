@@ -8,6 +8,7 @@
 }
 
 .tooltip {
+
   &.bs-tooltip-right .arrow:before {
     border-right-color: $white-color;
   }
@@ -28,6 +29,9 @@
 .el-tooltip__popper {
   @extend .tooltip-inner;
   border: none !important;
+  border-radius: $line-height;
+  text-align: center;
+
 }
 
 .el-tooltip__popper.is-dark {
