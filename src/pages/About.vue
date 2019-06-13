@@ -178,7 +178,17 @@
               :font-size-ratio="5"
               :animation-overlap="0.2"
               :animation-duration="2000"
-            />
+            >
+              <template slot-scope="props">
+                <el-tooltip class="item" effect="dark" placement="top">
+                  <div slot="content">
+                    <p style="color:white;">{{props.weight}}</p>
+                  </div>
+                  <div slot="activator" style="cursor: pointer;">{{ props.text }}</div>
+                  <div style="text-align: center;">{{ props.text }}</div>
+                </el-tooltip>
+              </template>
+            </vue-word-cloud>
           </transition>
           <div v-observe-visibility="visibilityChangedS4"></div>
         </swiper-slide>
@@ -212,6 +222,7 @@ import { SquareLink, SquareTexts, Button, ScrollDown } from '@/components';
 import { Xu0, Xu, Xin0, Xin, Di0, Di, Pin } from '../assets/svg';
 import VueWordCloud from 'vuewordcloud';
 import DoingSlide from '../layout/DoingSlide.vue';
+import { Tooltip } from 'element-ui';
 
 import 'swiper/dist/css/swiper.css';
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
@@ -330,7 +341,9 @@ export default {
     visibilityChangedS3() {
       this.cloudShow = false;
     },
-    callback() {}
+    getSkillLevel(skill) {
+      return this.words[skill];
+    }
   },
   components: {
     Xu0,
@@ -344,6 +357,7 @@ export default {
     SquareTexts,
     VueWordCloud,
     [Button.name]: Button,
+    [Tooltip.name]: Tooltip,
     swiper,
     swiperSlide,
     ScrollDown,

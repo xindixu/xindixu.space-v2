@@ -1,0 +1,58 @@
+.tooltip-inner {
+  padding: $padding-base-vertical $padding-base-horizontal;
+  min-width: 130px;
+  background-color: $white-color;
+  font-size: $font-size-base;
+  color: inherit;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip {
+  &.bs-tooltip-right .arrow:before {
+    border-right-color: $white-color;
+  }
+
+  &.bs-tooltip-top .arrow:before {
+    border-top-color: $white-color;
+  }
+
+  &.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: $white-color;
+  }
+
+  &.bs-tooltip-left .arrow:before {
+    border-left-color: $white-color;
+  }
+}
+
+.el-tooltip__popper {
+  @extend .tooltip-inner;
+  border: none !important;
+}
+
+.el-tooltip__popper.is-dark {
+  background-color: $black-color;
+}
+
+.el-tooltip__popper.is-light {
+
+  &[x-placement^=bottom] .popper__arrow,
+  &[x-placement^=bottom] .popper__arrow::after {
+    border-bottom-color: white;
+  }
+
+  &[x-placement^=top] .popper__arrow,
+  &[x-placement^=top] .popper__arrow::after {
+    border-top-color: white;
+  }
+
+  &[x-placement^=left] .popper__arrow,
+  &[x-placement^=left] .popper__arrow::after {
+    border-left-color: white;
+  }
+
+  &[x-placement^=right] .popper__arrow,
+  &[x-placement^=right] .popper__arrow::after {
+    border-right-color: white;
+  }
+}

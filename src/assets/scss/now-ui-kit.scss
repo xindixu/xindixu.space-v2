@@ -15,12 +15,12 @@
 
  */
 // use font spider to reduce chinese font size
- @font-face {
-     font-family: 'SentyTEA';
-     src: url('../fonts/SentyTEA.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
- }
+@font-face {
+    font-family: 'SentyTEA';
+    src: url('../fonts/SentyTEA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @import 'now-ui-kit/variables';
 @import 'now-ui-kit/mixins';
@@ -69,5 +69,5 @@
 @import "now-ui-kit/element-ui-plugins/carousel";
 // @import "now-ui-kit/element-ui-plugins/date_picker";
 @import "now-ui-kit/element-ui-plugins/input";
-// @import "now-ui-kit/element-ui-plugins/tooltip";
+@import "now-ui-kit/element-ui-plugins/tooltip";
 // @import "now-ui-kit/element-ui-plugins/popover";
