@@ -40,20 +40,32 @@
             <div class="row" id="rowBelow">
               <div class="col-lg-5 col-md-10 offset-lg-6 content-container">
                 <div id="map-container" class="mx-4">
-                  <img id="map" src="img/about/map.png">
+                  <img id="map" src="img/about/map.png" />
                   <Pin class="label pinFZ"></Pin>
                   <Pin class="label pinAUS"></Pin>
                 </div>
                 <div id="text-container">
-                  <SquareTexts id="tagFZ" num1="0324" num2="1998" en="Fuzhou, China" zh="中国福州"></SquareTexts>
-                  <SquareTexts id="tagAUS" num1="0809" num2="2016" en="Austin, U.S.A." zh="美国奥斯汀"></SquareTexts>
+                  <SquareTexts
+                    id="tagFZ"
+                    num1="0324"
+                    num2="1998"
+                    en="Fuzhou, China"
+                    zh="中国福州"
+                  ></SquareTexts>
+                  <SquareTexts
+                    id="tagAUS"
+                    num1="0809"
+                    num2="2016"
+                    en="Austin, U.S.A."
+                    zh="美国奥斯汀"
+                  ></SquareTexts>
                 </div>
                 <div>
                   <p>
                     I was born in Fuzhou, China and spent my first 18 years
-                    there. I moved to the US for college.
-                    <br>Now, I am a senior studying Advertising and Computer Science
-                    at the University of Texas at Austin.
+                    there. I moved to the US for college. <br />Now, I am a
+                    senior studying Advertising and Computer Science at the
+                    University of Texas at Austin.
                   </p>
                 </div>
               </div>
@@ -61,7 +73,7 @@
                 <div class="vertical chinese">
                   <p>
                     我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。
-                    <br>现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
+                    <br />现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
                   </p>
                 </div>
               </div>
@@ -114,13 +126,25 @@
             <div class="swiper-lazy-preloader"></div>
 
             <div id="map-container">
-              <img id="map" src="img/about/map.png">
+              <img id="map" src="img/about/map.png" />
               <Pin class="label pinFZ"></Pin>
               <Pin class="label pinAUS"></Pin>
             </div>
             <div id="text-container">
-              <SquareTexts id="tagFZ" num1="0324" num2="1998" en="Fuzhou, China" zh="中国福州"></SquareTexts>
-              <SquareTexts id="tagAUS" num1="0809" num2="2016" en="Austin, U.S.A." zh="美国奥斯汀"></SquareTexts>
+              <SquareTexts
+                id="tagFZ"
+                num1="0324"
+                num2="1998"
+                en="Fuzhou, China"
+                zh="中国福州"
+              ></SquareTexts>
+              <SquareTexts
+                id="tagAUS"
+                num1="0809"
+                num2="2016"
+                en="Austin, U.S.A."
+                zh="美国奥斯汀"
+              ></SquareTexts>
             </div>
             <div v-if="!$userReadChinese">
               <p>
@@ -135,14 +159,21 @@
 
             <div v-else>
               <div class="chinese">
-                <p>我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。</p>
-                <p>现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。</p>
+                <p>
+                  我生长于中国福州。三年前我来到了美国奥斯汀开启了我的大学生活。
+                </p>
+                <p>
+                  现在我大四，就读于德州大学奥斯汀分校，学习广告和计算机科学。
+                </p>
               </div>
             </div>
           </div>
         </swiper-slide>
         <swiper-slide v-for="obj in slideObjects" :key="obj.enTitle">
-          <div class="bg-img swiper-lazy" :data-background="'img/bg/' + obj.background + '.jpg'">
+          <div
+            class="bg-img swiper-lazy"
+            :data-background="'img/bg/' + obj.background + '.jpg'"
+          >
             <DoingSlide :obj="obj"></DoingSlide>
           </div>
         </swiper-slide>
@@ -153,7 +184,11 @@
             leave-active-class="animated fadeOut fastest"
             mode="out-in"
           >
-            <div class="full-screen" v-if="wordShow" style="background-color=white;">
+            <div
+              class="full-screen"
+              v-if="wordShow"
+              style="background-color=white;"
+            >
               <div v-if="$isMobile" class="screen-center text-center">
                 <h4 v-if="$userReadChinese" class="chinese">我擅长于…</h4>
                 <h4 v-else>I'm Skilled At ...</h4>
@@ -179,23 +214,27 @@
               :animation-overlap="0.2"
               :animation-duration="2000"
             >
-              <template slot-scope="props">
-                <el-tooltip class="item" effect="dark" placement="top">
-                  <div slot="content">
-                    <vue-stars
-                      name="slotDemo"
-                      :readonly="true"
-                      :max="5"
-                      :value="props.weight/40*5 | round"
-                    >
-                      <span slot="activeLabel">⭐</span>
-                      <span slot="inactiveLabel" style="display:none">😔</span>
-                    </vue-stars>
-                  </div>
-                  <div slot="activator" style="cursor: pointer;">{{ props.text }}</div>
-                  <div style="text-align: center;">{{ props.text }}</div>
-                </el-tooltip>
-              </template>
+              <!--
+                template slot-scope="props">
+                  <el-tooltip class="item" effect="dark" placement="top">
+                    <div slot="content">
+                      <vue-stars
+                        name="slotDemo"
+                        :readonly="true"
+                        :max="5"
+                        :value="((props.weight / 40) * 5) | round"
+                      >
+                        <span slot="activeLabel">⭐</span>
+                        <span slot="inactiveLabel" style="display:none">😔</span>
+                      </vue-stars>
+                    </div>
+                    <div slot="activator" style="cursor: pointer;">
+                      {{ props.text }}
+                    </div>
+                    <div style="text-align: center;">{{ props.text }}</div>
+                  </el-tooltip>
+                </template
+              -->
             </vue-word-cloud>
           </transition>
           <div v-observe-visibility="visibilityChangedS4"></div>
@@ -215,7 +254,8 @@
                 onclick="window.open('html/life-story.html','_blank');"
                 type="warning"
                 round
-              >Click to Launch</n-button>
+                >Click to Launch</n-button
+              >
             </div>
           </div>
         </swiper-slide>
@@ -352,11 +392,6 @@ export default {
     },
     getSkillLevel(skill) {
       return this.words[skill];
-    }
-  },
-  filters: {
-    round: function(value) {
-      return Math.round(value);
     }
   },
   components: {
