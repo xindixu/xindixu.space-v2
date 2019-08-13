@@ -4,7 +4,10 @@
       <swiper id="v" :options="swiperOptionV" ref="homeSwiper">
         <swiper-slide id="slide1">
           <div class="bg-img" style="background-image:url(img/home/2.jpg)">
-            <div v-if="!$isMobile" class="col-lg-5 offset-lg-7 col-md-6 offset-md-6">
+            <div
+              v-if="!$isMobile"
+              class="col-lg-5 offset-lg-7 col-md-6 offset-md-6"
+            >
               <div class="zhIntro vertical">
                 <h1 class="chineseTitle">徐欣笛</h1>
                 <div class="chinese indentV">
@@ -49,7 +52,10 @@
         </swiper-slide>
 
         <swiper-slide v-for="obj in slideObjects" :key="obj.link">
-          <div class="bg-img swiper-lazy" :data-background="'img/bg/' + obj.background + '.jpg'">
+          <div
+            class="bg-img swiper-lazy"
+            :data-background="'img/bg/' + obj.background + '.jpg'"
+          >
             <div class="swiper-lazy-preloader"></div>
             <HelpSlide :obj="obj"></HelpSlide>
           </div>
@@ -364,7 +370,7 @@ export default {
   }
 }
 
-/* Small Devices, Tablets */
+// Small Devices, Tablets
 @media only screen and (min-width: 768px) {
   #slide1 {
     .zhIntro {
@@ -384,8 +390,9 @@ export default {
         line-height: 1.5em;
       }
       .indentH {
+        margin-left: 40px;
         h4 {
-          font-size: 1.6em;
+          font-size: 1.4em;
           line-height: 1.2em;
         }
       }
@@ -416,6 +423,7 @@ export default {
         font-size: 3em;
       }
       .indentH {
+        margin-left: 60px;
         h4 {
           font-size: 1.2em;
           line-height: 1em;
@@ -451,6 +459,7 @@ export default {
         line-height: 1.5em;
       }
       .indentH {
+        margin-left: 60px;
         h4 {
           font-size: 2em;
           line-height: 1.2em;

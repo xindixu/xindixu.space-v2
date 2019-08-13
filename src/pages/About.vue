@@ -214,27 +214,6 @@
               :animation-overlap="0.2"
               :animation-duration="2000"
             >
-              <!--
-                template slot-scope="props">
-                  <el-tooltip class="item" effect="dark" placement="top">
-                    <div slot="content">
-                      <vue-stars
-                        name="slotDemo"
-                        :readonly="true"
-                        :max="5"
-                        :value="((props.weight / 40) * 5) | round"
-                      >
-                        <span slot="activeLabel">⭐</span>
-                        <span slot="inactiveLabel" style="display:none">😔</span>
-                      </vue-stars>
-                    </div>
-                    <div slot="activator" style="cursor: pointer;">
-                      {{ props.text }}
-                    </div>
-                    <div style="text-align: center;">{{ props.text }}</div>
-                  </el-tooltip>
-                </template
-              -->
             </vue-word-cloud>
           </transition>
           <div v-observe-visibility="visibilityChangedS4"></div>
