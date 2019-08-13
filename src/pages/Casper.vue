@@ -1,7 +1,7 @@
 <template>
   <div id="imgContainer" class="center-text">
     <transition appear enter-active-class="animated bounceIn">
-      <h2>Dr. Capser Meowspy!</h2>
+      <h2>Dr. Casper Meowspy!</h2>
     </transition>
 
     <masonry v-if="!$isMobile" :cols="5" :gutter="30">
@@ -11,7 +11,7 @@
         class="entranceFromTop"
         :style="{ 'animation-delay': index * 50 + 'ms' }"
       >
-        <img class="image" :src="img">
+        <img class="image" :src="img" />
       </div>
     </masonry>
     <masonry v-else :cols="3" :gutter="10">
@@ -21,7 +21,7 @@
         class="entranceFromTop"
         :style="{ 'animation-delay': index * 50 + 'ms' }"
       >
-        <img class="image" :src="img">
+        <img class="image" :src="img" />
       </div>
     </masonry>
   </div>
@@ -54,12 +54,11 @@ export default {
 #imgContainer {
   text-align: center;
   margin-top: 10vh;
-  padding: 0 1vw 0 0;
-
+  padding: 0;
   .image {
     width: 100%;
     height: 100%;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 3px;
   }
 }
@@ -90,7 +89,7 @@ export default {
     .image {
       width: 100%;
       height: 100%;
-      margin: 5px;
+      margin: 5px 0;
       border-radius: 3px;
     }
   }

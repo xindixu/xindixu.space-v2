@@ -14,7 +14,10 @@ v-cloak {
   display: none;
 }
 body {
-  overflow: hidden;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 .swiper-pagination-bullet-active {
   background: #e2b4bd !important;
