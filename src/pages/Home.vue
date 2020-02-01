@@ -12,7 +12,6 @@
                 <h1 class="chineseTitle">徐欣笛</h1>
                 <div class="chinese indentV">
                   <h4>网页开发工程师</h4>
-                  <h4>疯狂广告人</h4>
                   <h4>终身学习家</h4>
                 </div>
               </div>
@@ -20,7 +19,6 @@
                 <h1>Xindi Xu</h1>
                 <div class="english indentH">
                   <h4>Dedicated Web Developer</h4>
-                  <h4>Passionate Advertiser</h4>
                   <h4>Lifelong Learner</h4>
                 </div>
               </div>
@@ -31,7 +29,6 @@
                   <h1 class="chineseTitle">徐欣笛</h1>
                   <div class="chinese indentV">
                     <h4>网页开发工程师</h4>
-                    <h4>疯狂广告人</h4>
                     <h4>终身学习家</h4>
                   </div>
                 </div>
@@ -41,7 +38,6 @@
                   <h1>Xindi Xu</h1>
                   <div class="english indentH">
                     <h4>Dedicated Web Developer</h4>
-                    <h4>Passionate Advertiser</h4>
                     <h4>Lifelong Learner</h4>
                   </div>
                 </div>
@@ -192,7 +188,7 @@ export default {
     height: 500px;
     position: absolute;
     top: auto;
-    right: auto;
+    right: -15px;
 
     .chineseTitle {
       letter-spacing: 15px;

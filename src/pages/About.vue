@@ -296,9 +296,9 @@ export default {
           enTitle: 'Working...',
           zhTitle: '工作中...',
           enPara:
-            'I am currently interning at Nokia as a front-end web developer. My work includes designing, implementing, and maintaining websites with Sketch, WordPress, JavaScript, and Python Django.',
+            'I am currently interning at Pingboard as a front-end software engineer. My work includes implementing features to improve our app that built with JS, React, and Ruby on Rails. We consistently deliver functions that are accessible, compatible, and responsive.',
           zhPara:
-            '我现在在Nokia实习，做前端开发。我的工作包括设计，开发，维护网站，主要用Sketch，WordPress，HTML，JS，和Python Django.',
+            '我现在在Pingboard实习，是软件开发工程师。我的工作包括设计，开发，维护软件，主要用JavaScript, React和Ruby on Rails。我们致力于开发无障碍，强兼容，多端使用可能的产品。',
           background: 'bg33',
           enTop: false
         },
@@ -314,8 +314,8 @@ export default {
         }
       ],
       words: [
-        ['Angular', 40],
-        ['Vue.js', 40],
+        ['Angular', 20],
+        ['Vue.js', 30],
         ['React', 40],
         ['JavaScript', 30],
         ['TypeScript', 10],
