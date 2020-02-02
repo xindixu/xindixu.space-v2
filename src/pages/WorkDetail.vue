@@ -1,12 +1,17 @@
 <template>
   <div>
     <div class="page-header clear-filter" :filter-color="filter">
-      <div class="page-header-image" style="background-image: url('img/bg/bg23.jpg')"></div>
+      <div
+        class="page-header-image"
+        style="background-image: url('img/bg/bg23.jpg')"
+      ></div>
       <div class="content-center">
         <div class="container">
           <h1 class="title">{{ title }}</h1>
           <div class="text-center">
-            <badge v-for="tag in tags" :key="tag" type="success">{{ tag }}</badge>
+            <badge v-for="tag in tags" :key="tag" type="success">{{
+              tag
+            }}</badge>
           </div>
         </div>
       </div>
