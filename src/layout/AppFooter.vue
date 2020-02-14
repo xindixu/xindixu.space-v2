@@ -15,7 +15,7 @@ import { Github, Linkedin, Email, Youtube } from '../assets/svg';
 
 export default {
   props: {
-    type: String
+    type: String,
   },
   data() {
     return {
@@ -25,23 +25,23 @@ export default {
       list: [
         {
           isLink: false,
-          url: 'https://github.com/xindixu'
+          url: 'https://github.com/xindixu',
         },
         {
           isLink: false,
-          url: 'https://www.linkedin.com/in/xindi-xu/'
+          url: 'https://www.linkedin.com/in/xindi-xu/',
         },
         {
           isLink: false,
-          url: 'mailto:xindixu@utexas.edu'
+          url: 'mailto:xindixu@utexas.edu',
         },
         {
           isLink: false,
-          url: 'https://www.youtube.com/channel/UCWnA13M9WCIXbl9yl4qs6_Q'
-        }
+          url: 'https://www.youtube.com/channel/UCWnA13M9WCIXbl9yl4qs6_Q',
+        },
       ],
       position: 'bottom-left',
-      backgroundColor: '#E2B4BD'
+      backgroundColor: '#E2B4BD',
     };
   },
   components: {
@@ -49,8 +49,8 @@ export default {
     Github,
     Linkedin,
     Email,
-    Youtube
-  }
+    Youtube,
+  },
 };
 </script>
 <style>

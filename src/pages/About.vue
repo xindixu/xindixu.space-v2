@@ -17,7 +17,7 @@
                 <Di></Di>
                 <Di0></Di0>
               </div>
-              <div style="margin-top:130px">
+              <div style="margin-top: 130px">
                 <span @click="pronounce">
                   <SquareLink>pronounce</SquareLink>
                 </span>
@@ -34,6 +34,17 @@
                   <span class="chinese">笛</span> means bamboo flutes, whose
                   music often triggers a peaceful joy among the listeners.
                 </p>
+                <div class="col-lg-6">
+                  <img
+                    id="map"
+                    src="img/about/avatar.png"
+                    alt="avatar for Xindi Xu"
+                  />
+                  <a
+                    href="https://www.cs.utexas.edu/users/xx2673/resume/build/index.html"
+                    >View my resume</a
+                  >
+                </div>
               </div>
             </div>
 
@@ -178,7 +189,7 @@
           </div>
         </swiper-slide>
 
-        <swiper-slide style="background-color:white">
+        <swiper-slide style="background-color: white">
           <transition
             enter-active-class="animated bounceIn"
             leave-active-class="animated fadeOut fastest"
@@ -219,7 +230,7 @@
           <div v-observe-visibility="visibilityChangedS4"></div>
         </swiper-slide>
         <swiper-slide>
-          <div class="full-screen" style="background-color:#E2B4BD">
+          <div class="full-screen" style="background-color: #E2B4BD">
             <div class="screen-center text-center">
               <div v-if="$isMobile">
                 <h4 v-if="$userReadChinese" class="chinese">人生轨迹 ...</h4>
@@ -265,21 +276,21 @@ export default {
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
-          dynamicBullets: true
+          dynamicBullets: true,
         },
         mousewheel: {
           forceToAxis: true,
-          invert: true
+          invert: true,
         },
         keyboard: {
           enabled: true,
-          onlyInViewport: false
+          onlyInViewport: false,
         },
         lazy: {
-          loadPrevNext: true
+          loadPrevNext: true,
         },
         preloadImages: false,
-        a11y: true
+        a11y: true,
       },
       slideObjects: [
         {
@@ -290,7 +301,7 @@ export default {
           zhPara:
             '我主修广告，是TexasMedia的一员。我刚刚拿到了我的计算机科学的证书，我也会继续深入学习。我毕业后想做个网页开发工程师，所以全身心地学习各种现代网页开发技术。',
           background: 'bg31',
-          enTop: true
+          enTop: true,
         },
         {
           enTitle: 'Working...',
@@ -300,7 +311,7 @@ export default {
           zhPara:
             '我现在在Pingboard实习，是软件开发工程师。我的工作包括设计，开发，维护软件，主要用JavaScript, React和Ruby on Rails。我们致力于开发无障碍，强兼容，多端使用可能的产品。',
           background: 'bg33',
-          enTop: false
+          enTop: false,
         },
         {
           enTitle: 'Enjoying...',
@@ -310,8 +321,8 @@ export default {
           zhPara:
             '我爱我的猫猫，Dr. Casper Meowspy。我常锻炼身体，健身房，跆拳道，游泳，任何和“球”无关的运动。在放假时，我喜欢出游，探索各种地方。',
           background: 'bg19',
-          enTop: true
-        }
+          enTop: true,
+        },
       ],
       words: [
         ['Angular', 20],
@@ -342,11 +353,11 @@ export default {
         ['CMS', 10],
         ['Google Analytics', 15],
         ['Tableau', 10],
-        ['Adwords', 5]
+        ['Adwords', 5],
       ],
       wordShow: false,
       cloudShow: false,
-      eleToScrollTo: ''
+      eleToScrollTo: '',
     };
   },
   methods: {
@@ -371,7 +382,7 @@ export default {
     },
     getSkillLevel(skill) {
       return this.words[skill];
-    }
+    },
   },
   components: {
     Xu0,
@@ -384,19 +395,18 @@ export default {
     SquareLink,
     SquareTexts,
     VueWordCloud,
-    VueStars,
     [Button.name]: Button,
     [Tooltip.name]: Tooltip,
     swiper,
     swiperSlide,
     ScrollDown,
-    DoingSlide
+    DoingSlide,
   },
   head: {
     title: {
-      inner: 'About'
-    }
-  }
+      inner: 'About',
+    },
+  },
 };
 </script>
 
@@ -597,7 +607,7 @@ svg {
     font-size: 1em;
   }
   #rowBelow {
-    margin-top: -10vh;
+    margin-top: -20vh;
 
     .vertical {
       margin-left: 10px;
@@ -648,14 +658,14 @@ svg {
   }
 
   #rowBelow {
-    margin-top: 6vh;
+    margin-top: 0;
   }
 }
 
 // Retina
 @media only screen and (min-width: 760px) and (max-width: 1960px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   #rowBelow {
-    margin-top: 20vh;
+    margin-top: 0;
   }
 }
 </style>

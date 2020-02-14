@@ -4,6 +4,10 @@
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 module.exports = {
+  publicPath:
+    process.env.NODE_ENV === 'production'
+      ? '/users/xx2673/personal/dist/'
+      : '/',
   pwa: {
     themeColor: '#E2B4BD',
     msTileColor: '#E2B4BD',
