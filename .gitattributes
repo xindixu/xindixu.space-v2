@@ -1,4 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-src/assets/html linguist-vendored
+src/assets/html/* linguist-vendored
 *.vue linguist-language=vue
