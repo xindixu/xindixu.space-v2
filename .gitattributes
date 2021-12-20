@@ -2,3 +2,4 @@
 * text=auto
 src/assets/* linguist-vendored
 *.vue linguist-language=vue
+*.html linguist-language=vue
