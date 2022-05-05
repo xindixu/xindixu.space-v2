@@ -2,3 +2,4 @@
 * text=auto
 *.vue linguist-language=vue
 backup/** linguist-vendored=true
+public/html/life-story.html linguist-vendored=true
