@@ -3,3 +3,4 @@
 *.vue linguist-language=vue
 backup/** linguist-vendored=true
 public/html/life-story.html linguist-vendored=true
+src/assets/html/** linguist-vendored=true
